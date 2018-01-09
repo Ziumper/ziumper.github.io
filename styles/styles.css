@@ -37,3 +37,7 @@ body{
 .footer p{
     text-align: center;
 }
+
+.navbar {
+    margin-bottom: 0;
+}
