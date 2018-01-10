@@ -1,6 +1,19 @@
 body{
-    background-color: rgb(236, 236, 236);
+    
 }
+
+/* Bootstrap classes overwritten */
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: rgb(234, 171, 146);
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
+{
+    color: rgb(234, 171, 146);
+    background-color: #080808;
+}
+/*End  overwritten*/
 
 .image_avatar
 {
@@ -21,17 +34,20 @@ body{
 }
 
 .tech-image{
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     padding-top:10px;
+    border-radius: 50%;
+    
 }
 
 .footer
 {
-    background-color: black;
-    color: white;
+    background-color: #222222;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
+    color:white;
 }
 
 .footer p{
@@ -48,3 +64,39 @@ body{
         border-radius: 0;
     }
 }
+
+.frontend-header{
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 0;
+    background-size: 100% 100%;
+}
+
+.frontend-header > p, .frontend-header > h1, .main-content
+{
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+
+.main-content{
+    text-align: center;
+}
+
+.features
+{
+    text-align: center;
+    background-color: aliceblue;
+    width:100%;
+    padding-bottom: 20px;
+}
+
+
+.features img
+{ 
+    width:  40px;
+    height: 40px;    
+}
+
+
+
