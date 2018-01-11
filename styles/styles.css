@@ -3,14 +3,20 @@ body{
 }
 
 /* Bootstrap classes overwritten */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: rgb(234, 171, 146);
+    color: rgb(255, 255, 255);
     background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
 {
-    color: rgb(234, 171, 146);
+    color: rgb(255, 255, 255);
     background-color: #080808;
 }
 /*End  overwritten*/
@@ -89,6 +95,8 @@ body{
     background-color: aliceblue;
     width:100%;
     padding-bottom: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 
