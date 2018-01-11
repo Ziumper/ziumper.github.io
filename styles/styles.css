@@ -47,10 +47,17 @@ body{
     
 }
 
+.avatar_image
+{
+    width: 150px;
+    height: 250px;
+    padding-top:10px;
+    border-radius: 20%;
+}
+
 .footer
 {
     background-color: #222222;
-    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
     color:white;
