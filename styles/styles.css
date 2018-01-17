@@ -1,24 +1,25 @@
-body{
-    
-}
-
 /* Bootstrap classes overwritten */
 .navbar{
     position: fixed;
     width: 100%;
     z-index: 1;
+    background-color: #ffffff;
+}
+.navbar-toggle{
+    background-color: #6663634d;
+    border: 1px solid #a74e4e00;
 }
 
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    color: #5c1920;
+    background: aliceblue;
 }
 
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover
-{
-    color: rgb(255, 255, 255);
-    background-color: #080808;
-}
+
 /*End  overwritten*/
 
 .image_avatar
