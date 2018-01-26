@@ -1,13 +1,10 @@
-/* Bootstrap classes overwritten */
 .navbar{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    background-color: #ffffff;
+    background-color: #222222;
+    font-family: 'Oswald'
 }
 .navbar-toggle{
-    background-color: #6663634d;
-    border: 1px solid #a74e4e00;
+    background-color: #b73333;
+    border: 0.5px solid #a74e4e00;
 }
 
 .navbar-toggle .icon-bar {
@@ -19,8 +16,24 @@
     background: aliceblue;
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #b73333;
+    color:white;
+}
 
-/*End  overwritten*/
+a:focus, a:hover{
+    color:#b73333;
+}
+
+a{
+    color: white;
+}
+
+.navbar-brand{
+    font-family: 'Oswald';
+}
+
 
 .image_avatar
 {
