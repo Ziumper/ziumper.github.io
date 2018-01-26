@@ -1,0 +1,87 @@
+.navbar{
+    background-color: #000000;
+    font-family: 'Oswald'
+}
+.navbar-toggle{
+    background-color: #b73333;
+    border: 0.5px solid #a74e4e00;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    color: #5c1920;
+    background: aliceblue;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #b73333;
+    color:white;
+}
+
+a:focus, a:hover{
+    color:#b73333;
+}
+
+a{
+    color: white;
+}
+
+a.navbar-brand:focus, a.navbar-brand:hover{
+    color: white;
+}
+
+.navbar-brand{
+    font-family: 'Oswald';
+    background-color: #b73333;
+}
+
+header{
+    margin-top:50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+header h1{
+    font-size: 82px;
+}
+
+h1,h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.info-block{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info-block ul {
+    list-style: none;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: 20px;
+}
+
+footer p{
+   margin-bottom: 20px;
+   margin-top: 20px;    
+}
+
+footer i{
+    font-size: 60px;
+    color: whtie;
+    margin-bottom: 20px;
+}
