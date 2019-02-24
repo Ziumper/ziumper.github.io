@@ -28,10 +28,6 @@
     color: #00c8c8;
 }
 
-.currency-menu ul {
-    color: #777777;
-}
-
 .sub-menu-right ul {
     float:right;
     color: #999999;
@@ -51,6 +47,22 @@
     color:white;
 }
 
+.currency-menu ul {
+    color: #777777;
+}
+
+.currency-menu .dropdown-menu li {
+    display: list-item;
+}
+
+.currency-menu .dropdown-menu li a {
+    width: 100%;
+}
+.currency-menu .dropdown-menu li a:hover {
+    background-color: unset;
+    color:#00c8c8;
+}
+
 #currency-button {
     background: none;
     border: none;
@@ -58,6 +70,8 @@
     padding: unset;
 }
 
+#currency-button:focus,
+#currency-button:active,
 #currency-button:hover {
     color: #999999;
 }
@@ -68,4 +82,5 @@
     border-width: unset;
     outline-color: unset;
     outline: unset;
+
 }
