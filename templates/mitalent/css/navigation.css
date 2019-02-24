@@ -1,0 +1,71 @@
+
+.mi-talent .navigation-bar {
+    background-color: #333333;
+    min-height: 45px;
+    width:100%;
+}
+.mi-talent .navigation-bar .container {
+    padding-left:10%;
+    padding-right:10%;
+}
+
+.sub-menu ul {
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #999999;
+}
+
+.sub-menu ul li,
+.sub-menu ul li a {
+    display: inline-block;
+    line-height: 45px;
+}
+
+.sub-menu-right ul li a:hover {
+    text-decoration: none;
+    color: #00c8c8;
+}
+
+.currency-menu ul {
+    color: #777777;
+}
+
+.sub-menu-right ul {
+    float:right;
+    color: #999999;
+}
+
+.sub-menu li a {
+    padding-left:10px;
+    padding-right: 10px;
+    color: inherit;
+}
+
+#shopping-cart a {
+    background-color: #00c8c8;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color:white;
+}
+
+#currency-button {
+    background: none;
+    border: none;
+    border-width: unset;
+    padding: unset;
+}
+
+#currency-button:hover {
+    color: #999999;
+}
+
+#currency-button:focus,
+#currency-button:active {
+    border:none;
+    border-width: unset;
+    outline-color: unset;
+    outline: unset;
+}
