@@ -1,0 +1,7 @@
+.slider {
+    background-image: url('../images/sliderImage.png');
+    background-repeat: no-repeat;
+    min-height: 918px;
+    width: 100%;
+    background-color: #f8f8f8;
+}
