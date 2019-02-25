@@ -84,3 +84,9 @@
     outline: unset;
 }
 
+.currency-menu .dropdown-menu {
+    background-color: #333333;
+    top: 94%;
+    color: #999999;
+}
+
