@@ -1,7 +1,69 @@
-.slider {
+.header {
     background-image: url('../images/sliderImage.png');
     background-repeat: no-repeat;
     min-height: 918px;
     width: 100%;
     background-color: #f8f8f8;
+}
+
+.logo {
+    font-family: Arial;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.sub-navigation-container {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sub-navigation-container span{
+    font-weight: bold;
+}
+
+.sub-navigation ul {
+    list-style-type: none;
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.sub-navigation ul li, .sub-navigation ul li a {
+    display: inline-block;
+    line-height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:#515151;
+}
+
+.sub-navigation ul li a:hover {
+    text-decoration: none;
+}
+
+.sub-navigation .search-input input {
+    line-height: 25px;
+    text-indent: 10px;
+    background-color: #f8f8f8;
+    border-style: ridge;
+    border-color: #e7e7e7;
+    border-width: thin;
+    font-size: small;
+    font-family: Arial;
+    font-weight: normal;
+    color: #989898;
+    padding-right: 28px;
+}
+
+.sub-navigation .search-input i {
+    color: #989898;
+    position: relative;
+    right: 25px;
+    font-size: smaller;
+}
+
+.sub-navigation .search-input input::placeholder {
+    color: #989898;
 }
