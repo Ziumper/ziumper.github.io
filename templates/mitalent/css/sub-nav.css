@@ -33,14 +33,17 @@
 
 .sub-navigation ul li, .sub-navigation ul li a {
     display: inline-block;
+    margin-right: 40px;
+    color: #222222;
     line-height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color:#515151;
+    margin-bottom: 10px;
+    font-weight: 550;
 }
 
 .sub-navigation ul li a:hover {
     text-decoration: none;
+    color: #00c8c8;
+    cursor: pointer;
 }
 
 .sub-navigation .search-input input {
@@ -66,4 +69,36 @@
 
 .sub-navigation .search-input input::placeholder {
     color: #989898;
+}
+
+.sub-navigation-icon {
+    line-height: unset;
+    height: unset;
+    position: relative;
+    text-align: left;
+    bottom: 0px;
+}
+
+.sub-navigation-icon i {
+    position: absolute;
+    top: -5px;
+    color: #989898;
+}
+
+.sub-navigation ul li a:hover 
+.sub-navigation-icon i {
+    color: #00c8c8;
+}
+.sub-navigation-link-text {
+    text-align: center;
+}
+
+.sub-navigation .dropdown-menu {
+    position: absolute;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    background-color: #f8f8f8;
+    border: none;
 }
