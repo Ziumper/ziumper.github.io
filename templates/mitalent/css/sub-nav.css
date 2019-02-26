@@ -22,7 +22,7 @@
     font-weight: bold;
 }
 
-.sub-navigation ul {
+.sub-navigation > ul {
     list-style-type: none;
     font-size: small;
     font-weight: bold;
@@ -31,7 +31,7 @@
     text-decoration: none;
 }
 
-.sub-navigation ul li, .sub-navigation ul li a {
+.sub-navigation > ul > li, .sub-navigation > ul > li > a {
     display: inline-block;
     margin-right: 40px;
     color: #222222;
@@ -40,7 +40,7 @@
     font-weight: 550;
 }
 
-.sub-navigation ul li a:hover {
+.sub-navigation > ul > li > a:hover {
     text-decoration: none;
     color: #00c8c8;
     cursor: pointer;
@@ -85,8 +85,9 @@
     color: #989898;
 }
 
-.sub-navigation ul li a:hover 
+.sub-navigation > ul > li > a:hover 
 .sub-navigation-icon i {
+    text-decoration: none;
     color: #00c8c8;
 }
 .sub-navigation-link-text {
@@ -102,3 +103,35 @@
     background-color: #f8f8f8;
     border: none;
 }
+
+.sub-dropdown-menu {
+    float: left;
+    margin-right: 50px;
+    margin-left: 30px;
+    text-transform: none;
+}
+
+.sub-dropdown-menu ul {
+    list-style: unset;
+    padding: 0;
+}
+
+.sub-dropdown-menu > a {
+    text-transform: uppercase;
+    font-size: smaller;
+    color:#575153;
+    font-weight: 700;
+}
+
+.sub-dropdown-menu > a:hover,
+.sub-dropdown-menu > ul > li > a:hover  {
+    text-decoration: none;
+    color: #00c8c8;
+}
+
+.sub-dropdown-menu > ul > li > a {
+    font-size: small;
+    color: #575153;
+    font-weight: 400;
+}
+
