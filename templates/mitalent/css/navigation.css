@@ -5,6 +5,15 @@
     width:100%;
 }
 
+.hide-on-mobile {
+    display: none;
+}
+
+.mi-talent .navigation-bar .container {
+    margin-left:10%;
+    margin-right: 10%;
+}
+
 .sub-menu ul {
     list-style-type: none;
     font-size: 12px;
@@ -42,11 +51,6 @@
     padding-right: 30px;
     text-decoration: none;
     color:white;
-}
-
-.currency-menu {
-    padding-left: 0;
-    padding-right: 0;
 }
 
 .currency-menu ul {

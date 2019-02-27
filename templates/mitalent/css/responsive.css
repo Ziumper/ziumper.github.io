@@ -1,0 +1,56 @@
+
+/* Desktop */
+@media screen and (min-width:1200px) {
+    .mi-talent .navigation-bar .container {
+        margin-left:10%;
+        margin-right: 10%;
+        padding-right:15px;
+        padding-left:15px;
+    }
+
+}
+
+/* Small devices Tablets   */
+@media screen and (min-width:768px) {
+
+    .burger-menu {
+        display: none;
+    }
+    
+    .mi-talent .navigation-bar .container {
+        margin:auto;
+    }
+
+    .sub-menu-right a i {
+        display: none;
+    }
+
+}
+
+
+
+
+/* Small Phones */
+@media screen and (max-width:767px) {
+    .currency-menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mi-talent .navigation-bar .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #shopping-cart span {
+        display: none;
+    }
+
+    .sub-menu-right a i {
+        display: block;
+    }
+
+}
