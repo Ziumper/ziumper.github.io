@@ -4,10 +4,6 @@
     min-height: 45px;
     width:100%;
 }
-.mi-talent .navigation-bar .container {
-    padding-left:10%;
-    padding-right:10%;
-}
 
 .sub-menu ul {
     list-style-type: none;
@@ -15,6 +11,7 @@
     font-weight: bold;
     margin-bottom: 0;
     color: #999999;
+    padding-left: 0;
 }
 
 .sub-menu ul li,
@@ -45,6 +42,11 @@
     padding-right: 30px;
     text-decoration: none;
     color:white;
+}
+
+.currency-menu {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .currency-menu ul {
