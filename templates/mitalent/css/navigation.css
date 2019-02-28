@@ -14,6 +14,28 @@
     margin-right: 10%;
 }
 
+.burger-menu {
+    margin: unset;
+    padding: unset;
+    top: 0;
+    background-color: #333333;
+    height: 45px;
+    text-align: left;
+    padding-left: 30px;
+    float: left;
+}
+
+.burger-menu button {
+    margin: 0;
+    padding: 0;
+    float: unset;
+    top: 13px;
+}
+
+.burger-menu button span {
+    background:  white;
+}
+
 .sub-menu ul {
     list-style-type: none;
     font-size: 12px;

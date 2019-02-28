@@ -6,7 +6,13 @@
 
     .burger-menu {
         display: block;
+        width:100%;
     }
+
+    .sub-menu-right {
+        display: none;
+    }
+
 
     .mi-talent .navigation-bar .container {
         margin-left: unset;
@@ -50,10 +56,22 @@
     .currency-menu {
         display: none;
     }
+
+    .burger-menu {
+        width: auto;
+    }
+
+    .sub-menu-right {
+        display: none;
+    }
 }
 
 /* Small devices Tablets   */
 @media screen and (min-width:768px) {
+
+    .sub-menu-right {
+        display: block;
+    }
 
     .currency-menu {
         display: block;
