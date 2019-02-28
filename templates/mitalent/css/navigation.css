@@ -29,6 +29,11 @@
     line-height: 45px;
 }
 
+.sub-menu-right ul
+{
+    background-color: #333333;
+}
+
 .sub-menu-right ul li a:hover {
     text-decoration: none;
     color: #00c8c8;
@@ -45,12 +50,23 @@
     color: inherit;
 }
 
-#shopping-cart a {
-    background-color: #00c8c8;
+#shopping-cart {
+    float: right;
+    margin-right: 10%;
+    margin-left:10%;
     padding-left: 30px;
     padding-right: 30px;
+    background-color: #00c8c8;
+}
+
+#shopping-cart a {
+    padding: unset;
     text-decoration: none;
     color:white;
+}
+
+.currency-menu {
+    float: left;
 }
 
 .currency-menu ul {

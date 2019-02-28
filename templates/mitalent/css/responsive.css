@@ -1,18 +1,64 @@
-
-/* Desktop */
-@media screen and (min-width:1200px) {
-    .mi-talent .navigation-bar .container {
-        margin-left:10%;
-        margin-right: 10%;
-        padding-right:15px;
-        padding-left:15px;
+/* Small Phones */
+@media screen and (max-width:575px) {
+    .currency-menu {
+        display: none;
     }
 
+    .burger-menu {
+        display: block;
+    }
+
+    .mi-talent .navigation-bar .container {
+        margin-left: unset;
+        margin-right: unset;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sub-menu-right a i {
+        display: inline-block;
+    }
+
+    #shopping-cart {
+        margin-left:unset;
+        margin-right: unset;
+        width:100%;
+        text-align: center;
+        float: unset;
+        padding-right:unset;
+        padding-left:unset;
+    }
+
+    #shopping-cart a {
+        padding-left:0;
+        padding-right:0;
+    }
+
+    #shopping-cart ul,
+    #shopping-cart li {
+        width: 100%;
+    }
+
+    .sub-menu-right ul {
+        text-align: center;
+        float: unset;
+    }
+
+}
+
+@media screen and (min-width: 576px) {
+    .currency-menu {
+        display: none;
+    }
 }
 
 /* Small devices Tablets   */
 @media screen and (min-width:768px) {
 
+    .currency-menu {
+        display: block;
+    }
+    
     .burger-menu {
         display: none;
     }
@@ -28,29 +74,16 @@
 }
 
 
-
-
-/* Small Phones */
-@media screen and (max-width:767px) {
-    .currency-menu {
-        display: none;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
+/* Desktop */
+@media screen and (min-width:1200px) {
     .mi-talent .navigation-bar .container {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left:10%;
+        margin-right: 10%;
+        padding-right:15px;
+        padding-left:15px;
     }
 
-    #shopping-cart span {
-        display: none;
-    }
-
-    .sub-menu-right a i {
+    .currency-menu {
         display: block;
     }
-
 }

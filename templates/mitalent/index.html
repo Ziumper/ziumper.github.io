@@ -18,12 +18,12 @@
     <nav class="navigation-bar">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4 col-xs-4 burger-menu">
+          <div class="burger-menu">
 
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sub-menu currency-menu">
+          <div class="sub-menu currency-menu">
               <ul>
-                  <li>
+                  <li class="dropdown">
                     <button type="button" data-toggle="dropdown" id="currency-button">
                        Currency: GBP
                         <i class="fas fa-angle-down"></i>  
@@ -36,7 +36,17 @@
                   </li>
               </ul>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sub-menu sub-menu-right">
+          <div id="shopping-cart" class="sub-menu">
+            <ul>
+              <li>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Shopping cart</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sub-menu sub-menu-right">
             <ul>
               <li>
                 <a href="#">
@@ -53,16 +63,7 @@
               </li>
             </ul>
           </div>
-          <div id="shopping-cart" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sub-menu">
-            <ul>
-              <li>
-                <a href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span>Shopping cart</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+         
         </div>
       </div>
     </nav>
