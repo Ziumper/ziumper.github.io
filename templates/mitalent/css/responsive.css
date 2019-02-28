@@ -89,6 +89,11 @@
         display: none;
     }
 
+    
+    .navigation-bar .collapse {
+        display: none!important;
+    }
+
 }
 
 
@@ -103,5 +108,9 @@
 
     .currency-menu {
         display: block;
+    }
+
+    .navigation-bar .collapse {
+        display: none!important;
     }
 }
