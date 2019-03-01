@@ -7,6 +7,7 @@
     .burger-menu {
         display: block;
         width:100%;
+        padding-left:15px;
     }
 
     .sub-menu-right {
@@ -58,6 +59,7 @@
     }
 
     .burger-menu {
+        padding-left:15px;
         width: auto;
     }
 
