@@ -10,12 +10,18 @@
     font-family: Arial;
     font-size: x-large;
     text-transform: uppercase;
+    float: left;
+}
+
+.sub-navigation {
+    float:right;
 }
 
 .sub-navigation-container {
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    background: white;
 }
 
 .sub-navigation-container span{
@@ -28,6 +34,7 @@
     font-weight: bold;
     margin-bottom: 0;
     text-transform: uppercase;
+    padding-left: unset;
     text-decoration: none;
 }
 
@@ -35,7 +42,7 @@
     display: inline-block;
     margin-right: 40px;
     color: #222222;
-    line-height: 35px;
+    line-height: 40px;
     margin-bottom: 10px;
     font-weight: 550;
 }
@@ -135,3 +142,11 @@
     font-weight: 400;
 }
 
+.sub-navigation li.open a i.fa-angle-down,
+.sub-navigation li a i.fa-angle-up {
+    display:none;
+}
+
+.sub-navigation li.open a i.fa-angle-up  {
+    display:inline-block;
+}
