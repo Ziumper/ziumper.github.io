@@ -58,6 +58,10 @@
         display: none;
     }
 
+    #shopping-cart {
+        margin-right: unset;
+    }
+
     .burger-menu {
         padding-left:15px;
         width: auto;
@@ -72,7 +76,7 @@
 @media screen and (min-width:768px) {
 
     #shopping-cart {
-        margin-right: unset;
+        margin-right: 10%;
     }
 
     .sub-menu-right {
