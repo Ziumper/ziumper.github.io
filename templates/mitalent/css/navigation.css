@@ -108,25 +108,33 @@
     color:#00c8c8;
 }
 
-#currency-button {
+.currency-button {
     background: none;
     border: none;
     border-width: unset;
     padding: unset;
 }
 
-#currency-button:focus,
-#currency-button:active,
-#currency-button:hover {
+.currency-button:focus,
+.currency-button:active,
+.currency-button:hover {
     color: #999999;
 }
 
-#currency-button:focus,
-#currency-button:active {
+.currency-button:focus,
+.currency-button:active {
     border:none;
     border-width: unset;
     outline-color: unset;
     outline: unset;
+}
+
+#myNavbar .currency-button {
+    color:#777777;
+    font-weight: bold;
+    padding: 10px 15px;
+    width:100%;
+    text-align:left;
 }
 
 .currency-menu .dropdown-menu {
