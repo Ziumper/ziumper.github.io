@@ -115,6 +115,7 @@
     padding: unset;
 }
 
+
 .currency-button:focus,
 .currency-button:active,
 .currency-button:hover {
@@ -135,6 +136,11 @@
     padding: 10px 15px;
     width:100%;
     text-align:left;
+}
+
+#myNavbar .currency-button[aria-expanded="true"] {
+   color:#999999;
+   font-weight: bold;
 }
 
 .currency-menu .dropdown-menu {
