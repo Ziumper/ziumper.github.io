@@ -134,7 +134,7 @@
     top: 94%;
     color: #999999;
 }
-
+.navigation-bar .collapsing,
 .navigation-bar .collapse {
     border: none;
     box-shadow: none;
@@ -147,10 +147,11 @@
     margin: 0;
 }
 
-.navigation-bar .collapsing ul li a
+.navigation-bar .collapsing ul li a,
 .navigation-bar .collapse ul li a {
     color:#999999;
     font-weight: bold;
+     font-size: 12px;
 }
 
 .navigation-bar .collapsing ul li a:hover,

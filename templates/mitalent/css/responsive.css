@@ -71,6 +71,10 @@
 /* Small devices Tablets   */
 @media screen and (min-width:768px) {
 
+    #shopping-cart {
+        margin-right: unset;
+    }
+
     .sub-menu-right {
         display: block;
     }
@@ -106,6 +110,10 @@
         margin-right: 10%;
         padding-right:15px;
         padding-left:15px;
+    }
+
+    #shopping-cart {
+        margin-right: 10%;
     }
 
     .currency-menu {
