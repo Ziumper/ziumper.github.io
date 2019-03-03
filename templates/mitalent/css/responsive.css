@@ -69,25 +69,25 @@
     .sub-navigation > ul > li,
     .sub-navigation > ul > li a {
         width:100%;
-        text-align:center;
+        text-align:left;
         margin-right:unset;
+    }
+    
+    sub-navigation-link-text {
+        text-align: left;
     }
 
     .sub-navigation-icon {
         width:100%;
-        text-align:center;
+        text-align:left;
     }
 
     .sub-navigation-icon i {
-        right:50%;
+        right: 0;
+        left: 0;
     }
     .sub-navigation .open>.dropdown-menu {
         display:none;
-    }
-
-    .sub-navigation-container {
-        padding-left:unset;
-        padding-right:unset;
     }
 
     .sub-navigation .search-input input {
@@ -98,10 +98,16 @@
         padding-left:unset;
         padding-left:unset;
     }
+     .sub-navigation ul > li > a[data-toggle="dropdown"] {
+        display:none;
+    }
 
 }
 
 @media screen and (min-width: 576px) {
+    sub-navigation-link-text {
+        text-align:left;
+    }
     .currency-menu {
         display: none;
     }
@@ -128,17 +134,18 @@
     .sub-navigation > ul > li,
     .sub-navigation > ul > li a {
         width:100%;
-        text-align:center;
+        text-align:left;
         margin-right:unset;
     }
 
     .sub-navigation-icon {
         width:100%;
-        text-align:center;
+        text-align:left;
     }
 
     .sub-navigation-icon i {
-        right:50%;
+        right: 0;
+        left: 0;
     }
     .sub-navigation .open>.dropdown-menu {
         display:none;
@@ -151,10 +158,16 @@
     .sub-navigation .search-input input {
         width: 85%;
     }
+    .sub-navigation ul > li > a[data-toggle="dropdown"] {
+        display:none;
+    }
 }
 
 /* Small devices Tablets   */
 @media screen and (min-width:768px) {
+    .sub-dropdown-menu-mobile {
+        display:none;
+    }
 
     #shopping-cart {
         margin-right: 10%;
@@ -228,11 +241,21 @@
     }
     .logo {
         margin-right:10px;
+        margin-bottom: 26px;
     }
     
      .sub-navigation.collapse {
         display:block;
         height:unset!important;
+    }
+     .sub-navigation ul > li > a[data-toggle="collapse"] {
+        display:none;
+    }
+    .sub-navigation ul > li > a[data-toggle="dropdown"] {
+        display:inline-block;
+    }
+    .sub-navigation-button[aria-expanded="true"] i.fa-angle-up {
+        display: none;
     }
 }
 
@@ -263,6 +286,8 @@
     }
     .logo {
         margin-right:10px;
+        margin-bottom: 26px;
     }
+   
    
 }
