@@ -41,6 +41,10 @@
         padding-right:0;
     }
 
+    .sub-navigation {
+        width:100%;
+    }
+
     #shopping-cart ul,
     #shopping-cart li {
         width: 100%;
@@ -49,6 +53,50 @@
     .sub-menu-right ul {
         text-align: center;
         float: unset;
+    }
+
+       /* Sub Navigation */
+    .logo {
+        float:unset;
+        text-align:center;
+        /* width: 100%; */
+    }
+
+    .sub-navigation {
+        float:unset;
+    }
+
+    .sub-navigation > ul > li,
+    .sub-navigation > ul > li a {
+        width:100%;
+        text-align:center;
+        margin-right:unset;
+    }
+
+    .sub-navigation-icon {
+        width:100%;
+        text-align:center;
+    }
+
+    .sub-navigation-icon i {
+        right:50%;
+    }
+    .sub-navigation .open>.dropdown-menu {
+        display:none;
+    }
+
+    .sub-navigation-container {
+        padding-left:unset;
+        padding-right:unset;
+    }
+
+    .sub-navigation .search-input input {
+        width: 75%;
+    }
+
+    sub-navigation-header {
+        padding-left:unset;
+        padding-left:unset;
     }
 
 }
@@ -69,6 +117,39 @@
 
     .sub-menu-right {
         display: none;
+    }
+     /* Sub Navigation */
+    .logo {
+        width: unset;
+        text-align:center;
+        float:unset;
+    }
+
+    .sub-navigation > ul > li,
+    .sub-navigation > ul > li a {
+        width:100%;
+        text-align:center;
+        margin-right:unset;
+    }
+
+    .sub-navigation-icon {
+        width:100%;
+        text-align:center;
+    }
+
+    .sub-navigation-icon i {
+        right:50%;
+    }
+    .sub-navigation .open>.dropdown-menu {
+        display:none;
+    }
+
+    .sub-navigation {
+        float:unset;
+    }
+
+    .sub-navigation .search-input input {
+        width: 85%;
     }
 }
 
@@ -102,6 +183,44 @@
     
     .navigation-bar .collapse {
         display: none!important;
+    }
+    
+     /* Sub Navigation */
+    .logo {
+        width: unset;
+        text-align:unset;
+        float:left;
+    }
+    
+    .sub-navigation > ul > li,
+    .sub-navigation > ul > li a {
+        width:unset;
+        text-align:unset;
+        margin-right: 40px;
+    }
+
+    .sub-navigation-icon {
+        width:unset;
+        text-align:unset;
+    }
+    .sub-navigation {
+        text-align:unset;
+        width:unset;
+    }
+
+    .sub-navigation-icon i {
+        right:unset;
+    }
+    .sub-navigation .open>.dropdown-menu {
+        display:block;
+    }
+
+    .sub-navigation {
+        float:right;
+    }
+
+    .sub-navigation .search-input input{
+        width:unset;
     }
 
 }
