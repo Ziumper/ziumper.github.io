@@ -218,10 +218,11 @@
     border-style: solid;
     border-color:#737373;
     border-width: 0.02px;
-    padding:10px;
+    padding: 15px;
     float:right;
     background-color: #f8f8f8;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-size: 12px;
 }
 
 .shop-button:hover {
