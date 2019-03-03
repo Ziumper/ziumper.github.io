@@ -223,6 +223,17 @@
         width:unset;
     }
 
+    .logo i {
+        display:none;
+    }
+    .logo {
+        margin-right:10px;
+    }
+    
+     .sub-navigation.collapse {
+        display:block;
+        height:unset!important;
+    }
 }
 
 
@@ -246,4 +257,12 @@
     .navigation-bar .collapse {
         display: none!important;
     }
+
+    .logo i {
+        display:none;
+    }
+    .logo {
+        margin-right:10px;
+    }
+   
 }

@@ -151,3 +151,31 @@
 .sub-navigation li.open a i.fa-angle-up  {
     display:inline-block;
 }
+
+.logo a,
+.logo a:hover {
+    color:unset;
+    text-decoration:unset;
+}
+
+.logo i {
+    display:block;
+}
+
+.sub-navigation-button:hover {
+    cursor: pointer;
+}
+
+.sub-navigation-button i.fa-angle-up {
+    display: none;
+}
+
+.sub-navigation-button[aria-expanded="false"] i.fa-angle-up,
+.sub-navigation-button[aria-expanded="true"] i.fa-angle-down{
+    display: none;
+}
+
+.sub-navigation-button[aria-expanded="true"] i.fa-angle-up {
+    display: inline-block;
+}
+
