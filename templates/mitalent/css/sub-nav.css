@@ -200,3 +200,32 @@
       color: #00c8c8;
       text-decoration:none;
 }
+
+.shop-big-text {
+    text-transform:uppercase;
+    color:#575153;
+    font-weight:bold;
+    text-align:center;
+    font-size: 300px;
+    letter-spacing: 150px;
+}
+
+.shop-button {
+    background: none;
+    padding: unset;
+    text-transform:uppercase;
+    font-weight:500;
+    border-style: solid;
+    border-color:#737373;
+    border-width: 0.02px;
+    padding:10px;
+    float:right;
+    background-color: #f8f8f8;
+    letter-spacing: 2px;
+}
+
+.shop-button:hover {
+   background-color: #00c8c8;
+   color:white;
+}
+
