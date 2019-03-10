@@ -483,6 +483,7 @@
     padding-bottom: 30px;
     padding-left:0;
     padding-right:0;
+    position:relative;
 }
 
 .product-grid {
@@ -509,6 +510,67 @@
     top:5px;
     color:#b2b2b2;
     font-size:small;
+}
+.small-product-left .product-hover-icon,
+.small-product-right .product-hover-icon,
+.big-product-up .product-hover-icon,
+.big-product-down .product-hover-icon {
+    position:absolute;
+    right: 0;
+    top:50%;
+    left: 0;
+    margin: 0 auto;
+    width: 35px;
+    font-size:xx-large;
+    color:white;
+}
+
+.small-product-left,
+.big-product-up,
+.big-product-down 
+{
+    padding-left:0;
+}
+
+.small-product-right,
+.big-product-up,
+.big-product-down {
+    padding-right:0;
+}
+
+.min-picture-container {
+    position:absolute;
+    right:10px
+}
+
+.min-picture-first-small, 
+.min-picture-second-small
+{
+    position:relative;
+    width: 80px;
+    height: 100px;
+}
+
+.min-picture-first-small {
+    top: 5px;
+}
+
+.min-picture-second-small{
+    top: 100px;
+}
+
+.min-picture-first-small img,
+.min-picture-second-small img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /* Small Phones */
