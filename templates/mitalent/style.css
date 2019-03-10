@@ -636,6 +636,29 @@
 
 /* Small Phones */
 @media screen and (max-width:575px) {
+
+    .main-content-navigation-container {
+        padding-left: 10px;
+        padding-right:10px;
+    }
+
+    .product-grid-right,
+    .product-grid-left{
+        padding:0;
+    }
+
+    .small-product-right, .big-product-up, .big-product-down {
+        padding-right: 10px;
+    }
+    .small-product-left, .big-product-up, .big-product-down {
+        padding-left:10px;
+    }
+
+    .main-content-navigation ul li {
+        display:block;
+        text-align:center;
+    }
+
     .currency-menu {
         display: none;
     }
@@ -695,7 +718,6 @@
     .logo {
         float:unset;
         text-align:center;
-        /* width: 100%; */
     }
 
     .sub-navigation {
@@ -709,7 +731,7 @@
         margin-right:unset;
     }
     
-    sub-navigation-link-text {
+    .sub-navigation-link-text {
         text-align: left;
     }
 
@@ -753,7 +775,13 @@
 }
 
 @media screen and (min-width: 576px) {
-    sub-navigation-link-text {
+
+    .main-content-navigation {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sub-navigation-link-text {
         text-align:left;
     }
     .currency-menu {
