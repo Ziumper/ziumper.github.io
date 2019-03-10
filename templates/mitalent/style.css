@@ -510,6 +510,7 @@
     top:5px;
     color:#b2b2b2;
     font-size:small;
+    z-index: 2;
 }
 .small-product-left .product-hover-icon,
 .small-product-right .product-hover-icon,
@@ -523,6 +524,7 @@
     width: 35px;
     font-size:xx-large;
     color:white;
+    z-index: 2;
 }
 
 .small-product-left,
@@ -540,7 +542,8 @@
 
 .min-picture-container {
     position:absolute;
-    right:10px
+    right:10px;
+    z-index:2;
 }
 
 .min-product-picture, 

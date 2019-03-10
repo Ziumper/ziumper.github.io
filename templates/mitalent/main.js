@@ -3,8 +3,14 @@
 main();
 
 function main() {
-    turnOnSwitchImagesToMainProductByMinatures();
+  
+    //jquery functions
+    $( document ).ready(function() {
+        turnOnSwitchImagesToMainProductByMinatures();
+    });
 }
+
+
 
 function turnOnSwitchImagesToMainProductByMinatures() {
 
@@ -32,7 +38,11 @@ function turnOnSwitchImagesToMainProductByMinatures() {
             if(child.classList)  {
                 if(child.classList.contains('main-product-image')) {
                     imageSrcToSet = getImageSrcFromMiniature(minature);
-                    child.setAttribute('src',imageSrcToSet);
+                    $(child).fadeOut(1000,function(){
+                        child.setAttribute('src',imageSrcToSet);
+                    });
+                   
+                    $(child).fadeIn(1000);
                     break;
                 }
             }
@@ -53,6 +63,7 @@ function turnOnSwitchImagesToMainProductByMinatures() {
     }
     
 }
+
 
 // Źródło: https://gist.github.com/k-gun/c2ea7c49edf7b757fe9561ba37cb19ca
 ;(function() {
