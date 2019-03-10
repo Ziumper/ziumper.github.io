@@ -475,6 +475,7 @@
 .main-product-image  {
     width:100%;
     height:auto;
+    min-height:300px
     
 }
 
@@ -486,6 +487,28 @@
 
 .product-grid {
     padding:0
+}
+
+.small-product-left
+{
+    padding-right: 10px;
+}
+.small-product-right {
+    padding-left:10px;
+}
+
+.product-grid-left {
+    padding-right:15px
+}
+.product-grid-right {
+    padding-left:15px
+}
+.price-tag {
+    position:absolute;
+    left:20px;
+    top:5px;
+    color:#b2b2b2;
+    font-size:small;
 }
 
 /* Small Phones */
