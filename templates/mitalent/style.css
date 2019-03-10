@@ -447,6 +447,7 @@
     border-top-color: #eeeeee;
     border-top-width: 0.5px;
     margin-bottom: 20px;
+    padding-left: 0;
 }
 
 .main-content-navigation  ul {
@@ -454,6 +455,8 @@
     list-style-type:none;
     color:#727272;
     font-weight:bold;
+    padding-left:0
+    
 }
 .main-content-navigation ul li {
     display:inline-block;
@@ -472,7 +475,17 @@
 .main-product-image  {
     width:100%;
     height:auto;
-    margin-bottom:30px;
+    
+}
+
+.product {
+    padding-bottom: 30px;
+    padding-left:0;
+    padding-right:0;
+}
+
+.product-grid {
+    padding:0
 }
 
 /* Small Phones */
