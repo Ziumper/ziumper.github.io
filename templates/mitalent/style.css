@@ -543,24 +543,17 @@
     right:10px
 }
 
-.min-picture-first-small, 
-.min-picture-second-small
+.min-product-picture, 
+.min-product-picture
 {
     position:relative;
     width: 80px;
     height: 100px;
 }
 
-.min-picture-first-small {
-    top: 5px;
-}
 
-.min-picture-second-small{
-    top: 100px;
-}
-
-.min-picture-first-small img,
-.min-picture-second-small img {
+.min-product-picture img,
+.min-product-picture img {
     max-height: 100%;
     max-width: 100%;
     width: auto;
@@ -571,6 +564,13 @@
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.min-picture-container-first {
+    top:5px;
+}
+.min-picture-container-second {
+    top:100px
 }
 
 /* Small Phones */
