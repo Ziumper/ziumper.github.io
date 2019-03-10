@@ -480,10 +480,10 @@
 }
 
 .product {
-    padding-bottom: 30px;
     padding-left:0;
     padding-right:0;
     position:relative;
+    margin-bottom: 30px;
 }
 
 .product-grid {
@@ -525,6 +525,11 @@
     font-size:xx-large;
     color:white;
     z-index: 2;
+    cursor:pointer;
+}
+
+.product-hover-icon:hover {
+    color:#00c8c8
 }
 
 .small-product-left,
@@ -554,6 +559,9 @@
     height: 100px;
 }
 
+.min-product-picture:hover {
+    cursor:pointer;
+}
 
 .min-product-picture img,
 .min-product-picture img {
@@ -574,6 +582,56 @@
 }
 .min-picture-container-second {
     top:100px
+}
+
+
+
+.product-preview-menu {
+    min-height: 100px;
+    position:absolute;
+    background-color:white;
+    width:100%;
+    text-align:center;
+    display:none;
+}
+
+.product-preview-title {
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#727272;
+    font-size:11px;
+    padding-top:15px;
+
+}
+.product-preview-description {
+    color:#727272;
+    font-size:12px;
+    padding-top:10px;
+}
+
+.product-preview-buttons {
+   padding-top:10px;
+   padding-bottom:10px;
+}
+
+.product-preview-buttons i {
+    background-color: #727272;
+    border: 1px solid #727272;
+    padding: 4px;
+    border-radius: 15px;
+    color: white;
+}
+.product-preview-buttons i:hover {
+    background-color:#00c8c8;
+    border:1px solid #00c8c8;
+    cursor:pointer;
+}
+
+
+.product:hover .product-preview-menu {
+    display:block;
+    z-index:3;
+    bottom:unset;
 }
 
 /* Small Phones */
