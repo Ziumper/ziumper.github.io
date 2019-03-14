@@ -728,3 +728,11 @@
     padding-top: 50px;
 }
 
+.footer-menu {
+    float:left;
+}
+
+footer {
+    clear:both;
+    background-color: #f8f8f8;
+}
