@@ -503,7 +503,7 @@
     padding-right:15px
 }
 .product-grid-right {
-    padding-left:15px
+    /* padding-left:15px */
 }
 .price-tag {
     position:absolute;
@@ -677,12 +677,13 @@
     padding-left: unset;
 }
 
-.product-article-image-container {min-width: 200px;margin-top: 20px;}
+.product-article-image-container {padding: unset;min-width: 200px;margin-top: 20px;}
 
 .product-article-content-container {
     text-align: right;
     padding-right: 15px;
     padding-left: 0;
+    float: right;
 }
 
 .product-article-content-container h1 {
