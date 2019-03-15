@@ -500,10 +500,10 @@
 }
 
 .product-grid-left {
-    padding-right:15px
+    padding-right:15px;
 }
 .product-grid-right {
-    /* padding-left:15px */
+     padding-left:15px;
 }
 .price-tag {
     position:absolute;
@@ -682,7 +682,7 @@
 .product-article-content-container {
     text-align: right;
     padding-right: 15px;
-    padding-left: 0;
+    padding-left: 15px;
     float: right;
 }
 
@@ -693,7 +693,7 @@
 }
 
 .product-article-content-container p {
-    margin-bottom:30px
+    margin-bottom:30px;
 }
 
 .product-article-content-container button:focus,
@@ -730,9 +730,67 @@
 
 .footer-menu {
     float:left;
+    margin-bottom:50px;
+    margin-left: 50px;
 }
 
 footer {
     clear:both;
     background-color: #f8f8f8;
+}
+
+.footer-menu h4 a {
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:bold;
+    color: #727272;
+}
+
+.footer-menu ul li a:hover,
+.footer-menu h4 a:hover {
+    text-decoration: none;
+    color:#00c8c8;
+}
+
+.footer-menu h4 {
+    margin-top:50px;
+    margin-bottom:20px;
+}
+
+.footer-menu ul {
+    padding:unset;
+    list-style-type:none;
+    margin-right:50px
+}
+
+.footer-menu ul li a {
+    color: #727272;
+}
+
+.credentials {
+    background-color: #333333;
+    color: #999999;
+}
+.credentials .container {
+    padding-left:0;
+    padding-right:0;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+ 
+.left-credential {
+    float:left;
+    margin-left:50px;
+}
+
+.right-credential {
+    float:right;
+    margin-right:50px;
+}
+
+.right-credential a { 
+    color: #999999;
+}
+.right-credential a:hover {
+    text-decoration: none;
 }
