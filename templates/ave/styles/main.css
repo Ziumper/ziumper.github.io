@@ -1,5 +1,5 @@
 /*Navigation bar  */
-.mi-talent .navigation-bar {
+.navigation-bar {
     background-color: #333333;
     min-height: 45px;
     width:100%;
@@ -9,7 +9,7 @@
     display: none;
 }
 
-.mi-talent .navigation-bar .container {
+ .navigation-bar .container {
     margin-left:10%;
     margin-right: 10%;
 }
