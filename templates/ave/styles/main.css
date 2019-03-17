@@ -868,5 +868,42 @@ footer {
 .pubblictation-button button:hover {
     background-color: #00c8c8;
     color: white;
+}
 
+.map-information {
+    background-color: #f8f8f8;
+    display: table-row;
+}
+
+.map img {
+    width:100%;
+    height:auto;
+}
+
+.publication-map-addres a,
+.publication-map-addres {
+  color: #727272;
+}
+
+.publication-map-addres a:hover {
+    color:#00c8c8;
+    text-decoration:unset;
+}
+
+.map {width: 70%;display: table-cell;/* background: red; */vertical-align: middle;}
+.map-section {
+    display:table;
+    width:100%;
+    margin-bottom: 50px;
+}
+.information {
+    display: table-cell;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.map-publication.publication {
+    
+margin-top: unset;
 }
