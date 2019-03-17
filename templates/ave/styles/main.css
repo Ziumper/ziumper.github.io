@@ -849,7 +849,7 @@ footer {
 }
 
 .pubblictation-button button {
-    background-color: #737373;
+    background-color: #ffffff;
     color: #454647;
     margin-bottom: 100px;
     border: none;
@@ -862,4 +862,11 @@ footer {
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    border: 1px solid #454647;
+}
+
+.pubblictation-button button:hover {
+    background-color: #00c8c8;
+    color: white;
+
 }
