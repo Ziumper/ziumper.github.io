@@ -826,3 +826,40 @@ footer {
     text-transform:uppercase;
     letter-spacing: 10px;
 }
+
+.publication {
+    margin-top:40px
+}
+
+.publication-addres {
+    font-weight:bold;
+    color: #727272;
+    text-transform: uppercase;
+}
+
+.publication-content  {
+   color: #727272;
+   margin-bottom:40px
+}
+
+.publication h4 {
+    text-transform:uppercase;
+    font-size:17px;
+    color: #575153;
+}
+
+.pubblictation-button button {
+    background-color: #737373;
+    color: #454647;
+    margin-bottom: 100px;
+    border: none;
+    border-width: unset;
+    padding: unset;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
