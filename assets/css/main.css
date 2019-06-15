@@ -1,7 +1,2 @@
-.hacking {
-    background: url('../images/hacking.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+@import 'style.css';
+@import 'responsive.css';
