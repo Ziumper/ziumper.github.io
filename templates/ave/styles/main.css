@@ -894,7 +894,6 @@ footer {
 .map-section {
     display:table;
     width:100%;
-    margin-bottom: 50px;
 }
 .information {
     display: table-cell;

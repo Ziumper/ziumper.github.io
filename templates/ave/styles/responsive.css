@@ -1,6 +1,16 @@
 /* Small Phones */
 @media screen and (max-width:575px) {
 
+    .map.map-desktop {
+        display: none;
+    }
+
+    .map.map-mobile {
+        display: table-caption;
+        width: 100%;
+        vertical-align: middle;
+    }
+
     .right-credential {
         margin-right: 0;
         float: left;
@@ -157,6 +167,16 @@
 }
 
 @media screen and (min-width: 576px) {
+    .map.map-mobile {
+        display: table-caption;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .map.map-desktop {
+        display: none;
+    }
+
 
     .product-article-category:first-child,
     .product-article-category,
@@ -256,8 +276,15 @@
 
 /* Small devices Tablets   */
 @media screen and (min-width:768px) {
+    .map.map-mobile {
+        display: table-caption;
+        width: 100%;
+        vertical-align: middle;
+    }
 
-   
+    .map.map-desktop {
+        display: none;
+    }
 
     .sub-dropdown-menu-mobile {
         display:none;
@@ -432,6 +459,14 @@
     }
     .shop-button-wrapper  {
         padding-right:300px;
+    }
+
+    .map.map-mobile {
+        display: none;
+    }
+
+    .map.map-desktop {
+        display: table-cell;
     }
    
 }
