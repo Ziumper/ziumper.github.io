@@ -86,14 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/test.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/test.css ***!
-  \*******************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/styles/main.less":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/styles/main.less ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar getUrl = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ./../assets/images/hacking.jpg */ \"./src/assets/images/hacking.jpg\"));\n// Module\nexports.push([module.i, \"body {\\r\\n    background: black;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat center center fixed;\\r\\n}\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/test.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar getUrl = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ../assets/images/hacking.jpg */ \"./src/assets/images/hacking.jpg\"));\n// Module\nexports.push([module.i, \".hacking {\\n  background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat center center fixed;\\n  -webkit-background-size: cover;\\n  -moz-background-size: cover;\\n  -o-background-size: cover;\\n  background-size: cover;\\n  width: 100%;\\n  height: 100%;\\n  position: absolute;\\n}\\nbody {\\n  background: #000000;\\n  margin: 10;\\n  padding: 0;\\n}\\n.toggle {\\n  position: absolute;\\n  top: 3%;\\n  left: 100%;\\n  transform: translate(-150%, -3%);\\n  z-index: 1;\\n}\\n.toggle span {\\n  position: relative;\\n  width: 36px;\\n  height: 4px;\\n  background: #fff;\\n  display: block;\\n  margin-bottom: 8px;\\n  transition: 0.5s;\\n}\\n.toggle span:nth-child(1) {\\n  transform-origin: left;\\n}\\n.toggle span:nth-child(2) {\\n  transform-origin: center;\\n}\\n.toggle span:nth-child(3) {\\n  transform-origin: center;\\n}\\n.toggle.active span:nth-child(1) {\\n  transform: rotate(45deg);\\n  left: 2px;\\n}\\n.toggle.active span:nth-child(2) {\\n  transform: rotate(315deg);\\n  right: 3px;\\n}\\n.toggle.active span:nth-child(3) {\\n  transform: scale(0);\\n}\\n.mobile-menu {\\n  position: absolute;\\n  top: 50%;\\n  left: 50%;\\n  transform: translate(-50%, -50%);\\n  z-index: 1;\\n}\\n/* Desktop */\\n/* Tablets */\\n/* Mobile */\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/main.less?./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -173,18 +173,18 @@ eval("module.exports = \"dist/c95cb7d379697b360d8237665c90defd.jpg\";\n\n//# sou
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/hacking.jpg */ \"./src/assets/images/hacking.jpg\");\n/* harmony import */ var _assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_test_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/test.css */ \"./src/styles/test.css\");\n/* harmony import */ var _styles_test_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_test_css__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function() {\r\n    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.toggle').click(function() {\r\n        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.toggle').toggleClass('active');\r\n    });\r\n\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/hacking.jpg */ \"./src/assets/images/hacking.jpg\");\n/* harmony import */ var _assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_images_hacking_jpg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_main_less__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.less */ \"./src/styles/main.less\");\n/* harmony import */ var _styles_main_less__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_main_less__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function() {\r\n    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.toggle').click(function() {\r\n        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.toggle').toggleClass('active');\r\n    });\r\n\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/styles/test.css":
-/*!*****************************!*\
-  !*** ./src/styles/test.css ***!
-  \*****************************/
+/***/ "./src/styles/main.less":
+/*!******************************!*\
+  !*** ./src/styles/main.less ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./test.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/test.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/test.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!../../node_modules/less-loader/dist/cjs.js!./main.less */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/styles/main.less\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/main.less?");
 
 /***/ })
 
