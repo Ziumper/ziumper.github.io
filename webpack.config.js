@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -22,18 +21,13 @@ module.exports = {
                 ]
             },
             {
-                /**
-                 * File loader 
-                 * is loading files imported from ./src/index.js
-                 */
+
                 test: /\.(png|svg|jpg|gif)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    /**
-                     * Public path option 
-                     * from documentation overwrite spcified public path
-                     */
-                    publicPath: 'dist',
+                    publicPath: "dist/images",
+                    limit: 15000,
+                    outputPath: "images"
                 }
             }
         ],
