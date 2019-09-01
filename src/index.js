@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     function showPage() {
         $('#loading').fadeOut(3000);
-        $('#page').fadeIn(5000, 'linear');
+        $('#page').fadeIn(4000);
     }
 
 });
