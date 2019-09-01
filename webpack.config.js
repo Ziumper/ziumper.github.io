@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
 module.exports = {
@@ -12,11 +13,10 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.s[ac]ss$/i,
-                use: [{
-                        loader: 'style-loader', // creates style nodes from JS strings
-                    },
+                use: [
+                    MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader', // translates CSS into CommonJS
+                        loader: 'css-loader',
                     },
                     {
                         loader: 'sass-loader', // compiles sass to CSS
@@ -25,11 +25,10 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                use: [{
-                        loader: 'style-loader', // creates style nodes from JS strings
-                    },
+                use: [
+                    MiniCssExtractPlugin.loader,
                     {
-                        loader: 'css-loader', // translates CSS into CommonJS
+                        loader: 'css-loader',
                     },
                     {
                         loader: 'less-loader', // compiles Less to CSS
@@ -41,12 +40,16 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'url-loader',
                 options: {
-                    publicPath: "dist/images",
                     outputPath: "images",
-                    limit: 25000
+                    limit: 2400
                 }
             }
         ],
-
-    }
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ]
 };

@@ -1,4 +1,3 @@
-import './styles/main.less';
 import './styles/main.scss';
 import $ from "jquery";
 import 'bootstrap';
