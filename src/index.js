@@ -20,8 +20,8 @@ $(document).ready(function() {
     }
 
     function showPage() {
-        $('#page').show();
-        $('#loading').hide();
+        $('#loading').fadeOut(3000);
+        $('#page').fadeIn(5000, 'linear');
     }
 
 });
