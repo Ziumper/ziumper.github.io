@@ -1,10 +1,28 @@
-import $ from "jquery";
 import './styles/main.less';
-import './styles/main.sass';
+import './styles/main.scss';
+import $ from "jquery";
+import 'bootstrap';
+
 
 $(document).ready(function() {
-    $('.toggle').click(function() {
-        $('.toggle').toggleClass('active');
-    });
+
+    main();
+
+    function main() {
+        addClickHandlerOnToggle();
+        showPage();
+    }
+
+
+    function addClickHandlerOnToggle() {
+        $('.toggle').click(function() {
+            $('.toggle').toggleClass('active');
+        });
+    }
+
+    function showPage() {
+        $('#page').show();
+        $('#loading').hide();
+    }
 
 });

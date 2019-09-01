@@ -1,7 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        loader: './src/components/loader/loader.js',
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -39,8 +42,8 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     publicPath: "dist/images",
-                    limit: 15000,
-                    outputPath: "images"
+                    outputPath: "images",
+                    limit: 25000
                 }
             }
         ],
