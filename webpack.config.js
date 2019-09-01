@@ -4,7 +4,6 @@ const path = require('path');
 module.exports = {
     entry: {
         index: './src/index.js',
-        loader: './src/components/loader/loader.js',
     },
     output: {
         filename: '[name].bundle.js',
@@ -24,7 +23,6 @@ module.exports = {
                 ]
             },
             {
-
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'url-loader',
                 options: {
@@ -39,5 +37,10 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         })
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
 };
