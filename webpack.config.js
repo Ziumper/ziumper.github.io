@@ -24,18 +24,6 @@ module.exports = {
                 ]
             },
             {
-                test: /\.less$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                    },
-                    {
-                        loader: 'less-loader', // compiles Less to CSS
-                    }
-                ]
-            },
-            {
 
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'url-loader',
