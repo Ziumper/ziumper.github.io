@@ -1,26 +1,5 @@
-import '../styles/main.scss';
-import $ from "jquery";
+import '../styles/index.scss';
 import 'bootstrap';
+import { main } from './main';
 
-
-$(document).ready(function() {
-
-    main();
-
-    function main() {
-        addClickHandlerOnToggle();
-        showPage();
-
-        function addClickHandlerOnToggle() {
-            $('.toggle').click(function() {
-                $('.toggle').toggleClass('active');
-            });
-        }
-
-        function showPage() {
-            $('#loading').fadeOut(3000);
-            $('#page').fadeIn(4000);
-        }
-    }
-
-});
+main();
