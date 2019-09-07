@@ -1,6 +1,6 @@
 .toggle {
     position: absolute;
-    top: 1%;
+    top: 2%;
     left: 100%;
     transform: translate(-150%, -3%);
     z-index: 1;
@@ -10,7 +10,7 @@
     position: relative;
     width: 36px;
     height: 4px;
-    background: #fff;
+    background: white;
     display: block;
     margin-bottom: 8px;
     transition: .5s;
@@ -72,6 +72,10 @@
     padding-right: 15px;
 }
 
+.toggle-menu-list-element:hover {
+    cursor: pointer;
+}
+
 .toggle-menu-list-link {
     font-size: x-large;
     color: white;
@@ -85,4 +89,10 @@
 
 .toggle-menu.active .toggle-menu-list-link {
     opacity: 1;
+}
+
+.toggle-menu-list-link:hover {
+    color: gray;
+    text-decoration: unset;
+    cursor: pointer;
 }
