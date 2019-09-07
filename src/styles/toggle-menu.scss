@@ -1,6 +1,6 @@
 .toggle {
     position: absolute;
-    top: 3%;
+    top: 1%;
     left: 100%;
     transform: translate(-150%, -3%);
     z-index: 1;
@@ -47,10 +47,42 @@
     background: #211f1f;
     color: white;
     padding-top: 60px;
-    min-width: 150px;
     right: 0;
     height: 100%;
+    width: 0;
     text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    transition: width 2s;
+}
+
+.toggle-menu.active {
+    width: 250px;
+}
+
+.toggle-menu-list {
+    list-style-type: none;
+    padding-left: unset;
+}
+
+.toggle-menu-list-element {
+    padding-bottom: 10px;
+    padding-top: 10px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.toggle-menu-list-link {
+    font-size: x-large;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.toggle-menu .toggle-menu-list-link {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.toggle-menu.active .toggle-menu-list-link {
+    opacity: 1;
 }

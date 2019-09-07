@@ -3,13 +3,14 @@ import $ from "jquery";
 export const main = () => {
 
     $(document).ready(() => {
-        addClickHandlerOnToggle();
+        onToggleMenuButtonClick();
         showPage();
     })
 
-    function addClickHandlerOnToggle() {
+    function onToggleMenuButtonClick() {
         $('.toggle').click(function() {
             $('.toggle').toggleClass('active');
+            $('.toggle-menu').toggleClass('active');
         });
     }
 
