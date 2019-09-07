@@ -6,6 +6,10 @@
     z-index: 1;
 }
 
+.toggle:hover {
+    cursor: pointer;
+}
+
 .toggle span {
     position: relative;
     width: 36px;
