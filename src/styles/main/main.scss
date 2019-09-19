@@ -1,3 +1,9 @@
+@import "./loader.scss";
+@import "./toggle-menu/toggle-menu.scss";
+@import "./toggle-menu//toggle-menu-responsive.scss";
+@import "./footer/footer.scss";
+@import "./header/header.scss";
+@import "./responsive.scss";
 .parallax {
     overflow: hidden;
     visibility: visible;
@@ -24,4 +30,16 @@
     background: unset;
     color: white;
     text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.jumbo-title .container-fluid {
+    padding-top: 150px;
 }
