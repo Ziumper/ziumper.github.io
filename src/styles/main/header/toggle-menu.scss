@@ -1,9 +1,5 @@
 .toggle {
-    position: absolute;
-    top: 2%;
-    left: 100%;
-    transform: translate(-150%, -3%);
-    z-index: 1;
+    display: none;
 }
 
 .toggle:hover {
