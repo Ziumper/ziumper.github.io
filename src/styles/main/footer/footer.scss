@@ -6,17 +6,15 @@
 
 .footer-belt {
     background: #141414;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     color: gray;
-    display: flex;
 }
 
 .footer-belt .footer-belt-block {
     display: flex;
-    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer-belt .footer-belt-block .footer-logo-image {
@@ -58,14 +56,18 @@
 
 /* Tablets and mobile*/
 
-@media screen and (max-width:1199px) {
-    .footer-belt {
-        flex-direction: column;
-    }
+@media screen and (max-width:991px) {
     .footer-belt .footer-belt-block {
         padding-top: 15px;
         padding-bottom: 15px;
         padding-right: 5px;
         padding-left: 5px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .footer-belt .footer-belt-block {
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
 }
