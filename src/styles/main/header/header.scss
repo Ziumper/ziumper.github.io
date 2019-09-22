@@ -1,4 +1,44 @@
 @import './toggle-menu.scss';
+.parallax {
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    min-height: 800px;
+    background: url('./../assets/images/business.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax .opacity-medium {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    background: #1c1c1c;
+}
+
+.parallax .jumbo-title {
+    background: unset;
+    color: white;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.jumbo-title .container-fluid {
+    padding-top: 250px;
+}
+
 .logo {
     padding: 15px;
 }
@@ -6,4 +46,25 @@
 .logo-image {
     width: 130px;
     height: 100%;
+}
+
+.navigation-container {
+    z-index: 1;
+}
+
+.navigation-container .navbar-nav {
+    flex-direction: row;
+}
+
+.navigation-container .navbar-nav .nav-item {
+    padding: 15px;
+}
+
+.navigation-container .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: large;
+}
+
+.navigation-container .navbar-nav .nav-item .nav-link:hover {
+    color: #adadad;
 }
