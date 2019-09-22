@@ -68,3 +68,32 @@
 .navigation-container .navbar-nav .nav-item .nav-link:hover {
     color: #adadad;
 }
+
+
+/* Desktop */
+
+@media screen and (min-width:1200px) {}
+
+
+/* Tablets */
+
+@media screen and (max-width:1199px) and (min-width:768px) {
+    .toggle {
+        display: block;
+    }
+    .navbar-nav {
+        display: none;
+    }
+}
+
+
+/* Mobile */
+
+@media screen and (max-width:767px) {
+    .toggle {
+        display: block;
+    }
+    .navbar-nav {
+        display: none;
+    }
+}

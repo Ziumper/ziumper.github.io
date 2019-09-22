@@ -54,3 +54,18 @@
     color: gray;
     text-decoration: none;
 }
+
+
+/* Tablets and mobile*/
+
+@media screen and (max-width:1199px) {
+    .footer-belt {
+        flex-direction: column;
+    }
+    .footer-belt .footer-belt-block {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
