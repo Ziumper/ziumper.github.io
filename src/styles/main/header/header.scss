@@ -1,5 +1,6 @@
 @import './toggle-button.scss';
 @import './toggle-menu.scss';
+@import "./navigation.scss";
 .parallax {
     overflow: hidden;
     visibility: visible;
@@ -48,32 +49,6 @@
     width: 130px;
     height: 20px;
 }
-
-.navigation-container {
-    z-index: 1;
-}
-
-.navigation-container .navbar-nav {
-    flex-direction: row;
-}
-
-.navigation-container .navbar-nav .nav-item {
-    padding: 15px;
-}
-
-.navigation-container .navbar-nav .nav-item .nav-link {
-    color: white;
-    font-size: large;
-}
-
-.navigation-container .navbar-nav .nav-item .nav-link:hover {
-    color: #adadad;
-}
-
-
-/* Desktop */
-
-@media screen and (min-width:1200px) {}
 
 
 /* Tablets and mobile*/

@@ -1,21 +1,21 @@
 /* Toggle menu */
 
 .toggle-menu {
-    position: fixed;
-    color: white;
-    top: -100%;
-    width: 100%;
-    text-align: left;
-    padding-left: 0px;
-    padding-right: 0px;
     transition: height 2s;
-    height: 0;
+    position: absolute;
+    // position: fixed;
+    color: white;
+    text-align: left;
+    top: 70px;
+    width: 100%;
+}
+
+.toggle-menu #hidden-accordion {
+    display: none;
 }
 
 .toggle-menu.active {
     height: 100%;
-    top: 0;
-    display: block;
 }
 
 .toggle-menu-list {
@@ -23,34 +23,28 @@
     padding-left: unset;
 }
 
-.toggle-menu-list-element {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+.toggle-menu .toggle-menu-list .toggle-menu-item {
+    background: rgba(#1c1c1c, 0.99);
+    border-bottom: 1px solid gray;
+    display: none;
 }
 
-.toggle-menu-list-element:hover {
-    cursor: pointer;
-}
-
-.toggle-menu-list-link {
-    font-size: x-large;
+.toggle-menu .toggle-menu-list .toggle-menu-item .toggle-menu-link {
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* #1c1c1c*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-size: small;
 }
 
-.toggle-menu .toggle-menu-list-link {
-    opacity: 0;
-    transition: opacity 2s;
+.toggle-menu .toggle-menu-list .toggle-menu-item:last-child {
+    border-bottom: unset;
 }
 
-.toggle-menu.active .toggle-menu-list-link {
-    opacity: 1;
-}
-
-.toggle-menu-list-link:hover {
+.toggle-menu .toggle-menu-list .toggle-menu-item .toggle-menu-link:hover {
     color: gray;
     text-decoration: unset;
-    cursor: pointer;
 }

@@ -18,7 +18,19 @@ export const main = () => {
         $('.toggle').click(function() {
             $('.toggle').toggleClass('active');
             $('.toggle-menu').toggleClass('active');
+            var accordionChilds = $('.toggle-menu .toggle-menu-list .toggle-menu-item');
+            $.each(accordionChilds, function(number, element) {
+                var jqueryElement = $(element);
+                var visibleElement = jqueryElement.is(':visible');
+                if (visibleElement) {
+                    jqueryElement.slideUp("slow");
+                } else {
+                    jqueryElement.slideDown("slow");
+                }
+            });
         });
+
+
     }
 
     function showPage() {
