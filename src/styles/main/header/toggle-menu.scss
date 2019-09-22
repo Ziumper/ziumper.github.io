@@ -1,63 +1,21 @@
-.toggle {
-    display: none;
-}
-
-.toggle:hover {
-    cursor: pointer;
-}
-
-.toggle span {
-    position: relative;
-    width: 36px;
-    height: 4px;
-    background: white;
-    display: block;
-    margin-bottom: 8px;
-    transition: .5s;
-}
-
-.toggle span:nth-child(1) {
-    transform-origin: left;
-}
-
-.toggle span:nth-child(2) {
-    transform-origin: center;
-}
-
-.toggle span:nth-child(3) {
-    transform-origin: center;
-}
-
-.toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    left: 2px;
-}
-
-.toggle.active span:nth-child(2) {
-    transform: rotate(315deg);
-    right: 3px;
-}
-
-.toggle.active span:nth-child(3) {
-    transform: scale(0);
-}
+/* Toggle menu */
 
 .toggle-menu {
     position: fixed;
-    background: #211f1f;
     color: white;
-    padding-top: 60px;
-    right: 0;
-    height: 100%;
-    width: 0;
+    top: -100%;
+    width: 100%;
     text-align: left;
     padding-left: 0px;
     padding-right: 0px;
-    transition: width 2s;
+    transition: height 2s;
+    height: 0;
 }
 
 .toggle-menu.active {
-    width: 250px;
+    height: 100%;
+    top: 0;
+    display: block;
 }
 
 .toggle-menu-list {
