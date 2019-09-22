@@ -2,6 +2,8 @@ import $ from "jquery";
 import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 
 export const main = () => {
 
@@ -29,6 +31,11 @@ export const main = () => {
     }
 
     function addIcons() {
-        library.add([faGithub, faLinkedin]);
+        library.add([
+            faGithub,
+            faLinkedin,
+            faInstagram,
+            faFacebook
+        ]);
     }
 }
