@@ -9,9 +9,15 @@ body {
     text-align: center;
 }
 
+.main .seciton-head,
 .main .section-title {
     margin-bottom: unset;
     position: relative;
+    font-style: normal;
+}
+
+.main .section-head {
+    margin-bottom: 60px;
 }
 
 .main .section-title::before {
@@ -48,7 +54,14 @@ body {
     background: #1c1c1c;
 }
 
+.main .projects-section .section-text,
 .main .projects-section .section-title:hover,
 .main .projects-section .section-title {
     color: white;
+}
+
+.main .section-text {
+    width: 800px;
+    text-align: center;
+    margin: auto;
 }
