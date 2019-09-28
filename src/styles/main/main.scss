@@ -11,6 +11,31 @@ body {
 
 .main .section-title {
     margin-bottom: unset;
+    position: relative;
+}
+
+.main .section-title::before {
+    border-top: 1px solid;
+    content: "";
+    height: 0;
+    left: auto;
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    width: 40px;
+    opacity: .4;
+}
+
+.main .section-title::after {
+    border-top: 1px solid;
+    content: "";
+    height: 0;
+    left: auto;
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    width: 40px;
+    opacity: .4;
 }
 
 .main .content-section {
