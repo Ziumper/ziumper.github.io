@@ -16,5 +16,14 @@ body {
 .main .content-section {
     padding-top: 100px;
     padding-bottom: 100px;
-    background: #f7f7f7
+    background: #f7f7f7;
+}
+
+.main .projects-section {
+    background: #1c1c1c;
+}
+
+.main .projects-section .section-title:hover,
+.main .projects-section .section-title {
+    color: white;
 }
