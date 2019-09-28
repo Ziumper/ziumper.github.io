@@ -21,3 +21,12 @@
 .navigation-container .navbar-nav .nav-item .nav-link:hover {
     color: #adadad;
 }
+
+
+/* Tablets and mobile*/
+
+@media screen and (max-width:1199px) {
+    .navbar-nav {
+        display: none;
+    }
+}

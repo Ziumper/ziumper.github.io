@@ -44,3 +44,12 @@
 .toggle.active span:nth-child(3) {
     transform: scale(0);
 }
+
+
+/* Tablets and mobile*/
+
+@media screen and (max-width:1199px) {
+    .toggle {
+        display: block;
+    }
+}

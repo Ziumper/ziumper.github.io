@@ -48,3 +48,19 @@
     color: gray;
     text-decoration: unset;
 }
+
+.toggle-menu {
+    display: none;
+}
+
+
+/* Tablets and mobile*/
+
+@media screen and (max-width:1199px) {
+    .toggle {
+        display: block;
+    }
+    .toggle-menu {
+        display: block;
+    }
+}

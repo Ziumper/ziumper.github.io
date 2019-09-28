@@ -49,15 +49,3 @@
     width: 130px;
     height: 20px;
 }
-
-
-/* Tablets and mobile*/
-
-@media screen and (max-width:1199px) {
-    .toggle {
-        display: block;
-    }
-    .navbar-nav {
-        display: none;
-    }
-}
