@@ -65,6 +65,15 @@ export const main = () => {
                 $('.owl-carousel .owl-dot').eq(i).append(element);
             });
 
+        $(".owl-carousel").find('.owl-dot').each(function(i) {
+            $(this).click(function(e) {
+                var index = $(e.currentTarget.parentElement).children().index(e.currentTarget);
+                var activeItem = $(".owl-stage").children().eq(index).children(".item");
+                var imageUrl = $(activeItem).attr("background-image");
+                console.log(imageUrl);
+                $('#carousel-parallax').css("background-image", "url(" + imageUrl + ")");
+            });
+        });
 
     }
 }
