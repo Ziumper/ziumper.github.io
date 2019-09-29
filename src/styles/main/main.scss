@@ -54,6 +54,7 @@ body {
     background: #1c1c1c;
 }
 
+.main .black-section,
 .main .black-section .section-text,
 .main .black-section .section-title:hover,
 .main .black-section .section-title {
@@ -64,4 +65,52 @@ body {
     width: 45%;
     text-align: center;
     margin: auto;
+}
+
+.owl-carousel .item {
+    width: 100%;
+    height: 50vh;
+    background: #333;
+    padding: 10px;
+}
+
+.owl-carousel .item p {
+    font-size: 3em;
+    color: #fff;
+}
+
+.main .parallax-section {
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    min-height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./../assets/images/book.jpg");
+}
+
+.main .parallax-section .opacity-medium {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    background: #1c1c1c;
+}
+
+.carousel-section .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 100px;
+}
+
+.carousel-section .owl-theme .owl-dots .owl-dot span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-section .owl-theme .owl-dots .owl-dot {
+    margin-left: 30px;
+    margin-right: 30px;
 }
