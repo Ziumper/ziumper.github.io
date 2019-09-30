@@ -89,6 +89,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("./../assets/images/book.jpg");
+    -webkit-transition: background-image 1s;
+    /* Safari prior 6.1 */
+    transition: background-image 1s;
 }
 
 .main .parallax-section .opacity-medium {
