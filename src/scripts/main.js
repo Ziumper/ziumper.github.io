@@ -58,16 +58,17 @@ export const main = () => {
         $(".owl-carousel").owlCarousel({
                 items: 1,
                 dots: true,
-                onDragged: onDraggedCallback
+                onDragged: onDraggedCallback,
+                dotsContainer: "#dots-container"
             }).find('.owl-item')
             .each(function(i) {
                 var attr = $(this).children().attr('data-year');
                 var element = $('<p>' + attr + '</p>');
-                $('.owl-carousel .owl-dot').eq(i).append(element);
+                $('#dots-container .owl-dot').eq(i).append(element);
             });
 
 
-        $(".owl-carousel").find('.owl-dot').each(function(i) {
+        $("#dots-container").find('.owl-dot').each(function(i) {
             $(this).click(function(e) {
                 var index = $(e.currentTarget.parentElement).children().index(e.currentTarget);
                 changeBackground(index);
