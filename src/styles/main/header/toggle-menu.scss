@@ -3,11 +3,12 @@
 .toggle-menu {
     transition: height 2s;
     position: absolute;
-    // position: fixed;
     color: white;
     text-align: left;
-    top: 70px;
+    top: 54px;
     width: 100%;
+    left: 0;
+    right: 0;
 }
 
 .toggle-menu #hidden-accordion {
@@ -51,6 +52,18 @@
 
 .toggle-menu {
     display: none;
+}
+
+.navbar-fixed .toggle span {
+    background-color: black;
+}
+
+.navbar-fixed .toggle-menu .toggle-menu-list .toggle-menu-item .toggle-menu-link {
+    color: black;
+}
+
+.navbar-fixed .toggle-menu .toggle-menu-list .toggle-menu-item {
+    background-color: white;
 }
 
 

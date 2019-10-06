@@ -14,6 +14,7 @@ export const main = () => {
         addIcons();
         turnOnFontAwesomeIcons();
         addOwlCarousel();
+        addOnScrollFixedMenu();
     })
 
     function onToggleMenuButtonClick() {
@@ -86,5 +87,19 @@ export const main = () => {
             $('#carousel-parallax').css("background-image", "url(" + imageUrl + ")");
         }
 
+    }
+
+    function addOnScrollFixedMenu() {
+        var navbar = $(".navigation-container");
+        var lastScrollTop = 0;
+        $(window).scroll(function(event) {
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop || st == 0) {
+                navbar.removeClass('navbar-fixed');
+            } else {
+                navbar.addClass("navbar-fixed")
+            }
+            lastScrollTop = st;
+        });
     }
 }

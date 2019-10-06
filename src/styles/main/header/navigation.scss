@@ -2,7 +2,40 @@
 
 .navigation-container {
     z-index: 1;
-    padding-left: unset;
+    height: auto;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: background-color 1s;
+}
+
+.navigation-container .logo-black {
+    display: none;
+}
+
+.navigation-container.navbar-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+}
+
+.navigation-container.navbar-fixed .logo {
+    display: none;
+}
+
+.navigation-container.navbar-fixed .logo-black {
+    display: block;
+}
+
+.navigation-container.navbar-fixed .navbar-nav .nav-item .nav-link {
+    color: black;
+}
+
+.navigation-container.navbar-fixed+.jumbotron {
+    padding-top: 70px;
 }
 
 .navigation-container .navbar-nav {
