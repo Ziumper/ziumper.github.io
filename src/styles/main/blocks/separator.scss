@@ -1,15 +1,15 @@
-.footer {
+.separator {
     background: #1c1c1c;
     bottom: 0;
     width: 100%;
 }
 
-.footer-belt {
+.separator-belt {
     background: #141414;
     color: gray;
 }
 
-.footer-belt .footer-belt-block {
+.separator-belt .separator-belt-block {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,17 +17,17 @@
     padding-bottom: 50px;
 }
 
-.footer-belt .footer-belt-block .footer-logo-image {
+.separator-belt .separator-belt-block .separator-logo-image {
     display: block;
     width: 150px;
     height: 20px;
 }
 
-.footer-belt .footer-belt-block .footer-text {
+.separator-belt .separator-belt-block .separator-text {
     margin: unset;
 }
 
-.footer-belt .footer-belt-block .footer-list {
+.separator-belt .separator-belt-block .separator-list {
     flex-direction: row;
     list-style: none;
     display: flex;
@@ -36,19 +36,19 @@
     padding-right: 5px;
 }
 
-.footer-belt .footer-belt-block .footer-list .footer-list-item {
+.separator-belt .separator-belt-block .separator-list .separator-list-item {
     padding-right: 5px;
     padding-left: 5px;
 }
 
-.footer-belt-block .footer-text .footer-link,
-.footer-belt .footer-belt-block .footer-list .footer-list-item .footer-list-link {
+.separator-belt-block .separator-text .separator-link,
+.separator-belt .separator-belt-block .separator-list .separator-list-item .separator-list-link {
     color: white;
     text-decoration: none;
 }
 
-.footer-belt-block .footer-text .footer-link:hover,
-.footer-belt .footer-belt-block .footer-list .footer-list-item .footer-list-link:hover {
+.separator-belt-block .separator-text .separator-link:hover,
+.separator-belt .separator-belt-block .separator-list .separator-list-item .separator-list-link:hover {
     color: gray;
     text-decoration: none;
 }
@@ -57,7 +57,7 @@
 /* Tablets and mobile*/
 
 @media screen and (max-width:991px) {
-    .footer-belt .footer-belt-block {
+    .separator-belt .separator-belt-block {
         padding-top: 15px;
         padding-bottom: 15px;
         padding-right: 5px;
@@ -66,7 +66,7 @@
 }
 
 @media screen and (min-width:992px) {
-    .footer-belt .footer-belt-block {
+    .separator-belt .separator-belt-block {
         padding-bottom: 50px;
         padding-top: 50px;
     }
