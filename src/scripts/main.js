@@ -5,6 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import 'owl.carousel';
+import Shuffle from 'shufflejs';
 
 export const main = () => {
 
@@ -101,5 +102,9 @@ export const main = () => {
             }
             lastScrollTop = st;
         });
+    }
+
+    function setupShuffle() {
+
     }
 }
