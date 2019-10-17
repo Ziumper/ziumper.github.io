@@ -16,6 +16,7 @@ export const main = () => {
         turnOnFontAwesomeIcons();
         addOwlCarousel();
         addOnScrollFixedMenu();
+        setupShuffle();
     })
 
     function onToggleMenuButtonClick() {
@@ -106,5 +107,17 @@ export const main = () => {
 
     function setupShuffle() {
 
+        const itemSelectorClass = '.shuffle-item';
+        const sizerSelectorClass = '.shuffle-sizer';
+        const shuffleContainerId = 'shuffle-container';
+
+        console.log(document.getElementById(shuffleContainerId));
+        var element = document.getElementById(shuffleContainerId);
+        var gridItems = this.element.querySelectorAll(itemSelectorClass)
+
+        const shuffleInstance = new Shuffle(this.element, {
+            itemSelector: itemSelectorClass,
+            sizer: sizerSelectorClass
+        });
     }
 }
