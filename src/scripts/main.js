@@ -111,11 +111,10 @@ export const main = () => {
         const sizerSelectorClass = '.shuffle-sizer';
         const shuffleContainerId = 'shuffle-container';
 
-        console.log(document.getElementById(shuffleContainerId));
         var element = document.getElementById(shuffleContainerId);
-        var gridItems = this.element.querySelectorAll(itemSelectorClass)
+        var gridItems = element.querySelectorAll(itemSelectorClass)
 
-        const shuffleInstance = new Shuffle(this.element, {
+        const shuffleInstance = new Shuffle(element, {
             itemSelector: itemSelectorClass,
             sizer: sizerSelectorClass
         });
