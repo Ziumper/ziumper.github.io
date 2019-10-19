@@ -71,6 +71,20 @@ export class GridShuffle {
 
 }
 
-export function filter(key) {
+export function filter(button, key) {
+    const className = 'active-separator-button';
+    let elements = document.getElementsByClassName(className);
+    let oldActiveButton = getFirst(elements);
+    oldActiveButton.classList.remove(className);
+    button.classList.add(className);
+
     window.gridShuffle.shuffleInstance.filter(key);
+
+    function getFirst(elements) {
+        if (elements[0]) {
+            return elements[0];
+        }
+
+        return null;
+    }
 }
