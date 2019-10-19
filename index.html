@@ -189,18 +189,16 @@
                             <div class="separator-belt-block col-md-12">
                                 <ul class="separator-list">
                                     <li class="separator-list-item">
-                                        <a class="separator-list-link" href="#">Test1</a>
+                                        <button class="separator-list-link" onclick="filter('all')">All</a>
                                     </li>
                                     <li class="separator-list-item">
-                                        <a class="separator-list-link" href="#">Test2</a>
+                                        <button class="separator-list-link" onclick="filter('C#')">C#</a>
                                     </li>
                                     <li class="separator-list-item">
-                                        <a class="separator-list-link" href="#">Test3</a>
+                                        <button class="separator-list-link" onclick="filter('Java')">Java</a>
                                     </li>
                                     <li class="separator-list-item">
-                                        <a class="separator-list-link" href="#">
-                                                    Test4
-                                                </a>
+                                        <button class="separator-list-link" onclick="filter('C++')">C++</button>
                                     </li>
                                 </ul>
                             </div>
@@ -208,32 +206,60 @@
                     </div>
                 </div>
             </div>
-            <div id="shuffle-container">
-                <div class="card bg-dark text-white shuffle-item">
-                    <img class="card-img" src="./src/assets/images/space.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+            <div class="my-shuffle-container" id="shuffle-grid">
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <div class="picture-item__inner">
+                        <div class="aspect">
+                            <div class="aspect__inner">
+                                <img src="./src/assets/images/space.jpg" alt="3D render of a tennis ball">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="card bg-dark text-white shuffle-item">
-                    <img class="card-img" src="./src/assets/images/space.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                    <figcaption>wallpaper, 3d</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <div class="picture-item__inner">
+                        <div class="aspect">
+                            <div class="aspect__inner">
+                                <img src="./src/assets/images/space.jpg" alt="3D render of a tennis ball">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="card bg-dark text-white shuffle-item">
-                    <img class="card-img" src="./src/assets/images/space.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                    <figcaption>wallpaper, 3d</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C++"]'>
+                    <div class="picture-item__inner">
+                        <div class="aspect">
+                            <div class="aspect__inner">
+                                <img src="./src/assets/images/space.jpg" alt="3D render of a tennis ball">
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <figcaption>wallpaper, 3d</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <div class="picture-item__inner">
+                        <div class="aspect">
+                            <div class="aspect__inner">
+                                <img src="./src/assets/images/space.jpg" alt="3D render of a tennis ball">
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>wallpaper, C#</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["c#"]'>
+                    <div class="picture-item__inner">
+                        <div class="aspect">
+                            <div class="aspect__inner">
+                                <img src="./src/assets/images/space.jpg" alt="3D render of a tennis ball">
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>wallpaper, 3d</figcaption>
+                </figure>
+                <div class="col-sm-3 my-sizer-element"></div>
             </div>
+
         </section>
         <section class="content-section">
             <h1 name="contact" class="section-head">

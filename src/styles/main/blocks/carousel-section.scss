@@ -1,0 +1,88 @@
+.owl-carousel .item {
+    width: 100%;
+    padding: 10px;
+}
+
+.owl-carousel .item p {
+    color: #fff;
+}
+
+.main .parallax-section {
+    overflow: hidden;
+    visibility: visible;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./../assets/images/book.jpg");
+    -webkit-transition: background-image 1s;
+    /* Safari prior 6.1 */
+    transition: background-image 1s;
+}
+
+.main .parallax-section .opacity-medium {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    top: 0;
+    left: 0;
+    background: #1c1c1c;
+}
+
+.carousel-section .section-head {
+    margin-bottom: 10px;
+}
+
+.carousel-section #dots-container {
+    position: relative;
+}
+
+.carousel-section #dots-container .owl-dot {
+    background: unset;
+    border: unset;
+}
+
+.carousel-section #dots-container .owl-dot span,
+.carousel-section .owl-theme .owl-dots .owl-dot span {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-section #dots-container .owl-dot,
+.carousel-section .owl-theme .owl-dots .owl-dot {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    color: #747373;
+    border-color: #747373;
+    font-weight: bold;
+}
+
+.carousel-section #dots-container .owl-dot:focus,
+.carousel-section .owl-theme .owl-dots .owl-dot:focus {
+    outline-color: unset;
+    outline-width: 0;
+}
+
+.carousel-section #dots-container .owl-dot span,
+.carousel-section .owl-theme .owl-dots .owl-dot span {
+    display: none;
+}
+
+.carousel-section #dots-container .owl-dot p,
+.carousel-section .owl-theme .owl-dots .owl-dot p {
+    border: 2px solid;
+    padding: 10px;
+    margin: unset;
+    border-radius: 35px;
+    font-size: large;
+}
+
+.carousel-section #dots-container .owl-dot.active,
+.carousel-section .owl-theme .owl-dots .owl-dot.active {
+    color: #f7f7f7;
+    border-color: #f7f7f7;
+}
