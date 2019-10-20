@@ -85,11 +85,14 @@
         padding-right: 5px;
         padding-left: 5px;
     }
+    .separator-belt-block .separator-list .separator-list-item .separator-button {
+        font-size: medium;
+    }
 }
 
 @media screen and (min-width:992px) {
     .separator-belt .separator-belt-block {
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-top: 40px;
     }
 }
