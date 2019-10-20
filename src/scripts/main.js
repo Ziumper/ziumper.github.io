@@ -109,18 +109,39 @@ export const main = () => {
             }
 
             function addOnScrollFixedMenu() {
+
+                var st = $(window).scrollTop();
+                if (st > 0) {
+                    $('.navbar-sticky').css('background-color', 'rgba(28, 28, 28, 0.99)');
+                }
+
                 var lastScrollTop = 0;
                 $(window).scroll(function(event) {
                     var st = $(this).scrollTop();
+                    var navigation = $('.navigation-container');
+                    var navigationBarHeight = getNavigationHeight(navigation);
+                    var navigationBarHeightCss = '-' + navigationBarHeight + 'px';
+
                     if (st > lastScrollTop || st == 0) {
-                        $(".navbar-fixed").css('opacity', '0')
+                        $('.navbar-sticky').css('top', navigationBarHeightCss);
+                        $('.navbar-sticky').css('background-color', 'unset');
                     } else {
-                        $(".navbar-fixed").css('opacity', '1');
+                        $('.navbar-sticky').css('top', '0');
+                        $('.navbar-sticky').css('background-color', 'rgba(28, 28, 28, 0.99)');
+                    }
+
+                    if (st == 0) {
+                        $('.navbar-sticky').css('top', '0');
                     }
                     lastScrollTop = st;
                 });
 
+                function getNavigationHeight(navigation) {
+                    var toolbarHeight = $('.toggle-menu-list').height();
+                    var navigationBarHeight = navigation.height() + toolbarHeight;
 
+                    return navigationBarHeight;
+                }
             }
 
 

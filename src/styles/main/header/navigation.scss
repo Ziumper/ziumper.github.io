@@ -7,21 +7,20 @@
     padding-bottom: unset;
     padding-left: 16px;
     padding-right: 16px;
-    transition: background-color 1s;
+    transition: top 1s, background-color 1s;
 }
 
 .navigation-container .logo-black {
     display: none;
 }
 
-.navigation-container.navbar-fixed {
+.navigation-container.navbar-sticky {
     position: fixed;
     top: 0;
+    //background-color: rgba(28, 28, 28, 0.99);
     width: 100%;
-    background-color: white;
     z-index: 9999;
-    opacity: 0;
-    transition: opacity 1s;
+    transition: top 1s, background-color 1s;
 }
 
 .navigation-container.navbar-fixed .logo {
