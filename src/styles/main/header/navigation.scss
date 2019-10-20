@@ -20,6 +20,8 @@
     width: 100%;
     background-color: white;
     z-index: 9999;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .navigation-container.navbar-fixed .logo {
@@ -48,7 +50,7 @@
 
 .navigation-container .navbar-nav .nav-item .nav-link {
     color: white;
-    font-size: large;
+    font-size: medium;
 }
 
 .navigation-container .navbar-nav .nav-item .nav-link:hover {

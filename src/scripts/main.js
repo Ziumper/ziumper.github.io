@@ -109,18 +109,21 @@ export const main = () => {
             }
 
             function addOnScrollFixedMenu() {
-                var navbar = $(".navigation-container");
                 var lastScrollTop = 0;
                 $(window).scroll(function(event) {
                     var st = $(this).scrollTop();
                     if (st > lastScrollTop || st == 0) {
-                        navbar.removeClass('navbar-fixed');
+                        $(".navbar-fixed").css('opacity', '0')
                     } else {
-                        navbar.addClass("navbar-fixed")
+                        $(".navbar-fixed").css('opacity', '1');
                     }
                     lastScrollTop = st;
                 });
+
+
             }
+
+
 
 
         })
