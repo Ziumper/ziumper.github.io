@@ -163,9 +163,6 @@ export const main = () => {
                 });
             }
 
-
-
-
         })
 
     }
