@@ -4,6 +4,8 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
+
 import 'owl.carousel';
 import { GridShuffle } from './gridshuffle';
 
@@ -34,6 +36,7 @@ export const main = () => {
             turnOnFontAwesomeIcons();
             addOwlCarousel();
             addOnScrollFixedMenu();
+            setupReturnToTop();
 
 
             function onToggleMenuButtonClick() {
@@ -70,7 +73,8 @@ export const main = () => {
                     faLinkedin,
                     faInstagram,
                     faFacebook,
-                    faCircle
+                    faCircle,
+                    faArrowUp,
                 ]);
             }
 
@@ -142,6 +146,21 @@ export const main = () => {
 
                     return navigationBarHeight;
                 }
+            }
+
+            function setupReturnToTop() {
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                        $('#return-to-top').fadeIn(200); // Fade in the arrow
+                    } else {
+                        $('#return-to-top').fadeOut(200); // Else fade out the arrow
+                    }
+                });
+                $('#return-to-top').click(function() { // When arrow is clicked
+                    $('body,html').animate({
+                        scrollTop: 0 // Scroll to top of body
+                    }, 500);
+                });
             }
 
 
