@@ -37,7 +37,22 @@ export const main = () => {
             addOwlCarousel();
             addOnScrollFixedMenu();
             setupReturnToTop();
+            addMailSender();
 
+
+            function addMailSender() {
+                var button = document.getElementById('mail-sender');
+                button.onclick = function(event) {
+                    let email = 'tomasz.komoszeski@gmail.com'
+                    let name = document.getElementById('name-input').value;
+                    let webpage = document.getElementById('webpage-input').value;
+                    let content = encodeURIComponent(document.getElementById('content-text-area').value);
+                    let subject = encodeURIComponent(name + ' ' + webpage);
+
+
+                    window.open('mailto:' + email + '?subject=' + subject + '&body=' + content);
+                }
+            }
 
             function onToggleMenuButtonClick() {
                 $('.toggle').click(function() {
