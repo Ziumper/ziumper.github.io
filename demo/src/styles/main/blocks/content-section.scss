@@ -56,6 +56,14 @@
 }
 
 .main .content-section .btn {
-    font-size: small;
     border-radius: 30px;
+    margin-top: 60px;
+    font-size: medium;
+    background: #0e0f10;
+    text-transform: uppercase;
+}
+
+.main .content-section .btn:hover {
+    background: #f7f7f7;
+    color: black;
 }
