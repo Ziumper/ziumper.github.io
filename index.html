@@ -276,23 +276,20 @@
             <h1 name="contact" class="section-head">
                 <a name="contact" class="section-title">Contact</a>
             </h1>
-            <form class="container">
+            <form id="contact-form" class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-4">
-                        <input type="text" id="name-input" class="form-control" placeholder="Name">
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="name-input" class="form-control" placeholder="Name" required>
                     </div>
-                    <div class="col-sm-12 col-md-4">
-                        <input type="email" id="email-input" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col-sm-12 col-md-4">
-                        <input type="text" id="webpage-input" class="form-control" placeholder="Webpage">
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="webpage-input" class="form-control" placeholder="Webpage" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Content" maxlength="450" class="form-control" id="content-text-area" rows="5"></textarea>
+                    <textarea placeholder="Content" maxlength="450" class="form-control" id="content-text-area" rows="5" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-dark" id="mail-sender">Send message</button>
+                    <button type="submit" class="btn btn-dark" id="mail-sender">Send message</button>
                 </div>
             </form>
         </section>
