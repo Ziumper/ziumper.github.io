@@ -5,6 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
+import { debounce } from "lodash";
 
 import 'owl.carousel';
 import { GridShuffle } from './gridshuffle';
@@ -164,13 +165,14 @@ export const main = () => {
             }
 
             function setupReturnToTop() {
-                $(window).scroll(function() {
-                    if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
-                        $('#return-to-top').fadeIn(200); // Fade in the arrow
-                    } else {
-                        $('#return-to-top').fadeOut(200); // Else fade out the arrow
-                    }
-                });
+                $(window).on('scroll', debounce(
+                    function() {
+                        if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                            $('#return-to-top').fadeIn(200); // Fade in the arrow
+                        } else {
+                            $('#return-to-top').fadeOut(200); // Else fade out the arrow
+                        }
+                    }, 400));
                 $('#return-to-top').click(function() { // When arrow is clicked
                     $('body,html').animate({
                         scrollTop: 0 // Scroll to top of body
