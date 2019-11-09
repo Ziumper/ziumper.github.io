@@ -136,7 +136,7 @@ export const main = () => {
                 }
 
                 var lastScrollTop = 0;
-                $(window).scroll(function(event) {
+                $(window).on('scroll', debounce(function(event) {
                     var st = $(this).scrollTop();
                     var navigation = $('.navigation-container');
                     var navigationBarHeight = getNavigationHeight(navigation);
@@ -154,7 +154,7 @@ export const main = () => {
                         $('.navbar-sticky').css('top', '0');
                     }
                     lastScrollTop = st;
-                });
+                }, 400));
 
                 function getNavigationHeight(navigation) {
                     var toolbarHeight = $('.toggle-menu-list').height();
