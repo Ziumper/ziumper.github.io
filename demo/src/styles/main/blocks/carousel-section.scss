@@ -86,3 +86,12 @@
     color: #f7f7f7;
     border-color: #f7f7f7;
 }
+
+.carousel-section .timeline-link {
+    color: gray;
+}
+
+.carousel-section .timeline-link:hover {
+    text-decoration: none;
+    color: #fff;
+}
