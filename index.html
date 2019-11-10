@@ -13,46 +13,443 @@
 </head>
 
 <body>
-    <div id="loading">
-        <div class="loader"></div>
-    </div>
-    <div id="page" class="hacking" style="display:none;">
-        <div class="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="toggle-menu">
-            <ul class="toggle-menu-list">
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+
+    <header class="parallax">
+        <div class="opacity-medium"></div>
+        <nav class="navbar navigation-container navbar-sticky">
+            <div class="logo">
+                <a href="./index.html"><img class="logo-image" src="src/assets/images/logo-path.png" /></a>
+            </div>
+            <div class="logo logo-black">
+                <a href="./index.html"><img class="logo-image" src="src/assets/images/logo-path-black-color.png" /></a>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
                 </li>
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About me</a>
                 </li>
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#timeline">Timeline</a>
                 </li>
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
-                <li class="toggle-menu-list-element">
-                    <a class="toggle-menu-list-link" href="#">Test</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/tkomoszeski"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156/"><i
+                                        class="fab fa-linkedin"></i></a>
                 </li>
             </ul>
-        </div>
-        <div class="jumbotron jumbotron-fluid">
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="toggle-menu">
+                <ul class="toggle-menu-list">
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="#about">About me</a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="#timeline">Timeline</a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="https://github.com/tkomoszeski">
+                            <i class="fab fa-github"></i>
+                            <span>Github</span>
+                        </a>
+                    </li>
+                    <li class="toggle-menu-item">
+                        <a class="toggle-menu-link" href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156/">
+                            <i class="fab fa-linkedin"></i>
+                            <span>Linkedin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbo-title jumbotron jumbotron-fluid">
             <div class="container-fluid">
-                <h1 class="display-4">Working on it.</h1>
+                <h1 class="display-4">Get things done.</h1>
                 <p class="lead">
-                    Stay tuned!
+                    Programming is a passion.
                 </p>
             </div>
         </div>
-    </div>
+    </header>
+    <main class="main">
+        <section class="content-section">
+            <h1 class="section-head"><a name="about" class="section-title">About me</a></h1>
+            <p class="section-text">
+                I am software developer, who want to make world better place with his job. I am always learning. Even if I made mistake I never give up my aims, no matter what. In my work I am looking for opportunity to learn new and exciting things. I specialize in
+                shop platforms in e-commerce as a developer. In free time, I like to develop a few games in gamin platform Unity. I am passionate about creating new, interesting things that helps people. In addition, I love playing guitar and spending
+                time outdoors, traveling and exploring the world around me.
+            </p>
+        </section>
+        <section id="carousel-parallax" class="content-section parallax-section black-section carousel-section">
+            <div class="opacity-medium"></div>
+            <h1 class="section-head"><a name="timeline" class="section-title">Timeline</a></h1>
+            <div id="dots-container"></div>
+            <div class="owl-carousel owl-theme">
+                <div class="item" data-year="2013 - 2017" background-image="./src/assets/images/book.jpg">
+                    <h2 class="section-head">Study</h2>
+                    <p class="section-text">
+                        In 2013 I started my studing in <a class="timeline-link" href="http://www.uwm.edu.pl/">Uniwersytet Warmińsko-Mazurski in Olsztyn</a>, where I graduate with honors in 2017 and gained bachelor of engineering in information technology.
+                        During my studies I learn a lot about object oriented programming, algorithms and modern programming languages, which I use to make fast and efficent working applications. I was also a part of Java scientific club, where I was
+                        learning java and enhance my knowledge about software engineering.
+                    </p>
+                </div>
+                <div class="item" data-year="2017 - 2018" background-image="./src/assets/images/work.jpg">
+                    <h2 class="section-head">First Work</h2>
+                    <p class="section-text">
+                        I started my work carrer in <a class="timeline-link" href="https://billennium.com/">Billennium</a> company which is offering IT solutions for business and outsourcing services. For first three months of work I was on internship.
+                        I finished early, because of good results in work and I started work as a regular junior software developer in commercial projects. After a year I decided to move on with my carrier and start looking for new opportunites in another
+                        company.
+                    </p>
+                </div>
+                <div class="item" data-year="2018 - 2019" background-image="./src/assets/images/space.jpg">
+                    <h2 class="section-head">A litle company</h2>
+                    <p class="section-text">
+                        In 2018 I started looking for company where I can focus on get more experience in software engineering. I found local company
+                        <a class="timeline-link" href="https://meteoryt.pl/">Meteoryt</a> where i developed my skills in database management and e-commerce applications </p>
+                </div>
+                <div class="item" data-year="2019 - Now" background-image="./src/assets/images/station.jpg">
+                    <h2 class="section-head">Big world and opportunites</h2>
+                    <p class="section-text">
+                        To continue my learning and geting experience i moved into
+                        <a class="timeline-link" href="https://www.google.com/search?q=Gdańsk">Gdańsk</a> to work for <a class="timeline-link" href="https://www.sunzinet.com/">Sunzinet</a> where I started work in e-commerce developers team. I am looking
+                        forward what future can bring.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section ">
+            <h1 class="section-head">
+                <a name="projects" class="section-title">Projects</a>
+            </h1>
+            <p class="section-text">
+                During my studies I also created some projects where I trained my skills in software engineering. I am not specfied for one programming language, so it is litle mixed about technology I worked with. If you interested in how i work and what kind of things
+                I can do, please checkout the projects links bellow!
+            </p>
+        </section>
+        <section class="content-section black-section separator-section">
+            <div class="separator">
+                <div class="separator-belt">
+                    <div class="container">
+                        <div class="row">
+                            <div class="separator-belt-block col-md-12">
+                                <ul class="separator-list">
+                                    <li class="separator-list-item">
+                                        <button class="separator-button active-separator-button" onclick="filter(this,'all')">All</a>
+                                    </li>
+                                    <li class="separator-list-item">
+                                        <button class="separator-button" onclick="filter(this,'C#')">C#</a>
+                                    </li>
+                                    <li class="separator-list-item">
+                                        <button class="separator-button" onclick="filter(this,'Java')">Java</a>
+                                    </li>
+                                    <li class="separator-list-item">
+                                        <button class="separator-button" onclick="filter(this,'C++')">C++</button>
+                                    </li>
+                                    <li class="separator-list-item">
+                                        <button class="separator-button" onclick="filter(this,'PHP')">Php</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-shuffle-container" id="shuffle-grid">
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/HttpClientLoginBot">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/hacker.jpg" alt="Men without face, with hoodie">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>HTPP client login desktop bot with proxy use, for password check.</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a classs="shuffle-link" href="https://github.com/tkomoszeski/WebCloudSystem">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/files.jpg" alt="Magazine of filles">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Webcloud System - simple file storage web application with authentication and user registration</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Blog">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/blog.jpg" alt="wallpaper with words">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Blog/News management web application</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C++"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/LZSS">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/data.jpg" alt="Programming screen">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Implementation of LZSS algorithm</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["PHP"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Shopware-Plugins">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/commerce.jpg" alt="E-commerce wallpaper">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Examples of shopware plugins</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C++"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Podstawy-programowania">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/thought.jpg" alt="Bulb">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Learning project with algorithms and etc.</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/JavaServlets">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/coffe.jpg" alt="Coffe cup">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Servlets application</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AutoEncoder">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/encoder.jpg" alt="World of bits">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Autoencoder AI application</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Systemy-Rozproszone">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/distributed.jpg" alt="Screen with applications">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Distributed systems exercises</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["Java"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/CalcAndroid">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/android.jpg" alt="Smartphone">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Android calculator application</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Floppy_Clone">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/game.jpg" alt="X and O game">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Floppy Clone game in Unity</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AI-apriori-and-rules-of-association">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/ai.jpg" alt="Brain">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Implementation of association rule learning </figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AI-decision-rules">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/ai2.jpg" alt="World of paths">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Implementation of decision learning </figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AI-decision-trees">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/tree.jpg" alt="A tree under a field">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Implementation of decision trees </figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AI-fisher">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/robot.jpg" alt="robot">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Implementation of fisher artificial intelligence method</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AI-KNN">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/eye.jpg" alt="eye">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>K-nearest neighbors algorithm</figcaption>
+                </figure>
+                <figure class="picture-item img-item col-sm-3" data-groups='["C#"]'>
+                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Bookshop">
+                        <div class="picture-item__inner">
+                            <div class="aspect">
+                                <div class="aspect__inner">
+                                    <img src="./src/assets/images/books.jpg" alt="Books">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption>Web application shop with books</figcaption>
+                </figure>
+                <div class="col-sm-3 my-sizer-element"></div>
+            </div>
+
+        </section>
+        <section class="content-section">
+            <h1 name="contact" class="section-head">
+                <a name="contact" class="section-title">Contact</a>
+            </h1>
+            <form id="contact-form" class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="name-input" class="form-control" placeholder="Name" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="webpage-input" class="form-control" placeholder="Webpage" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Content" maxlength="450" class="form-control" id="content-text-area" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-dark" id="mail-sender">Send message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="separator">
+            <div class="separator-belt">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator-belt-block col-lg-4 col-md-12">
+                            <p class="separator-text">Programming in <a class="separator-link" href="https://www.google.com/search?q=Gdańsk">Gdańsk</a></p>
+                        </div>
+                        <div class="separator-belt-block col-lg-4 col-md-12">
+                            <a href="./index.html">
+                                <img class="separator-logo-image" src="src/assets/images/logo-path.png" />
+                            </a>
+                        </div>
+                        <div class="separator-belt-block col-lg-4 col-md-12">
+                            <p class="separator-text">You can finde me here:</p>
+                            <ul class="separator-list">
+                                <li class="separator-list-item">
+                                    <a class="separator-list-link" href="https://www.instagram.com/komoszeski/"><i
+                                                    class="fab fa-instagram"></i></a>
+                                </li>
+                                <li class="separator-list-item">
+                                    <a class="separator-list-link" href="https://www.facebook.com/tomasz.komoszeski"><i
+                                                    class="fab fa-facebook"></i></a>
+                                </li>
+                                <li class="separator-list-item">
+                                    <a class="separator-list-link" href="https://github.com/tkomoszeski"><i
+                                                    class="fab fa-github"></i></a>
+                                </li>
+                                <li class="separator-list-item">
+                                    <a class="separator-list-link" href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156/"><i
+                                                    class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-information">
+        </div>
+    </footer>
+    <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
     <script src="dist/index.bundle.js"></script>
     <script src="dist/vendors.bundle.js"></script>
 </body>

@@ -1,6 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-@import "./main.scss";
-@import "./loader.scss";
-@import "./toggle-menu/toggle-menu.scss";
-@import "./toggle-menu//toggle-menu-responsive.scss";
-@import "./responsive.scss";
+$owl-image-path: "~owl.carousel/src/img/";
+@import "~owl.carousel/src/scss/owl.carousel.scss";
+@import '~owl.carousel/src/scss/owl.theme.default.scss';
+@import "./main/main.scss";
