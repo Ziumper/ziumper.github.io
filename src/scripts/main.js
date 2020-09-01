@@ -5,6 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { debounce } from "lodash";
 
 import 'owl.carousel';
@@ -91,40 +92,41 @@ export const main = () => {
                     faFacebook,
                     faCircle,
                     faArrowUp,
+                    faEnvelope
                 ]);
             }
 
             function addOwlCarousel() {
-                $(".owl-carousel").owlCarousel({
-                        items: 1,
-                        dots: true,
-                        onDragged: onDraggedCallback,
-                        dotsContainer: "#dots-container"
-                    }).find('.owl-item')
-                    .each(function(i) {
-                        var attr = $(this).children().attr('data-year');
-                        var element = $('<p>' + attr + '</p>');
-                        $('#dots-container .owl-dot').eq(i).append(element);
-                    });
+                // $(".owl-carousel").owlCarousel({
+                //         items: 1,
+                //         dots: true,
+                //         onDragged: onDraggedCallback,
+                //         dotsContainer: "#dots-container"
+                //     }).find('.owl-item')
+                //     .each(function(i) {
+                //         var attr = $(this).children().attr('data-year');
+                //         var element = $('<p>' + attr + '</p>');
+                //         $('#dots-container .owl-dot').eq(i).append(element);
+                //     });
 
 
-                $("#dots-container").find('.owl-dot').each(function(i) {
-                    $(this).click(function(e) {
-                        var index = $(e.currentTarget.parentElement).children().index(e.currentTarget);
-                        changeBackground(index);
-                    });
-                });
+                // $("#dots-container").find('.owl-dot').each(function(i) {
+                //     $(this).click(function(e) {
+                //         var index = $(e.currentTarget.parentElement).children().index(e.currentTarget);
+                //         changeBackground(index);
+                //     });
+                // });
 
-                function onDraggedCallback(event) {
-                    var index = event.item.index;
-                    changeBackground(index);
-                }
+                // function onDraggedCallback(event) {
+                //     var index = event.item.index;
+                //     changeBackground(index);
+                // }
 
-                function changeBackground(itemIndex) {
-                    var activeItem = $(".owl-stage").children().eq(itemIndex).children(".item");
-                    var imageUrl = $(activeItem).attr("background-image");
-                    $('#carousel-parallax').css("background-image", "url(" + imageUrl + ")");
-                }
+                // function changeBackground(itemIndex) {
+                //     var activeItem = $(".owl-stage").children().eq(itemIndex).children(".item");
+                //     var imageUrl = $(activeItem).attr("background-image");
+                //     $('#carousel-parallax').css("background-image", "url(" + imageUrl + ")");
+                // }
 
             }
 
