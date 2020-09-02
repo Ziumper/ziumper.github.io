@@ -36,7 +36,6 @@ export const main = () => {
             showPage();
             addIcons();
             turnOnFontAwesomeIcons();
-            addOwlCarousel();
             addOnScrollFixedMenu();
             setupReturnToTop();
             addMailSender();
@@ -96,39 +95,6 @@ export const main = () => {
                 ]);
             }
 
-            function addOwlCarousel() {
-                // $(".owl-carousel").owlCarousel({
-                //         items: 1,
-                //         dots: true,
-                //         onDragged: onDraggedCallback,
-                //         dotsContainer: "#dots-container"
-                //     }).find('.owl-item')
-                //     .each(function(i) {
-                //         var attr = $(this).children().attr('data-year');
-                //         var element = $('<p>' + attr + '</p>');
-                //         $('#dots-container .owl-dot').eq(i).append(element);
-                //     });
-
-
-                // $("#dots-container").find('.owl-dot').each(function(i) {
-                //     $(this).click(function(e) {
-                //         var index = $(e.currentTarget.parentElement).children().index(e.currentTarget);
-                //         changeBackground(index);
-                //     });
-                // });
-
-                // function onDraggedCallback(event) {
-                //     var index = event.item.index;
-                //     changeBackground(index);
-                // }
-
-                // function changeBackground(itemIndex) {
-                //     var activeItem = $(".owl-stage").children().eq(itemIndex).children(".item");
-                //     var imageUrl = $(activeItem).attr("background-image");
-                //     $('#carousel-parallax').css("background-image", "url(" + imageUrl + ")");
-                // }
-
-            }
 
             function addOnScrollFixedMenu() {
 
