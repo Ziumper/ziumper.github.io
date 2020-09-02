@@ -16,6 +16,14 @@
     font-size: medium;
 }
 
+.main .section-image img,
+.main .content-section .section-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
 .main .section-title::before {
     border-top: 1px solid;
     content: "";
@@ -66,4 +74,27 @@
 .main .content-section .btn:hover {
     background: #f7f7f7;
     color: black;
+}
+
+.main .thumbnail-grid-list {
+    margin: 0 auto;
+    overflow: auto;
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+        padding: 10px;
+    }
+    li img {
+        float: left;
+        width: 100px;
+        height: auto;
+        -webkit-transition: box-shadow 0.5s ease;
+        -moz-transition: box-shadow 0.5s ease;
+        -o-transition: box-shadow 0.5s ease;
+        -ms-transition: box-shadow 0.5s ease;
+        transition: box-shadow 0.5s ease;
+    }
 }

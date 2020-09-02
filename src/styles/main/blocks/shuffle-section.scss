@@ -12,7 +12,7 @@
     display: block;
     width: 100%;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: none;
 }
 
 @supports ((-o-object-fit: cover) or (object-fit:cover)) {
@@ -20,7 +20,7 @@
         max-width: none;
         height: 100%;
         -o-object-fit: cover;
-        object-fit: cover
+        object-fit: cover;
     }
 }
 
