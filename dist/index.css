@@ -7697,6 +7697,9 @@ a.text-dark:hover, a.text-dark:focus {
   top: 50%;
   width: 40px;
   opacity: .4; }
+  @media screen and (max-width: 1199px) {
+    .main .section-title::before {
+      border-top: unset; } }
 
 .main .section-title::after {
   border-top: 1px solid;
@@ -7708,6 +7711,9 @@ a.text-dark:hover, a.text-dark:focus {
   top: 50%;
   width: 40px;
   opacity: .4; }
+  @media screen and (max-width: 1199px) {
+    .main .section-title::after {
+      border-top: unset; } }
 
 .main .content-section {
   padding-top: 100px;

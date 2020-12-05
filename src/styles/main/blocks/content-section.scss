@@ -35,6 +35,9 @@
         top: 50%;
         width: 40px;
         opacity: .4;
+        @media screen and (max-width: 1199px) {
+            border-top: unset;
+        }
     }
     .section-title::after {
         border-top: 1px solid;
@@ -46,6 +49,9 @@
         top: 50%;
         width: 40px;
         opacity: .4;
+        @media screen and (max-width: 1199px) {
+            border-top: unset;
+        }
     }
     .content-section {
         padding-top: 100px;
