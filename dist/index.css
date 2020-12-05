@@ -7710,7 +7710,8 @@ body.lb-disable-scrolling {
 
 .main .black-section {
   background: #1c1c1c;
-  color: white; }
+  color: white;
+  padding-bottom: unset; }
   .main .black-section .section-text {
     color: white; }
   .main .black-section .section-title {
@@ -7721,7 +7722,8 @@ body.lb-disable-scrolling {
 .picture-item {
   margin-top: 24px;
   margin-left: 0;
-  opacity: 0; }
+  opacity: 0;
+  margin-bottom: 24px; }
 
 .picture-item.in {
   opacity: 1; }
