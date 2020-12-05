@@ -4,6 +4,10 @@
         margin-bottom: unset;
         position: relative;
         font-style: normal;
+        color: #0e0f10;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .section-head {
         margin-bottom: 60px;

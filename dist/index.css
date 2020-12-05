@@ -7665,7 +7665,11 @@ a.text-dark:hover, a.text-dark:focus {
 .main .section-title {
   margin-bottom: unset;
   position: relative;
-  font-style: normal; }
+  font-style: normal;
+  color: #0e0f10; }
+  .main .seciton-head:hover,
+  .main .section-title:hover {
+    text-decoration: none; }
 
 .main .section-head {
   margin-bottom: 60px; }
@@ -7748,13 +7752,14 @@ a.text-dark:hover, a.text-dark:focus {
     transition: box-shadow 0.5s ease; }
 
 .main .black-section {
-  background: #1c1c1c; }
-
-.main .black-section,
-.main .black-section .section-text,
-.main .black-section .section-title:hover,
-.main .black-section .section-title {
+  background: #1c1c1c;
   color: white; }
+  .main .black-section .section-text {
+    color: white; }
+  .main .black-section .section-title {
+    color: white; }
+    .main .black-section .section-title :hover {
+      color: white; }
 
 .owl-carousel .item {
   width: 100%;

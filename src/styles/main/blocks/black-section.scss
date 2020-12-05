@@ -1,10 +1,15 @@
-.main .black-section {
-    background: #1c1c1c;
-}
-
-.main .black-section,
-.main .black-section .section-text,
-.main .black-section .section-title:hover,
-.main .black-section .section-title {
-    color: white;
+.main {
+    .black-section {
+        background: #1c1c1c;
+        color: white;
+        .section-text {
+            color: white;
+        }
+        .section-title {
+            color: white;
+             :hover {
+                color: white;
+            }
+        }
+    }
 }
