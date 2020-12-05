@@ -102,6 +102,12 @@ img.picture-item__blur {
 .my-shuffle-container {
     position: relative;
     overflow: hidden;
+    .card-link {
+        color: white;
+        &:hover {
+            color: gray;
+        }
+    }
 }
 
 .my-shuffle-container .picture-item img:hover {
