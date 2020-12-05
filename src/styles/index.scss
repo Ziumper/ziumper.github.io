@@ -1,6 +1,3 @@
 @import "~bootstrap/scss/bootstrap";
-$owl-image-path: "~owl.carousel/src/img/";
-@import "~owl.carousel/src/scss/owl.carousel.scss";
-@import '~owl.carousel/src/scss/owl.theme.default.scss';
+@import "~lightbox2/dist/css/lightbox";
 @import "./main/main.scss";
-@import "~lightbox2/dist/css/lightbox.css";

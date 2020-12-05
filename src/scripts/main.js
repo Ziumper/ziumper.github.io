@@ -8,7 +8,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { debounce } from "lodash";
 
-import 'owl.carousel';
+
 import { GridShuffle } from './gridshuffle';
 
 export const main = () => {
