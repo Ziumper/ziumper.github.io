@@ -40,7 +40,7 @@ export class GridShuffle {
             // Add the transition class to the items after ones that are in the viewport
             // have received the `in` class.
             setTimeout(function() {
-                this.addTransitionToItems();
+                // this.addTransitionToItems();
             }.bind(this), 100);
 
         }

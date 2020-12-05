@@ -2,6 +2,7 @@
     margin-top: 24px;
     margin-left: 0;
     opacity: 0;
+    margin-bottom: 24px;
 }
 
 .picture-item.in {
@@ -102,6 +103,20 @@ img.picture-item__blur {
 .my-shuffle-container {
     position: relative;
     overflow: hidden;
+    .card-text {
+        .card-link {
+            margin-left: unset;
+        }
+    }
+    .card-link {
+        color: white;
+        &:hover {
+            color: gray;
+        }
+    }
+    .gallery-light-link {
+        display: none;
+    }
 }
 
 .my-shuffle-container .picture-item img:hover {

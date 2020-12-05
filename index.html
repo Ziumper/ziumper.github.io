@@ -99,6 +99,7 @@
             <div class="section-image">
                 <img src="./src/assets/images/foto1.jpg" />
             </div>
+
             <p class="section-text">
                 I am software developer, who want to make world better place with his job. I am always learning. Even if I made mistake I never give up my aims, no matter what. In my work I am looking for opportunity to learn new and exciting things. I specialize in
                 shop platforms in e-commerce as a developer. In free time, I like to develop a few games in gaming platform Unity. I am passionate about creating new, interesting things that helps people. In addition, I love playing guitar and spending
@@ -115,8 +116,7 @@
         </section>
         <section class="content-section black-section">
             <h1 class="section-head">
-                <a name="technology-stack" class="sction-title">Technology Stack</a>
-
+                <a name="technology-stack" class="section-title">Technology Stack</a>
             </h1>
             <div class="thumbnail-grid-list">
                 <ul>
@@ -286,6 +286,9 @@
                                     <li class="separator-list-item">
                                         <button class="separator-button" onclick="filter(this,'PHP')">Php</button>
                                     </li>
+                                    <li class="separator-list-item">
+                                        <button class="separator-button" onclick="filter(this,'Games')">Games</button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -293,169 +296,220 @@
                 </div>
             </div>
             <div class="my-shuffle-container" id="shuffle-grid">
-                <figure class="picture-item img-item col-sm-1" data-groups='["C#"]'>
-                    <a classs="shuffle-link" href="https://github.com/tkomoszeski/WebCloudSystem">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/files.jpg" alt="Magazine of filles">
+                <figure class="picture-item col-md-6" data-groups='["C#"]'>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card bg-dark text-left">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="./src/assets/images/posts_manager.jpg" data-lightbox="blog">
+                                                <img src="./src/assets/images/posts_manager.jpg" />
+                                            </a>
+                                            <a href="./src/assets/images/blog_login.jpg" class="gallery-light-link" data-lightbox="blog">Image #1</a>
+                                            <a href="./src/assets/images/blog_home.jpg" class="gallery-light-link" data-lightbox="blog">Image #2</a>
+                                            <a href="./src/assets/images/blog_profile.png" class="gallery-light-link" data-lightbox="blog">Image #3</a>
+                                            <a href="./src/assets/images/blog_register.jpg" class="gallery-light-link" data-lightbox="blog">Image #4</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5 class="card-title">Demo Blog Manager</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">Cms project for managing news and articles</h6>
+                                            <p class="card-text">
+                                                Demo blog management application in .net core and angular. It contains:
+                                                <ul>
+                                                    <li>
+                                                        Registration module
+                                                    </li>
+                                                    <li>
+                                                        Login page
+                                                    </li>
+                                                    <li>
+                                                        Listing page for each user
+                                                    </li>
+                                                    <li>
+                                                        Administration panel
+                                                    </li>
+                                                    <li>
+                                                        Home page with last seen news, posts
+                                                    </li>
+                                                    <li>
+                                                        Post form to edit existing posts
+                                                    </li>
+                                                </ul>
+                                            </p>
+                                            <a href="https://github.com/tkomoszeski/Demo-Blog-Manager" class="card-link">Link to code <i class="fab fa-github"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                    <figcaption>Webcloud System - simple file storage web application with authentication and user registration</figcaption>
+                    </div>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["C#"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Demo-Blog-Manager">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/blog.jpg" alt="wallpaper with words">
+                <figure class="picture-item col-md-6" data-groups='["C#","Games"]'>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card bg-dark text-left">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="./src/assets/images/night_catcher.png" data-lightbox="nightCatcher">
+                                                <img src="./src/assets/images/night_catcher.png" />
+                                            </a>
+                                            <a href="./src/assets/images/night_catcher_mobile.png" class="gallery-light-link" data-lightbox="nightCatcher">Image #1</a>
+                                            <a href="./src/assets/images/nigh_catcher_menu.png" class="gallery-light-link" data-lightbox="nightCatcher">Image #2</a>
+                                            <a href="./src/assets/images/night_cacher2.png" class="gallery-light-link" data-lightbox="nightCatcher">Image #3</a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5 class="card-title">Night Catcher</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted"> Cute mobile game on android</h6>
+                                            <p class="card-text">
+                                                Game was made by me and colegaues from <a class="card-link" href="https://www.facebook.com/Farmind-studio-105131987936540">Farmind</a> game developers studio. I was responsible for planning programming structures
+                                                of game, code review and integration external tools for example <a class="card-link" href="https://www.audiokinetic.com/products/wwise/">Wwise</a> integration, unit tests and etc. Night catcher is chill-out
+                                                base game for those who want to just relax and click on some dots on phone. There are a lot of cute cats with different levels. It was not easy to achieve quality and keep artchitecture scalable. Game was
+                                                made in <a class="card-link" class="card-link" href="https://unity.com/">Unity Engine.</a>
+                                            </p>
+                                            <a href="https://drive.google.com/file/d/1ucdwQAgqDjaWSsaFs1dKPYV17nr-ouIa/view?usp=sharing" class="card-link">Download <i class="fa fa-download"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                    <figcaption>Demo Blog/News management web application</figcaption>
+                    </div>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["PHP"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Shopware-Plugins">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/commerce.jpg" alt="E-commerce wallpaper">
+                <!-- <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["PHP "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/Shopware-Plugins ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src=" " alt="E-commerce wallpaper ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Examples of shopware plugins</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["PHP"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/shopware-6-docker">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/work.jpg" alt="E-commerce wallpaper">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["PHP "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/shopware-6-docker ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/work.jpg " alt="E-commerce wallpaper ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Shopware 6 with docker environment and shopwre 6 plugins </figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["Java"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/JavaServlets">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/coffe.jpg" alt="Coffe cup">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["Java "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/JavaServlets ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/coffe.jpg " alt="Coffe cup ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Servlets application</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["Java"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/AutoEncoder">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/encoder.jpg" alt="World of bits">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["Java "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/AutoEncoder ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/encoder.jpg " alt="World of bits ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Autoencoder AI application</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["Java"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/E-Lista">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/data.jpg" alt="World of bits">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["Java "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/E-Lista ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/data.jpg " alt="World of bits ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>E-list of worker activity, tool for generating time reports</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["Java"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Systemy-Rozproszone">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/distributed.jpg" alt="Screen with applications">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["Java "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/Systemy-Rozproszone ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/distributed.jpg " alt="Screen with applications ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Distributed systems exercises</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["Java"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/CalcAndroid">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/android.jpg" alt="Smartphone">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["Java "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/CalcAndroid ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/android.jpg " alt="Smartphone ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Android calculator application</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["C#"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Floppy_Clone">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/game.jpg" alt="X and O game">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["C# "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/Floppy_Clone ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/game.jpg " alt="X and O game ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Floppy Clone game in Unity</figcaption>
                 </figure>
-                <figure class="picture-item img-item col-sm-1" data-groups='["C#"]'>
-                    <a class="shuffle-link" href="https://github.com/tkomoszeski/Bookshop">
-                        <div class="picture-item__inner">
-                            <div class="aspect">
-                                <div class="aspect__inner">
-                                    <img src="./src/assets/images/books.jpg" alt="Books">
+                <figure class="picture-item img-item col-md-12 col-sm-1 " data-groups='["C# "]'>
+                    <a class="shuffle-link " href="https://github.com/tkomoszeski/Bookshop ">
+                        <div class="picture-item__inner ">
+                            <div class="aspect ">
+                                <div class="aspect__inner ">
+                                    <img src="./src/assets/images/books.jpg " alt="Books ">
                                 </div>
                             </div>
                         </div>
                     </a>
                     <figcaption>Web application shop with books</figcaption>
-                </figure>
-                <div class="col-sm-3 my-sizer-element"></div>
+                </figure> -->
             </div>
         </section>
         <section class="content-section">
             <h1 name="contact" class="section-head">
                 <a name="contact" class="section-title">Contact Details</a>
             </h1>
-            <div class="row">
-
-                <form id="contact-form" class="container">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 section-image">
-                            <img src="src/assets/images/foto2.jpg" />
-                        </div>
-                        <h2 class="col-sm-12">Send me a message!</h2>
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" id="name-input" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="col-sm-12 col-md-6">
-                            <input type="text" id="webpage-input" class="form-control" placeholder="Webpage" required>
-                        </div>
+            <form id="contact-form" class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 section-image">
+                        <img src="src/assets/images/foto2.jpg " />
                     </div>
-                    <div class="form-group">
-                        <textarea placeholder="Content" maxlength="450" class="form-control" id="content-text-area" rows="5" required></textarea>
+                    <h2 class="col-sm-12">Send me a message!</h2>
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="name-input" class="form-control" placeholder="Name" required>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-dark" id="mail-sender">Send message</button>
+                    <div class="col-sm-12 col-md-6">
+                        <input type="text" id="webpage-input" class="form-control" placeholder="Webpage" required>
                     </div>
-                </form>
-
-            </div>
+                </div>
+                <div class="form-group ">
+                    <textarea placeholder="Content" maxlength="450 " class="form-control" id="content-text-area" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit " class="btn btn-dark" id="mail-sender">Send message</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>
@@ -464,22 +518,22 @@
                 <div class="container">
                     <div class="row">
                         <div class="separator-belt-block col-lg-4 col-md-12">
-                            <p class="separator-text">Programming in <a class="separator-link" href="https://www.google.com/search?q=Gdańsk">Gdańsk</a></p>
+                            <p class="separator-text ">Programming in <a class="separator-link" href="https://www.google.com/search?q=Gdańsk">Gdańsk</a></p>
                         </div>
                         <div class="separator-belt-block col-lg-4 col-md-12">
-                            <a href="./index.html">
-                                <img class="separator-logo-image" src="src/assets/images/logo-path.png" />
+                            <a href="./index.html ">
+                                <img class="separator-logo-image " src="src/assets/images/logo-path.png" />
                             </a>
                         </div>
                         <div class="separator-belt-block col-lg-4 col-md-12">
                             <p class="separator-text">You can finde me here:</p>
                             <ul class="separator-list">
                                 <li class="separator-list-item">
-                                    <a class="separator-list-link" href="https://www.instagram.com/komoszeski/"><i
-                                                    class="fab fa-instagram"></i></a>
+                                    <a class="separator-list-link " href="https://www.instagram.com/komoszeski/"><i
+                                                    class="fab fa-instagram "></i></a>
                                 </li>
                                 <li class="separator-list-item">
-                                    <a class="separator-list-link" href="https://www.facebook.com/tomasz.komoszeski"><i
+                                    <a class="separator-list-link " href="https://www.facebook.com/tomasz.komoszeski"><i
                                                     class="fab fa-facebook"></i></a>
                                 </li>
                                 <li class="separator-list-item">
@@ -496,13 +550,12 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-information">
         </div>
     </footer>
-    <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
-    <script src="dist/index.bundle.js"></script>
-    <script src="dist/vendors.bundle.js"></script>
+    <a href="javascript: " id="return-to-top"><i class="fas fa-arrow-up "></i></a>
+    <script src="dist/index.bundle.js "></script>
+    <script src="dist/vendors.bundle.js "></script>
 </body>
 
 </html>
