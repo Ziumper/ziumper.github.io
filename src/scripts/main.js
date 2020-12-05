@@ -6,6 +6,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons/faFacebook";
 import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
+import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
 import { debounce } from "lodash";
 
 
@@ -91,7 +92,8 @@ export const main = () => {
                     faFacebook,
                     faCircle,
                     faArrowUp,
-                    faEnvelope
+                    faEnvelope,
+                    faDownload
                 ]);
             }
 

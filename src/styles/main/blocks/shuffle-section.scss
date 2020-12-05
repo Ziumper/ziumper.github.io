@@ -103,11 +103,19 @@ img.picture-item__blur {
 .my-shuffle-container {
     position: relative;
     overflow: hidden;
+    .card-text {
+        .card-link {
+            margin-left: unset;
+        }
+    }
     .card-link {
         color: white;
         &:hover {
             color: gray;
         }
+    }
+    .gallery-light-link {
+        display: none;
     }
 }
 

@@ -7805,10 +7805,14 @@ img.picture-item__blur {
 .my-shuffle-container {
   position: relative;
   overflow: hidden; }
+  .my-shuffle-container .card-text .card-link {
+    margin-left: unset; }
   .my-shuffle-container .card-link {
     color: white; }
     .my-shuffle-container .card-link:hover {
       color: gray; }
+  .my-shuffle-container .gallery-light-link {
+    display: none; }
 
 .my-shuffle-container .picture-item img:hover {
   opacity: 0.6; }
