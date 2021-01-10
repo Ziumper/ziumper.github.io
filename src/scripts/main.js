@@ -7,6 +7,7 @@ import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
+import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
 import { debounce } from "lodash";
 
 
@@ -93,7 +94,8 @@ export const main = () => {
                     faCircle,
                     faArrowUp,
                     faEnvelope,
-                    faDownload
+                    faDownload,
+                    faLink
                 ]);
             }
 
