@@ -7,8 +7,10 @@ import { faCircle } from "@fortawesome/free-regular-svg-icons/faCircle";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons/faEnvelope";
 import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
+import { faGitlab } from "@fortawesome/free-brands-svg-icons/faGitlab";
 import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
 import { debounce } from "lodash";
+
 
 
 import { GridShuffle } from './gridshuffle';
@@ -95,7 +97,8 @@ export const main = () => {
                     faArrowUp,
                     faEnvelope,
                     faDownload,
-                    faLink
+                    faLink,
+                    faGitlab
                 ]);
             }
 
