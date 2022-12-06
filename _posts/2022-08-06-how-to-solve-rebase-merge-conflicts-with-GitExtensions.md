@@ -1,5 +1,7 @@
 ---
 title:  "How to solve rebase and merge conflicts with GitExtensions?"
+excerpt: "Have you ever wondered how to merge your changes easily without destroying the entire project?"
+tagline: "Have you ever wondered how to merge your changes easily without destroying the entire project?"
 header:
     overlay_color: "#000"
     overlay_filter: "0.5"
@@ -9,7 +11,6 @@ header:
 
 
 Have you ever wondered how to merge your changes easily without destroying the entire project? 
-
 So here is a quick and easy guide to follow. Let’s start!
 First, you should install and configure [GitExtensions](https://git-extensions-documentation.readthedocs.io/en/release-3.4/getting_started.html). After that open up your repository. In my case, it contains two branches: master and develop. Check the image below to see it.
 
