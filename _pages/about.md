@@ -11,9 +11,20 @@ header:
 
 I am passionate about creating new, interesting things that helps people. In addition, I love playing guitar, listen to music and spending time outdoors while traveling and exploring the world around me.
 
+## Education
+
+> ***Gdańsk University of Technology***: 2021 - current
+> Master's in computer science studies
+
+> ***Universtiy of Warima nad Mazury***: 2013 – 2017
+> Engineer's degree in computer science
+
+> ***Stanisław Staszic School Complex in Szczytno***: 2008 - 2012
+>  IT technician
+
 ## Past Experience
 
-My developer story started in the summer of 2017 after my successful graduation in computer science. Since that, I am always looking for an opportunity to grow my skills. Software development is a way to create with only imagination as a border, so I started a company to bring my skills to a new level. I hope we can work together on new exciting things.
+My developer story started in the summer of 2017 after my successful graduation in computer science. Since that, I am always looking for an opportunity to grow my skills. Software development is a way to create with only imagination as a border, so I started a company to bring my skills to a new level. I hope we can work together on new exciting things. 
 
 ### Farmind
 Create, develop and test games in Unity and C# from 2020.
