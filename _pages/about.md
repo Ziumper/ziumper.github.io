@@ -1,7 +1,7 @@
 ---
 permalink: /about
 title: "About me"
-layout: archive
+layout: splash
 author_profile: true
 header:
   overlay_color: "#000"
@@ -27,7 +27,7 @@ I am passionate about creating new, interesting things that helps people. In add
 My developer story started in the summer of 2017 after my successful graduation in computer science. Since that, I am always looking for an opportunity to grow my skills. Software development is a way to create with only imagination as a border, so I started a company to bring my skills to a new level. I hope we can work together on new exciting things. 
 
 ### Farmind
-Create, develop and test games in Unity and C# from 2020.
+Create, develop and test games in Unity and C# from 2020-2023.
 
 ### Sunzinet
 Maintain and develop shopware 5 and shopware 6 plugins, shops, and solutions in PHP from summer 2019.

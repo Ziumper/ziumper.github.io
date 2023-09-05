@@ -16,16 +16,16 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ziumper"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Tomasz Komoszeski"
+title                    : "Ziumper - Software engineering"
+title_separator          : "- "
+subtitle                 : "An amazing developer and blog website"
+name                     : "Ziumper"
 description              : "An amazing developer and blog website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   :  "/assets/images/cropped-LogoSlider.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : #"/assets/images/16363882.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -81,7 +81,7 @@ baidu_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : Ziumper
 facebook:
   username               :
   app_id                 :
@@ -104,15 +104,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tomasz Komoszeski"
-  avatar           : "/assets/images/me.jpg"
+  name             : "Ziumper"
+  avatar           : "/assets/images/16363882.jpg"
   bio              : "Software engineer and an eternal student. I have been big of programming since 2008. From 2021 I am also an entrepreneur. A fan of computer games and old good cartoons from the 90s."
   location         : "Poland"
-  #email            :  "tomasz.komoszeski@gmail.com"
+  email            :  "tomasz.komoszeski@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:tomasz.komoszeski@gmail.com"
+    #- label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "mailto:tomasz.komoszeski@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -132,6 +132,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/tomasz-komoszeski-b348a6156/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -140,10 +143,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/Ziumper"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
+      url: "https://gitlab.com/ziumper"
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
@@ -285,8 +288,24 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
-      comments: # true
+      comments: false
       share: true
       related: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+  
+
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

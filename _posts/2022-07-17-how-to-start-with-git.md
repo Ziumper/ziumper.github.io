@@ -1,5 +1,9 @@
 ---
 title:  "How to start with GIT?"
+toc: true
+toc_label: "What's inside"
+toc_icon: "cog"
+toc_sticky: true
 ---
 
 I was wondering what GIT means. Here is what I have found:
@@ -7,6 +11,8 @@ I was wondering what GIT means. Here is what I have found:
 > GIT  as a word is an alternation of the word get, which was shortened from begetting.
 > The implicit reference is to illegitimate offspring, 
 > and the term is roughly synonymous with a twit, dolt, moron, or idiot. Within the open source community, the significance of the name choice varies.
+
+# Git
 
 It means GIT is for idiots that do not know what they are doing. The perfect tool for a software developer. Let us start from the beginning.
 
