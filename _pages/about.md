@@ -7,10 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/cropped-LogoSlider.png
-toc: true
-toc_label: "What's inside"
-toc_icon: "cog"
-toc_sticky: true
+classes: wide
 ---
 
 # Education
