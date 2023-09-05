@@ -11,30 +11,50 @@ feature_row:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /assets/images/portfolio-images/stands_generator.png
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "Node based procedural generation which is used to generate random jump stands paths in 3d space."
+  - image_path: /assets/images/portfolio-images/night_catcher.png
+    title: "Night catcher"
+    excerpt: "Night catcher is chill-out base game for those who want to just relax and click on some dots on phone"
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /archive/src/assets/images/boesner1.png
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /archive/src/assets/images/boesner1.png
+  - image_path: /assets/images/portfolio-images/boesner.png
+    title: "Boesner"
+    excerpt: "Relaunch of the international boesner online store"
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/portfolio-images/agents_app.png
     alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /archive/src/assets/images/boesner1.png
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    title: "Agents App"
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /archive/src/assets/images/boesner1.png
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
+    excerpt: "Implementation of Monte Carlo simulation app for interaction between agents in RTBS (reputation and trust building scheme)"
+  - image_path: /assets/images/portfolio-images/posts-manager.png
+    alt: "placeholder image 2"
+    title: "Blog Manager App"
+    excerpt: "Simple blog manager application project created in mean time while learning .NET technology"
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/portfolio-images/lzss-app.png
+    title: "LZSS"
+    excerpt: "Implementation of LZSS algorithm, that reduces memory occupied by files."
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/portfolio-images/ave.png
+    title: "Ave Webshop Template"
+    excerpt: "It's responsive web shop template. I used one of the ready designs available in Internet. It's just for exercise, and look what i am able to do with bare HTML, JavaScript and CSS"
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
+  - image_path: /assets/images/portfolio-images/old-portfolio.png
+    title: " Old portfolio project"
+    excerpt: "It's responsive portfolio project that I created myself in JavaScript, HTML and CSS"
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
 
 ---
 
