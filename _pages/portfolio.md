@@ -34,26 +34,26 @@ feature_row:
     alt: "placeholder image 2"
     title: "Blog Manager App"
     excerpt: "Simple blog manager application project created in mean time while learning .NET technology"
-    url: "#test-link"
+    url: "/portfolio/blog-manager"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/lzss-app.png
     title: "LZSS"
     excerpt: "Implementation of LZSS algorithm, that reduces memory occupied by files."
-    url: "#test-link"
+    url: "/portfolio/lzss"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/ave.png
     title: "Ave Webshop Template"
     excerpt: "It's responsive web shop template. I used one of the ready designs available in Internet. It's just for exercise, and look what i am able to do with bare HTML, JavaScript and CSS"
-    url: "#test-link"
-    btn_label: "Read More"
+    url: "/archive/src/pages/templates/ave"
+    btn_label: "Visit page"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/old-portfolio.png
     title: " Old portfolio project"
     excerpt: "It's responsive portfolio project that I created myself in JavaScript, HTML and CSS"
-    url: "#test-link"
-    btn_label: "Read More"
+    url: "/archive"
+    btn_label: "Visit page"
     btn_class: "btn--inverse"
 
 ---
