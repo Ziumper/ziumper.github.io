@@ -8,7 +8,7 @@ sidebar:
   - title: "Responsibilities"
     text: "Overseeing the operations of a programming team. Monitoring the progress of other programmers and developers. Ensuring that all programmers have the resources and tools they need. Delegating tasks to programmers in areas like design, coding and testing."
   - title: "Technology"
-    text: "Unity, Visual Studio, Gimp, C#, WWise, Unit Testing"
+    text: "Unity, Visual Studio, Gimp, C#, WWise, Unit Testing, Hack&Plan, Git, GitExtenisons, Git-lfs, Gitlab"
 gallery:
   - url: /archive/src/assets/images/ludo_screen1.jpg
     image_path: /archive/src/assets/images/ludo_screen1.jpg

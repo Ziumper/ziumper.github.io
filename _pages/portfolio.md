@@ -12,9 +12,9 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/night_catcher.png
-    title: "Night catcher"
-    excerpt: "Night catcher is chill-out base game for those who want to just relax and click on some dots on phone"
-    url: "#test-link"
+    title: "Night Catcher"
+    excerpt: "Night Catcher is chill-out base game for those who want to just relax and click on some dots on phone"
+    url: "/portfolio/night-catcher"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/boesner.png
