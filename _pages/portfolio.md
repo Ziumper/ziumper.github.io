@@ -8,7 +8,7 @@ feature_row:
     alt: "Ludo game, just chill out!"
     title: "Ludo game, just chill out!"
     excerpt: "Ludo is board game played between friends and family. The game is played between 2 to 4 players"
-    url: "#test-link"
+    url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/night_catcher.png
