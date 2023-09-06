@@ -14,13 +14,13 @@ gallery:
     alt: "Main Menu"
   - url: /archive/src/assets/images/night_cacher2.png
     image_path: /archive/src/assets/images/night_cacher2.png
-    alt: "Main Menu"
+    alt: "Night Catcher Game 1"
   - url: /archive/src/assets/images/night_catcher_mobile.png
     image_path: /archive/src/assets/images/night_catcher_mobile.png
-    alt: "Main Menu"
+    alt: "Night Catcher Game 2"
   - url: /archive/src/assets/images/night_catcher.png
     image_path: /archive/src/assets/images/night_catcher.png
-    alt: "Main Menu"
+    alt: "Wallpaper Night Catcher"
 ---
 
 # Crafting Quality and Scalability in Unity

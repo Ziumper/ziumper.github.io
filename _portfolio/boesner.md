@@ -1,7 +1,5 @@
 ---
 excerpt: "Relaunch of the international boesner online store."
-header:
-  teaser: /archive/src/assets/images/boesner2.png
 sidebar:
   - title: "Role"
     image: /assets/images/portfolio-images/SZ-Logo.webp

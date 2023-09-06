@@ -26,7 +26,7 @@ feature_row:
   - image_path: /assets/images/portfolio-images/agents_app.png
     alt: "placeholder image 1"
     title: "Agents App"
-    url: "#test-link"
+    url: "/portfolio/agents-app"
     btn_label: "Read More"
     btn_class: "btn--inverse"
     excerpt: "Implementation of Monte Carlo simulation app for interaction between agents in RTBS (reputation and trust building scheme)"
