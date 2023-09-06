@@ -20,7 +20,7 @@ feature_row:
   - image_path: /assets/images/portfolio-images/boesner.png
     title: "Boesner"
     excerpt: "Relaunch of the international boesner online store"
-    url: "#test-link"
+    url: "/portfolio/boesner"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/agents_app.png

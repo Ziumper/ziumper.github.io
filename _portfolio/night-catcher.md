@@ -59,7 +59,7 @@ I invite you to explore this portfolio to discover more about the Night Catcher 
 
 Thank you for joining us on this journey to create a soothing and delightful gaming experience. Night Catcher is not just a game; it's an invitation to unwind and enjoy the simple pleasures in life, one click at a time.
 
-
+# Gallery
 
 {% include gallery %}
 
