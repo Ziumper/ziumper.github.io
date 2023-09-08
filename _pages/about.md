@@ -15,45 +15,49 @@ toc_sticky: true
 feature_row_experience:
   - image_path: /assets/images/portfolio-images/sz-logo-big.png
     alt: "Sunzinet"
-    excerpt: "Maintain and develop shopware 5 and shopware 6 plugins, shops, and solutions in PHP from summer 2019."
+    title: "Software Developer"
+    excerpt: "<b>Jun 2019 - Now</b><br/> Maintain and develop shopware 5 and shopware 6 plugins, shops, and solutions in PHP"
     url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/farmind.png
     alt: "Farmind"
-    excerpt: "Create, develop and test games in Unity and C# from 2020-2023."
+    title: "Lead Software Developer"
+    excerpt: "<b>Feb 2020 - Jan 2023</b><br/> Create, develop and test games in Unity and C#"
     url: "/portfolio/night-catcher"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/meteoryt.png
     alt: "Meteoryt"
-    excerpt: "Developing and maintain e-commerce software solutions written in PHP and Smarty from 2018-2019."
+    title: "Software Developer"
+    excerpt: "<b> July 2018 - Jun 2019</b> <br/> Developing and maintain e-commerce software solutions written in PHP and Smarty"
     url: "/portfolio/boesner"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/billennium.png
     alt: "Billennium"
-    excerpt: "Develop and maintain existing software solutions in .NET and C# frameworks from 2017-2018."
+    title: "Software Developer"
+    excerpt: "<b>Jan 2017- Feb 2018 </b><br/> Develop and maintain existing software solutions in .NET and other C# frameworks"
     url: "/portfolio/boesner"
     btn_label: "Read More"
     btn_class: "btn--inverse"
 feature_row_education:
-  - image_path: /assets/images/portfolio-images/ludo_screen1.jpg
-    alt: "Sunzinet"
-    title: "Sunzinet"
-    excerpt: "Maintain and develop shopware 5 and shopware 6 plugins, shops, and solutions in PHP from summer 2019."
+  - image_path: /assets/images/portfolio-images/pg-smaller.png
+    alt: "Gdańsk University of Technology"
+    title: "Master of Engineering, Computer Science"
+    excerpt: "<b>2021 - 2023</b><br/>"
     url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /assets/images/portfolio-images/night_catcher.png
-    title: "Night Catcher"
-    excerpt: "Night Catcher is chill-out base game for those who want to just relax and click on some dots on phone"
-    url: "/portfolio/night-catcher"
+  - image_path: /assets/images/portfolio-images/uwm.png
+    title: "Bachelor of Engineering, Computer Science"
+    excerpt: "<b>2013 - 2017</b><br/>"
+    url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
-  - image_path: /assets/images/portfolio-images/boesner.png
-    title: "Boesner"
-    excerpt: "Relaunch of the international boesner online store"
+  - image_path: /assets/images/portfolio-images/staszic.png
+    title: "IT technician "
+    excerpt: "<b>2008 - 2012</b><br/>"
     url: "/portfolio/boesner"
     btn_label: "Read More"
     btn_class: "btn--inverse"
@@ -69,10 +73,12 @@ My developer carrier story started in the summer of 2017 after my successful gra
 
 # Education
 
-Over the course of the past ten years, I embarked on an incredible journey through the ever-evolving landscape of Information Technology (IT). It has been a decade marked by discovery, challenges, growth, and a relentless pursuit of knowledge in the world of bits and bytes.
+Over the course of the ten years, I embarked on an incredible journey through the ever-evolving landscape of Information Technology (IT). It has been a decade marked by discovery, challenges, growth, and a relentless pursuit of knowledge in the world of bits and bytes.
+
+{% include feature_row_education %}
 
 <!-- 
-{% include feature_row_education %} -->
+
 
 <!-- ## Gdańsk University of Technology
  2021 - 2023, Master of Engineering, Computer Science
