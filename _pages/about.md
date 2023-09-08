@@ -44,20 +44,20 @@ feature_row_experience:
 feature_row_education:
   - image_path: /assets/images/portfolio-images/pg-smaller.png
     alt: "Gdańsk University of Technology"
-    title: "Master of Engineering, Computer Science"
-    excerpt: "<b>2021 - 2023</b><br/>"
+    title: "Gdańsk University of Technology"
+    excerpt: "Master of Engineering, Computer Science <br/> <b>2021 - 2023</b><br/>"
     url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/uwm.png
-    title: "Bachelor of Engineering, Computer Science"
-    excerpt: "<b>2013 - 2017</b><br/>"
+    title: " Universtiy of Warima nad Mazury"
+    excerpt: "Bachelor of Engineering, Computer Science <br/> <b>2013 - 2017</b><br/>"
     url: "/portfolio/just-chill-out-ludo-game"
     btn_label: "Read More"
     btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/staszic.png
-    title: "IT technician "
-    excerpt: "<b>2008 - 2012</b><br/>"
+    title: "Stanisław Staszic School Complex in Szczytno"
+    excerpt: "IT technician <br/> <b>2008 - 2012</b><br/>"
     url: "/portfolio/boesner"
     btn_label: "Read More"
     btn_class: "btn--inverse"
