@@ -1,5 +1,4 @@
 ---
-excerpt: "Relaunch of the international boesner online store."
 sidebar:
   - title: "Role"
     image: /assets/images/portfolio-images/pg-logotyp.png
