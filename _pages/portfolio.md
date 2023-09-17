@@ -4,6 +4,13 @@ title: "Portfolio"
 layout: splash
 classes: wide
 feature_row:
+  - image_path: /assets/images/portfolio-images/bhb.png
+    alt: "Board Heroes Battle"
+    title: "Board Heroes Battle"
+    excerpt: "An Augmented Reality (AR) turn-based strategy (TBS) Android game developed in Unity and Unreal Engine"
+    url: "/portfolio/board-heroes-battle"
+    btn_label: "Read More"
+    btn_class: "btn--inverse"
   - image_path: /assets/images/portfolio-images/ludo_screen1.jpg
     alt: "Ludo game, just chill out!"
     title: "Ludo game, just chill out!"
