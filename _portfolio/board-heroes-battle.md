@@ -8,7 +8,7 @@ sidebar:
   - title: "Responsibilities"
     text: "Game desgin, development and programming"
   - title: "Technology"
-    text: "ARCore, Unity, Unreal Engine, C++, Blueprints, C#"
+    text: "ARCore, Unity, Unreal Engine, C++, Blueprints, C#, XR, ARFoundation"
 gallery:
   - url: /assets/images/portfolio-images/BoardHeroesBattle_unity.jpg
     image_path: /assets/images/portfolio-images/BoardHeroesBattle_unity.jpg
