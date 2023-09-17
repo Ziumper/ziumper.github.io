@@ -13,7 +13,7 @@ developing augmented reality applications for the Android platform"
      text: "october 2021 - jun 2023"
 ---
 
-Life as a commercial software developer was a dynamic and fulfilling journey—a journey that instilled in me the significance of innovation, efficiency, and problem-solving in the world of technology. However, with each passing project and every line of code written, I realized that my passion for software development was merely the beginning of a profound intellectual adventure.
+Life as a commercial software developer was a dynamic and fulfilling journey, a journey that instilled in me the significance of innovation, efficiency, and problem-solving in the world of technology. However, with each passing project and every line of code written, I realized that my passion for software development was merely the beginning of a profound intellectual adventure.
 
 In the ever-evolving realm of technology, I found myself drawn to a deeper understanding of software engineering and the intricate standards that underpin this dynamic field. The decision to further my education and embark on a path of continuous learning was born out of a desire to explore, experiment, and elevate my expertise beyond the confines of commercial development.
 
