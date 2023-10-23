@@ -27,7 +27,7 @@ gallery:
 
 Night Catcher is more than just a mobile game; it's a tranquil escape into a world of whimsical felines and soothing relaxation. Developed by the talented team at Farmind Game Developers Studio, this project brought together creativity and technical expertise to create an unforgettable gaming experience. As the project lead and chief programmer, I played a pivotal role in shaping the game's architecture, ensuring its quality, and seamlessly integrating external tools like Wwise for a truly immersive audio experience.
 
-<a href="https://play.google.com/store/apps/details?id=com.Farmind.NightCatcher" class="btn btn--inverse"><i class="fa fa-play" aria-hidden="true"></i> Install game</a>
+<a href="https://play.google.com/store/apps/details?id=com.Farmind.NightCatcher" class="btn btn--primary"><i class="fa fa-play" aria-hidden="true"></i> Install game</a>
 
 # Planning the Programming Structures
 
@@ -64,4 +64,4 @@ Thank you for joining us on this journey to create a soothing and delightful gam
 {% include gallery %}
 
 
-<a href="http://farmind.pl/en/night-catcher-mobile/" class="btn btn--inverse">Read more</a>
+<a href="http://farmind.pl/en/night-catcher-mobile/" class="btn btn--primary">Read more</a>

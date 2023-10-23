@@ -7,12 +7,16 @@ header:
     overlay_filter: "0.5"
     overlay_image: /assets/images/posts-images/gitExtensions_12.png
     teaser: /assets/images/posts-images/gitExtensions_12.png
+toc: true
+toc_label: "What's inside"
+toc_icon: "cog"
+toc_sticky: true
 ---
 
 
 Have you ever wondered how to merge your changes easily without destroying the entire project? 
 So here is a quick and easy guide to follow. Let’s start!
-First, you should install and configure [GitExtensions](https://git-extensions-documentation.readthedocs.io/en/release-3.4/getting_started.html). After that open up your repository. In my case, it contains two branches: master and develop. Check the image below to see it.
+First, you should install and configure [GitExtensions](https://git-extensions-documentation.readthedocs.io/). After that open up your repository. In my case, it contains two branches: master and develop. Check the image below to see it.
 
 ![gitExtensions1!](/assets//images//posts-images/gitExtensions_1.webp "gitextensions window tree changes")
 

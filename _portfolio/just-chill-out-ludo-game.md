@@ -39,7 +39,7 @@ I invite you to explore this portfolio to get a glimpse of the Ludo game board p
 
 Thank you for joining us on this journey to reimagine Ludo for the digital age. Together, we've brought a piece of our childhood into the modern world, preserving its magic for generations to come
 
-<a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/" class="btn btn--inverse"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy game</a>
+<a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/" class="btn btn--primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Buy game</a>
 
 
 
@@ -76,4 +76,4 @@ The result of our collective efforts is a digital Ludo game board that pays homa
 {% include gallery %}
 
 
-<a href="http://farmind.pl/en/just-chill-out-ludo-game/" class="btn btn--inverse">Read more</a>
+<a href="http://farmind.pl/en/just-chill-out-ludo-game/" class="btn btn--primary">Read more</a>

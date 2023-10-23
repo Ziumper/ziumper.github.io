@@ -23,7 +23,7 @@ gallery:
 
 I had the privilege of taking the helm in the relaunch of the Boesner online store, an international e-commerce platform, powered by Shopware 5. This project was a testament to my skills in plugin development, my ability to work with legacy code, and my commitment to seeing a project through from start to finish.
 
-<a href="https://boesner.com" class="btn btn--inverse"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Visit Store</a> 
+<a href="https://boesner.com" class="btn btn--primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Visit Store</a> 
 
 # Plugin development experience
 
@@ -45,4 +45,4 @@ The modernized platform not only maintained its loyal customer base but also att
 
 {% include gallery %}
 
-<a href="https://www.sunzinet.com/en/references/boesner" class="btn btn--inverse">Read more</a> 
+<a href="https://www.sunzinet.com/en/references/boesner" class="btn btn--primary">Read more</a> 

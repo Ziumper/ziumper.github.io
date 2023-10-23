@@ -28,7 +28,7 @@ gallery:
 
 I am thrilled to present my blog manager application, a dynamic and feature-rich platform developed using .NET Core and Angular. This project encompasses a wide range of functionalities, including user registration, secure login, user-specific listing pages, a versatile administration panel, and a user-friendly home page that keeps users updated with the latest news and posts.
 
-<a href="https://github.com/Ziumper/Demo-Blog-Manager/" class="btn btn--inverse"><i class="fab fa-fw fa-github" aria-hidden="true"></i> View code</a>
+<a href="https://github.com/Ziumper/Demo-Blog-Manager/" class="btn btn--primary"><i class="fab fa-fw fa-github" aria-hidden="true"></i> View code</a>
 
 # Technological Frameworks
 

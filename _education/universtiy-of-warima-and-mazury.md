@@ -31,7 +31,7 @@ In retrospect, my time with the Java Science Club was an enriching chapter of my
 
 My Engineer's Thesis, titled 'Implementation of LZSS Algorithm,' reflects my dedication to exploring data compression techniques and their practical applications. This thesis represents a significant milestone in my academic journey, where I delved into the intricate workings of the LZSS algorithm to contribute to the field of data compression and software engineering.
 
-<a href="/portfolio/lzss" class="btn btn--inverse">Read more</a> 
+<a href="/portfolio/lzss" class="btn btn--primary">Read more</a> 
 
 
 # Gradutes skills

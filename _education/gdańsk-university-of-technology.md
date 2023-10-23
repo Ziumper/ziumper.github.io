@@ -21,7 +21,7 @@ In the ever-evolving realm of technology, I found myself drawn to a deeper under
 
 In the culmination of my educational journey, my master's thesis focused on a comprehensive comparison of Augmented Reality (AR) integration in two of the industry's leading game engines, Unity and Unreal Engine. This study involved the development of two distinct AR applications, each powered by one of these engines, and explored their capabilities in-depth, including the seamless implementation of multiplayer functionality.
 
-<a href="/portfolio/board-heroes-battle" class="btn btn--inverse">Read more</a> 
+<a href="/portfolio/board-heroes-battle" class="btn btn--primary">Read more</a> 
 
 # About University of Technology in Gdańsk Graduated skills
 

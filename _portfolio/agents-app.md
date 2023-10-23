@@ -16,8 +16,8 @@ gallery:
 
  I utilized my C++ programming skills to create a real-time simulation of a reputation and trust-building scheme, offering valuable insights into the complexities of human interactions and digital ecosystems.
 
-<a href="https://github.com/Ziumper/AgentsApp/releases/download/v0.2.2/AgentsApp.zip" class="btn btn--inverse"><i class="fa fa-download" aria-hidden="true"></i> Download app</a>
-<a href="https://github.com/Ziumper/AgentsApp" class="btn btn--inverse"><i class="fab fa-fw fa-github" aria-hidden="true"></i> View code</a>
+<a href="https://github.com/Ziumper/AgentsApp/releases/download/v0.2.2/AgentsApp.zip" class="btn btn--primary"><i class="fa fa-download" aria-hidden="true"></i> Download app</a>
+<a href="https://github.com/Ziumper/AgentsApp" class="btn btn--primary"><i class="fab fa-fw fa-github" aria-hidden="true"></i> View code</a>
 
 # The Concept
 
