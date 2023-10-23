@@ -1,5 +1,5 @@
 ---
-title:  "How to storage big binary files with git lfs on Google Drive or One Drive?"
+title:  "How to store big binary files with git lfs on Google Drive or One Drive?"
 toc: true
 toc_label: "What's inside"
 toc_icon: "cog"
