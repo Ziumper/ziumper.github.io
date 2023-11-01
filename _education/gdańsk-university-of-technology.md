@@ -3,7 +3,7 @@ sidebar:
    - title: "Degree/Title"
      image: /assets/images/portfolio-images/pg-logotyp.png
      image_alt: "image"
-     text: "Master's"
+     text: "Master of Science in Engineering"
    - title: "Field of Study:"
      text: "Computer Science"
    - title: "Thesis Title"

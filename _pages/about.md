@@ -45,14 +45,14 @@ feature_row_education:
   - image_path: /assets/images/portfolio-images/pg-smaller.png
     alt: "Gdańsk University of Technology"
     title: "Gdańsk University of Technology"
-    excerpt: "Master of Engineering, Computer Science <br/> <b>2021 - 2023</b><br/>"
+    excerpt: "Master of Science in Engineering, Computer Science <br/> <b>2021 - 2023</b><br/>"
     url: "/education/gdańsk-university-of-technology"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/portfolio-images/uwm.png
-    title: " Universtiy of Warima and Mazury"
+    title: " Universtiy of Warmia and Mazury"
     excerpt: "Bachelor of Engineering, Computer Science <br/> <b>2013 - 2017</b><br/>"
-    url: "/education/universtiy-of-warima-and-mazury"
+    url: "/education/universtiy-of-warmia-and-mazury"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/portfolio-images/staszic.png
