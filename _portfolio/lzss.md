@@ -20,6 +20,9 @@ gallery:
 
 In the fast-paced world of data management, where both storage space and quick access to information are paramount, my project stands at the intersection of efficiency and reliability. It showcases the implementation of the LZSS (Lempel-Ziv-Storer-Szymanski) compression algorithm, which optimizes data storage, and incorporates the KMP (Knuth-Morris-Pratt) algorithm for robust search capabilities.
 
+
+<a href="https://github.com/Ziumper/LZSS" class="btn btn--primary"><i class="fab fa-fw fa-github" aria-hidden="true"></i> View code</a>
+
 # The Challenge
 
 Efficient data compression is essential, but equally critical is the ability to retrieve information swiftly and reliably. The LZSS algorithm, renowned for its memory-saving prowess, forms the foundation of this project. However, to enhance its utility, I introduced the KMP algorithm, known for its robust string search capabilities.
