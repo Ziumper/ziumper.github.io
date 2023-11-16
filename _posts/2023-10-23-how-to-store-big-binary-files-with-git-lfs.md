@@ -25,92 +25,253 @@ I suggest connecting git lfs with custom transfer adapter.  According to git-lfs
 > The core client also supports extensions to allow resuming of downloads (via Range headers) and uploads (via the tus.io protocol).
 
 
-# lfs-folderstore 
+# Usage examples
 
-A lfs-folderstore is a git-lfs custom transfer adapter that utilizes a remote LFS media store in the form of a shared NAS folder. 
-Let's say you use Git, but you don't use any fancy hosting solution. You just use a plain Git repo on a server somewhere, perhaps using SSH so you don't even need a web server. It's simple and great.
+I used this approach to storage media files in my software development project and game dev project. 
+I bet you can do it too. In the most cases I like to use it for:
+-  game dev projects in game engines like Unity and Unreal Engine.
+-  dbdumps storage 
+-  big media files storage (in case you need a one)
 
-But how do you use Git LFS? It usually wants a server to expose API endpoints. Sure you could use one of the big hosting providers, but that makes everything more complicated.
+There are always a way to do it for another kind of projects.
 
-Maybe you already have plenty of storage sitting on a NAS somewhere, or via Dropbox, Google Drive etc, which you can share with your colleagues. Why not just use that?
+In example bellow I will be using gitlab, google drive and other tools.
 
-So that's what this adapter does. When enabled, all LFS uploads and downloads are simply translated into file copies to/from a folder that's visible to your system already. Put your media on a shared folder, or on a synced folder like Dropbox, or Synology Cloud Drive etc.
+# Gitlab setup 
 
-## How to use it?
+Firstly you need to disable default lfs service of gitlab. It's very vell documented feature in official documentation 
+[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs) but there is not many information how to disable it. 
 
-I copied over the documentation available from github repo of the creator so you don't have switch from place to place ;-) 
+It's a ltile tricky and not really user friendly but obviously you need to select your repository and dive into settings.
+![gitlab!](/assets/images/posts-images/settings_gitlab.png "setup gitlab lfs")
 
-### Prerequisites
+![gitlab2!](/assets/images/posts-images/disable_gitlab_lfs_example.png "disable gitlab lfs")
 
-You need to be running Git LFS version 2.3.0 or later. This has been tested
-with 2.5.2 and 2.6.0 (and with Git 2.19.1).
+Although!
 
-### Download &amp; install
+![yodameme](/assets/images/posts-memes/yoda-there-is.gif "yoda meme")
 
-You will need `lfs-folderstore[.exe]` to be on your system path somewhere.
+There is another way also via gitlab cli, and to CI tools too via environment variables but I will not cover this, let's keep it simple.
 
-Either download and extract the [latest
-release](https://github.com/sinbad/lfs-folderstore/releases), or build it from
-source using the standard `go build`.
+If giltab lfs is disabled on remote you can start with local setup.
 
-### Configure a fresh repo
+# Local repository setup
 
-Starting a new repository is the easiest case.
+You will need a new repository or use existing one. I suggest starting with fresh state so 
+you can go with easier setup guide bellow. 
 
-* Initialise your repository as usual with `git init` and `git lfs track *.png` etc
-* Create some commits with LFS binaries
-* Add your plain git remote using `git remote add origin <url>`
-* Run these commands to configure your LFS folder:
-  * `git config --add lfs.customtransfer.lfs-folder.path lfs-folderstore`
-  * `git config --add lfs.customtransfer.lfs-folder.args "C:/path/to/your/folder"`
-  * `git config --add lfs.standalonetransferagent lfs-folder`
-* `git push origin master` will now copy any media to that folder
+```
+git init
+```
 
-A few things to note:
+Add also remote server link. That can be done after setup or later.
+For gitlab you can follow simple tutorial [link to git](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#add-a-remote)
 
-* As shown, if on Windows, use forward slashes for path separators
-* If you have spaces in your path, add **additional single quotes** around the path
-    * e.g. `git config --add lfs.customtransfer.lfs-folder.args "'C:/path with spaces/folder'"`
-* The `standalonetransferagent` forced Git LFS to use the folder agent for all
-  pushes and pulls. If you want to use another remote which uses the standard
-  LFS API, you should see the next section.
+# Lfs setup
 
-### Configure an existing repo
 
-If you already have a Git LFS repository pushing to a standard LFS server, and
-you want to either move to a folder, or replicate, it's a little more complicated.
+Download a lfs adapter tool from [available releases](https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1).
 
-* Create a new remote using `git remote add folderremote <url>`. Do this even if you want to keep the git repo at the same URL as currently.
-* Run these commands to configure the folder store:
-  * `git config --add lfs.customtransfer.lfs-folder.path lfs-folderstore`
-  * `git config --add lfs.customtransfer.lfs-folder.args "C:/path/to/your/folder"`
-  * `git config --add lfs.<url>.standalonetransferagent lfs-folder` - important: use the new Git repo URL
-* `git push folderremote master ...` - important: list all branches you wish to keep LFS content for. Only LFS content which is reachable from the branches you list (at any version) will be copied to the remote
 
-### Cloning a repo
+![memeMickeyMouse](/assets/images/posts-memes/OIP.jpeg)
 
-There is one downside to this 'simple' approach to LFS storage - on cloning a
-repository, git-lfs can't know how to fetch the LFS content, until you configure
-things again using `git config`. That's the nature of the fact that you're using
-a simple Git remote with no LFS API to expose this information.
+Download, unzip, install it 
+to some good known location. For example make a new folder in you main work disk like this ```C:\Tools``` so full path to the tool
+will be like this ```C:\Tools\lfs-folderstore.exe```.
 
-It's not that hard to resolve though, you just need a couple of extra steps
-when you clone fresh. Here's the sequence:
 
-* `git clone <url> <folder>`
-    * this will work for the git data, but will report "Error downloading object" when trying to get LFS data
-* `cd <folder>` - to enter your newly cloned repo
-* Configure as with a new repo:
-  * `git config --add lfs.customtransfer.lfs-folder.path lfs-folderstore`
-  * `git config --add lfs.customtransfer.lfs-folder.args "C:/path/to/your/folder"`
-  * `git config --add lfs.standalonetransferagent lfs-folder`
-* `git reset --hard master`
-  * This will sort out the LFS files in your checkout and copy the content from the now-configured shared folder
+To setup repo with lfs please add .gitattributes file in your repository.
+For examples check this [link](https://github.com/gitattributes/gitattributes).
 
-## Git config integration
+## Unity .gitattributes
+
+```
+## in root 
+
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.physicMaterial merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf -text
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
+
+## git-lfs ##
+
+#Image
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+
+#Audio
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+#Wwise
+*.bnk filter=lfs diff=lfs merge=lfs -text
+
+#Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+
+#3D Object
+*.FBX filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+#ETC
+*.a filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.rns filter=lfs diff=lfs merge=lfs -text
+*.reason filter=lfs diff=lfs merge=lfs -text
+*.lxo filter=lfs diff=lfs merge=lfs -text
+
+```
+
+##  Unreal Engine .gitattributes
+```
+## Unreal Engine 
+## Auto detect text files and perform LF normalization ##
+
+* text=auto
+
+# UE file types
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+*.udk filter=lfs diff=lfs merge=lfs -text
+*.upk filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 2D formats
+# Read more in: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
+
+# Recommended use:
+*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[fF][lL[oO][aA][tT] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[pP][cC][xX] filter=lfs diff=lfs merge=lfs -text
+*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
+*.[xX][cC][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
+*.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
+*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 3D formats
+
+# Always recommended to use:
+# The UE4 FBX import pipeline uses FBX 2018
+*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
+*.[sS][rR][tT] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Audio formats
+# Read more in: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
+
+# Always recommended to use:
+*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
+*.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
+
+# Not recommended to use, but supported:
+*.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][aA] filter=lfs diff=lfs merge=lfs -text
+*.[aA][cC]3 filter=lfs diff=lfs merge=lfs -text
+*.[aA][mM][rR] filter=lfs diff=lfs merge=lfs -text
+*.[aA][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][uU] filter=lfs diff=lfs merge=lfs -text
+*.[cC][dD][dD][aA] filter=lfs diff=lfs merge=lfs -text
+*.[cC][aA][fF] filter=lfs diff=lfs merge=lfs -text
+*.[bB][wW][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][dD][tT][sS] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Video formats
+# Read more in: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
+
+# Always recommended to use, supports all platforms:
+# For the best compatibility and performance, it is recommended to use H.264 encoded MP4 (.mp4) container files.
+*.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used, only some platforms are supported:
+*.3[gG]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP] filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP][pP] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[aA] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM][o][vV] filter=lfs diff=lfs merge=lfs -text
+*.[aA][sS][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][vV][iI] filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][vV] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Fonts
+# Read more in: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
+
+*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Documents
+*.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
+
+```
+# Goolge Drive Setup
+
+If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client [Download](https://www.google.com/drive/download/). 
+Install it and login so you can create a folder to store all big binary data. 
+
+After the login you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name
+``binary-lfs``. That name will be used to store all binary data for you project in lfs setup. 
+
+# Git config integration
+
+If you have done right everything now it's a time to connect git-lfs with our tool and google drive.
 
 I used my favorite open-source [GitExtension](https://git-extensions-documentation.readthedocs.io/) software as reference for integration, but you can use terminal by using git config approach
-or any kind of text editor
+or any kind of text editor. In case using text editor open up config file inside hidden .git folder inside root folder of your project repository.
 
 To open up the configuration of your github repository choose following option:
 ![gitExtensions1!](/assets/images/posts-images/integration_gitextension.png "open configuration")
@@ -119,8 +280,8 @@ Open it up and append following lines, similar as inside [Cloning a repo](#cloni
 
 ```
 [lfs "customtransfer.lfs-folder"]
-    path = C:\\MyPathToLfsFolderStoreExe\\lfs-folderstore.exe
-    args = 'I:\\My drive\\my-lfs-folder'
+    path = C:\\Tools\\lfs-folderstore.exe
+    args = 'I:\\My drive\\binary-lfs'
 [lfs]
     standalonetransferagent = lfs-folder
     repositoryformatversion = 0
@@ -130,6 +291,13 @@ Afterwards you should be good to go, afterwards remember to sort out the LFS fil
 ```bash
 git reset --hard master
 ```
+or if you are using fresh repository simply push it
+
+```
+git push -u origin main
+```
+
+# Troubleshooting
 
 Sometimes there could be some problems with your network or issues with git lfs 
 In case of smudge errors or problems you can use following hacks:
@@ -138,7 +306,15 @@ In case of smudge errors or problems you can use following hacks:
 - use git lfs fetch --all - Fetch git lfs files for ALL remote branches
 - move your google drive or one drive directory cache to new folder and try to download the data again
 
-# Usage examples
 
-I used following approach to storage media files in my software development project and game dev project. 
-I bet you can do it too. Good luck!
+# Bibliography and sources
+
+- [Lfs folderstore repo](https://github.com/sinbad/lfs-folderstore)
+- [Google Drive](https://www.google.com/drive/download/)
+- [Gitlab Docs](https://docs.gitlab.com/)
+
+# Thanks and appreciation 
+
+I would like to thank [Asmo](http://farmind.pl/) for finding out this way and teaching team to how
+use it. Without this approach it would be hard to work remotly and store such big data in effcient way and low costs. 
+Keep good work! 
