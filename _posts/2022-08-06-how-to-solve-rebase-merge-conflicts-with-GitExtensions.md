@@ -13,9 +13,9 @@ toc_icon: "cog"
 toc_sticky: true
 tags:
     - GitExtensions
-    - Tutorial
-categories:
     - Git
+categories:
+    - Tutorials
 ---
 
 

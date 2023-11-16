@@ -6,9 +6,9 @@ toc_icon: "cog"
 toc_sticky: true
 tags:
     - GitExtensions
-    - Tutorial
-categories:
     - Git
+categories:
+    - Tutorials
 ---
 
 I was wondering what GIT means. Here is what I have found:
