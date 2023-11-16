@@ -40,9 +40,9 @@ In example bellow I will be using gitlab, google drive and other tools.
 # Gitlab setup 
 
 Firstly you need to disable default lfs service of gitlab. It's very vell documented feature in official documentation 
-[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs) but there is not many information how to disable it. 
+[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs) but there is not much information how to disable it. 
 
-It's a ltile tricky and not really user friendly but obviously you need to select your repository and dive into settings.
+It's a litle tricky and not really user friendly but obviously you need to select your repository and dive into settings.
 ![gitlab!](/assets/images/posts-images/settings_gitlab.png "setup gitlab lfs")
 
 ![gitlab2!](/assets/images/posts-images/disable_gitlab_lfs_example.png "disable gitlab lfs")
@@ -80,7 +80,7 @@ to some good known location. For example make a new folder in you main work disk
 will be like this ```C:\Tools\lfs-folderstore.exe```.
 
 
-To setup repo with lfs please add .gitattributes file in your repository.
+To set up repo with lfs please add .gitattributes file in your repository.
 For examples check this [link](https://github.com/gitattributes/gitattributes).
 
 ## Unity .gitattributes
@@ -263,7 +263,7 @@ For examples check this [link](https://github.com/gitattributes/gitattributes).
 If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client [Download](https://www.google.com/drive/download/). 
 Install it and login so you can create a folder to store all big binary data. 
 
-After the login you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name
+After loging you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name
 ``binary-lfs``. That name will be used to store all binary data for you project in lfs setup. 
 
 # Git config integration
@@ -303,7 +303,7 @@ Sometimes there could be some problems with your network or issues with git lfs
 In case of smudge errors or problems you can use following hacks:
 - try using better internet connection low network bandwidth is not helping
 - restart computer
-- use git lfs fetch --all - Fetch git lfs files for ALL remote branches
+- use ``git lfs fetch --all``  fetch git lfs files for ALL remote branches
 - move your google drive or one drive directory cache to new folder and try to download the data again
 
 
@@ -315,6 +315,5 @@ In case of smudge errors or problems you can use following hacks:
 
 # Thanks and appreciation 
 
-I would like to thank [Asmo](http://farmind.pl/) for finding out this way and teaching team to how
-use it. Without this approach it would be hard to work remotly and store such big data in effcient way and low costs. 
+I would like to thank [Asmo](http://farmind.pl/) for finding out this way and teaching team how to use it. Without this approach it would be hard to work remotly and store such big data in effcient way and low costs. 
 Keep good work! 
