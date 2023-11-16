@@ -11,6 +11,11 @@ toc: true
 toc_label: "What's inside"
 toc_icon: "cog"
 toc_sticky: true
+tags:
+    - GitExtensions
+    - Tutorial
+categories:
+    - Git
 ---
 
 
