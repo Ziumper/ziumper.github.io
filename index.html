@@ -41,7 +41,7 @@ tagline: ""
     {% for category in site.categories %}
       {% if category[1].size == i %}
         <span itemprop="keywords">
-            <a href="{{ category[0] | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category[0] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+            <a href="{{ category[0] | slugify | prepend: '#' | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category[0] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
           </span>
       {% endif %}
     {% endfor %}
@@ -55,7 +55,7 @@ tagline: ""
       {% for tag in site.tags %}
         {% if tag[1].size == i %}
       <span itemprop="keywords">
-        <a href="{{ tag[0] | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag[0] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+        <a href="{{ tag[0] | slugify | prepend: '#' | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag[0] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
       </span>
       {% endif %}
       {% endfor %}
