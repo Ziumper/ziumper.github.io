@@ -247,7 +247,7 @@ sass:
 # multi language settings
 default_locale_in_subfolder: false
 exclude_from_localizations: ["assets"]
-languages: ["en", "pt-br"]
+languages: ["en", "pl"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
@@ -281,8 +281,8 @@ display_categories: ["blockquotes"] # these categories will be displayed on the 
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Komoszeski]
+  first_name: [Tomasz]
 
   style: apa
   locale: en

@@ -1,0 +1,156 @@
+not_found:
+  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie, proszę wróc do 
+  main_page: strona główna
+main:
+  contact_note: Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! 
+    <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a>
+  footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+    Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
+    Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+    Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  more_info: >
+    <p>Burdąg, Warmińsko-Mazurskie Polska</p>
+  subtitle: Aspirujący programista gier oraz inżynier oprogramowania
+titles:
+  about: O mnie
+  blog: blog
+  cv: cv
+  latest_posts: ostatnie posty
+  news: wiadomości
+  profiles: ludzie
+  projects: projekty
+  publications: publikacje
+  repositories: repozytoria
+  selected_publications: wybrane publikacje
+  teaching: nauka
+  submenus: podmenu
+  unk: strona nie znaleziona
+descriptions:
+  about: Prosty blog. Oparty o [*folio](https://github.com/bogoli/-folio).
+  archive-category: archiwum postów w tej kategorii
+  archive-tag: archiwum postów z tagiem
+  archive-year: archiwum postów z tym rokiem
+  blog: Prosty blog z postami
+  cv: Curriculum Vitae.
+  profiles: Członkowie mojej grupy naukowej.
+  projects: Kolekcja moich projektów.
+  publications: Publikacje podzielone na kategorię w chronologicznym porządku.
+  repositories: Repozytoria i stworzony przeze mnie kod.
+  teaching: Materiały do kursów.
+  unk: Wygląda na to, że popełniono błąd i nic tutaj nie ma.
+blog:
+  description: Prosty blog z postami
+  name: al-folio blog po polsku # blog_name will be displayed in your blog page
+  nav_title: blog # your blog must have a title for it to be displayed in the nav bar
+  related_posts:
+    description: "Oto kilka następnych artykułów, które mogą Ci się również spodobać: "
+    title: Podoba Ci się ten artykuł?
+months:
+  long:
+    january: Styczeń
+    february: Luty
+    march: Marzec
+    april: Kwiecień
+    may: Maj
+    june: Czerwiec
+    july: Lipiec
+    august: Sierpień
+    september: Wrzesień
+    october: Październik
+    november: Listopad
+    december: Grudzień
+  short:
+    january: Sty
+    february: Lut
+    march: Marz
+    april: Kwie
+    may: Maj
+    june: Czerw
+    july: Lipie
+    august: Sierp
+    september: Wrze
+    october: Paź
+    november: List
+    december: Grudz
+news:
+  empty: Póki co pusto...
+  titles:
+    news1: Proste ogłoszenie w tekście.
+    news2: Długie ogłoszenie ze szczegółami
+    news3: "Proste ogłoszenie w tekście z emoji! :sparkles: :smile:"
+pagination:
+  newer: Nowsze
+  older: Starsze
+  page: strona
+projects:
+  titles:
+    project1: Projekt 1
+    project2: Projekt 2
+    project3: Projekt 3
+    project4: Projekt 4
+    project5: Projekt 5
+    project6: Projekt 6
+  descriptions:
+    project1: projekt z obrazem w tle
+    project2: projekt z obrazem w tle oraz skrzynkowym komentarzem
+    project3: projekt, który przekierowuje do innej strony
+    project4: kolejny projekty bez obrazu
+    project5: projekt z obrazem w tle
+    project6: projekt bez obrazu
+  categories:
+    fun: zabawa
+    work: praca
+repositories:
+  users: Użytkownicy GitHub 
+  repos: Repozytoria GitHub 
+cv:
+  address: Adres
+  area: Obszar
+  awarder: Nagradzony
+  awards: Nagrody 
+  basics: Podstawowe informacje
+  certificates: Certyfikaty
+  city: Miasto
+  countryCode: Kod kraju
+  courses: Kursy
+  date: Data
+  education: Edukacja
+  email: Email
+  endDate: Data końcowa
+  fluency: Płynność
+  highlights: Przegląd najważniejszych wydarzeń
+  image: Obraz
+  institution: Instytucja
+  interests: Zainteresowania
+  issuer: Emitent
+  keywords: Słowa kluczowe
+  label: Etykieta
+  language: Język
+  languages: Języki
+  level: Poziom
+  location: Lokalizacja
+  name: Imię
+  network: Sieć
+  organization: Organizacja
+  phone: Telefon
+  position: Pozycja
+  postalCode: Kod pocztowy
+  profiles: Profile
+  projects: Projekty
+  publications: Publikacje
+  publisher: Wydawca
+  reference: Referencja
+  references: Referencje
+  region: Region
+  releaseDate: Data wydania
+  score: Punkty
+  skills: Umiejętności
+  startDate: Początkowa data
+  studyType: Przedmiot studiów
+  summary: Podsumowanie
+  table_of_contents: Spis treści
+  title: Tytuł
+  url: Url
+  username: Nazwa użytkownika
+  volunteer: Ochotnik
+  work: Praca
