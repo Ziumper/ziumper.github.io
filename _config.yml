@@ -7,7 +7,7 @@ first_name: Tomasz
 middle_name: 
 last_name: Komoszeski
 email: you@example.com
-keywords: portfolio-website ziumper software-developer software-engineer game-developer full-stack unity-developer shopware-developer godot-developer unreal-developer # add your own keywords or leave empty
+keywords: portfolio-website ziumper software-developer software-engineer game-developer full-stack unity-developer shopware-developer godot-developer unreal-developer frontend-developer backend-developer # add your own keywords or leave empty
 
 lang: en # the main language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -72,7 +72,7 @@ scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: # your ORCID ID
-medium_username: Ziumper # your Medium username
+medium_username: #Ziumper # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
 lattes_id: # your ID on Lattes (Brazilian Lattes CV)
@@ -85,7 +85,7 @@ keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 dblp_url: # your DBLP profile url
-stackoverflow_id: Ziumper # your stackoverflow id
+stackoverflow_id: #Ziumper # your stackoverflow id
 kaggle_id: # your kaggle id
 lastfm_id: # your lastfm id
 spotify_id: # your spotify id
@@ -148,9 +148,9 @@ disqus_shortname: multi-language-al-folio # put your disqus shortname
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+#external_sources:
+#  - name: #medium.com
+#    rss_url: https://medium.com/@al-folio/feed
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -228,7 +228,7 @@ plugins:
   - jekyll-minifier
   - jekyll-multiple-languages-plugin
   - jekyll-paginate-v2
-  - jekyll/scholar
+#  - jekyll/scholar
   - jekyll-sitemap
   - jekyll-toc
   - jekyll-twitter-plugin
@@ -280,46 +280,46 @@ display_categories: ["blockquotes"] # these categories will be displayed on the 
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
-scholar:
-  last_name: [Komoszeski]
-  first_name: [Tomasz]
-
-  style: apa
-  locale: en
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
+#scholar:
+#  last_name: [Komoszeski]
+#  first_name: [Tomasz]
+#
+#  style: apa
+#  locale: en
+#
+#  source: /_bibliography/
+#  bibliography: papers.bib
+#  bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
+#  bibtex_filters: [latex, smallcaps, superscript]
 
-  replace_strings: true
-  join_strings: true
+#  replace_strings: true
+#  join_strings: true
 
-  details_dir: bibliography
-  details_link: Details
+#  details_dir: bibliography
+#  details_link: Details
 
-  query: "@*"
-  group_by: year
-  group_order: descending
+#  query: "@*"
+#  group_by: year
+#  group_order: descending
 
 # Display different badges withs stats for your publications
-enable_publication_badges:
-  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
+#enable_publication_badges:
+#  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+#  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords:
-  [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
+#filtered_bibtex_keywords:
+#  [abbr, abstract, altmetric, arxiv, bibtex_show, blog, code, html, pdf, poster, preview, selected, slides, supp, video, website]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
-more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
+#max_author_limit: 3 # leave blank to always show all authors
+#more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-enable_publication_thumbnails: true
+#enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
@@ -451,13 +451,12 @@ vega-lite:
 jekyll_get_json:
   - data: resume_en
     json: assets/json/resume_en.json # it can also be an url
-  - data: resume_pt-br
-    json: assets/json/resume_pt-br.json # it can also be an url
+  - data: resume_pl
+    json: assets/json/resume_pl.json # it can also be an url
 jsonresume:
   - basics
   - work
   - education
-  - publications
   - projects
   - volunteer
   - awards
