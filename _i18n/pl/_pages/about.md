@@ -1,5 +1,7 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Cześć, mam na imię Tomek!
+ 
+Jestem programistą oraz konsultantem IT z szerokim zakresem umiejętności. Podczas pracy na różnych stanowiskach zdobyłem cenne umiejętności i wiedzę IT, które pozwoliły mi wdrażać innowacyjne pomysły, eliminować powstające ryzyka oraz budować skalowalne i trwałe rozwiązania. Zawsze podchodzę do swojej pracy profesjonalnie, a łączenie jej z pasją, pozwala mi utrzymać wysoki poziom motywacji i pro aktywną postawę. Kładę również wysoki nacisk na rozwój, stosując najnowsze technologie w branży IT, jednocześnie nie zapominając o starych, sprawdzonych rozwiązaniach.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
+Swoją przygodę z IT zacząłem już od wczesnych lat szkolnych i kontynuowalem przez lata nauki i pracy. Jeżeli chcesz wiedzieć więcej o mnie i mojej ścieżce zawodowej zachęcam do przejrzenia zrealizowanych przeze mnie [projektów](/pl/projects) oraz [curicullum vitae](/pl/cv). Jeżeli mogę w czymś pomóc, nie zawachaj się ze mną [skontkatować](mailto:tomasz.komoszeski@gmail.com).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+W wolnym czasie lubię podróżować, programować i grać w gry, czytać ciekawe ksiązki i pisać posty na [moim blogu](/pl/blog)! 

@@ -1,5 +1,8 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
+Hi, my name is Tomek!
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am a programmer and IT consultant with a broad range of skills. Throughout my career in various positions, I have gained valuable IT skills and knowledge that have allowed me to implement innovative ideas, mitigate emerging risks, and build scalable and resilient solutions. I always approach my work professionally, and combining it with passion helps me maintain a high level of motivation and a proactive attitude. I also place a strong emphasis on development, using the latest technologies in the IT industry while not forgetting about old, proven solutions.
+
+I started my IT journey from an early age, continuing through years of education and work. If you want to know more about me and my career path, I encourage you to look through the [projects I have completed](/projects) and [my curriculum vitae](/cv). If I can help in any way, don't hesitate to [contact me](mailto:tomasz.komoszeski@gmail.com).
+
+In my free time, I enjoy traveling, programming, and playing games, reading interesting books, and writing posts on [my blog](/blog)!

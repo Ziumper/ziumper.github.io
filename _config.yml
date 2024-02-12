@@ -6,7 +6,7 @@ title: Ziumper # the website title (if blank, full name will be used instead)
 first_name: Tomasz
 middle_name: 
 last_name: Komoszeski
-email: you@example.com
+email: tomasz.komoszeski@gmail.com
 keywords: portfolio-website ziumper software-developer software-engineer game-developer full-stack unity-developer shopware-developer godot-developer unreal-developer frontend-developer backend-developer # add your own keywords or leave empty
 
 lang: en # the main language of your site (for example: en, fr, cn, ru, etc.)
@@ -66,7 +66,7 @@ github_username: Ziumper # your GitHub user name
 gitlab_username: Ziumper # your GitLab user name
 x_username: # your X handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: # your LinkedIn user name
+linkedin_username: tomasz-komoszeski-b348a6156 # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
