@@ -1,4 +1,4 @@
-- title: General Information
+- title: Basic Information
   type: map
   contents:
     - name: Full Name
@@ -6,96 +6,166 @@
     - name: Date of Birth
       value: 5th May 1992
     - name: Languages
-      value: Polish, English, German
-
-- title: Education
-  type: time_table
-  contents:
-    - title: IT Technician
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+      value: Polish (Native), English (C1)
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Software developer 
+      institution: Sunzinet Polska Sp. z o.o., Gdańsk, Poland
+      year: 2019 - 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - title: Responsibilities
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+            - Designing, coding, and developing e-commerce web applications using <a href="https://www.shopware.com/en/">Shopware 5 and 6</a> technologies
+            - Requirements analysis and proposing solutions based on them
+            - Implementing subsequent software versions and add-ons providing functionalities
+            - Testing, debugging, and maintaining e-commerce applications and their development
+            - Integrating e-commerce application communication with ERP systems, CMS, etc.
+            - Working and communicating in an international, multilingual team
+            - Migrating existing online stores to the Shopware 6 platform
+        - title: Projects
+          contents:
+            - <a href="https://www.sunzinet.com/en/references/boesner">Boesner</a>
+            - <a href="https://www.fliesendiscount.de/">Fliesen Discount</a>
+            - <a href="https://www.sunzinet.com/en/references/leguano">Leguano</a>
+            - <a href="https://www.sunzinet.com/en/references/axion-gmbh">Axion</a>
+          
+    - title: Unity Developer
+      institution: Farmind Studio Sp. z o.o., Warsaw, Poland
+      year: 2020 - 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - title: Responsibilities
+          contents:
+            - Integrating existing, purchased, and creating new tools for editing game content in the Unity engine
+            - Designing and integrating mechanics in developed games
+            - Technical mentoring, code reviews
+            - Fixing bugs, optimizing, and profiling in the Unity engine
+        - title: Projects
+          contents:
+            - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
+            - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
+            - <a href="https://play.google.com/store/apps/details?id=com.Farmind.NightCatcher&hl=en&gl=US&pli=1">NightCatcher</a>    
+    - title: Software developer  
+      institution: Meteoryt Sp. z o.o., Szczytno, Poland
+      year: 2018 - 2019
       description:
+        - title: Responsibilities
+          contents: 
+            - Designing, coding, and developing e-commerce web applications using PHP, Smarty, MySQL, XML, CSS, and HTML
+            - Assisting in restructuring and maintaining the desktop application <a href="https://pobieranie.meteoryt.pl/">Asystent</a> and its analogous <a href="https://meteoryt.pl/asystentchmura">cloud</a> version
+        - title: Projects
+          contents:
+            - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
+            - <a href="https://wypozyczalnia.asystentonline.pl/">Wypożyczalnia</a>
+            - <a href="https://asystentonline.pl/">Asystent</a>
+    - title: Software developer 
+      institution: Billennium S.A., Olsztyn, Poland
+      year: 2017 - 2018
+      description: 
+        - title: Responsibilities
+          contents:
+            - Designing, coding, and developing web applications using ASP.NET, REST, C#, MVC, Angular, JavaScript, TypeScript, CSS, and HTML
+            - Fixing bugs, testing, maintaining, and debugging existing applications
+            - Working and communicating in an international, multilingual team
+            - Conducting and participating in code reviews
+        - title: Projects
+          contents: 
+            - <a href="https://github.com/Ziumper/Bookshop">Bookstore Recruitment Project</a>
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Education
   type: time_table
   contents:
-    - title: <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>
-      year: 2023-now
-      description: A fork of al-folio theme with support for multiple languages.
+    - title: M.Sc. in Computer Science
+      institution: Gdańsk University of Technology, Gdańsk, Poland
+      year: 2021 - 2023
+      description:
+        - title: Specialization
+          contents:
+            - Application of Information Technologies
+        - title: Type of Studies
+          contents: 
+            - Part-time Studies
+        - title: Thesis Title
+          contents: 
+            - Comparison of Unity and Unreal Engine for Developing Augmented Reality Applications on Android Platform
+    - title: B.Sc. in Computer Science
+      institution: University of Warmia and Mazury, Olsztyn, Poland
+      year: 2013 - 2017
+      description:
+        - title: Specialization
+          contents:
+            - General Computer Science
+        - title: Type of Studies
+          contents: 
+            - Full-time Studies
+        - title: Thesis Title
+          contents: 
+            - Implementation of LZSS Algorithm
+    - title: IT Technician
+      institution: Complex of Vocational Schools No. 1 named after Stanisław Staszic, Szczytno, Poland
+      year: 2008 - 2012
 
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Personality Traits
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+      - Teamwork and interpersonal skills
+      - Creative problem-solving and critical thinking
+      - Adaptability and flexibility
+      - Effective communication and articulation
+      - Empathy and user-oriented approach
+      - Time management and priority setting
+      - Continuous learning and curiosity
+      - Attention to detail and precision
+      - Stress management
+      - Leadership and mentoring abilities
+      - Maintaining work-life balance
+    - title: Programming
       items:
-        - Description 1.
-        - Description 2.
+        - AGILE, SCRUM, Kanban
+        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST
+        - C#, C++, PHP, Java, JavaScript, TypeScript, Python
+        - GIT, SVN
+        - CSS, HTML, LESS, SASS
+        - MySQL, Doctrine, Entity Framework, Hibernate, SQLLite
+        - ImGui, ImPlot, OpenXLSX
+        - Google Tests, NUnit, Moq
+        - Angular, Vue.js, JQuery, ExtJs, Node.js
+        - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
+        - .NET, .NET Core, WPF, Windows Forms, AvaloniaUI
+        - Maven, Composer, Nuget, CMake
+        - Apache, Elastic Search, Redis, Varnish
+        - Shopware, Symfony, Twig, Smarty, PSH 
+        - Docker, Vagrant, Oracle VirtualBox 
+        - Nftables
+        - Linux, Windows, Mac
+        - Bash, Powershell 
+        - UML, Enterprise Architect
+    - title: Game Development
+      items:
+        - Unreal Engine, Unity, Godot
+        - Gimp, Photoshop, Blender
+        - Knowledge of computer graphics and rendering techniques
+        - AR, VR, ARCore
+        - Network programming in multiplayer games
 
-- title: Other Interests
+- title: Certificates and Training
+  type: time_table
+  contents:
+      - year: 2023
+        items:
+          - Internet Advertising Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+          - Marketing and Brand Building Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+      - year: 2019
+        items:
+          - Vue.js Course, <a href="https://typeofweb.com/">typeofweb</a>
+      - year: 2010
+        items: 
+          - ECDL, <a href="https://ecdl.pl/">European Computer Driving Licence</a>
+
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Playing guitar, reading good books, computer games, and traveling.

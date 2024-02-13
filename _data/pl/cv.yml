@@ -6,36 +6,72 @@
     - name: Data urodzenia
       value: 5 Maj 1992
     - name: Języki
-      value: Polski, Angielski
+      value: Polski (Natywny), Angielski (C1)
 
-- title: Experience
+- title: Doświadczenie
   type: time_table
   contents:
-    - title: Programista
-      institution: Billennium S.A., Olsztyn, Polska
-      year: 2017 - 2018
-      # description:
-      #   - Description 1.
-      #   - Description 2.
-      #   - title: Description 3.
-      #     contents:
-      #       - Sub-description 1.
-      #       - Sub-description 2.
+    - title: Programista 
+      institution: Sunzinet Polska Sp. z o.o., Gdańsk, Polska
+      year: 2019 - 2024
+      description:
+        - title: Obowiązki
+          contents:
+            - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem technologii <a href="https://www.shopware.com/en/">Shopware 5 i 6</a>
+            - Analiza wymagań i proponowanie rozwiązań na ich podstawie
+            - Wdrażanie kolejnych wersji oprogramowania i dodatków udostępniających funkcjonalności
+            - Testowanie, debugowanie i utrzymywanie aplikacji e-commerce oraz ich rozwój
+            - Integracja komunikacji aplikacji e-commerce z systemami ERP, CMS itp. 
+            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
+            - Migracja sklepów istniejących sklepów internetowych na platformę Shopware 6
+        - title: Projekty
+          contents:
+            - <a href="https://www.sunzinet.com/en/references/boesner">Boesner</a>
+            - <a href="https://www.fliesendiscount.de/">Fliesen Discount</a>
+            - <a href="https://www.sunzinet.com/en/references/leguano">Leguano</a>
+            - <a href="https://www.sunzinet.com/en/references/axion-gmbh">Axion</a>
+          
+    - title: Programista Unity
+      institution: Farmind Studio Sp. z o.o., Warszawa, Polska
+      year: 2020 - 2023
+      description:
+        - title: Obowiązki
+          contents:
+            - Integracja istniejących, zakupionych i tworzenie nowych narzędzi do edycji zawartości gier w silniku Unity
+            - Projektowanie i integracja mechanik w tworzonych grach
+            - Mentoring techniczny, przeprowadzanie przeglądów kodu
+            - Naprawa błędów, optymalizacja i profilowanie w silniku Unity
+        - title: Projekty
+          contents:
+            - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
+            - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
+            - <a href="https://play.google.com/store/apps/details?id=com.Farmind.NightCatcher&hl=en&gl=US&pli=1">NightCatcher</a>    
     - title: Programista 
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
       year: 2018 - 2019
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Programista Unity
-      institution: Farmind Studio Sp. z o.o, Warszawa, Polska
-      year: 2020 - 2023
-
-    - title: Programista 
-      institution: Sunzinet Polska Sp. z o.o, Gdańsk, Polska
-      year: 2019 - 2024
-
+        - title: Obowiązki
+          contents: 
+            - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem PHP, Smarty, MySQL, XML, CSS i HTML
+            - Pomoc w restuktaryzacji i utrzymaniu aplikacji desktopowej <a href="https://pobieranie.meteoryt.pl/">Asystent</a> oraz analogicznej wersji <a href="https://meteoryt.pl/asystentchmura"> chmurowej</a>
+        - title: Projekty
+          contents:
+            - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
+            - <a href="https://wypozyczalnia.asystentonline.pl/">Wypożyczalnia</a>
+            - <a href="https://asystentonline.pl/">Asystent</a>
+    - title: Programista
+      institution: Billennium S.A., Olsztyn, Polska
+      year: 2017 - 2018
+      description: 
+        - title: Obowiązki
+          contents:
+            - Projektowanie, kodowanie i tworzenie aplikacji internetowych z wykorzystaniem ASP.NET, REST, C#, MVC, Angular, JavaScript i TypeScript, CSS i HTML
+            - Naprawa błędów, testowanie, utrzymywanie i debugowanie istniejących aplikacji
+            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
+            - Przeprowadzanie i uczestniczenie w przeglądach kodu
+        - title: Projekty
+          contents: 
+            - <a href="https://github.com/Ziumper/Bookshop">Projekt rekrutacyjny Księgarnia</a>
 
 - title: Edukacja
   type: time_table
@@ -69,43 +105,70 @@
     - title: Technik Informatyk
       institution: Zespół Szkółw Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
       year: 2008 - 2012
-    
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>
-      year: 2023-now
-      description: A fork of al-folio theme with support for multiple languages.
 
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Umiejętności
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Cechy charakteru
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+      - Umiejętność pracy w zespole i umiejętności interpersonalne
+      - Kreatywne rozwiązywanie problemów i krytyczne myślenie
+      - Zdolność adaptacji i elastyczność
+      - Skuteczna komunikacja i artykulacja
+      - Empatia i nastawienie zorientowane na użytkownika
+      - Zarządzanie czasem i ustalanie priorytetów
+      - Ciągła nauka i ciekawość
+      - Dbałość o szczegóły i precyzja
+      - Radzenie sobie ze stresem
+      - Zdolności przywódcze i mentorskie
+      - Utrzymywanie równowangi pomiędzy pracą a życiem osobistym
+    - title: Programowanie
       items:
-        - Description 1.
-        - Description 2.
+        - AGILE, SCRUM, Kanban
+        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST
+        - C#, C++, PHP, Java, JavaScript, TypeScript, Python
+        - GIT, SVN
+        - CSS, HTML, LESS, SASS
+        - MySQL, Doctrine, Entity Framework, Hibernate, SQLLite
+        - ImGui, ImPlot, OpenXLSX
+        - Google Tests, NUnit, Moq
+        - Angular, Vue.js, JQuery, ExtJs, Node.js
+        - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
+        - .NET, .NET Core, WPF, Windows Forms, AvaloniaUI
+        - Maven, Composer, Nuget, CMake
+        - Apache, Elastic Search, Redis, Varnish
+        - Shopware, Symfony, Twig, Smarty, PSH 
+        - Docker, Vagrant, Oracle VirtualBox 
+        - Nftables
+        - Linux, Windows, Mac
+        - Bash, Powershell 
+        - UML, Enterprise Architect
+    - title: Game-dev
+      items:
+        - Unreal Engine, Unity, Godot
+        - Gimp, Photoshop, Blender
+        - Znajomość grafiki komputerowej i technik renderingu
+        - AR, VR, ARCore
+        - Programowanie sieciowe w grach wieloosobowych
+   
+- title: Certyfikaty i szkolenia
+  type: time_table
+  contents:
+      - year: 2023
+        items:
+          - Szkolenie z reklamy w internecie, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+          - Szkolenie w zakresie marketingu i budowania marki, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+      - year: 2019
+        items:
+          - Kurs Vue.js, <a href="https://typeofweb.com/">typeofweb</a>
+      - year: 2010
+        items: 
+          - ECDL, <a href="https://ecdl.pl/">European Computer Driving Licence</a>   
 
-- title: Other Interests
+- title: Zainteresowania
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - Gra na gitarze, dobra książka, gry komputerowe oraz podróże. 
+
