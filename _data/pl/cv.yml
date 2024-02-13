@@ -1,101 +1,111 @@
-- title: Informações Gerais
+- title: Podstawowe informacje
   type: map
   contents:
-    - name: Nome Completo
-      value: Albert Einstein
-    - name: Data de Nascimento
-      value: 14 de março de 1879
-    - name: Idiomas
-      value: Inglês, Alemão
+    - name: Imię i nazwisko
+      value: Tomasz Komoszeski
+    - name: Data urodzenia
+      value: 5 Maj 1992
+    - name: Języki
+      value: Polski, Angielski
 
-- title: Educação
+- title: Experience
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurique, Suíça
-      year: 1905
+    - title: Programista
+      institution: Billennium S.A., Olsztyn, Polska
+      year: 2017 - 2018
+      # description:
+      #   - Description 1.
+      #   - Description 2.
+      #   - title: Description 3.
+      #     contents:
+      #       - Sub-description 1.
+      #       - Sub-description 2.
+    - title: Programista 
+      institution: Meteoryt Sp. z o.o., Szczytno, Polska
+      year: 2018 - 2019
       description:
-        - Descrição 1.
-        - Descrição 2.
-        - title: Descrição 3.
-          contents:
-            - Sub-descrição 1.
-            - Sub-descrição 2.
-    - title: Diploma de ensino federal
-      institution: Eidgenössische Technische Hochschule, Zurique, Suíça
-      year: 1900
-      description:
-        - Descrição 1.
-        - Descrição 2.
+        - Description 1.
+        - Description 2.
 
-- title: Experiência
+    - title: Programista Unity
+      institution: Farmind Studio Sp. z o.o, Warszawa, Polska
+      year: 2020 - 2023
+
+    - title: Programista 
+      institution: Sunzinet Polska Sp. z o.o, Gdańsk, Polska
+      year: 2019 - 2024
+
+
+- title: Edukacja
   type: time_table
   contents:
-    - title: Professor de Física Teórica
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Mgr. inż. Informatyka
+      institution: Politechnika Gdańska, Gdańsk, Polska
+      year: 2021 - 2023
       description:
-        - Descrição 1.
-        - Descrição 2.
-        - title: Descrição 3.
+        - title: Specjalność
           contents:
-            - Sub-descrição 1.
-            - Sub-descrição 2.
-    - title: Professor Visitante
-      institution: California Institute of Technology, Pasadena, Califórnia, EUA
-      year: 1933
+            - Zastosowanie Technologii informacyjnych
+        - title: Rodzaj studiów
+          contents: 
+            - Studia niestacjonarne
+        - title: Tytuł pracy dyplomowej
+          contents: 
+            -  Porównanie silników Unity oraz Unreal Engine do wytwarzania aplikacji rozszerzonej rzeczywistości na platformę Android
+    - title: Inż. Informatyka
+      institution: Uniwersytet Warmińsko-Mazurski, Olsztyn, Polska
+      year: 2013 - 2017
       description:
-        - Descrição 1.
-        - Descrição 2.
+        - title: Specjalność
+          contents:
+            - Informatyka Ogólna
+        - title: Rodzaj studiów
+          contents: 
+            - Studia stacjonarne
+        - title: Tytuł pracy dyplomowej
+          contents: 
+            -  Implementacja algorytmu LZSS
+    - title: Technik Informatyk
+      institution: Zespół Szkółw Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
+      year: 2008 - 2012
+    
 
-    - title: Diretor
-      institution: Kaiser Wilhelm Institute for Physics, Berlim, Alemanha.
-      year: 1917-1933
-
-    - title: Professor de Física Teórica
-      institution: Karl-Ferdinand University, Praga, Tchecoslováquia
-      year: 1911 - 1917
-      description:
-
-    - title: Professor Associado de Física Teórica
-      institution: University of Zurich, Zurique, Suíça
-      year: 1909 - 1911
-
-- title: Projetos de Código Aberto
+- title: Open Source Projects
   type: time_table
   contents:
     - title: <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>
-      year: 2023-atual
-      description: Uma variação do tema al-folio com suporte a múltiplos idiomas.
+      year: 2023-now
+      description: A fork of al-folio theme with support for multiple languages.
 
     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-atual
-      description: Um tema Jekyll bonito, simples, limpo e responsivo para acadêmicos.
+      year: 2015-now
+      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Honrarias e Prêmios
+- title: Honors and Awards
   type: time_table
   contents:
     - year: 1921
       items:
-        - Prêmio Nobel de Física
-        - Medalha Matteucci
+        - Nobel Prize in Physics
+        - Matteucci Medal
     - year: 2029
       items:
-        - Medalha Max Planck
+        - Max Planck Medal
 
-- title: Interesses Acadêmicos
+- title: Academic Interests
   type: nested_list
   contents:
-    - title: Tópico 1.
+    - title: Topic 1.
       items:
-        - Descrição 1.
-        - Descrição 2.
-    - title: Tópico 2.
+        - Description 1.
+        - Description 2.
+    - title: Topic 2.
       items:
-        - Descrição 1.
-        - Descrição 2.
+        - Description 1.
+        - Description 2.
 
-- title: Outros Interesses
+- title: Other Interests
   type: list
   contents:
     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.

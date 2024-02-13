@@ -2,6 +2,7 @@ github_users:
   - ziumper
 
 github_repos:
+  - Ziumper/CrafterTheGame
   - Ziumper/HelloCMakeProject
   - Ziumper/Unity-TDD-Template
   - Ziumper/AgentsApp
