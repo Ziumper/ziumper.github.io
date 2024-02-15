@@ -1,895 +1,203 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pl"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ziumper.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://ziumper.github.io/" rel="alternate" type="text/html" hreflang="pl"/><updated>2024-02-15T13:33:14+00:00</updated><id>https://ziumper.github.io/feed.xml</id><title type="html">Ziumper</title><entry><title type="html">a post with code diff</title><link href="https://ziumper.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://ziumper.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pl"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://ziumper.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://ziumper.github.io/" rel="alternate" type="text/html" hreflang="pl"/><updated>2024-02-15T20:40:48+00:00</updated><id>https://ziumper.github.io/feed.xml</id><title type="html">Ziumper</title><entry><title type="html">Jak przechowywać duże pliki binarne z użyciem git lfs na Google Drive lub One Drive?</title><link href="https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs/" rel="alternate" type="text/html" title="Jak przechowywać duże pliki binarne z użyciem git lfs na Google Drive lub One Drive?"/><published>2023-10-23T16:40:16+00:00</published><updated>2023-10-23T16:40:16+00:00</updated><id>https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs/"><![CDATA[<h1 id="adapter-transferu">Adapter transferu</h1> <p>Sugeruję połączenie git lfs z niestandardowym adapterem transferu. Zgodnie z dokumentacją git-lfs:</p> <blockquote> <p>Git LFS obsługuje wiele sposobów przesyłania (wgrywania i pobierania) plików. W podstawowych aplikacjach klienckich używa się żądania HTTP za pośrednictwem adresu URL zwróconego z API LFS dla danego obiektu. Klient obsługuje również rozszerzenia umożliwiające wznowienie pobierania (za pośrednictwem nagłówków Range) i przesyłania.</p> </blockquote> <h1 id="przykłady-użycia">Przykłady użycia</h1> <p>Wykorzystałem ten sposób do przechowywania plików multimedialnych w moim projekcie i do rozwoju oprogramowania w projektach związanych z grami. Jestem pewien, że i Ty możesz to zrobić. W większości przypadków lubię to stosować do:</p> <ul> <li>projektów związanych z tworzeniem gier w silnikach takich jak Unity i Unreal Engine.</li> <li>przechowywania dbdumps</li> <li>przechowywania dużych plików multimedialnych (w razie potrzeby)</li> </ul> <p>Zawsze istnieje sposób, aby to zrobić również dla innych rodzajów projektów.</p> <p>W poniższym przykładzie będę używał gitlab, google drive i innych narzędzi.</p> <h1 id="konfiguracja-gitlab-a">Konfiguracja Gitlab-a</h1> <p>Po pierwsze, musisz wyłączyć domyślną usługę lfs w gitlabie. Jest to bardzo dobrze udokumentowana funkcja w oficjalnej dokumentacji <a href="https://docs.gitlab.com/ee/topics/git/lfs">Gitlab</a>, ale nie ma zbyt dużo informacji na temat tego, jak ją wyłączyć.</p> <p>Jest to trochę skomplikowane i niezbyt przyjazne dla użytkownika, ale oczywiście musisz wybrać swoje repozytorium i wejść w ustawienia.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/settings_gitlab-480.webp 480w,/assets/img/posts/settings_gitlab-800.webp 800w,/assets/img/posts/settings_gitlab-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/settings_gitlab.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/disable_gitlab_lfs_example-480.webp 480w,/assets/img/posts/disable_gitlab_lfs_example-800.webp 800w,/assets/img/posts/disable_gitlab_lfs_example-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/disable_gitlab_lfs_example.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <p>Istnieje również inny sposób za pomocą wiersza poleceń gitlab oraz dla narzędzi CI za pomocą zmiennych środowiskowych, ale nie będę tego omawiał, trzymajmy to proste. Jeśli gitlab lfs jest wyłączony na zdalnym serwerze, możesz zacząć od konfiguracji lokalnej.</p> <h1 id="konfiguracja-lokalnego-repozytorium">Konfiguracja lokalnego repozytorium</h1> <p>Będziesz potrzebował nowego repozytorium lub możesz użyć istniejącego. Sugeruję rozpoczęcie od stanu początkowego, abyś mógł skorzystać z prostego przewodnika konfiguracyjnego poniżej.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div> <p>Dodaj również link do serwera zdalnego. Można to zrobić po konfiguracji lub później. Dla lfs z gitlabem możesz sugerować się zgodnie z prostym samouczkiem <a href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#add-a-remote">link do git</a></p> <h1 id="konfiguracja-lfs">Konfiguracja lfs</h1> <p>Pobierz narzędzie adaptera lfs z <a href="https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1">dostępnych wydań</a>.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/OIP-480.webp 480w,/assets/img/posts/OIP-800.webp 800w,/assets/img/posts/OIP-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Pobierz, rozpakuj, zainstaluj je w dobrze znanej lokalizacji. Na przykład utwórz nowy folder na swoim głównym dysku roboczym, np. tak: <code class="language-plaintext highlighter-rouge">C:\Tools</code>, więc pełna ścieżka do narzędzia będzie wyglądać tak: <code class="language-plaintext highlighter-rouge">C:\Tools\lfs-folderstore.exe</code>.</p> <p>Aby skonfigurować repozytorium z lfs, dodaj plik .gitattributes w swoim repozytorium. Przykłady można znaleźć pod tym <a href="https://github.com/gitattributes/gitattributes">linkiem</a>.</p> <h2 id="unity-gitattributes">Unity .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## in root 
 
----
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
+*.cs diff=csharp text
+*.cginc text
+*.shader text
 
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.physicMaterial merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf -text
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
 
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
+## git-lfs ##
 
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
+#Image
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
 
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
+#Audio
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+#Wwise
+*.bnk filter=lfs diff=lfs merge=lfs -text
 
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
+#Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
 
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
+#3D Object
+*.FBX filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
 
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
+#ETC
+*.a filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.rns filter=lfs diff=lfs merge=lfs -text
+*.reason filter=lfs diff=lfs merge=lfs -text
+*.lxo filter=lfs diff=lfs merge=lfs -text
 
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
+</code></pre></div></div> <h2 id="unreal-engine-gitattributes">Unreal Engine .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Unreal Engine 
+## Auto detect text files and perform LF normalization ##
 
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
+* text=auto
 
-   var hoganTemplates = require('./templates/diff2html-templates.js');
+# UE file types
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+*.udk filter=lfs diff=lfs merge=lfs -text
+*.upk filter=lfs diff=lfs merge=lfs -text
 
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
+--------------------------------------------------
 
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
+# 2D formats
+# Read more in: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
 
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
+# Recommended use:
+*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
 
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
+# Can also be used:
+*.[fF][lL[oO][aA][tT] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[pP][cC][xX] filter=lfs diff=lfs merge=lfs -text
+*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
+*.[xX][cC][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
 
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
+# Other supported formats:
+*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
+*.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
+*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
 
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
+--------------------------------------------------
 
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
+# 3D formats
 
-@@ -53,6 +53,7 @@
+# Always recommended to use:
+# The UE4 FBX import pipeline uses FBX 2018
+*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
 
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
+# Can also be used:
+*.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
 
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
+# Other supported formats:
+*.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
+*.[sS][rR][tT] filter=lfs diff=lfs merge=lfs -text
 
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
+--------------------------------------------------
 
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
+# Audio formats
+# Read more in: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
 
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
+# Always recommended to use:
+*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
 
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
+# Can also be used:
+*.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
+*.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
 
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
+# Not recommended to use, but supported:
+*.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][aA] filter=lfs diff=lfs merge=lfs -text
+*.[aA][cC]3 filter=lfs diff=lfs merge=lfs -text
+*.[aA][mM][rR] filter=lfs diff=lfs merge=lfs -text
+*.[aA][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][uU] filter=lfs diff=lfs merge=lfs -text
+*.[cC][dD][dD][aA] filter=lfs diff=lfs merge=lfs -text
+*.[cC][aA][fF] filter=lfs diff=lfs merge=lfs -text
+*.[bB][wW][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][dD][tT][sS] filter=lfs diff=lfs merge=lfs -text
 
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
+--------------------------------------------------
 
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
+# Video formats
+# Read more in: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
 
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
+# Always recommended to use, supports all platforms:
+# For the best compatibility and performance, it is recommended to use H.264 encoded MP4 (.mp4) container files.
+*.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
 
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
+# Can also be used, only some platforms are supported:
+*.3[gG]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP] filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP][pP] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[aA] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM][o][vV] filter=lfs diff=lfs merge=lfs -text
+*.[aA][sS][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][vV][iI] filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][vV] filter=lfs diff=lfs merge=lfs -text
 
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
+--------------------------------------------------
 
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
+# Fonts
+# Read more in: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
 
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
+*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
 
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
+--------------------------------------------------
 
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
+# Documents
+*.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
 
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
+</code></pre></div></div> <h1 id="konfiguracja-google-drive">Konfiguracja Google Drive</h1> <p>Jeśli repozytorium jest gotowe, będziesz potrzebować jakiegoś rodzaju przestrzeni dyskowej, aby to działało. Aby w pełni zintegrować to z Google Drive, użyj klienta Google Drive <a href="https://www.google.com/drive/download/">Pobierz</a>. Zainstaluj go, zaloguj się, aby można było utworzyć folder do przechowywania wszystkich dużych danych binarnych.</p> <p>Po zalogowaniu powinieneś zobaczyć swój zamontowany folder w Finderze, jeśli używasz Maca, lub w Exploratorze Windows, jako oddzielony dysk. Otwórz go i utwórz nowy folder o nazwie <code class="language-plaintext highlighter-rouge">binary-lfs</code>. Ta nazwa będzie używana do przechowywania wszystkich danych binarnych dla Twojego projektu w konfiguracji lfs.</p> <h1 id="integracja-konfiguracji-git">Integracja konfiguracji Git</h1> <p>Jeśli wszystko zostało wykonane prawidłowo, teraz nadszedł czas, aby połączyć git-lfs z naszym narzędziem i Google Drive.</p> <p>Użyłem mojego ulubionego otwartoźródłowego oprogramowania <a href="https://git-extensions-documentation.readthedocs.io/">GitExtension</a> jako odniesienia do integracji, ale możesz użyć terminala za pomocą podejścia z konfiguracją git config lub dowolnego edytora tekstu. W przypadku korzystania z edytora tekstu otwórz plik konfiguracyjny w ukrytym folderze .git w głównym folderze Twojego projektu repozytorium.</p> <p>Aby otworzyć konfigurację Twojego repozytorium github, wybierz następującą opcję:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/integration_gitextension-480.webp 480w,/assets/img/posts/integration_gitextension-800.webp 800w,/assets/img/posts/integration_gitextension-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Otwórz go i dodaj następujące linie.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[lfs "customtransfer.lfs-folder"]
+    path = C:\\Tools\\lfs-folderstore.exe
+    args = 'I:\\My drive\\binary-lfs'
+[lfs]
+    standalonetransferagent = lfs-folder
+    repositoryformatversion = 0
+</code></pre></div></div> <p>Następnie, pamiętaj, aby posortować pliki LFS i skopiować zawartość skonfigurowanego wspólnego folderu, używając następującej komendy</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--hard</span> master
+</code></pre></div></div> <p>lub jeśli korzystasz z nowego repozytorium, po prostu je wyślij</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin main
+</code></pre></div></div> <h1 id="rozwiązywanie-problemów">Rozwiązywanie problemów</h1> <p>Czasami mogą pojawić się problemy z Twoją siecią lub z git lfs. W przypadku błędów smudge lub innych problemów można wypróbować następujące triki:</p> <ul> <li>spróbuj użyć lepszego połączenia internetowego, słaby pasmo sieciowe nie pomaga</li> <li>zrestartuj komputer</li> <li>użyj <code class="language-plaintext highlighter-rouge">git lfs fetch --all</code> pobiera pliki git lfs dla WSZYSTKICH zdalnych gałęzi</li> <li>przenieś katalog cache Google Drive lub One Drive do nowego folderu i spróbuj ponownie pobrać dane</li> </ul> <h1 id="bibliografia-i-źródła">Bibliografia i źródła</h1> <ul> <li><a href="https://github.com/sinbad/lfs-folderstore">Lfs folderstore repo</a></li> <li><a href="https://www.google.com/drive/download/">Google Drive</a></li> <li><a href="https://docs.gitlab.com/">Gitlab Docs</a></li> </ul>]]></content><author><name></name></author><category term="tutorials"/><category term="git"/><category term="git-lfs"/><category term="git-extensions"/><category term="unity"/><category term="unreal-engine"/><summary type="html"><![CDATA[Adapter transferu]]></summary></entry><entry><title type="html">Jak rozwiązywać konfilkty przy pomocy GitExtensions?</title><link href="https://ziumper.github.io/blog/2022/how-to-solve-rebase-merge-conflicts-with-GitExtensions/" rel="alternate" type="text/html" title="Jak rozwiązywać konfilkty przy pomocy GitExtensions?"/><published>2022-08-06T16:40:16+00:00</published><updated>2022-08-06T16:40:16+00:00</updated><id>https://ziumper.github.io/blog/2022/how-to-solve-rebase-merge-conflicts-with-GitExtensions</id><content type="html" xml:base="https://ziumper.github.io/blog/2022/how-to-solve-rebase-merge-conflicts-with-GitExtensions/"><![CDATA[<p>Czy kiedykolwiek zastanawiałeś się, jak łatwo połączyć swoje zmiany bez niszczenia całego projektu? Oto szybki i prosty przewodnik. Zaczynamy! Po pierwsze, powinieneś zainstalować i skonfigurować <a href="https://git-extensions-documentation.readthedocs.io/">GitExtensions</a>. Następnie otwórz swoje repozytorium. W moim przypadku zawiera ono dwie gałęzie: master i develop. Sprawdź obraz poniżej, aby to zobaczyć.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_1-480.webp 480w,/assets/img/posts/gitExtensions_1-800.webp 800w,/assets/img/posts/gitExtensions_1-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_1.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_2-480.webp 480w,/assets/img/posts/gitExtensions_2-800.webp 800w,/assets/img/posts/gitExtensions_2-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_2.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <p>Zawiera plik hello.html z tym samym edytowanym wierszem, więc nie wie, który wiersz powinien być użyty, gdy <a href="https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts">conflict</a> wystąpi.</p> <h2 id="jak-zmienić-baze">Jak zmienić baze?</h2> <p>Aby <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase">przebazować</a> z gałęzi develop na gałąź master, aby zatwierdzenie na gałęzi develop było “nad” zatwierdzeniami z gałęzi master i tak aby zawierał wszystkie zatwierdzenia z gałęzi master także. Jak to zrobić? Przełącz się na gałąź develop. Kliknij prawym przyciskiem myszy na niej. Wybierz opcję przełączenia gałęzi, a następnie wybierz gałąź develop.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_3-480.webp 480w,/assets/img/posts/gitExtensions_3-800.webp 800w,/assets/img/posts/gitExtensions_3-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_3.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Kiedy jesteś na gałęzi develop, wybierz, dla którego zatwierdzenia chcesz zmienić bazę. W moim przypadku jest to zatwierdzenie z gałęzi master o wiadomości “Hope it will work”.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_4-480.webp 480w,/assets/img/posts/gitExtensions_4-800.webp 800w,/assets/img/posts/gitExtensions_4-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_4.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Po kliknięciu “yes”, aby zmienić bazę, powinieneś zobaczyć komunikat o błędzie, ale nie martw się, nie ma w tym nic złego z git. To tylko informacja dla Ciebie, że musisz rozwiązać kilka konfliktów.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_5-480.webp 480w,/assets/img/posts/gitExtensions_5-800.webp 800w,/assets/img/posts/gitExtensions_5-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_5.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Następnie kliknij OK i kontynuuj. Następnie powinieneś zobaczyć podobne okno poniżej:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_6-480.webp 480w,/assets/img/posts/gitExtensions_6-800.webp 800w,/assets/img/posts/gitExtensions_6-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_6.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Wybierz rozwiązanie konfliktów, a następnie powinno pojawić się kolejne okno.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_7-480.webp 480w,/assets/img/posts/gitExtensions_7-800.webp 800w,/assets/img/posts/gitExtensions_7-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_7.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>To okno jest oknem rozwiązywania konfliktów scalania. Możesz rozwiązać konflikty scalania na dwa sposoby. Szybki i łatwy drugi sposób, dla którego używasz narzędzia do porównywania różnic, jak <a href="https://github.com/KDE/kdiff3">kdiff3</a>.</p> <h2 id="szybki-i-łatwy-sposób-rozwiązania-konfliktów-scalania">Szybki i łatwy sposób rozwiązania konfliktów scalania.</h2> <p>Możesz zastosować zmiany dla pliku hello.html, odrzucając swoje zmiany i korzystając z zmian z gałęzi master. Kliknij prawym przyciskiem myszy na pliku hello.html i wybierz (theirs), jak na obrazie poniżej:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_8-480.webp 480w,/assets/img/posts/gitExtensions_8-800.webp 800w,/assets/img/posts/gitExtensions_8-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_8.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Jeśli chcesz nadpisać zmiany, zawsze możesz użyć opcji (ours). Następnie kliknij kontynuuj przebazowanie w głównym oknie przebazowania.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_9-480.webp 480w,/assets/img/posts/gitExtensions_9-800.webp 800w,/assets/img/posts/gitExtensions_9-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>W przypadku większej liczby plików lub konfliktów, będziesz musiał je rozwiązać później. Pamiętaj, że praca z większymi plikami lub zmianami może zająć trochę czasu.</p> <h2 id="praca-z-narzędziem-do-porównywania-różnic">Praca z narzędziem do porównywania różnic</h2> <p>Tutaj zmodyfikowałem trochę historię repozytorium, więc możemy z tym pracować</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_10-480.webp 480w,/assets/img/posts/gitExtensions_10-800.webp 800w,/assets/img/posts/gitExtensions_10-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Przebazuj ponownie i rozwijaj na gałąź master.</p> <ol> <li> <p>Przełącz się na gałąź develop</p> </li> <li> <p>Wybierz pierwszy commit z gałęzi master z wiadomością “Some other changes” i kliknij prawym przyciskiem myszy na nim</p> </li> <li> <p>Przebazuj bieżącą gałąź na -&gt; wybrany commit.</p> </li> </ol> <p>Następnie zaczyna się magia. Pomijam kroki do okna konfliktów scalania, które są takie same jak powyżej. Wybierz otwórz je w kdiff3 lub innym narzędziu do scalania/porównywania.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_11-480.webp 480w,/assets/img/posts/gitExtensions_11-800.webp 800w,/assets/img/posts/gitExtensions_11-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_11.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Powinieneś zobaczyć okno podobne do poniższego:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_12-480.webp 480w,/assets/img/posts/gitExtensions_12-800.webp 800w,/assets/img/posts/gitExtensions_12-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_12.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Następnie występują trzy katalogi scalania:</p> <ul> <li> <p>(“A” jest traktowane jako starsza baza obu).</p> </li> <li> <p>B - jest (ich) wersją gałęzi master</p> </li> <li> <p>C - jest (nasze) w tym przypadku wersją gałęzi develop</p> </li> </ul> <p>Poniżej znajduje się okno wyjścia, które zawiera wynik scalania.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_13-480.webp 480w,/assets/img/posts/gitExtensions_13-800.webp 800w,/assets/img/posts/gitExtensions_13-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_13.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Możesz wybrać wersję pliku, którą chcesz zostawić i połączyć je. Możesz zobaczyć, że wybrałem jedną linię z C, jedną linię z A i jedną linię z B. Następnie zapisałem plik i kontynuowałem przebazowanie po rozwiązaniu konfliktów. To proste, ale czasami sytuacja może się skomplikować, więc uważaj.</p> <p>Poniżej widoczny jest wynik zmiany bazy:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitExtensions_14-480.webp 480w,/assets/img/posts/gitExtensions_14-800.webp 800w,/assets/img/posts/gitExtensions_14-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitExtensions_14.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Stworzy to rozszerzenia plików .orig, więc zawsze możesz zobaczyć historię swoich zmian.</p> <p>Lepiej nie commitować tych plików do repozytorium.</p> <p>To wszystko! Mam nadzieję, że artykuł pomoże Ci w rozwiązywaniu konfliktów!</p>]]></content><author><name></name></author><category term="tutorials"/><category term="git"/><category term="gitExtensions"/><summary type="html"><![CDATA[Czy kiedykolwiek zastanawiałeś się, jak łatwo połączyć swoje zmiany bez niszczenia całego projektu? Oto szybki i prosty przewodnik. Zaczynamy! Po pierwsze, powinieneś zainstalować i skonfigurować GitExtensions. Następnie otwórz swoje repozytorium. W moim przypadku zawiera ono dwie gałęzie: master i develop. Sprawdź obraz poniżej, aby to zobaczyć.]]></summary></entry><entry><title type="html">Jak zacząć z GIT-em?</title><link href="https://ziumper.github.io/blog/2022/how-to-start-with-git/" rel="alternate" type="text/html" title="Jak zacząć z GIT-em?"/><published>2022-07-17T16:40:16+00:00</published><updated>2022-07-17T16:40:16+00:00</updated><id>https://ziumper.github.io/blog/2022/how-to-start-with-git</id><content type="html" xml:base="https://ziumper.github.io/blog/2022/how-to-start-with-git/"><![CDATA[<p>Zastanawiałem się, co oznacza GIT. Oto co znalazłem:</p> <blockquote> <p>GIT to słowo będące skrótem od angielskiego słowa “get”, które zostało skrócone z “begetting”. Jest również niejawne odniesienie do nieślubnych potomków, a termin jest mniej więcej synonimem głupca, durnia, kretyna lub idioty. W społeczności open source znaczenie wyboru nazwy różni się.</p> </blockquote> <p>Oznacza to, że GIT jest dla idiotów, którzy nie wiedzą, co robią. Doskonałe narzędzie dla programisty. Zacznijmy od początku.</p> <p>Linus Torvalds zdecydował się na jego rozwój dla jądra Linuxa. Od 2005 roku pomaga programistom śledzić zmiany w kodzie. Dostępny we wszystkich systemach operacyjnych i używany przez użytkowników na całym świecie. Łatwo z nim zacząć, ale trudniej być w nim eksperte. Jest to system kontroli wersji. Możesz go pobrać ze <a href="https://git-scm.com/downloads">tej strony</a> i wypróbować samodzielnie.</p> <h1 id="podstawy">Podstawy</h1> <p>Pobierz i zainstaluj <a href="https://git-scm.com/downloads">gita</a> na swoim systemie operacyjnym. Aby kontynuować, musisz otworzyć terminal. Po instalacji powinieneś być w stanie wykonać kilka poleceń gita. Utwórz nowy folder. Następnie otwórz terminal w nowym folderze. Utwórzmy repozytorium. Aby to osiągnąć, użyj poniższego polecenia.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div> <h1 id="narzędzia">Narzędzia</h1> <p>Istnieje kilka narzędzi GUI (ang. Graphic User Interface), które mogą pomóc Ci w rozpoczęciu pracy z Gitem. Jeśli nie jesteś fanem terminala, polecam <a href="https://gitextensions.github.io/">GitExtensions</a></p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/gitextension-480.webp 480w,/assets/img/posts/gitextension-800.webp 800w,/assets/img/posts/gitextension-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/gitextension.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" alt="git extensions editor window" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Alternatywnie możesz użyć <a href="https://www.sourcetreeapp.com/">SourceTree</a> jest on darmową alternatywą dla systemu Mac. Myślę, że jeśli używasz Linuxa, to równie dobrze możesz również korzystać z terminala.</p> <p><img src="https://wac-cdn.atlassian.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=651" alt="SourceTree!"/></p> <h1 id="commit">Commit</h1> <p>Dobrze, jak dotąd! Teraz zróbmy kilka commitów. Stwórz plik HTML o następującej zawartości.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span>Hello there<span class="nt">&lt;/h1&gt;</span>
+</code></pre></div></div> <p>Teraz jesteś gotowy, do daleszej pracy z obszarem staging. Co to jest obszar staging - wyjaśnijmy to jako pudełko, do którego wkładasz rzeczy, a następnie używasz go jako migawki, aby zatwierdzić zmiany. Aby to zrobić, powinieneś określić ścieżkę do pliku w formacie pliku lub ścieżkę z jakimś wzorcem, np.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.txt .xml, etc.
+</code></pre></div></div> <p>Polecenie dodawania pliku hello.html w terminalu</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add hello.html
+</code></pre></div></div> <p>Możesz także dodać wszystkie pliki</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="k">*</span>
+</code></pre></div></div> <p>Następnie, wpisując:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div> <p>Powinieneś zobaczyć wszystkie pliki, które zostały przez ciebie dodane do obszaru staging.</p> <p>Następnie możesz zatwierdzić hello.html w swoim lokalnym repozytorium.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">-m</span> <span class="s2">"Add hello there file"</span>
+</code></pre></div></div> <p>commit - to polecenie, które zapisuje migawkę “pudełka”, które wcześniej dodaliśmy.</p> <h1 id="commits-message-standards">Commits message standards</h1> <p>Chcę wyjaśnić kilka standardów dotyczących wiadomości commitów i jak często powinieneś to robić. Słyszałem, że im częściej to robisz, tym lepiej. Nie ma ograniczenia, później zawsze możesz zmniejszyć liczbę commitów, używając funkcji squash. Zacznijmy od formy wiadomości commita. Jak to powinno się robić:</p> <ul> <li> <p>Użyj zdaniowych trybów w linii tematu, np. “Naprawia uszkodzony link do Javadoc”</p> </li> <li> <p>Rozpocznij zdanie linii tematu wielką literą, np. “Dodaje, Usuwa, Naprawia, Wprowadza, Unikaj itp.”</p> </li> <li> <p>Nie kończ linii tematu kropką</p> </li> <li> <p>Zachowaj linie tematu do 50 znaków lub mniej, jeśli to możliwe</p> </li> <li> <p>Zawijaj linie w treści na 72 znaki lub mniej</p> </li> <li> <p>Wzmień związane z nim numery Jira na końcu komentarza commita, poprzedzone „Issue:” jak powyżej</p> </li> <li> <p>W treści wiadomości commita wyjaśnij, jak działały rzeczy przed tym commitem, co się zmieniło i jak teraz działają rzeczy</p> </li> </ul> <p>Lubie także dodać jakiś rodzaj tagu przed wiadomością commita, oto kilka przykładów:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– Feature
 
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
+– Bugfix
 
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
+– Cleanup
 
----
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
+– Hotfix
+</code></pre></div></div> <p>Kiedy pracujesz nad zadaniem, dobrze jest dodać pewną liczbę zadań, takich jak #123, które odnoszą się do niektórych. Podsumowując, powinno to wyglądać tak:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>FEATURE] <span class="c">#123 My super not quite long commit message. </span>
 
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
 
- ## Diff2HtmlUI Helper
+Here goes body messages where we describe what is going on.
+Keep it short as much as you can, but include all necessary details 
+inside.
 
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
-
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
-
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry><entry><title type="html">a post with advanced image components</title><link href="https://ziumper.github.io/blog/2024/advanced-images/" rel="alternate" type="text/html" title="a post with advanced image components"/><published>2024-01-27T11:46:00+00:00</published><updated>2024-01-27T11:46:00+00:00</updated><id>https://ziumper.github.io/blog/2024/advanced-images</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/advanced-images/"><![CDATA[<p>This is an example post with advanced image components.</p> <h2 id="image-slider">Image Slider</h2> <p>This is a simple image slider. It uses the <a href="https://swiperjs.com/">Swiper</a> library. Check the <a href="https://swiperjs.com/demos">examples page</a> for more information of what you can achieve with it.</p> <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/9-480.webp 480w,/assets/img/9-800.webp 800w,/assets/img/9-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/8-480.webp 480w,/assets/img/8-800.webp 800w,/assets/img/8-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/10-480.webp 480w,/assets/img/10-800.webp 800w,/assets/img/10-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </swiper-slide> </swiper-container> <h2 id="image-comparison-slider">Image Comparison Slider</h2> <p>This is a simple image comparison slider. It uses the <a href="https://img-comparison-slider.sneas.io/">img-comparison-slider</a> library. Check the <a href="https://img-comparison-slider.sneas.io/examples.html">examples page</a> for more information of what you can achieve with it.</p> <img-comparison-slider> <figure slot="first"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> <figure slot="second"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic_color-480.webp 480w,/assets/img/prof_pic_color-800.webp 800w,/assets/img/prof_pic_color-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </img-comparison-slider>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what advanced image components could look like]]></summary></entry><entry><title type="html">a post with vega lite</title><link href="https://ziumper.github.io/blog/2024/vega-lite/" rel="alternate" type="text/html" title="a post with vega lite"/><published>2024-01-27T00:20:00+00:00</published><updated>2024-01-27T00:20:00+00:00</updated><id>https://ziumper.github.io/blog/2024/vega-lite</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/vega-lite/"><![CDATA[<p>This is an example post with some <a href="https://vega.github.io/vega-lite/">vega lite</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">vega_lite
-</span><span class="sb">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-vega_lite">{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A dot plot showing each movie in the database, and the difference from the average movie rating. The display is sorted by year to visualize everything in sequential order. The graph is for all Movies before 2019.",
-  "data": {
-    "url": "https://raw.githubusercontent.com/vega/vega/main/docs/data/movies.json"
-  },
-  "transform": [
-    {"filter": "datum['IMDB Rating'] != null"},
-    {"filter": {"timeUnit": "year", "field": "Release Date", "range": [null, 2019]}},
-    {
-      "joinaggregate": [{
-        "op": "mean",
-        "field": "IMDB Rating",
-        "as": "AverageRating"
-      }]
-    },
-    {
-      "calculate": "datum['IMDB Rating'] - datum.AverageRating",
-      "as": "RatingDelta"
-    }
-  ],
-  "mark": "point",
-  "encoding": {
-    "x": {
-      "field": "Release Date",
-      "type": "temporal"
-    },
-    "y": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "title": "Rating Delta"
-    },
-    "color": {
-      "field": "RatingDelta",
-      "type": "quantitative",
-      "scale": {"domainMid": 0},
-      "title": "Rating Delta"
-    }
-  }
-}
-</code></pre> <p>This plot supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included vega lite code could look like]]></summary></entry><entry><title type="html">a post with geojson</title><link href="https://ziumper.github.io/blog/2024/geojson-map/" rel="alternate" type="text/html" title="a post with geojson"/><published>2024-01-26T17:57:00+00:00</published><updated>2024-01-26T17:57:00+00:00</updated><id>https://ziumper.github.io/blog/2024/geojson-map</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/geojson-map/"><![CDATA[<p>This is an example post with some <a href="https://geojson.org/">geojson</a> code. The support is provided thanks to <a href="https://leafletjs.com/">Leaflet</a>. To create your own visualization, go to <a href="https://geojson.io/">geojson.io</a>.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">geojson
-</span><span class="sb">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-geojson">{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -3.162613728707967
-            ],
-            [
-              -59.820894493858034,
-              -2.904625022183211
-            ],
-            [
-              -60.11363029935569,
-              -2.904625022183211
-            ]
-          ]
-        ],
-        "type": "Polygon"
-      }
-    }
-  ]
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><category term="maps"/><summary type="html"><![CDATA[this is what included geojson code could look like]]></summary></entry><entry><title type="html">a post with echarts</title><link href="https://ziumper.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="a post with echarts"/><published>2024-01-26T16:03:00+00:00</published><updated>2024-01-26T16:03:00+00:00</updated><id>https://ziumper.github.io/blog/2024/echarts</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/echarts/"><![CDATA[<p>This is an example post with some <a href="https://echarts.apache.org/">echarts</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">echarts
-</span><span class="sb">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-echarts">{
-  "title": {
-    "text": "ECharts Getting Started Example"
-  },
-  "responsive": true,
-  "tooltip": {},
-  "legend": {
-    "top": "30px",
-    "data": ["sales"]
-  },
-  "xAxis": {
-    "data": ["Shirts", "Cardigans", "Chiffons", "Pants", "Heels", "Socks"]
-  },
-  "yAxis": {},
-  "series": [
-    {
-      "name": "sales",
-      "type": "bar",
-      "data": [5, 20, 36, 10, 10, 20]
-    }
-  ]
-}
-</code></pre> <p>Note that this library offer support for both light and dark themes. You can switch between them using the theme switcher in the top right corner of the page.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included echarts code could look like]]></summary></entry><entry><title type="html">a post with chart.js</title><link href="https://ziumper.github.io/blog/2024/chartjs/" rel="alternate" type="text/html" title="a post with chart.js"/><published>2024-01-26T01:04:00+00:00</published><updated>2024-01-26T01:04:00+00:00</updated><id>https://ziumper.github.io/blog/2024/chartjs</id><content type="html" xml:base="https://ziumper.github.io/blog/2024/chartjs/"><![CDATA[<p>This is an example post with some <a href="https://www.chartjs.org/">chart.js</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-chartjs">{
-  "type": "line",
-  "data": {
-    "labels": [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July"
-    ],
-    "datasets": [
-      {
-        "label": "# of bugs",
-        "fill": false,
-        "lineTension": 0.1,
-        "backgroundColor": "rgba(75,192,192,0.4)",
-        "borderColor": "rgba(75,192,192,1)",
-        "borderCapStyle": "butt",
-        "borderDash": [],
-        "borderDashOffset": 0,
-        "borderJoinStyle": "miter",
-        "pointBorderColor": "rgba(75,192,192,1)",
-        "pointBackgroundColor": "#fff",
-        "pointBorderWidth": 1,
-        "pointHoverRadius": 5,
-        "pointHoverBackgroundColor": "rgba(75,192,192,1)",
-        "pointHoverBorderColor": "rgba(220,220,220,1)",
-        "pointHoverBorderWidth": 2,
-        "pointRadius": 1,
-        "pointHitRadius": 10,
-        "data": [
-          65,
-          59,
-          80,
-          81,
-          56,
-          55,
-          40
-        ],
-        "spanGaps": false
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">chartjs
-</span><span class="sb">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-chartjs">{
-  "type": "doughnut",
-  "data": {
-    "labels": [
-      "Red",
-      "Blue",
-      "Yellow"
-    ],
-    "datasets": [
-      {
-        "data": [
-          300,
-          50,
-          100
-        ],
-        "backgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        "hoverBackgroundColor": [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }
-    ]
-  },
-  "options": {}
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry><entry><title type="html">a post with TikZJax</title><link href="https://ziumper.github.io/blog/2023/tikzjax/" rel="alternate" type="text/html" title="a post with TikZJax"/><published>2023-12-12T22:25:00+00:00</published><updated>2023-12-12T22:25:00+00:00</updated><id>https://ziumper.github.io/blog/2023/tikzjax</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/tikzjax/"><![CDATA[<p>This is an example post with TikZ code. TikZJax converts script tags (containing TikZ code) into SVGs.</p> <script type="text/tikz">
-\begin{tikzpicture}
-    \draw[red,fill=black!60!red] (0,0) circle [radius=1.5];
-    \draw[green,fill=black!60!green] (0,0) circle [x radius=1.5cm, y radius=10mm];
-    \draw[blue,fill=black!60!blue] (0,0) circle [x radius=1cm, y radius=5mm, rotate=30];
-\end{tikzpicture}
-</script>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included TikZ code could look like]]></summary></entry><entry><title type="html">a post with jupyter notebook</title><link href="https://ziumper.github.io/blog/2023/jupyter-notebook/" rel="alternate" type="text/html" title="a post with jupyter notebook"/><published>2023-07-04T12:57:00+00:00</published><updated>2023-07-04T12:57:00+00:00</updated><id>https://ziumper.github.io/blog/2023/jupyter-notebook</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/jupyter-notebook/"><![CDATA[<p>To include a jupyter notebook in a post, you can use the following code:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{::nomarkdown}
-<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">jupyter_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'assets/jupyter/blog.ipynb'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">relative_url</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">notebook_exists</span><span class="w"> </span><span class="cp">%}{%</span><span class="w"> </span><span class="nt">file_exists</span><span class="w"> </span>assets/jupyter/blog.ipynb<span class="w"> </span><span class="cp">%}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">notebook_exists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'true'</span><span class="w"> </span><span class="cp">%}</span>
-  <span class="cp">{%</span><span class="w"> </span><span class="nt">jupyter_notebook</span><span class="w"> </span><span class="nv">jupyter_path</span><span class="w"> </span><span class="cp">%}</span>
-<span class="cp">{%</span><span class="w"> </span><span class="nt">else</span><span class="w"> </span><span class="cp">%}</span>
-  &lt;p&gt;Sorry, the notebook you are looking for does not exist.&lt;/p&gt;
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
-{:/nomarkdown}
-</code></pre></div></div> <p>Let’s break it down: this is possible thanks to <a href="https://github.com/red-data-tools/jekyll-jupyter-notebook">Jekyll Jupyter Notebook plugin</a> that allows you to embed jupyter notebooks in your posts. It basically calls <a href="https://nbconvert.readthedocs.io/en/latest/usage.html#convert-html"><code class="language-plaintext highlighter-rouge">jupyter nbconvert --to html</code></a> to convert the notebook to an html page and then includes it in the post. Since <a href="https://jekyllrb.com/docs/configuration/markdown/">Kramdown</a> is the default Markdown renderer for Jekyll, we need to surround the call to the plugin with the <a href="https://kramdown.gettalong.org/syntax.html#extensions">::nomarkdown</a> tag so that it stops processing this part with Kramdown and outputs the content as-is.</p> <p>The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the <code class="language-plaintext highlighter-rouge">file_exists</code> filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:</p> <div class="jupyter-notebook" style="position: relative; width: 100%; margin: 0 auto;"> <div class="jupyter-notebook-iframe-container"> <iframe src="/assets/jupyter/blog.ipynb.html" style="position: absolute; top: 0; left: 0; border-style: none;" width="100%" height="100%" onload="this.parentElement.style.paddingBottom = (this.contentWindow.document.documentElement.scrollHeight + 10) + 'px'"></iframe> </div> </div> <p>Note that the jupyter notebook supports both light and dark themes.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="jupyter"/><summary type="html"><![CDATA[an example of a blog post with jupyter notebook]]></summary></entry><entry><title type="html">a post with custom blockquotes</title><link href="https://ziumper.github.io/blog/2023/custom-blockquotes/" rel="alternate" type="text/html" title="a post with custom blockquotes"/><published>2023-05-12T19:53:00+00:00</published><updated>2023-05-12T19:53:00+00:00</updated><id>https://ziumper.github.io/blog/2023/custom-blockquotes</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/custom-blockquotes/"><![CDATA[<p>This post shows how to add custom styles for blockquotes. Based on <a href="https://github.com/sighingnow/jekyll-gitbook">jekyll-gitbook</a> implementation.</p> <p>We decided to support the same custom blockquotes as in <a href="https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html">jekyll-gitbook</a>, which are also found in a lot of other sites’ styles. The styles definitions can be found on the <a href="https://github.com/george-gca/multi-language-al-folio/blob/master/_sass/_base.scss">_base.scss</a> file, more specifically:</p> <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Tips, warnings, and dangers */</span>
-<span class="nc">.post</span> <span class="nc">.post-content</span> <span class="nt">blockquote</span> <span class="p">{</span>
-  <span class="k">&amp;</span><span class="nc">.block-tip</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-tip-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">&amp;</span><span class="nc">.block-warning</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-warning-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-  <span class="k">&amp;</span><span class="nc">.block-danger</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block</span><span class="p">);</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-bg</span><span class="p">);</span>
-
-    <span class="nt">p</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-text</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="nt">h1</span><span class="o">,</span>
-    <span class="nt">h2</span><span class="o">,</span>
-    <span class="nt">h3</span><span class="o">,</span>
-    <span class="nt">h4</span><span class="o">,</span>
-    <span class="nt">h5</span><span class="o">,</span>
-    <span class="nt">h6</span> <span class="p">{</span>
-      <span class="nl">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">global-danger-block-title</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div> <p>A regular blockquote can be used as following:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; This is a regular blockquote</span>
-<span class="gt">&gt; and it can be used as usual</span>
-</code></pre></div></div> <blockquote> <p>This is a regular blockquote and it can be used as usual</p> </blockquote> <p>These custom styles can be used by adding the specific class to the blockquote, as follows:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### TIP</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; A tip can be used when you want to give advice</span>
-<span class="gt">&gt; related to a certain content.</span>
-{: .block-tip }
-</code></pre></div></div> <blockquote class="block-tip"> <h5 id="tip">TIP</h5> <p>A tip can be used when you want to give advice related to a certain content.</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### WARNING</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a warning, and thus should</span>
-<span class="gt">&gt; be used when you want to warn the user</span>
-{: .block-warning }
-</code></pre></div></div> <blockquote class="block-warning"> <h5 id="warning">WARNING</h5> <p>This is a warning, and thus should be used when you want to warn the user</p> </blockquote> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ##### DANGER</span>
-<span class="gt">&gt;</span>
-<span class="gt">&gt; This is a danger zone, and thus should</span>
-<span class="gt">&gt; be used carefully</span>
-{: .block-danger }
-</code></pre></div></div> <blockquote class="block-danger"> <h5 id="danger">DANGER</h5> <p>This is a danger zone, and thus should be used carefully</p> </blockquote> ]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="blockquotes"/><summary type="html"><![CDATA[an example of a blog post with custom blockquotes]]></summary></entry><entry><title type="html">a post with table of contents on a sidebar</title><link href="https://ziumper.github.io/blog/2023/sidebar-table-of-contents/" rel="alternate" type="text/html" title="a post with table of contents on a sidebar"/><published>2023-04-25T14:14:00+00:00</published><updated>2023-04-25T14:14:00+00:00</updated><id>https://ziumper.github.io/blog/2023/sidebar-table-of-contents</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/sidebar-table-of-contents/"><![CDATA[<p>This post shows how to add a table of contents as a sidebar.</p> <h2 id="adding-a-table-of-contents">Adding a Table of Contents</h2> <p>To add a table of contents to a post as a sidebar, simply add</p> <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">toc</span><span class="pi">:</span>
-  <span class="na">sidebar</span><span class="pi">:</span> <span class="s">left</span>
-</code></pre></div></div> <p>to the front matter of the post. The table of contents will be automatically generated from the headings in the post. If you wish to display the sidebar to the right, simply change <code class="language-plaintext highlighter-rouge">left</code> to <code class="language-plaintext highlighter-rouge">right</code>.</p> <h3 id="example-of-sub-heading-1">Example of Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-1">Example of another Sub-Heading 1</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h2 id="customizing-your-table-of-contents">Customizing Your Table of Contents</h2> <p data-toc-text="Customizing">If you want to learn more about how to customize the table of contents of your sidebar, you can check the <a href="https://afeld.github.io/bootstrap-toc/">bootstrap-toc</a> documentation. Notice that you can even customize the text of the heading that will be displayed on the sidebar.</p> <h3 id="example-of-sub-heading-2">Example of Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p> <h3 id="example-of-another-sub-heading-2">Example of another Sub-Heading 2</h3> <p>Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="toc"/><category term="sidebar"/><summary type="html"><![CDATA[an example of a blog post with table of contents on a sidebar]]></summary></entry></feed>
+Footer where summary and all other references should be applied <span class="k">for
+</span>example: 
+Those commits resolve issue <span class="c">#123 and #124</span>
+</code></pre></div></div> <p>Git branches – tree of changes Commits can be added to branches. The branch is a set of commits that are separated from the main branch just like in a tree with leafs. To create a branch:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch &lt;branch_name&gt;
+</code></pre></div></div> <p>Aby zmienić gałąź</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout &lt;branch_name&gt; 
+</code></pre></div></div> <p>Po zainicjowaniu repozytorium gita zwykle masz jedną istniejącą główną gałąź, z której wszystkie utworzone później gałęzie mogą być pochodne. Używaj ich, aby grupować pewne zmiany w funkcji, nad którą pracujesz.</p> <h1 id="workflow">Workflow</h1> <p>Polecam zapoznanie się z kilkoma pojęciami gita, takimi jak gałąź, rebase, merge i squash. Po tym możesz zacząć myśleć o tym, jak pracować i zarządzać swoją pracą jako programista. Jestem wielkim zwolennikiem normalizacji i standardów przepływów pracy. Znalazłem kilka metodologii, które są popularne obecnie podczas pracy z gitem.</p> <ul> <li>Gitflow</li> <li>Trunk</li> </ul> <p>Wybierz pierwszy, jeśli nie masz w swoim zestawie narzędzi CI/CD. Drugi jest świetny przy pracy z zintegrowanymi narzędziami do przeglądu kodu.</p>]]></content><author><name></name></author><category term="tutorials"/><category term="git"/><category term="gitExtensions"/><summary type="html"><![CDATA[Zastanawiałem się, co oznacza GIT. Oto co znalazłem:]]></summary></entry></feed>

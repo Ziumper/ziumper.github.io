@@ -1,0 +1,177 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> How to store big binary files with git lfs on Google Drive or One Drive? | Ziumper </title> <meta name="author" content="Tomasz Komoszeski"> <meta name="description" content=""> <meta name="keywords" content="portfolio-website ziumper software-developer software-engineer game-developer full-stack unity-developer shopware-developer godot-developer unreal-developer frontend-developer backend-developer"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs/"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?0afe9f0ae161375728f7bcc5eb5b4ab4"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Ziumper </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item active"> <a class="nav-link" href="/pl/blog/2023/how-to-store-big-binary-files-with-git-lfs/">PL</a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">How to store big binary files with git lfs on Google Drive or One Drive?</h1> <p class="post-meta"> October 23, 2023 </p> <p class="post-tags"> <a href="/blog/2023"> <i class="fa-solid fa-calendar fa-sm"></i> 2023 </a>   ·   <a href="/blog/tag/git"> <i class="fa-solid fa-hashtag fa-sm"></i> git</a>   <a href="/blog/tag/git-lfs"> <i class="fa-solid fa-hashtag fa-sm"></i> git-lfs</a>   <a href="/blog/tag/git-extensions"> <i class="fa-solid fa-hashtag fa-sm"></i> git-extensions</a>   <a href="/blog/tag/unity"> <i class="fa-solid fa-hashtag fa-sm"></i> unity</a>   <a href="/blog/tag/unreal-engine"> <i class="fa-solid fa-hashtag fa-sm"></i> unreal-engine</a>     ·   <a href="/blog/category/tutorials"> <i class="fa-solid fa-tag fa-sm"></i> tutorials</a>   </p> </header> <article class="post-content"> <div id="markdown-content"> <h1 id="transfer-adapter">Transfer adapter</h1> <p>I suggest connecting git lfs with custom transfer adapter. According to git-lfs documentation:</p> <blockquote> <p>Git LFS supports multiple ways to transfer (upload and download) files. In the core client, the basic way to do this is via a one-off HTTP request via the URL returned from the LFS API for a given object. The core client also supports extensions to allow resuming of downloads (via Range headers) and uploads (via the tus.io protocol).</p> </blockquote> <h1 id="usage-examples">Usage examples</h1> <p>I used this approach to storage media files in my software development project and game dev project. I bet you can do it too. In the most cases I like to use it for:</p> <ul> <li>game dev projects in game engines like Unity and Unreal Engine.</li> <li>dbdumps storage</li> <li>big media files storage (in case you need a one)</li> </ul> <p>There are always a way to do it for another kind of projects.</p> <p>In example bellow I will be using gitlab, google drive and other tools.</p> <h1 id="gitlab-setup">Gitlab setup</h1> <p>Firstly you need to disable default lfs service of gitlab. It’s very vell documented feature in official documentation <a href="https://docs.gitlab.com/ee/topics/git/lfs" rel="external nofollow noopener" target="_blank">Gitlab</a> but there is not much information how to disable it.</p> <p>It’s a litle tricky and not really user friendly but obviously you need to select your repository and dive into settings.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/settings_gitlab-480.webp 480w,/assets/img/posts/settings_gitlab-800.webp 800w,/assets/img/posts/settings_gitlab-1400.webp 1400w," sizes="95vw" type="image/webp"></source> <img src="/assets/img/posts/settings_gitlab.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/disable_gitlab_lfs_example-480.webp 480w,/assets/img/posts/disable_gitlab_lfs_example-800.webp 800w,/assets/img/posts/disable_gitlab_lfs_example-1400.webp 1400w," sizes="95vw" type="image/webp"></source> <img src="/assets/img/posts/disable_gitlab_lfs_example.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>Although!</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/yoda-there-is-480.webp 480w,/assets/img/posts/yoda-there-is-800.webp 800w,/assets/img/posts/yoda-there-is-1400.webp 1400w," sizes="95vw" type="image/webp"></source> <img src="/assets/img/posts/yoda-there-is.gif" class="img-fluid rounded z-depth-1" width="30%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>There is another way also via gitlab cli, and to CI tools too via environment variables but I will not cover this, let’s keep it simple.</p> <p>If giltab lfs is disabled on remote you can start with local setup.</p> <h1 id="local-repository-setup">Local repository setup</h1> <p>You will need a new repository or use existing one. I suggest starting with fresh state so you can go with easier setup guide bellow.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
+</code></pre></div></div> <p>Add also remote server link. That can be done after setup or later. For gitlab you can follow simple tutorial <a href="https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#add-a-remote" rel="external nofollow noopener" target="_blank">link to git</a></p> <h1 id="lfs-setup">Lfs setup</h1> <p>Download a lfs adapter tool from <a href="https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1" rel="external nofollow noopener" target="_blank">available releases</a>.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/OIP-480.webp 480w,/assets/img/posts/OIP-800.webp 800w,/assets/img/posts/OIP-1400.webp 1400w," sizes="95vw" type="image/webp"></source> <img src="/assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <p>Download, unzip, install it to some good known location. For example make a new folder in you main work disk like this <code class="language-plaintext highlighter-rouge">C:\Tools</code> so full path to the tool will be like this <code class="language-plaintext highlighter-rouge">C:\Tools\lfs-folderstore.exe</code>.</p> <p>To set up repo with lfs please add .gitattributes file in your repository. For examples check this <a href="https://github.com/gitattributes/gitattributes" rel="external nofollow noopener" target="_blank">link</a>.</p> <h2 id="unity-gitattributes">Unity .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## in root 
+
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.physicMaterial merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf -text
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
+
+## git-lfs ##
+
+#Image
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+
+#Audio
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+#Wwise
+*.bnk filter=lfs diff=lfs merge=lfs -text
+
+#Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+
+#3D Object
+*.FBX filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+#ETC
+*.a filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.rns filter=lfs diff=lfs merge=lfs -text
+*.reason filter=lfs diff=lfs merge=lfs -text
+*.lxo filter=lfs diff=lfs merge=lfs -text
+
+</code></pre></div></div> <h2 id="unreal-engine-gitattributes">Unreal Engine .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Unreal Engine 
+## Auto detect text files and perform LF normalization ##
+
+* text=auto
+
+# UE file types
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+*.udk filter=lfs diff=lfs merge=lfs -text
+*.upk filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 2D formats
+# Read more in: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
+
+# Recommended use:
+*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[fF][lL[oO][aA][tT] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[pP][cC][xX] filter=lfs diff=lfs merge=lfs -text
+*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
+*.[xX][cC][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
+*.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
+*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# 3D formats
+
+# Always recommended to use:
+# The UE4 FBX import pipeline uses FBX 2018
+*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
+
+# Other supported formats:
+*.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
+*.[sS][rR][tT] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Audio formats
+# Read more in: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
+
+# Always recommended to use:
+*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used:
+*.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
+*.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
+
+# Not recommended to use, but supported:
+*.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][aA] filter=lfs diff=lfs merge=lfs -text
+*.[aA][cC]3 filter=lfs diff=lfs merge=lfs -text
+*.[aA][mM][rR] filter=lfs diff=lfs merge=lfs -text
+*.[aA][iI][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][uU] filter=lfs diff=lfs merge=lfs -text
+*.[cC][dD][dD][aA] filter=lfs diff=lfs merge=lfs -text
+*.[cC][aA][fF] filter=lfs diff=lfs merge=lfs -text
+*.[bB][wW][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][dD][tT][sS] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Video formats
+# Read more in: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
+
+# Always recommended to use, supports all platforms:
+# For the best compatibility and performance, it is recommended to use H.264 encoded MP4 (.mp4) container files.
+*.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
+
+# Can also be used, only some platforms are supported:
+*.3[gG]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP] filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP]2 filter=lfs diff=lfs merge=lfs -text
+*.3[gG][pP][pP] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[aA] filter=lfs diff=lfs merge=lfs -text
+*.[mM]4[vV] filter=lfs diff=lfs merge=lfs -text
+*.[mM][o][vV] filter=lfs diff=lfs merge=lfs -text
+*.[aA][sS][fF] filter=lfs diff=lfs merge=lfs -text
+*.[aA][vV][iI] filter=lfs diff=lfs merge=lfs -text
+*.[wW][mM][vV] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Fonts
+# Read more in: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
+
+*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
+*.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
+
+--------------------------------------------------
+
+# Documents
+*.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
+
+</code></pre></div></div> <h1 id="goolge-drive-setup">Goolge Drive Setup</h1> <p>If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client <a href="https://www.google.com/drive/download/" rel="external nofollow noopener" target="_blank">Download</a>. Install it and login so you can create a folder to store all big binary data.</p> <p>After loging you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name <code class="language-plaintext highlighter-rouge">binary-lfs</code>. That name will be used to store all binary data for you project in lfs setup.</p> <h1 id="git-config-integration">Git config integration</h1> <p>If you have done right everything now it’s a time to connect git-lfs with our tool and google drive.</p> <p>I used my favorite open-source <a href="https://git-extensions-documentation.readthedocs.io/" rel="external nofollow noopener" target="_blank">GitExtension</a> software as reference for integration, but you can use terminal by using git config approach or any kind of text editor. In case using text editor open up config file inside hidden .git folder inside root folder of your project repository.</p> <p>To open up the configuration of your github repository choose following option:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/integration_gitextension-480.webp 480w,/assets/img/posts/integration_gitextension-800.webp 800w,/assets/img/posts/integration_gitextension-1400.webp 1400w," sizes="95vw" type="image/webp"></source> <img src="/assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <p>Open it up and append following lines, similar as inside <a href="#cloning-a-repo">Cloning a repo</a></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[lfs "customtransfer.lfs-folder"]
+    path = C:\\Tools\\lfs-folderstore.exe
+    args = 'I:\\My drive\\binary-lfs'
+[lfs]
+    standalonetransferagent = lfs-folder
+    repositoryformatversion = 0
+</code></pre></div></div> <p>Afterwards you should be good to go, afterwards remember to sort out the LFS files in your checkout and copy the content from the now-configured shared folder, by using following command</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--hard</span> master
+</code></pre></div></div> <p>or if you are using fresh repository simply push it</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin main
+</code></pre></div></div> <h1 id="troubleshooting">Troubleshooting</h1> <p>Sometimes there could be some problems with your network or issues with git lfs In case of smudge errors or problems you can use following hacks:</p> <ul> <li>try using better internet connection low network bandwidth is not helping</li> <li>restart computer</li> <li>use <code class="language-plaintext highlighter-rouge">git lfs fetch --all</code> fetch git lfs files for ALL remote branches</li> <li>move your google drive or one drive directory cache to new folder and try to download the data again</li> </ul> <h1 id="bibliography-and-sources">Bibliography and sources</h1> <ul> <li><a href="https://github.com/sinbad/lfs-folderstore" rel="external nofollow noopener" target="_blank">Lfs folderstore repo</a></li> <li><a href="https://www.google.com/drive/download/" rel="external nofollow noopener" target="_blank">Google Drive</a></li> <li><a href="https://docs.gitlab.com/" rel="external nofollow noopener" target="_blank">Gitlab Docs</a></li> </ul> </div> </article> <br> <hr> <br> <ul class="list-disc pl-8"></ul> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2022/how-to-solve-rebase-merge-conflicts-with-GitExtensions/">How to solve rebase and merge conflicts with GitExtensions?</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2022/how-to-start-with-git/">How to start with GIT?</a> </li> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2024 Tomasz Komoszeski. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/george-gca/multi-language-al-folio" rel="external nofollow noopener" target="_blank">multi-language-al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2930004b8d7fcd0a8e00fdcfc8fc9f24"></script> <script defer src="/assets/js/common.js?4a129fbf39254905f505c7246e641eaf"></script> <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
