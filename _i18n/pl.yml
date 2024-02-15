@@ -42,8 +42,8 @@ descriptions:
   teaching: Materiały do kursów.
   unk: Wygląda na to, że popełniono błąd i nic tutaj nie ma.
 blog:
-  description: Prosty blog z postami
-  name: al-folio blog po polsku # blog_name will be displayed in your blog page
+  description: Blog o kodowaniu, programowaniu i innych ciekawych rzeczach
+  name: Think twice, code once # blog_name will be displayed in your blog page
   nav_title: blog # your blog must have a title for it to be displayed in the nav bar
   related_posts:
     description: "Oto kilka następnych artykułów, które mogą Ci się również spodobać: "

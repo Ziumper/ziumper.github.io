@@ -128,20 +128,20 @@
     - title: Programowanie
       items:
         - AGILE, SCRUM, Kanban
-        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST
+        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST/SOAP, ORM
         - C#, C++, PHP, Java, JavaScript, TypeScript, Python
         - GIT, SVN
         - CSS, HTML, LESS, SASS
-        - MySQL, Doctrine, Entity Framework, Hibernate, SQLite
+        - MySQL, MSSQL, Doctrine, Entity Framework, Hibernate, SQLite
         - ImGui, ImPlot, OpenXLSX
         - Google Tests, NUnit, Moq
         - Angular, Vue.js, JQuery, ExtJs, Node.js
         - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
-        - .NET, .NET Core, WPF, Windows Forms, AvaloniaUI
+        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
         - Maven, Composer, Nuget, CMake
         - Apache, Elastic Search, Redis, Varnish
         - Shopware, Symfony, Twig, Smarty, PSH 
-        - Docker, Vagrant, Oracle VirtualBox 
+        - Docker, Vagrant, Oracle VirtualBox, Puppet
         - Nftables
         - Linux, Windows, Mac
         - Bash, Powershell 

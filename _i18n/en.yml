@@ -40,8 +40,8 @@ descriptions:
   teaching: Materials for courses you taught. Replace this text with your description.
   unk: Looks like there has been a mistake. Nothing exists here.
 blog:
-  description: a simple whitespace theme for academics
-  name: al-folio blog in english # blog_name will be displayed in your blog page
+  description: Blog about coding, programming, and other interesting things
+  name: Think twice, code once # blog_name will be displayed in your blog page
   nav_title: blog # your blog must have a title for it to be displayed in the nav bar
   related_posts:
     description: "Here are some more articles you might like to read next:"
