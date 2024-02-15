@@ -45,7 +45,8 @@
           contents:
             - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
             - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
-            - <a href="https://play.google.com/store/apps/details?id=com.Farmind.NightCatcher&hl=en&gl=US&pli=1">NightCatcher</a>    
+            - <a href="http://farmind.pl/night-catcher/">NightCatcher</a>
+             
     - title: Programista 
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
       year: 2018 - 2019
@@ -131,7 +132,7 @@
         - C#, C++, PHP, Java, JavaScript, TypeScript, Python
         - GIT, SVN
         - CSS, HTML, LESS, SASS
-        - MySQL, Doctrine, Entity Framework, Hibernate, SQLLite
+        - MySQL, Doctrine, Entity Framework, Hibernate, SQLite
         - ImGui, ImPlot, OpenXLSX
         - Google Tests, NUnit, Moq
         - Angular, Vue.js, JQuery, ExtJs, Node.js
