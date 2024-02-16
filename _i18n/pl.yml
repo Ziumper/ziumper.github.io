@@ -103,6 +103,9 @@ projects:
   categories:
     fun: zabawa
     work: praca
+    game-dev: game-dev
+    web-development: aplikacje webowe
+    desktop: aplikacje desktopowe
 repositories:
   users: Użytkownicy GitHub 
   repos: Repozytoria GitHub 

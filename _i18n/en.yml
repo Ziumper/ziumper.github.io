@@ -101,6 +101,9 @@ projects:
   categories:
     fun: fun
     work: work
+    game-dev: game-dev
+    web-development: web-development
+    desktop: desktop
 repositories:
   users: GitHub Users
   repos: GitHub Repositories

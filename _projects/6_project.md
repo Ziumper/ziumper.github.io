@@ -4,7 +4,7 @@ title: projects.titles.project6
 description: projects.descriptions.project6
 img:
 importance: 4
-category: fun
+category: game-dev
 ---
 
 {% translate_file _projects/6_project.md %}
