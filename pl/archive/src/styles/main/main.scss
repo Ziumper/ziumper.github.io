@@ -1,0 +1,34 @@
+@import "./header/header.scss";
+@import "./blocks/separator.scss";
+@import "./blocks/content-section.scss";
+@import "./blocks/black-section.scss";
+@import "./blocks/shuffle-section.scss";
+@import"./blocks/return-to-top.scss";
+body {
+    background: black;
+}
+
+.main {
+    background: white;
+    text-align: center;
+}
+
+@media screen and (max-width:991px) {
+    .main .section-text {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .main .section-text {
+        width: 70%;
+    }
+}
+
+.separator-belt-block {
+    flex-wrap: wrap;
+}
+
+.separator-list {
+    flex-wrap: inherit;
+}

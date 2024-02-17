@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Ave template">
+  <meta name="author" content="Tomasz Komoszeski">
+  <title>Ave</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css" />
+  <!-- Latest compiled and minified JavaScript -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navigation-bar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sub-menu currency-menu">
+          <ul>
+            <li class="dropdown">
+              <button type="button" data-toggle="dropdown" class="currency-button">
+                Currency: GBP
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">PLN</a></li>
+                <li><a href="#">JPY</a></li>
+                <li><a href="#">USD</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div id="shopping-cart" class="sub-menu">
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Shopping cart</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="burger-menu">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="sub-menu sub-menu-right">
+          <ul>
+            <li>
+              <a href="#">
+                <span>Register</span>
+                <i class="fas fa-user-plus"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Sign in</span>
+                <i class="fas fa-sign-in-alt"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">
+                <span>Register</span>
+                <i class="fas fa-user-plus"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>Sign in</span>
+                <i class="fas fa-sign-in-alt"></i>
+              </a>
+            </li>
+            <li>
+              <button type="button" data-toggle="collapse" data-target="#currencyMobileMenu" class="currency-button">
+                Currency: GBP
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </button>
+            </li>
+            <li>
+              <div id="currencyMobileMenu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">PLN</a></li>
+                  <li><a href="#">JPY</a></li>
+                  <li><a href="#">USD</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="sub-navigation-header container-fluid header ">
+    <nav class="row sub-navigation-container">
+      <div class="logo">
+        <a href="#"> <span>avenue</span> fashion</a>
+        <div class="sub-navigation-button" data-toggle="collapse" data-target="#subNavigationMenu">
+          <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up"></i>
+        </div>
+      </div>
+      <div id="subNavigationMenu" class="sub-navigation collapse">
+        <ul>
+          <li>
+            <a data-toggle="dropdown">
+              <div class="sub-navigation-link-text">Mens</div>
+              <div class="sub-navigation-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </a>
+            <a data-toggle="collapse" data-target="#subMobileCollapseMenu1">
+              <div class="sub-navigation-link-text">Mens</div>
+              <div class="sub-navigation-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </a>
+            <div class="dropdown-menu">
+              <div class="sub-dropdown-menu">
+                <a href="#">Casuals</a>
+                <ul>
+                  <li><a href="#">Jakcets</a></li>
+                  <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  <li><a href="#">Polo Shirts</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                  <li><a href="#">Trousers & Chinos</a></li>
+                  <li><a href="#">T-Shirts</a></li>
+                </ul>
+              </div>
+              <div class="sub-dropdown-menu">
+                <a href="#">Formal</a>
+                <ul>
+                  <li><a href="#">Jakets</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Suits</a></li>
+                  <li><a href="#">Trousers</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="collapse-menu collapse" id="subMobileCollapseMenu1">
+              <div class="sub-dropdown-menu-mobile">
+                <a href="#">Casuals</a>
+                <ul>
+                  <li><a href="#">Jakcets</a></li>
+                  <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  <li><a href="#">Polo Shirts</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                  <li><a href="#">Trousers & Chinos</a></li>
+                  <li><a href="#">T-Shirts</a></li>
+                </ul>
+              </div>
+              <div class="sub-dropdown-menu-mobile">
+                <a href="#">Formal</a>
+                <ul>
+                  <li><a href="#">Jakets</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Suits</a></li>
+                  <li><a href="#">Trousers</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="dropdown">
+              <div class="sub-navigation-link-text">Womens</div>
+              <div class="sub-navigation-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </a>
+            <a data-toggle="collapse" data-target="#subMobileCollapseMenu2">
+              <div class="sub-navigation-link-text">Womens</div>
+              <div class="sub-navigation-icon">
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+              </div>
+            </a>
+            <div class="dropdown-menu">
+              <div class="sub-dropdown-menu">
+                <a href="#">Casuals</a>
+                <ul>
+                  <li><a href="#">Jakcets</a></li>
+                  <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  <li><a href="#">Polo Shirts</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                  <li><a href="#">Trousers & Chinos</a></li>
+                  <li><a href="#">T-Shirts</a></li>
+                </ul>
+              </div>
+              <div class="sub-dropdown-menu">
+                <a href="#">Formal</a>
+                <ul>
+                  <li><a href="#">Jakets</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Suits</a></li>
+                  <li><a href="#">Trousers</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="collapse-menu collapse" id="subMobileCollapseMenu2">
+              <div class="sub-dropdown-menu-mobile">
+                <a href="#">Casuals</a>
+                <ul>
+                  <li><a href="#">Jakcets</a></li>
+                  <li><a href="#">Hoodies & Sweatshirts</a></li>
+                  <li><a href="#">Polo Shirts</a></li>
+                  <li><a href="#">Sportswear</a></li>
+                  <li><a href="#">Trousers & Chinos</a></li>
+                  <li><a href="#">T-Shirts</a></li>
+                </ul>
+              </div>
+              <div class="sub-dropdown-menu-mobile">
+                <a href="#">Formal</a>
+                <ul>
+                  <li><a href="#">Jakets</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Suits</a></li>
+                  <li><a href="#">Trousers</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#">The Brand</a>
+          </li>
+          <li>
+            <a href="#">Local Stores</a>
+          </li>
+          <li>
+            <a href="#">Look Book</a>
+          </li>
+          <li class="search-input">
+            <input placeholder="Search..." type="text" />
+            <i class="fas fa-search"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="shop-big-text">ave</div>
+      <div class="shop-button-wrapper">
+        <button class="shop-button special-margin">Shop men's collection </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+        <nav class="main-content-navigation">
+            <div class="container main-content-navigation-container">
+              <ul>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">New arrivals</a></li>
+                <li><a href="#">Best sellers</a></li>
+                <li><a href="#">Special offers</a></li>
+                <li><a href="#">Coming soon</a></li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+    <section>
+        <div class="products">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 product-grid product-grid-left">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 small-product-left">
+                    <div class="product">
+                      <div class="min-picture-container min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 small-product-right">
+                    <div class="product">
+                      <div class="min-picture-container min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container  min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 big-product-down">
+                    <div class="product">
+                      <div class="min-picture-container min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container  min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 product-grid product-grid-right">
+                  <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 big-product-up">
+                    <div class="product">
+                      <div class="min-picture-container  min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container  min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-xs-12 col-sm-12 col-md-12  small-product-left">
+                    <div class="product">
+                      <div class=" min-picture-container  min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-xs-12 col-sm-12 col-md-12 small-product-right">
+                    <div class="product">
+                      <div class="min-picture-container  min-picture-container-first">
+                        <div class="minature min-product-picture">
+                          <img src="images/sliderImage.png">
+                        </div>
+                      </div>
+                      <div class="min-picture-container min-picture-container-second">
+                        <div class="minature min-product-picture">
+                          <img src="images/grey.png">
+                        </div>
+                      </div>
+                      <div class="price-tag">89.99</div>
+                      <img class="main-product-image" src="images/sliderImage.png" />
+                      <div class="product-hover-icon">
+                        <i class="fas fa-info-circle"></i>
+                      </div>
+                      <div class="product-preview-menu">
+                        <div class="product-preview-title">Women burnst orange casual</div>
+                        <div class="product-preview-description">Lorem ipsum dolor sit amet description</div>
+                        <div class="product-preview-buttons">
+                          <i class="fas fa-shopping-cart"></i>
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-arrow-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <div class="container line-seperator">
+      <hr>
+    </div>
+    <section>
+        <div class="contianer-fluid">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 product-article-category">
+              <div class="article-category-container">
+                <div class="col-lg-6 col-sm-4 col-xs-12 product-article-image-container">
+                  <img src="images/sliderImage.png">
+                </div>
+                <div class="col-lg-6 col-sm-8 col-xs-12 product-article-content-container">
+                  <h1><b>Men's</b> Lookbook</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris posuere, dui ut vulputate gravida,
+                    dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                    Mauris iaculis risus sem, nec congue dolor gravida eu.
+                    Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                    Etiam vel nisl purus. Quisque luctus felis eros,
+                    vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                    non ex.
+                  </p>
+                  <div>
+                    <button>view now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 product-article-category">
+              <div class="article-category-container">
+                <div class="col-lg-6 col-sm-4 col-xs-12 product-article-image-container">
+                  <img src="images/sliderImage.png">
+                </div>
+                <div class="col-lg-6 col-sm-8 col-xs-12 product-article-content-container">
+                  <h1><b>Men's</b> Lookbook</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris posuere, dui ut vulputate gravida,
+                    dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                    Mauris iaculis risus sem, nec congue dolor gravida eu.
+                    Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                    Etiam vel nisl purus. Quisque luctus felis eros,
+                    vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                    non ex.
+                  </p>
+                  <div>
+                    <button>view now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 product-article-category">
+              <div class="article-category-container">
+                <div class="col-lg-6 col-sm-4 col-xs-12 product-article-image-container">
+                  <img src="images/sliderImage.png">
+                </div>
+                <div class="col-lg-6 col-sm-8 col-xs-12 product-article-content-container">
+                  <h1><b>Men's</b> Lookbook</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris posuere, dui ut vulputate gravida,
+                    dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                    Mauris iaculis risus sem, nec congue dolor gravida eu.
+                    Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                    Etiam vel nisl purus. Quisque luctus felis eros,
+                    vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                    non ex.
+                  </p>
+                  <div>
+                    <button>view now</button>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+      
+          </div>
+    </section>
+    <div class="container line-seperator">
+        <hr>
+    </div>
+    <section>
+      <div class="branding">
+        <div class="branding-text">
+          <h1><b>The</b> Heading</h1>
+          <h2>Lorem ipsum</h2>
+        </div>
+        <div class="shadow-layer"></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="publication">
+            <h4>Lodnon</h4>
+            <p class="publication-addres">
+              180-182 Regent Street , London, w1b 5bt
+            </p>
+            <p class="publication-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Mauris posuere, dui ut vulputate gravida,
+                dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                Mauris iaculis risus sem, nec congue dolor gravida eu.
+                Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                Etiam vel nisl purus. Quisque luctus felis eros,
+                vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                non ex.
+            </p>
+            <div class="pubblictation-button">
+                <button>view details</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="publication">
+                <h4>Lodnon</h4>
+                <p class="publication-addres">
+                  180-182 Regent Street , London, w1b 5bt
+                </p>
+                <p class="publication-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris posuere, dui ut vulputate gravida,
+                    dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                    Mauris iaculis risus sem, nec congue dolor gravida eu.
+                    Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                    Etiam vel nisl purus. Quisque luctus felis eros,
+                    vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                    non ex.
+                </p>
+                <div class="pubblictation-button">
+                    <button>view details</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="publication">
+                <h4>Lodnon</h4>
+                <p class="publication-addres">
+                  180-182 Regent Street , London, w1b 5bt
+                </p>
+                <p class="publication-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris posuere, dui ut vulputate gravida,
+                    dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                    Mauris iaculis risus sem, nec congue dolor gravida eu.
+                    Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                    Etiam vel nisl purus. Quisque luctus felis eros,
+                    vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                    non ex.
+                </p>
+                <div class="pubblictation-button">
+                    <button>view details</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="map-section">
+      <div class="map map-mobile">
+          <img src="images/map.jpg"/>
+      </div>
+      <div class="map-information container-fluid">
+        <div class="map map-desktop">
+          <img src="images/map.jpg"/>
+        </div>
+        <div class="information">
+          <div class="publication map-publication">
+            <h4>London</h4>
+            <p class="publication-addres">
+                180-182 Regent Street , London, w1b 5bt
+              </p>
+              <p class="publication-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris posuere, dui ut vulputate gravida,
+                  dui nisi dapibus eros, in hendrerit ex sem id turpis.
+                  Mauris iaculis risus sem, nec congue dolor gravida eu.
+                  Ut porta felis sit amet arcu pretium, in varius nibh ultrices.
+                  Etiam vel nisl purus. Quisque luctus felis eros,
+                  vitae placerat neque sagittis et. Nunc at consequat velit. Mauris ut est non mi posuere dignissim vitae
+                  non ex.
+              </p>
+              <div class="publication-map-addres">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>180-182 Regent Street London W1B 5BT</span>
+              </div>
+              <div class="publication-map-addres">
+                  <i class="fas fa-phone"></i>
+                  <span>0123-456-789</span>
+              </div>
+              <div class="publication-map-addres">
+                  <i class="fas fa-link"></i>
+                  <span>
+                    <a href="#">www.yourwebsite.com</a>
+                  </span>
+              </div>
+              <div class="publication-map-addres">
+                  <i class="far fa-envelope"></i>
+                  <span>
+                      <a href="mailto:support@yourwebsite.com">support@yourwebsite.com</a> 
+                  </span>
+              </div>
+              <div class="publication-map-addres">
+                  <i class="far fa-clock"></i>
+                  <span>
+                    Modnay-Friday: 9am to 6pm Saturday: 10am to 6pm Sunday: 10am to 2pm
+                  </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="credentials">
+      <div class="container">
+        <span class="left-credential">&#169;
+         2016 Avenue Fashion&#8482;
+        </span>
+        <span class="right-credential" ><a href="https://tkomoszeski.github.io">Dev by tkomoszeski.github.io</a></span> <span class="right-credential"><a href="#">Design by RobbyDesign.com</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/libs/libs.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
