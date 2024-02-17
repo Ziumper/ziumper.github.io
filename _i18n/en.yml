@@ -85,12 +85,12 @@ pagination:
   page: page
 projects:
   titles:
-    project1: Project 1
-    project2: Project 2
-    project3: Project 3
-    project4: Project 4
-    project5: Project 5
-    project6: Project 6
+    project1: Board Heroes Battle
+    project2: Ludo Game
+    project3: Night Catcher
+    project4: Crafter the game
+    project5: ToDoApp
+    project6: P
   descriptions:
     project1: a project with a background image
     project2: a project with a background image and giscus comments

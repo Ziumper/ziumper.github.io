@@ -37,7 +37,7 @@
       description:
         - title: Obowiązki
           contents:
-            - Integracja istniejących, zakupionych i tworzenie nowych narzędzi do edycji zawartości gier w silniku Unity
+            - Integracja istniejących, zakupionych i tworzenie nowych narzędzi przy pomocy C# i .NET do edycji zawartości gier w silniku Unity
             - Projektowanie i integracja mechanik w tworzonych grach
             - Mentoring techniczny, przeprowadzanie przeglądów kodu
             - Naprawa błędów, optymalizacja i profilowanie w silniku Unity

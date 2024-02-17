@@ -37,7 +37,7 @@
       description:
         - title: Responsibilities
           contents:
-            - Integrating existing, purchased, and creating new tools for editing game content in the Unity engine
+            - Integrating existing, purchased, and creating new tools with C# and .NET for editing game content in the Unity engine
             - Designing and integrating mechanics in developed games
             - Technical mentoring, code reviews
             - Fixing bugs, optimizing, and profiling in the Unity engine
