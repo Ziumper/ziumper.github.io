@@ -1,6 +1,6 @@
 not_found:
-  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie, proszę wróc do 
-  main_page: strona główna
+  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie proszę wróc do 
+  main_page: strony głównej
 main:
   contact_note: >
     Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! 
@@ -87,14 +87,14 @@ pagination:
   page: strona
 projects:
   titles:
-    project1: Projekt 1
-    project2: Projekt 2
-    project3: Projekt 3
-    project4: Projekt 4
-    project5: Projekt 5
+    project1: Board Heroes Battle
+    project2: Ludo - "Just Chill Out"
+    project3: Night Catcher
+    project4: Crafter The Game
+    project5: ToDoApp
     project6: Projekt 6
   descriptions:
-    project1: projekt z obrazem w tle
+    project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: projekt z obrazem w tle oraz skrzynkowym komentarzem
     project3: projekt, który przekierowuje do innej strony
     project4: kolejny projekty bez obrazu
