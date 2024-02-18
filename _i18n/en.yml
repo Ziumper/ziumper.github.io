@@ -86,14 +86,14 @@ pagination:
 projects:
   titles:
     project1: Board Heroes Battle
-    project2: Ludo Game
+    project2: Agents App
     project3: Night Catcher
     project4: Crafter the game
     project5: ToDoApp
     project6: Ptest
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
-    project2: a project with a background image and giscus comments
+    project2: Monte carlo simulation app written in C++
     project3: a project that redirects to another website
     project4: another without an image
     project5: a project with a background image
