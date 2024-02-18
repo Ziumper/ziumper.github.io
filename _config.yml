@@ -246,7 +246,7 @@ sass:
 
 # multi language settings
 default_locale_in_subfolder: false
-exclude_from_localizations: ["assets"]
+exclude_from_localizations: ["assets", "archive"]
 languages: ["en", "pl"]
 
 # -----------------------------------------------------------------------------
