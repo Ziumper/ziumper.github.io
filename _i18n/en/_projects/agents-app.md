@@ -16,7 +16,7 @@ The aim of the project was to create a real-time simulation of a reputation and 
     GUI screen of the application
 </div>
 
-## functionalities
+## Functionalities
 
 Application have following functionalities:
 
