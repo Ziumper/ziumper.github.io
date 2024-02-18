@@ -16,9 +16,9 @@ The aim of the project was to create a real-time simulation of a reputation and 
     GUI screen of the application
 </div>
 
-## Functionality
+## functionalities
 
-The project implemented the following functionalities:
+Application have following functionalities:
 
 - a login window that allows tracking, filtering, and better understanding of the trust-building process stages in the simulation
 - the ability to edit input parameters such as initial trust level, number of agents, or number of inputs
