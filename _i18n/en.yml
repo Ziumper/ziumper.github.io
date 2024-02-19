@@ -90,14 +90,14 @@ projects:
     project3: Ludo - Just Chill Out
     project4: Night Catcher
     project5: Polygangs
-    project6: Ptest
+    project6: LZSS
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
     project3: Ludo board game made in Unity
     project4: Skill based mobile game for Android made in Unity
     project5: Gangster simulator in a Polish city from the 90s.
-    project6: a project with no image
+    project6: Implementation of loseless data compression algorithm - LZSS
   categories:
     fun: fun
     work: work

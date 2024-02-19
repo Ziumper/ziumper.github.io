@@ -91,15 +91,15 @@ projects:
     project2: Agents App
     project3: Ludo - Just Chill Out
     project4: Night Catcher
-    project5: ToDoApp
-    project6: Projekt 6
+    project5: Polygangs
+    project6: LZSS
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
     project3: Implmentacja słynnej gry w "Chińczyka" zrobiona w Unity
     project4: Zręcznościowa gra mobilna zrobiona w Unity
-    project5: projekt z obrazem w tle
-    project6: projekt bez obrazu
+    project5: Symulator życia gangsterskiego w mieście z lat 90 w stylu low-poly
+    project6: Implementacja bezstratnego algorytmu kompresji danych LZSS
   categories:
     fun: zabawa
     work: praca
