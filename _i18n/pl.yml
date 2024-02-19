@@ -98,6 +98,7 @@ projects:
     project9: Axion
     prooject10: Fliesen Discount
     project11: Archiwalne Portfolio
+    project12: Zakodowana witryna internetowa
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -110,6 +111,7 @@ projects:
     project9: Pierwszy projekt w technologii Shopware 5
     project10: Przeniesienie istniejącego sklepu Shopware 5 na Shopware 6
     project11: Stary projekt portoflio zbudowany przy pomocy JavaScript, HTML, CSS i Webpacka
+    project12: Zakodowana strona internetowa na podstawie gotowego szablonu HTML, CSS i JS
   categories:
     fun: zabawa
     work: praca
