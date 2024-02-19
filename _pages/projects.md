@@ -10,6 +10,17 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+{% if site.enable_project_categories and page.display_categories %}
+<div class="links">
+ {% for category in page.display_categories %}
+  {% capture localized_category %}projects.categories.{{category}}{% endcapture %}
+  <a class="btn btn-outline-amber btn-sm z-depth-0" href=".#{% t localized_category %}">
+      {% t localized_category %}
+  </a>
+ {% endfor %}
+ </div>
+{% endif %}
+
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
