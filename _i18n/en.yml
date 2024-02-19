@@ -95,6 +95,7 @@ projects:
     project8: Leguano
     project9: Axion
     project10: Fliesen discount
+    project11: Old portfolio project
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
@@ -106,6 +107,7 @@ projects:
     project8: Implementation of the first store using Shopware 6 technology
     project9: The first project in Shopware 5 technology
     project10: Re-implementation of the store using Shopware 6 technology
+    project11: Archived portfolio project written with plain JavaScript, HTML, CSS and Webpack
   categories:
     fun: fun
     work: work

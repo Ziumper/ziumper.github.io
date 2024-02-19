@@ -96,6 +96,8 @@ projects:
     project7: Boesner
     project8: Leguano
     project9: Axion
+    prooject10: Fliesen Discount
+    project11: Archiwalne Portfolio
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -106,6 +108,8 @@ projects:
     project7: Ponowna implementacja sklepu Boesner w technologii Shopware 5
     project8: Wdrożenie pierwszego sklepu w technologii Shopware 6
     project9: Pierwszy projekt w technologii Shopware 5
+    project10: Przeniesienie istniejącego sklepu Shopware 5 na Shopware 6
+    project11: Stary projekt portoflio zbudowany przy pomocy JavaScript, HTML, CSS i Webpacka
   categories:
     fun: zabawa
     work: praca
