@@ -99,6 +99,9 @@ projects:
     prooject10: Fliesen Discount
     project11: Archiwalne Portfolio
     project12: Zakodowana witryna internetowa
+    project13: Blog Manager
+    project14: Web Cloud System
+    project15: Todo App
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -112,6 +115,9 @@ projects:
     project10: Przeniesienie istniejącego sklepu Shopware 5 na Shopware 6
     project11: Stary projekt portoflio zbudowany przy pomocy JavaScript, HTML, CSS i Webpacka
     project12: Zakodowana strona internetowa na podstawie gotowego szablonu HTML, CSS i JS
+    project13: Aplikacja do zarządzania blogami MVC na platformie .NET Core i Angular z konfiguracją docker-compose dla lepszego doświadczenia programistycznego
+    project14: Aplikacja webowa do trzymania i zarządzania plikami. Napisana w .NET Core
+    project15: Prosta aplikacja ToDo, do zarzadzania wykonywanymi zadaniami napisania w .NET Core przy pomocy AvaloniaUI i WPF oraz testami jednostkowymi
   categories:
     fun: zabawa
     work: praca

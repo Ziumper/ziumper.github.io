@@ -97,6 +97,9 @@ projects:
     project10: Fliesen discount
     project11: Old portfolio project
     project12: Coded online store example
+    project13: Blog Manager
+    project14: Web Cloud System
+    project15: Todo App
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
@@ -110,6 +113,9 @@ projects:
     project10: Re-implementation of the store using Shopware 6 technology
     project11: Archived portfolio project written with plain JavaScript, HTML, CSS and Webpack
     project12: Coded online store example with HTML, CSS i JS based on existing shop template
+    project13: Blog management application MVC in .net core and angular with docker-compose setup for better development experience
+    project14: Easy and simple MVC .NET app to store and manage filles in .net core and angular
+    project15: WPF TodoApp apllicaiton for checking AvaloniaUI framework. Project based on AvaloniaUI example with modifications and integrated Unit tests
   categories:
     fun: fun
     work: work
