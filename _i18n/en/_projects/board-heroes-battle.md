@@ -41,7 +41,7 @@ The game allows for both single-player and LAN multiplayer modes. Players aim to
     </div>
 </div>
 <div class="caption">
-    Przykładowa plansza do gry
+    Example of game board used in AR gameplay as image target 
 </div>
 
 To summarize, the following functionalities were implemented:

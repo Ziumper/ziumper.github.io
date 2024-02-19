@@ -49,7 +49,7 @@ Dodatkową atrakcją jest rozszerzenie interfejsu użytkownika o przyciski AR. N
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/board.jpg" title="example board" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/projects/board.jpg" title="example board" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">

@@ -128,7 +128,7 @@
     - title: Programowanie
       items:
         - AGILE, SCRUM, Kanban
-        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST/SOAP, ORM
+        - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST/SOAP, ORM, RWD
         - C#, C++, PHP, Java, JavaScript, TypeScript, Python
         - GIT, SVN
         - CSS, HTML, LESS, SASS

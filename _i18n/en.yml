@@ -87,14 +87,14 @@ projects:
   titles:
     project1: Board Heroes Battle
     project2: Agents App
-    project3: Night Catcher
+    project3: Ludo - Just Chill Out
     project4: Crafter the game
     project5: ToDoApp
     project6: Ptest
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
-    project3: a project that redirects to another website
+    project3: Ludo board game made in Unity
     project4: another without an image
     project5: a project with a background image
     project6: a project with no image
