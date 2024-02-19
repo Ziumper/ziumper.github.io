@@ -8,7 +8,7 @@ The aim of the project was to implement the [LZSS](https://en.wikipedia.org/wiki
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/lzss.jpg" title="agents app gui" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/LZSS.jpg" title="agents app gui" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">

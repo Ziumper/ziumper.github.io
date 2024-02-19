@@ -9,7 +9,7 @@ Projekt został zrealizowany podczas studiów inżynierski jako praca dyplomowa 
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/lzss.jpg" title="agents app gui" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/LZSS.jpg" title="lzss gui" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
