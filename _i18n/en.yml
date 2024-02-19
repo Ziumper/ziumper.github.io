@@ -91,6 +91,10 @@ projects:
     project4: Night Catcher
     project5: Polygangs
     project6: LZSS
+    project7: Boesner
+    project8: Leguano
+    project9: Axion
+    project10: Fliesen discount
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
@@ -98,6 +102,10 @@ projects:
     project4: Skill based mobile game for Android made in Unity
     project5: Gangster simulator in a Polish city from the 90s.
     project6: Implementation of loseless data compression algorithm - LZSS
+    project7: Relanuch of boesner shop in Shopware 5 technology
+    project8: Implementation of the first store using Shopware 6 technology
+    project9: The first project in Shopware 5 technology
+    project10: Re-implementation of the store using Shopware 6 technology
   categories:
     fun: fun
     work: work

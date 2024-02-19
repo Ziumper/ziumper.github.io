@@ -93,6 +93,9 @@ projects:
     project4: Night Catcher
     project5: Polygangs
     project6: LZSS
+    project7: Boesner
+    project8: Leguano
+    project9: Axion
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -100,6 +103,9 @@ projects:
     project4: Zręcznościowa gra mobilna zrobiona w Unity
     project5: Symulator życia gangsterskiego w mieście z lat 90 w stylu low-poly
     project6: Implementacja bezstratnego algorytmu kompresji danych LZSS
+    project7: Ponowna implementacja sklepu Boesner w technologii Shopware 5
+    project8: Wdrożenie pierwszego sklepu w technologii Shopware 6
+    project9: Pierwszy projekt w technologii Shopware 5
   categories:
     fun: zabawa
     work: praca
