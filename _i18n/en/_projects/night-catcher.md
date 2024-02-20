@@ -1,5 +1,3 @@
-Sure, here's the translation:
-
 <div class="links">
    <a href="http://farmind.pl/en/night-catcher-mobile/" class="btn btn-amber btn-sm z-depth-0" role="button">Read more <i class="fa fa-book"></i></a>
 </div>
