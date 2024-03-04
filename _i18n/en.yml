@@ -100,11 +100,8 @@ projects:
     project13: Blog Manager
     project14: Web Cloud System
     project15: Todo App
-<<<<<<< HEAD
-    project16: File Upload
-=======
     project16: Crafter
->>>>>>> 5edd8becad6fbff57c9f10369401844bd50e2abf
+    project17: File Upload
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
@@ -121,11 +118,8 @@ projects:
     project13: Blog management application MVC in .net core and angular with docker-compose setup for better development experience
     project14: Easy and simple MVC .NET app to store and manage filles in .net core and angular
     project15: WPF TodoApp apllicaiton for checking AvaloniaUI framework. Project based on AvaloniaUI example with modifications and integrated Unit tests
-<<<<<<< HEAD
-    project16: File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests
-=======
     project16: Project of a game in which a basic item crafting system has been implemented in Unity
->>>>>>> 5edd8becad6fbff57c9f10369401844bd50e2abf
+    project17: File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests
   categories:
     fun: fun
     work: work
