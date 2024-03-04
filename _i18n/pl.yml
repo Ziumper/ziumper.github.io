@@ -102,7 +102,11 @@ projects:
     project13: Blog Manager
     project14: Web Cloud System
     project15: Todo App
+<<<<<<< HEAD
     project16: File Upload
+=======
+    project16: Crafter
+>>>>>>> 5edd8becad6fbff57c9f10369401844bd50e2abf
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -119,7 +123,11 @@ projects:
     project13: Aplikacja do zarządzania blogami MVC na platformie .NET Core i Angular z konfiguracją docker-compose dla lepszego doświadczenia programistycznego
     project14: Aplikacja webowa do trzymania i zarządzania plikami. Napisana w .NET Core
     project15: Prosta aplikacja ToDo, do zarzadzania wykonywanymi zadaniami napisania w .NET Core przy pomocy AvaloniaUI i WPF oraz testami jednostkowymi
+<<<<<<< HEAD
     project16: Aplikacja w symfony 7, doctrine i PhpUnit do wrzucania plików na serwer z walidowanym formularzem
+=======
+    project16: Projekt gry, w której został zaimplementowany podstawowy system tworzenia przedmiotów w Unity
+>>>>>>> 5edd8becad6fbff57c9f10369401844bd50e2abf
   categories:
     fun: zabawa
     work: praca

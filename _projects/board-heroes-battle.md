@@ -3,7 +3,7 @@ layout: page
 title: projects.titles.project1
 description: projects.descriptions.project1
 img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
-importance: 1
+importance: 2
 category: game-dev
 ---
 

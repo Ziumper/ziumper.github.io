@@ -148,10 +148,12 @@
         - UML, Enterprise Architect
     - title: Game-dev
       items:
-        - Unreal Engine, Unity, Godot
+        - Unity, Unreal Engine,, Godot
         - Gimp, Photoshop, Blender
-        - Znajomość grafiki komputerowej i technik renderingu
+        - Unreal Engine C++ API i Profiler
+        - Blueprint, Visual Scripting
         - AR, VR, ARCore
+        - Znajomość grafiki komputerowej i technik renderingu
         - Programowanie sieciowe w grach wieloosobowych
    
 - title: Certyfikaty i szkolenia

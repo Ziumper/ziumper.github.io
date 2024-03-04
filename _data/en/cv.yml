@@ -145,10 +145,12 @@
         - UML, Enterprise Architect
     - title: Game Development
       items:
-        - Unreal Engine, Unity, Godot
+        - Unity, Unreal Engine, Godot
         - Gimp, Photoshop, Blender
-        - Knowledge of computer graphics and rendering techniques
+        - Unreal Engine C++ API and Profiler
+        - Blueprint, Visual Scripting
         - AR, VR, ARCore
+        - Knowledge of computer graphics and rendering techniques
         - Network programming in multiplayer games
 
 - title: Certificates and Training
