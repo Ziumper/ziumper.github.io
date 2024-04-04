@@ -104,6 +104,7 @@ projects:
     project15: Todo App
     project16: Crafter
     project17: File Upload
+    project18: Klon gry Connect the pops!
   descriptions:
     project1: Gra w rozszerzonej rzeczywistości na platformę Android
     project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
@@ -122,6 +123,7 @@ projects:
     project15: Prosta aplikacja ToDo, do zarzadzania wykonywanymi zadaniami napisania w .NET Core przy pomocy AvaloniaUI i WPF oraz testami jednostkowymi
     project16: Projekt gry, w której został zaimplementowany podstawowy system tworzenia przedmiotów w Unity
     project17: Aplikacja w symfony 7, doctrine i PhpUnit do wrzucania plików na serwer z walidowanym formularzem
+    project18: Klon gry na platformę android o nazwie "Connect The Pops!"
   categories:
     fun: zabawa
     work: praca

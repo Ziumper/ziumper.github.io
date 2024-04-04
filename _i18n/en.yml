@@ -102,6 +102,7 @@ projects:
     project15: Todo App
     project16: Crafter
     project17: File Upload
+    project18: Connect The Pops Clone
   descriptions:
     project1: Augmented reality turn based board game for the Android platform
     project2: Monte carlo simulation app written in C++
@@ -120,6 +121,7 @@ projects:
     project15: WPF TodoApp apllicaiton for checking AvaloniaUI framework. Project based on AvaloniaUI example with modifications and integrated Unit tests
     project16: Project of a game in which a basic item crafting system has been implemented in Unity
     project17: File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests
+    project18: Clone of popular android game "Connect The Pops" from Popcorn
   categories:
     fun: fun
     work: work
