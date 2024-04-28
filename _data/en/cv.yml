@@ -11,9 +11,9 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Software developer 
-      institution: Sunzinet Polska Sp. z o.o., Gdańsk, Poland
-      year: 2019 - 2024
+    - title: PHP Software Developer
+      institution: SUNZINET Polska Sp. z o.o., Gdańsk, Poland
+      year: 2019 - Feb 2024
       description:
         - title: Responsibilities
           contents:
@@ -33,7 +33,7 @@
           
     - title: Unity Developer
       institution: Farmind Studio Sp. z o.o., Warsaw, Poland
-      year: 2020 - 2023
+      year: 2020 - Jan 2023
       description:
         - title: Responsibilities
           contents:

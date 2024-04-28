@@ -11,9 +11,9 @@
 - title: Doświadczenie
   type: time_table
   contents:
-    - title: Programista 
-      institution: Sunzinet Polska Sp. z o.o., Gdańsk, Polska
-      year: 2019 - 2024
+    - title: Programista PHP
+      institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
+      year:  2019 - lut 2024
       description:
         - title: Obowiązki
           contents:
@@ -47,7 +47,7 @@
             - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
             - <a href="http://farmind.pl/night-catcher/">NightCatcher</a>
              
-    - title: Programista 
+    - title: Programista PHP
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
       year: 2018 - 2019
       description:
@@ -60,7 +60,7 @@
             - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
             - <a href="https://wypozyczalnia.asystentonline.pl/">Wypożyczalnia</a>
             - <a href="https://asystentonline.pl/">Asystent</a>
-    - title: Programista
+    - title: Programista .NET
       institution: Billennium S.A., Olsztyn, Polska
       year: 2017 - 2018
       description: 
