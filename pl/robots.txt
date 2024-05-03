@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
+Disallow: /archive/
 
 Sitemap: https://ziumper.github.io/pl/sitemap.xml
