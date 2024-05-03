@@ -3,5 +3,6 @@ permalink: /robots.txt
 ---
 User-agent: *
 Disallow:
+Disallow: /archive/
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
