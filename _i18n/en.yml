@@ -27,11 +27,11 @@ titles:
   submenus: submenus
   unk: page not found
 descriptions:
-  about: A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  about:  Ziumper software developer portfolio.
   archive-category: an archive of posts in this category
   archive-tag: an archive of posts with this tag
   archive-year: an archive of posts from this year
-  blog: a simple whitespace theme for academics
+  blog: a simple developer blog
   cv: Curriculum Vitae
   profiles: Members of the research group or lab.
   projects: A growing collection of cool projects.
@@ -125,8 +125,9 @@ projects:
   categories:
     fun: fun
     work: work
-    game-dev: game-dev
     web-development: web-development
+    e-commerce: e-commerce
+    game-dev: game-dev   
     desktop: desktop
 repositories:
   users: GitHub Users

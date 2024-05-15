@@ -5,7 +5,7 @@ description: descriptions.projects
 permalink: /projects/
 nav: true
 nav_order: 3
-display_categories: [game-dev, web-development, desktop]
+display_categories: [web-development, e-commerce, game-dev,desktop]
 horizontal: false
 ---
 

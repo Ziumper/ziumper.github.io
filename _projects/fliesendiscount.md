@@ -5,5 +5,5 @@ description: projects.descriptions.project10
 img: assets/img/projects/fliesendiscount1.png
 redirect: https://www.fliesendiscount.de/
 importance: 2
-category:  web-development
+category:  e-commerce
 ---
