@@ -6,11 +6,10 @@ tags: git gitExtensions
 categories: tutorials
 ---
 
-
 Zastanawiałem się, co oznacza GIT. Oto co znalazłem:
 
 > GIT to słowo będące skrótem od angielskiego słowa "get", które zostało skrócone z "begetting".
-> Jest również niejawne odniesienie do nieślubnych potomków, 
+> Jest również niejawne odniesienie do nieślubnych potomków,
 > a termin jest mniej więcej synonimem głupca, durnia, kretyna lub idioty. W społeczności open source znaczenie wyboru nazwy różni się.
 
 Oznacza to, że GIT jest dla idiotów, którzy nie wiedzą, co robią. Doskonałe narzędzie dla programisty. Zacznijmy od początku.
@@ -42,7 +41,8 @@ Alternatywnie możesz użyć [SourceTree](https://www.sourcetreeapp.com/) jest o
 
 ![SourceTree!](https://wac-cdn.atlassian.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=651)
 
-# Commit 
+# Commit
+
 Dobrze, jak dotąd! Teraz zróbmy kilka commitów. Stwórz plik HTML o następującej zawartości.
 
 ```html
@@ -74,10 +74,11 @@ Następnie, wpisując:
 ```
 git status
 ```
- 
+
 Powinieneś zobaczyć wszystkie pliki, które zostały przez ciebie dodane do obszaru staging.
 
 Następnie możesz zatwierdzić hello.html w swoim lokalnym repozytorium.
+
 ```bash
 git commit -m "Add hello there file"
 ```
@@ -90,7 +91,7 @@ Chcę wyjaśnić kilka standardów dotyczących wiadomości commitów i jak czę
 
 - Użyj zdaniowych trybów w linii tematu, np. "Naprawia uszkodzony link do Javadoc"
 
-- Rozpocznij zdanie linii tematu wielką literą, np. "Dodaje, Usuwa, Naprawia,  Wprowadza, Unikaj itp."
+- Rozpocznij zdanie linii tematu wielką literą, np. "Dodaje, Usuwa, Naprawia, Wprowadza, Unikaj itp."
 
 - Nie kończ linii tematu kropką
 
@@ -103,7 +104,6 @@ Chcę wyjaśnić kilka standardów dotyczących wiadomości commitów i jak czę
 - W treści wiadomości commita wyjaśnij, jak działały rzeczy przed tym commitem, co się zmieniło i jak teraz działają rzeczy
 
 Lubie także dodać jakiś rodzaj tagu przed wiadomością commita, oto kilka przykładów:
-
 
 ```bash
 – Feature
@@ -118,18 +118,17 @@ Lubie także dodać jakiś rodzaj tagu przed wiadomością commita, oto kilka pr
 Kiedy pracujesz nad zadaniem, dobrze jest dodać pewną liczbę zadań, takich jak #123, które odnoszą się do niektórych. Podsumowując, powinno to wyglądać tak:
 
 ```bash
-[FEATURE] #123 My super not quite long commit message. 
+[FEATURE] #123 My super not quite long commit message.
 
 
 Here goes body messages where we describe what is going on.
-Keep it short as much as you can, but include all necessary details 
+Keep it short as much as you can, but include all necessary details
 inside.
 
 Footer where summary and all other references should be applied for
-example: 
+example:
 Those commits resolve issue #123 and #124
 ```
-
 
 Git branches – tree of changes
 Commits can be added to branches. The branch is a set of commits that are separated from the main branch just like in a tree with leafs. To create a branch:
@@ -141,7 +140,7 @@ git branch <branch_name>
 Aby zmienić gałąź
 
 ```
-git checkout <branch_name> 
+git checkout <branch_name>
 ```
 
 Po zainicjowaniu repozytorium gita zwykle masz jedną istniejącą główną gałąź, z której wszystkie utworzone później gałęzie mogą być pochodne. Używaj ich, aby grupować pewne zmiany w funkcji, nad którą pracujesz.

@@ -9,8 +9,9 @@ This project was created as part of the recruitment process for the company wher
 ## Technologies and Tools Used
 
 During the project, I familiarized myself with the following technologies and tools:
-- Entity Framework Core 
-- Angular 
+
+- Entity Framework Core
+- Angular
 - C#
 - .NET Core
 - MVC
@@ -20,5 +21,5 @@ During the project, I familiarized myself with the following technologies and to
 - HTML
 - TypeScript
 - SCSS
-- ASP.NET 
+- ASP.NET
 - Rest

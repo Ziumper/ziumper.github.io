@@ -1,4 +1,3 @@
-
 # Project Description
 
 The aim of this project was to analyze and compare selected aspects of developing, functionality, and operation of augmented reality applications on the Android platform using Unity and Unreal Engine game engines. Additionally, it involved conducting a comparative analysis and playability research of hybrid games in the context of enriching traditional board gameplay and expanding its multiplayer capabilities.
@@ -32,8 +31,6 @@ The game upon which the applications were based is a blend of turn-based strateg
 </div>
 
 The game allows for both single-player and LAN multiplayer modes. Players aim to navigate through dungeons prepared in the form of boards with opponents they combat in turn-based gameplay. Each dungeon consists of several such boards in the form of 4 rooms. Characters fight by performing one of 3 actions in the order determined by the character's statistics. The player aims to defeat opponents on all boards through strategic selection of hero action targets, and in multiplayer gameplay, also cooperative elements. Randomness is introduced in the form of bonuses awarded through dice rolls or random functions. The game is composed of distinctive dungeons comprising thematic boards and unique opponents. The available player characters also possess characteristic class elements found in role-playing games, adding variety to the gameplay through unconventional environments, colorful characters, strategic selection of their movements, statistics, and unique abilities. An additional attraction is the extension of the user interface with AR buttons. Special markers are printed on the board, which, when covered by hand, trigger the execution of a specific action, replacing virtual buttons placed on the phone screen in the user interface.
-
-
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -82,9 +79,3 @@ In the course of project implementation, I became acquainted with the following 
 - Unity Editor Profiler
 - Export from Unity to Unreal Engine
 - Profiling tools in Android Studio
-
-
-
-
-
-

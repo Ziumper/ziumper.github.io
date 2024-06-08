@@ -43,14 +43,15 @@ The project implemented the following features:
 ## Technologies Used
 
 In the course of the project, I became acquainted with the following technologies and tools:
+
 - .NET
-- C# 
+- C#
 - 3D animations
 - Unity Cinemachine
 - Unity Terrain Tools
 - Visual Studio
 - Blender
-- Unity Profiler 
+- Unity Profiler
 - Wwise
 - NUnit
 - Hack&Plan

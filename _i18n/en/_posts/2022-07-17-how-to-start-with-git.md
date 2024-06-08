@@ -6,20 +6,19 @@ tags: git gitExtensions
 categories: tutorials
 ---
 
-
 I was wondering what GIT means. Here is what I have found:
 
-> GIT  as a word is an alternation of the word get, which was shortened from begetting.
-> The implicit reference is to illegitimate offspring, 
+> GIT as a word is an alternation of the word get, which was shortened from begetting.
+> The implicit reference is to illegitimate offspring,
 > and the term is roughly synonymous with a twit, dolt, moron, or idiot. Within the open source community, the significance of the name choice varies.
 
 It means GIT is for idiots that do not know what they are doing. The perfect tool for a software developer. Let us start from the beginning.
 
 Linus Torvalds decided to develop it for the Linux kernel. From 2005 that helped developers track changes in the code. Available in all operating systems and used by users around the globe. Easy to start but hard to master version control system. You can download it from [this site](https://git-scm.com/downloads) and try it by yourself.
 
-# Basics 
+# Basics
 
-Download and install  [git](https://git-scm.com/downloads) on your OS (Operating system).
+Download and install [git](https://git-scm.com/downloads) on your OS (Operating system).
 I am starting with the basics. To follow, you need to get familiar with terminal.
 After installation you should be able to execute some git commands.
 Create a new folder. Then open up a terminal within new folder.
@@ -40,11 +39,10 @@ If you are not a fan of terminal I bet you can use [GitExtensions](https://gitex
 
 As an alternative you can use [SourceTree](https://www.sourcetreeapp.com/) it is a valid free to use alternative for Mac. I think if you are using Linux you can go with terminal as well.
 
-
 ![SourceTree!](https://wac-cdn.atlassian.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=651)
 
+# Commit
 
-# Commit 
 Okay, so far good! Now let’s commit some files to it. I made an HTML file with the following content.
 
 ```html
@@ -53,7 +51,7 @@ Okay, so far good! Now let’s commit some files to it. I made an HTML file with
 
 and save it as hello.html. Now you are ready to add it to staging area.
 What is a staging area – let’s explain it as a box where you put stuff and then you use it as a snapshot to commit the changes.
-To do it you should specify the path to the file with the file format, or path with some pattern like 
+To do it you should specify the path to the file with the file format, or path with some pattern like
 
 ```bash
 .txt .xml, etc.
@@ -76,7 +74,7 @@ Then by typing:
 ```
 git status
 ```
- 
+
 You should be able to see all files, which have been added by you to staging area.
 
 Afterwards, you can commit the hello.html to your local repository.
@@ -90,7 +88,6 @@ commit – is a command that saves a snapshot of the “box” that we staged.
 # Commits message standards
 
 I want to explain a few standards on how to deal with commit messages and how often you should be doing it. I heard that the more often you are doing it, the better. There is no limit, afterwards, you can always reduce the number of commits, by using the squash functionality. Let’s start with the form of the commit message. How it should be:
-
 
 - Use imperative statements in the subject line, e.g. “Fix broken Javadoc link”
 
@@ -121,18 +118,17 @@ I want to explain a few standards on how to deal with commit messages and how of
 When you are working on a task it is good to add some number of tasks like #123 that reference some. In summary, it should look like that:
 
 ```bash
-[FEATURE] #123 My super not quite long commit message. 
+[FEATURE] #123 My super not quite long commit message.
 
 
 Here goes body messages where we describe what is going on.
-Keep it short as much as you can, but include all necessary details 
+Keep it short as much as you can, but include all necessary details
 inside.
 
 Footer where summary and all other references should be applied for
-example: 
+example:
 Those commits resolve issue #123 and #124
 ```
-
 
 Git branches – tree of changes
 Commits can be added to branches. The branch is a set of commits that are separated from the main branch just like in a tree with leafs. To create a branch:
@@ -144,7 +140,7 @@ git branch <branch_name>
 To switch branch
 
 ```
-git checkout <branch_name> 
+git checkout <branch_name>
 ```
 
 After initializing the git repository you usually have one existing main branch from which all created afterwards branches can be derived. Use them to group some changes on the feature you are working on.

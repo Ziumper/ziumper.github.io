@@ -23,14 +23,13 @@ Projekt bazował na zasadach kultowej gry planszowej Chińczyk, znanej również
 
 W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 
-- mechanika poruszania pionkami oraz przeciwnikami komputerowymi 
+- mechanika poruszania pionkami oraz przeciwnikami komputerowymi
 - efekty specjalne i animacje
-- mechanika poruszania kamerą 
+- mechanika poruszania kamerą
 - poruszające się oraz interaktywne elementy otoczenia
 - w pełni turowa rozgrywka
 - tryb wielu graczy na jednym urządzeniu oraz tryb pojedynczego gracza botami
 - intuicyjny interfejs użytkownika
-
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -44,14 +43,15 @@ W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 ## Wykorzystane technologie
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+
 - .NET
-- C# 
+- C#
 - Animacje 3D
 - Unity Cinemachine
 - Unity Terrain Tools
 - Visual Studio
 - Bledner
-- Unity Profiler 
+- Unity Profiler
 - Wwise
 - NUnit
 - Hack&Plan

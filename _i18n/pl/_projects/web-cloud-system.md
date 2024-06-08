@@ -9,8 +9,9 @@ Jest to projekt, który został wykonany jako jeden z etapów rekrutacyjnych do 
 ## Wykorzystane technologie i narzędzia
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
-- Entity Framework Core 
-- Angular 
+
+- Entity Framework Core
+- Angular
 - C#
 - .NET Core
 - MVC
@@ -21,5 +22,5 @@ W ramach realizacji projektu udało mi się zapoznać z następującymi technolo
 - TypeScript
 - SCSS
 - Visual Studio
-- ASP.NET 
-- Rest 
+- ASP.NET
+- Rest

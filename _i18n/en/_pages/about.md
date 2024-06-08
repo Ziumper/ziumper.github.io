@@ -1,4 +1,3 @@
-
 Hi, my name is Tomek!
 
 I am a programmer and IT consultant with a broad range of skills. Throughout my career in various positions, I have gained valuable IT skills and knowledge that have allowed me to implement innovative ideas, mitigate emerging risks, and build scalable and resilient solutions. I always approach my work professionally, and combining it with passion helps me maintain a high level of motivation and a proactive attitude. I also place a strong emphasis on development, using the latest technologies in the IT industry while not forgetting about old, proven solutions.

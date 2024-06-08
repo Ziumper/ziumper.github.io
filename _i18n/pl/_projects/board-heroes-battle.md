@@ -1,4 +1,3 @@
-
 # Opis projektu
 
 Celem niniejszej pracy była analiza i porównanie wybranych aspektów wytwarzania, funkcjonalności oraz działania aplikacji rzeczywistości rozszerzonej na platformę Android przy użyciu silników gier Unity i Unreal Engine oraz przeprowadzenie analizy porównawczej i badań grywalności gier hybrydowych w kontekście wzbogacenia tradycyjnej rozgrywki planszowej oraz poszerzenia
@@ -43,9 +42,7 @@ również elementu współpracy. Element losowości wprowadzony jest w postaci b
 Gra zbudowana jest z charakterystycznych lochów składających się z tematycznych plansz
 i niepowtarzalnych przeciwników. Dostępni dla gracza bohaterowie, także posiadają charakterystyczny element klas dla gier fabularnych. Elementy te urozmaicają rozgrywkę poprzez nieszablonowe otoczenie, barwne postacie,element strategicznego doboru ich ruchów, statystyk oraz
 unikalnych umiejętności.
-Dodatkową atrakcją jest rozszerzenie interfejsu użytkownika o przyciski AR. Na planszy wydrukowane są specjalne znaczniki, które po przykryciu ręką wywołują wykonanie danej akcji. Zastępują one przyciski wirtualne umieszczone na ekranie telefonu w interfejsie użytkownika. 
-
-
+Dodatkową atrakcją jest rozszerzenie interfejsu użytkownika o przyciski AR. Na planszy wydrukowane są specjalne znaczniki, które po przykryciu ręką wywołują wykonanie danej akcji. Zastępują one przyciski wirtualne umieszczone na ekranie telefonu w interfejsie użytkownika.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -61,27 +58,28 @@ Podsumowując zaimplementowano nastepujace funkcjonalności:
 - tryb wielosobowy i pojedynczego gracza z rozgrywką turową w rozszerzonej rzeczywistości
 - śledzenie obrazów
 - rózne poziomy i postacie z unikatowymi zdolnościami
-- zbalansowany poziom rozgrywki 
+- zbalansowany poziom rozgrywki
 - wirtualną kość
 - przystępny interfejs użytkownika
 - efekty specjalne i animacje podczas walki
-- wirtualne przyciski w rozszerzonej rzeczywistości 
+- wirtualne przyciski w rozszerzonej rzeczywistości
 - zapewniono optymalną rozgrywkę poprzez optymalizację rozgrywki
 
 ## Wyzwania
 
 Podczas tworzenia projektu udało się pokonać szereg pułapek i wyzwań, które czekały na każdym kroku rozwoju aplikacji. Oto niektóre z nich.
 
-- Zapewnienie spójności w wartwie wizualnej i rozgrywki w obu aplikacjach. Zarówno Unity i Unreal Engine udostępniają własną abstrakcje, jeżeli chodzi o tworzenie aplikacji AR. Mimo różnic udało się zapewnić podobną rozgrywkę i mechaniki. 
+- Zapewnienie spójności w wartwie wizualnej i rozgrywki w obu aplikacjach. Zarówno Unity i Unreal Engine udostępniają własną abstrakcje, jeżeli chodzi o tworzenie aplikacji AR. Mimo różnic udało się zapewnić podobną rozgrywkę i mechaniki.
 - Implementacja lokalnej rozgrywki sieciowej z świecie AR. Synchronizacja w czasie rzeczywistym każdego z graczy, gdy każdy ma własne urządzenie i kamerę wymusiło stosowanie wielu kompromisów technologicznych zarówno po stronie Unity jak i Unreal Engine.
 - Połączenie gry planszowej z mobilną aplikacją AR - aspekt hybrydowości wprowadzajacy do gry nowe mechaniki wymagał zmierzenia się nie tylko z aspektami cyfrowymi, ale z projektowaniem tradyjnych gier planszowych.
 
 ## Wykorzystane technologie
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
-- Android Studio 
+
+- Android Studio
 - ARCore
-- C++ 
+- C++
 - C#
 - Unreal Engine,
 - Unity
@@ -89,13 +87,7 @@ W ramach realizacji projektu udało mi się zapoznać z następującymi technolo
 - Photoshop
 - Gimp
 - Visual Studio
-- Unreal Engine Bluepirnts 
-- Unity Editor Porfiler 
+- Unreal Engine Bluepirnts
+- Unity Editor Porfiler
 - Eksport z Unity do Unreal Engine
 - Narzędzia do profilowania w Android Studio
-
-
-
-
-
-

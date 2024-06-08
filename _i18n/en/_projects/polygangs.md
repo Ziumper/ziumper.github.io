@@ -21,6 +21,7 @@ The game focuses on recreating life in a Polish city in the 1990s. Conceptually,
 ## Responsibilities
 
 Within this project, I was responsible for:
+
 - bug fixing
 - designing and implementing new mechanics
 - code reviews

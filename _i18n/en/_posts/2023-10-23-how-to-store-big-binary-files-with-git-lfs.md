@@ -8,34 +8,31 @@ categories: tutorials
 
 # Transfer adapter
 
-I suggest connecting git lfs with custom transfer adapter.  According to git-lfs documentation:
-
+I suggest connecting git lfs with custom transfer adapter. According to git-lfs documentation:
 
 > Git LFS supports multiple ways to transfer (upload and download) files.
-> In the core client, the basic way to do this is via a one-off HTTP request via the URL returned from the LFS API for a given object. 
+> In the core client, the basic way to do this is via a one-off HTTP request via the URL returned from the LFS API for a given object.
 > The core client also supports extensions to allow resuming of downloads (via Range headers) and uploads (via the tus.io protocol).
-
 
 # Usage examples
 
-I used this approach to storage media files in my software development project and game dev project. 
+I used this approach to storage media files in my software development project and game dev project.
 I bet you can do it too. In the most cases I like to use it for:
--  game dev projects in game engines like Unity and Unreal Engine.
--  dbdumps storage 
--  big media files storage (in case you need a one)
+
+- game dev projects in game engines like Unity and Unreal Engine.
+- dbdumps storage
+- big media files storage (in case you need a one)
 
 There are always a way to do it for another kind of projects.
 
 In example bellow I will be using gitlab, google drive and other tools.
 
-# Gitlab setup 
+# Gitlab setup
 
-Firstly you need to disable default lfs service of gitlab. It's very vell documented feature in official documentation 
-[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs) but there is not much information how to disable it. 
+Firstly you need to disable default lfs service of gitlab. It's very vell documented feature in official documentation
+[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs) but there is not much information how to disable it.
 
 It's a litle tricky and not really user friendly but obviously you need to select your repository and dive into settings.
-
-
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -60,8 +57,8 @@ If giltab lfs is disabled on remote you can start with local setup.
 
 # Local repository setup
 
-You will need a new repository or use existing one. I suggest starting with fresh state so 
-you can go with easier setup guide bellow. 
+You will need a new repository or use existing one. I suggest starting with fresh state so
+you can go with easier setup guide bellow.
 
 ```
 git init
@@ -72,18 +69,15 @@ For gitlab you can follow simple tutorial [link to git](https://docs.gitlab.com/
 
 # Lfs setup
 
-
 Download a lfs adapter tool from [available releases](https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1).
-
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%"  zoomable=true %}
 </div>
 
-Download, unzip, install it 
-to some good known location. For example make a new folder in you main work disk like this ```C:\Tools``` so full path to the tool
-will be like this ```C:\Tools\lfs-folderstore.exe```.
-
+Download, unzip, install it
+to some good known location. For example make a new folder in you main work disk like this `C:\Tools` so full path to the tool
+will be like this `C:\Tools\lfs-folderstore.exe`.
 
 To set up repo with lfs please add .gitattributes file in your repository.
 For examples check this [link](https://github.com/gitattributes/gitattributes).
@@ -91,7 +85,7 @@ For examples check this [link](https://github.com/gitattributes/gitattributes).
 ## Unity .gitattributes
 
 ```
-## in root 
+## in root
 
 *.cs diff=csharp text
 *.cginc text
@@ -150,9 +144,10 @@ For examples check this [link](https://github.com/gitattributes/gitattributes).
 
 ```
 
-##  Unreal Engine .gitattributes
+## Unreal Engine .gitattributes
+
 ```
-## Unreal Engine 
+## Unreal Engine
 ## Auto detect text files and perform LF normalization ##
 
 * text=auto
@@ -263,13 +258,14 @@ For examples check this [link](https://github.com/gitattributes/gitattributes).
 *.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
 
 ```
+
 # Goolge Drive Setup
 
-If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client [Download](https://www.google.com/drive/download/). 
-Install it and login so you can create a folder to store all big binary data. 
+If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client [Download](https://www.google.com/drive/download/).
+Install it and login so you can create a folder to store all big binary data.
 
 After loging you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name
-``binary-lfs``. That name will be used to store all binary data for you project in lfs setup. 
+`binary-lfs`. That name will be used to store all binary data for you project in lfs setup.
 
 # Git config integration
 
@@ -279,7 +275,6 @@ I used my favorite open-source [GitExtension](https://git-extensions-documentati
 or any kind of text editor. In case using text editor open up config file inside hidden .git folder inside root folder of your project repository.
 
 To open up the configuration of your github repository choose following option:
-
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
@@ -296,10 +291,12 @@ Open it up and append following lines, similar as inside [Cloning a repo](#cloni
     repositoryformatversion = 0
 ```
 
-Afterwards you should be good to go, afterwards remember to sort out the LFS files in your checkout and copy the content from the now-configured shared folder, by using following command 
+Afterwards you should be good to go, afterwards remember to sort out the LFS files in your checkout and copy the content from the now-configured shared folder, by using following command
+
 ```bash
 git reset --hard master
 ```
+
 or if you are using fresh repository simply push it
 
 ```
@@ -308,13 +305,13 @@ git push -u origin main
 
 # Troubleshooting
 
-Sometimes there could be some problems with your network or issues with git lfs 
+Sometimes there could be some problems with your network or issues with git lfs
 In case of smudge errors or problems you can use following hacks:
+
 - try using better internet connection low network bandwidth is not helping
 - restart computer
-- use ``git lfs fetch --all``  fetch git lfs files for ALL remote branches
+- use `git lfs fetch --all` fetch git lfs files for ALL remote branches
 - move your google drive or one drive directory cache to new folder and try to download the data again
-
 
 # Bibliography and sources
 

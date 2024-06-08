@@ -25,8 +25,9 @@ Projekt zostal zrealizowany w celu zaaktualizowania wiedzy i kompetencji z zakre
 ## Wykorzystane technologie i narzędzia
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
-- Entity Framework Core 
-- Angular 
+
+- Entity Framework Core
+- Angular
 - C#
 - .NET Core
 - MVC

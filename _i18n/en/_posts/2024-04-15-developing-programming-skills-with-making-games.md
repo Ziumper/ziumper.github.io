@@ -2,7 +2,7 @@
 layout: post
 title: Developing programming skills with making games
 date: 2024-04-15 7:40:16
-tags: game-dev software-development 
+tags: game-dev software-development
 categories: self-development
 ---
 
@@ -15,6 +15,7 @@ In this context, game development seems to be an ideal tool for learning program
 In this article, we will explore the main reasons why game development can be an excellent way to develop programming skills. We will discover why creating games is not only fascinating and creative, but also an effective learning tool. Are you ready to embark on a journey through the world of programming through game development? Let's dive into it!
 
 # Learning beyond basic programming
+
 Game development is not just about creating entertainment - it's a journey through the fascinating world of programming. It requires an understanding of basic programming concepts such as variables, loops, conditions, and many others. But what is game development really about? It's not just a string of code and complicated algorithms. It's a process that allows for interactive and satisfying creation of a world dreamed up by the programmer.
 
 Imagine this: the car you drive on your computer screen is not just a collection of pixels. It's the result of your code, created by you. Every pixel of that vehicle, every movement, is the result of your work. In games, just like in the real world, you have full control over what happens. You can build an entire world from scratch and then let players discover and explore it.
@@ -44,7 +45,6 @@ Furthermore, the problems and challenges you will encounter when creating games 
 
 It's also worth noting that game development can be an excellent opportunity to experiment with non-standard algorithms and programming techniques. From advanced artificial intelligence algorithms for non-player characters to advanced graphics effects and physical simulations - in the world of computer games, there is no place for boredom or routine. Every project is a new challenge and an opportunity to learn.
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid  path="assets/img/projects/BoardHeroesBattle_unreal.jpg" title="example image" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
@@ -52,8 +52,8 @@ It's also worth noting that game development can be an excellent opportunity to 
 
 In this way, game development becomes an excellent exercise for problem-solving skills. Each new game is a new technical challenge that requires a creative approach and analytical thinking.
 
-
 # Development of Problem-Solving Skills
+
 Writing computer games is not just about creating visually appealing and exciting experiences for players - it's also a technical challenge that requires solving various programming problems. From resource management to performance optimization and user interaction handling, every aspect of game development presents programmers with new and exciting challenges.
 
 One of the key aspects of game development is resource management. Computer games often use various types of resources such as textures, sounds, 3D models, or animations. Effective management of these resources, their loading, releasing, and usage at the right moments, can be a crucial factor influencing the performance and smoothness of the game. Therefore, programmers must not only be able to efficiently manage memory but also consider strategies such as caching, preloading, or streaming of resources.

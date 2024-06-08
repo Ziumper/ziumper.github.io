@@ -5,7 +5,7 @@
 
 # Opis projektu
 
-Projekt został zrealizowany z ciekawości i pasji zgłębiania tworzenia oprogramowania. Do podstawowego szablonu udostępnionego przez producenta dorzuciłem warstwę zapisywanie zadań, dzięki czemu zostają one załadowane w momencie ponownego uruchomeinia programu oraz testy jednosktowe. Do aplikacji został dołączony prosty instalator, który może pomóc użytkownikowi z wykonywanymi zadaniami. 
+Projekt został zrealizowany z ciekawości i pasji zgłębiania tworzenia oprogramowania. Do podstawowego szablonu udostępnionego przez producenta dorzuciłem warstwę zapisywanie zadań, dzięki czemu zostają one załadowane w momencie ponownego uruchomeinia programu oraz testy jednosktowe. Do aplikacji został dołączony prosty instalator, który może pomóc użytkownikowi z wykonywanymi zadaniami.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -16,10 +16,10 @@ Projekt został zrealizowany z ciekawości i pasji zgłębiania tworzenia oprogr
     GUI screen of the application
 </div>
 
-
-# Wykorzystane technologie 
+# Wykorzystane technologie
 
 Podczas pracy z projektem aplikacji zaznajomiłem się z następującymi technologiami:
+
 - Avalonia UI
 - WPF
 - C#

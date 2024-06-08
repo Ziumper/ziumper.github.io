@@ -74,4 +74,4 @@ Warto również zauważyć, że pisanie gier może być doskonałą okazją do e
 </div>
 <div class="caption">Implementacja gry w życie może stanowić interesujące i ciekawe wyzwanie programistyczne</div>
 
-W ten sposób, pisanie gier staje się doskonałym ćwiczeniem dla umiejętności rozwiązywania problemów. Każda nowa gra to nowe wyzwanie techniczne, które wymaga kreatywnego podejścia i zdolności do myślenia analitycznego. 
+W ten sposób, pisanie gier staje się doskonałym ćwiczeniem dla umiejętności rozwiązywania problemów. Każda nowa gra to nowe wyzwanie techniczne, które wymaga kreatywnego podejścia i zdolności do myślenia analitycznego.

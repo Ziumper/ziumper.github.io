@@ -21,6 +21,7 @@ Gra skupia się na odwzorowaniu życia w polskim mieście w latach 90 XX wieku. 
 ## Obowiązki
 
 W ramach tego projektu byłem odpowiedzialny za:
+
 - naprawę błędów
 - projektowanie i tworzenie nowych mechanik
 - przeglądy kodu
@@ -31,4 +32,4 @@ W ramach tego projektu byłem odpowiedzialny za:
 
 ## Zdobyte doświadczenie
 
-Był to jeden z pierwszych tytułów gier, w którym pracowałem w pełni komercyjnym projekcie w branży game-dev. Nauczył mnie dystanstu do tworzonego przeze mnie kodu, uwzględniania dostępności nowych funkcjonalności przy projektowaniu dla osób nietechnicznych i podejmowania kompromisu technologicznego, szybkiego prototypowania oraz testowania skutecznych rozwiązań. 
+Był to jeden z pierwszych tytułów gier, w którym pracowałem w pełni komercyjnym projekcie w branży game-dev. Nauczył mnie dystanstu do tworzonego przeze mnie kodu, uwzględniania dostępności nowych funkcjonalności przy projektowaniu dla osób nietechnicznych i podejmowania kompromisu technologicznego, szybkiego prototypowania oraz testowania skutecznych rozwiązań.

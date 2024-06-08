@@ -22,7 +22,7 @@ Projekt został zrealizowany podczas studiów magisterskich na Politechnice Gda�
 W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 
 - okno logowania, które pozwala śledzić, filtrować i lepiej zrozumieć zachodzące procesie symulacji etapy budowania zaufania
-- możliwość edycji wprowadzanych parametrów takich jak początkowy poziom zaufania, liczba agentów czy liczby wprowadzanych 
+- możliwość edycji wprowadzanych parametrów takich jak początkowy poziom zaufania, liczba agentów czy liczby wprowadzanych
 - tryb boost, pozwalający na szybsze wykonywanie obliczeń i symulacji
 - eksport wyników symulacji do pliku MSOffice Excel
 - podgląd w czasie rzeczywistym wyników symulacji
@@ -31,9 +31,10 @@ W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 ## Wykorzystane technologie
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+
 - C++
-- ImGui 
-- ImPlot 
+- ImGui
+- ImPlot
 - GoogleTests
 - OpenXLSX
 - Visual Studio

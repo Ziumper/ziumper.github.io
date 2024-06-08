@@ -6,8 +6,7 @@ tags: git gitExtensions
 categories: tutorials
 ---
 
-
-Have you ever wondered how to merge your changes easily without destroying the entire project? 
+Have you ever wondered how to merge your changes easily without destroying the entire project?
 So here is a quick and easy guide to follow. Let’s start!
 First, you should install and configure [GitExtensions](https://git-extensions-documentation.readthedocs.io/). After that open up your repository. In my case, it contains two branches: master and develop. Check the image below to see it.
 
@@ -19,7 +18,7 @@ First, you should install and configure [GitExtensions](https://git-extensions-d
         {% include figure.liquid path="assets/img/posts/gitExtensions_2.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
     </div>
 </div>
- 
+
 
 It contains on hello.html file with the same line edited so it does not know which line it should take when [conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) happens.
 
@@ -40,20 +39,17 @@ When you are on develop branch choose which commit would like to rebase. In my c
 
 After clicking, yes to rebase it, you should see an error pop up, do not worry it is nothing wrong with git. It is just information for you that you need to resolve some conflicts.
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_5.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
 Click, ok, and procceed. Next, you should see a similar window below:
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_6.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
 Choose solve conflicts and then the next window should pop up.
-
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_7.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
@@ -86,7 +82,6 @@ Here I modified a little history of the repository so we can work with something
     {% include figure.liquid path="assets/img/posts/gitExtensions_10.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
-
 Let’s rebase again and develop to a master branch.
 
 1. Checkout to develop
@@ -103,18 +98,17 @@ Then the magic begins. I omit the steps to merge conflicts window, which is the 
 
 You should see a window similar to below:
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_12.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
-Three directory-merge 
+Three directory-merge
 
 - (“A” is treated as the older base of both).
 
 - B – is a (theirs) master branch version
 
-- C – is a (ours)  in that case, develop branch version
+- C – is a (ours) in that case, develop branch version
 
 Below is the Output window that will contain the merging result.
 
@@ -125,7 +119,6 @@ Below is the Output window that will contain the merging result.
 You can choose whatever version of the file you would like and combine them in the output you can see I have chosen one line from C, one line from A, and one line from B.
 Then I saved the file and continue to rebase after solving the conflicts. Simply as that, but sometimes it can be tricky so pay attention.
 Result of rebasing:
-
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_14.png" class="img-fluid rounded z-depth-1"  zoomable=true %}

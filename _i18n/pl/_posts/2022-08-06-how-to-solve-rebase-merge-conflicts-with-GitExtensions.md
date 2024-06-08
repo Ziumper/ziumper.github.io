@@ -6,7 +6,6 @@ tags: git gitExtensions
 categories: tutorials
 ---
 
-
 Czy kiedykolwiek zastanawiałeś się, jak łatwo połączyć swoje zmiany bez niszczenia całego projektu? Oto szybki i prosty przewodnik. Zaczynamy!
 Po pierwsze, powinieneś zainstalować i skonfigurować [GitExtensions](https://git-extensions-documentation.readthedocs.io/). Następnie otwórz swoje repozytorium. W moim przypadku zawiera ono dwie gałęzie: master i develop. Sprawdź obraz poniżej, aby to zobaczyć.
 
@@ -18,11 +17,11 @@ Po pierwsze, powinieneś zainstalować i skonfigurować [GitExtensions](https://
         {% include figure.liquid path="assets/img/posts/gitExtensions_2.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
     </div>
 </div>
- 
+
 
 Zawiera plik hello.html z tym samym edytowanym wierszem, więc nie wie, który wiersz powinien być użyty, gdy [conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) wystąpi.
 
-## Jak zmienić baze? 
+## Jak zmienić baze?
 
 Aby [przebazować](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase) z gałęzi develop na gałąź master, aby zatwierdzenie na gałęzi develop było "nad" zatwierdzeniami z gałęzi master i tak aby zawierał wszystkie zatwierdzenia z gałęzi master także. Jak to zrobić?
 Przełącz się na gałąź develop. Kliknij prawym przyciskiem myszy na niej. Wybierz opcję przełączenia gałęzi, a następnie wybierz gałąź develop.
@@ -44,7 +43,6 @@ Po kliknięciu "yes", aby zmienić bazę, powinieneś zobaczyć komunikat o bł�
 </div>
 
 Następnie kliknij OK i kontynuuj. Następnie powinieneś zobaczyć podobne okno poniżej:
-
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_6.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
@@ -74,14 +72,13 @@ Jeśli chcesz nadpisać zmiany, zawsze możesz użyć opcji (ours). Następnie k
 
 W przypadku większej liczby plików lub konfliktów, będziesz musiał je rozwiązać później. Pamiętaj, że praca z większymi plikami lub zmianami może zająć trochę czasu.
 
-##  Praca z narzędziem do porównywania różnic
+## Praca z narzędziem do porównywania różnic
 
 Tutaj zmodyfikowałem trochę historię repozytorium, więc możemy z tym pracować
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_10.jpg" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
-
 
 Przebazuj ponownie i rozwijaj na gałąź master.
 
@@ -99,19 +96,17 @@ Następnie zaczyna się magia. Pomijam kroki do okna konfliktów scalania, któr
 
 Powinieneś zobaczyć okno podobne do poniższego:
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitExtensions_12.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
-Następnie występują trzy katalogi scalania:  
+Następnie występują trzy katalogi scalania:
 
 - ("A" jest traktowane jako starsza baza obu).
 
 - B - jest (ich) wersją gałęzi master
 
 - C - jest (nasze) w tym przypadku wersją gałęzi develop
-
 
 Poniżej znajduje się okno wyjścia, które zawiera wynik scalania.
 

@@ -11,7 +11,7 @@ main:
     <p>Software engineer</p>
     <p><a href="mailto:tomasz.komoszeski@gmail.com"> Tomasz Komoszeski</a>,</p>
     <p>Poland</p>
-  subtitle: Software engineer and aspiring game developer 
+  subtitle: Software engineer and aspiring game developer
 titles:
   about: about
   blog: blog
@@ -27,7 +27,7 @@ titles:
   submenus: submenus
   unk: page not found
 descriptions:
-  about:  Ziumper software developer portfolio.
+  about: Ziumper software developer portfolio.
   archive-category: an archive of posts in this category
   archive-tag: an archive of posts with this tag
   archive-year: an archive of posts from this year
@@ -127,7 +127,7 @@ projects:
     work: work
     web-development: web-development
     e-commerce: e-commerce
-    game-dev: game-dev   
+    game-dev: game-dev
     desktop: desktop
 repositories:
   users: GitHub Users

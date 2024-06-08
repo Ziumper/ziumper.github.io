@@ -10,15 +10,15 @@ categories: tutorials
 
 Sugeruję połączenie git lfs z niestandardowym adapterem transferu. Zgodnie z dokumentacją git-lfs:
 
-
 > Git LFS obsługuje wiele sposobów przesyłania (wgrywania i pobierania) plików.
 > W podstawowych aplikacjach klienckich używa się żądania HTTP za pośrednictwem adresu URL zwróconego z API LFS dla danego obiektu.
 > Klient obsługuje również rozszerzenia umożliwiające wznowienie pobierania (za pośrednictwem nagłówków Range) i przesyłania.
 
 # Przykłady użycia
 
-Wykorzystałem ten sposób do przechowywania plików multimedialnych w moim projekcie i do rozwoju oprogramowania w projektach związanych z grami. 
+Wykorzystałem ten sposób do przechowywania plików multimedialnych w moim projekcie i do rozwoju oprogramowania w projektach związanych z grami.
 Jestem pewien, że i Ty możesz to zrobić. W większości przypadków lubię to stosować do:
+
 - projektów związanych z tworzeniem gier w silnikach takich jak Unity i Unreal Engine.
 - przechowywania dbdumps
 - przechowywania dużych plików multimedialnych (w razie potrzeby)
@@ -29,8 +29,8 @@ W poniższym przykładzie będę używał gitlab, google drive i innych narzędz
 
 # Konfiguracja Gitlab-a
 
-Po pierwsze, musisz wyłączyć domyślną usługę lfs w gitlabie. Jest to bardzo dobrze udokumentowana funkcja w oficjalnej dokumentacji 
-[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs), ale nie ma zbyt dużo informacji na temat tego, jak ją wyłączyć. 
+Po pierwsze, musisz wyłączyć domyślną usługę lfs w gitlabie. Jest to bardzo dobrze udokumentowana funkcja w oficjalnej dokumentacji
+[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs), ale nie ma zbyt dużo informacji na temat tego, jak ją wyłączyć.
 
 Jest to trochę skomplikowane i niezbyt przyjazne dla użytkownika, ale oczywiście musisz wybrać swoje repozytorium i wejść w ustawienia.
 
@@ -48,8 +48,7 @@ Jeśli gitlab lfs jest wyłączony na zdalnym serwerze, możesz zacząć od konf
 
 # Konfiguracja lokalnego repozytorium
 
-Będziesz potrzebował nowego repozytorium lub możesz użyć istniejącego. Sugeruję rozpoczęcie od stanu początkowego, abyś mógł skorzystać z prostego przewodnika konfiguracyjnego poniżej. 
- 
+Będziesz potrzebował nowego repozytorium lub możesz użyć istniejącego. Sugeruję rozpoczęcie od stanu początkowego, abyś mógł skorzystać z prostego przewodnika konfiguracyjnego poniżej.
 
 ```
 git init
@@ -62,15 +61,13 @@ Dla lfs z gitlabem możesz sugerować się zgodnie z prostym samouczkiem [link d
 
 Pobierz narzędzie adaptera lfs z [dostępnych wydań](https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1).
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%"  zoomable=true %}
 </div>
 
-Pobierz, rozpakuj, zainstaluj je 
-w dobrze znanej lokalizacji. Na przykład utwórz nowy folder na swoim głównym dysku roboczym, np. tak: ```C:\Tools```, więc pełna ścieżka do narzędzia
-będzie wyglądać tak: ```C:\Tools\lfs-folderstore.exe```.
-
+Pobierz, rozpakuj, zainstaluj je
+w dobrze znanej lokalizacji. Na przykład utwórz nowy folder na swoim głównym dysku roboczym, np. tak: `C:\Tools`, więc pełna ścieżka do narzędzia
+będzie wyglądać tak: `C:\Tools\lfs-folderstore.exe`.
 
 Aby skonfigurować repozytorium z lfs, dodaj plik .gitattributes w swoim repozytorium.
 Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/gitattributes).
@@ -78,7 +75,7 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 ## Unity .gitattributes
 
 ```
-## in root 
+## in root
 
 *.cs diff=csharp text
 *.cginc text
@@ -137,9 +134,10 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 ```
 
-##  Unreal Engine .gitattributes
+## Unreal Engine .gitattributes
+
 ```
-## Unreal Engine 
+## Unreal Engine
 ## Auto detect text files and perform LF normalization ##
 
 * text=auto
@@ -250,13 +248,14 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 *.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
 
 ```
+
 # Konfiguracja Google Drive
 
-Jeśli repozytorium jest gotowe, będziesz potrzebować jakiegoś rodzaju przestrzeni dyskowej, aby to działało. Aby w pełni zintegrować to z Google Drive, użyj klienta Google Drive [Pobierz](https://www.google.com/drive/download/). 
-Zainstaluj go, zaloguj się, aby można było utworzyć folder do przechowywania wszystkich dużych danych binarnych. 
+Jeśli repozytorium jest gotowe, będziesz potrzebować jakiegoś rodzaju przestrzeni dyskowej, aby to działało. Aby w pełni zintegrować to z Google Drive, użyj klienta Google Drive [Pobierz](https://www.google.com/drive/download/).
+Zainstaluj go, zaloguj się, aby można było utworzyć folder do przechowywania wszystkich dużych danych binarnych.
 
 Po zalogowaniu powinieneś zobaczyć swój zamontowany folder w Finderze, jeśli używasz Maca, lub w Exploratorze Windows, jako oddzielony dysk. Otwórz go i utwórz nowy folder o nazwie
-``binary-lfs``. Ta nazwa będzie używana do przechowywania wszystkich danych binarnych dla Twojego projektu w konfiguracji lfs. 
+`binary-lfs`. Ta nazwa będzie używana do przechowywania wszystkich danych binarnych dla Twojego projektu w konfiguracji lfs.
 
 # Integracja konfiguracji Git
 
@@ -267,13 +266,11 @@ lub dowolnego edytora tekstu. W przypadku korzystania z edytora tekstu otwórz p
 
 Aby otworzyć konfigurację Twojego repozytorium github, wybierz następującą opcję:
 
-
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
 Otwórz go i dodaj następujące linie.
-
 
 ```
 [lfs "customtransfer.lfs-folder"]
@@ -284,12 +281,12 @@ Otwórz go i dodaj następujące linie.
     repositoryformatversion = 0
 ```
 
-
-Następnie, pamiętaj, aby posortować pliki LFS i skopiować zawartość skonfigurowanego wspólnego folderu, używając następującej komendy 
+Następnie, pamiętaj, aby posortować pliki LFS i skopiować zawartość skonfigurowanego wspólnego folderu, używając następującej komendy
 
 ```bash
 git reset --hard master
 ```
+
 lub jeśli korzystasz z nowego repozytorium, po prostu je wyślij
 
 ```
@@ -302,7 +299,7 @@ Czasami mogą pojawić się problemy z Twoją siecią lub z git lfs. W przypadku
 
 - spróbuj użyć lepszego połączenia internetowego, słaby pasmo sieciowe nie pomaga
 - zrestartuj komputer
-- użyj ``git lfs fetch --all`` pobiera pliki git lfs dla WSZYSTKICH zdalnych gałęzi
+- użyj `git lfs fetch --all` pobiera pliki git lfs dla WSZYSTKICH zdalnych gałęzi
 - przenieś katalog cache Google Drive lub One Drive do nowego folderu i spróbuj ponownie pobrać dane
 
 # Bibliografia i źródła
@@ -310,4 +307,3 @@ Czasami mogą pojawić się problemy z Twoją siecią lub z git lfs. W przypadku
 - [Lfs folderstore repo](https://github.com/sinbad/lfs-folderstore)
 - [Google Drive](https://www.google.com/drive/download/)
 - [Gitlab Docs](https://docs.gitlab.com/)
-

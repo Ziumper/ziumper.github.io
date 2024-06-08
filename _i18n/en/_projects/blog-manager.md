@@ -25,6 +25,7 @@ The project was undertaken to update knowledge and skills in ASP.NET technology.
 ## Technologies and Tools Used
 
 In the course of the project, I acquainted myself with the following technologies and tools:
+
 - Entity Framework Core
 - Angular
 - C#

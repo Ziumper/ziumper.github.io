@@ -1,10 +1,10 @@
 not_found:
-  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie proszę wróc do 
+  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie proszę wróc do
   main_page: strony głównej
 main:
   contact_note: >
     Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! 
-    <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>. 
+    <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>.
   footer_text: > # the ">" symbol means to ignore newlines until "titles:"
     Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
     Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -13,7 +13,7 @@ main:
     <p>Inżynier oprogramowania</p>
     <p><a href="mailto:tomasz.komoszeski@gmail.com">Tomasz Komoszeski</a>,</p>
     <p>Polska</p>
-  subtitle:  Inżynier oprogramowania oraz aspiruający programista gier
+  subtitle: Inżynier oprogramowania oraz aspiruający programista gier
 titles:
   about: O mnie
   blog: blog
@@ -132,13 +132,13 @@ projects:
     game-dev: game-dev
     desktop: aplikacje desktopowe
 repositories:
-  users: Użytkownicy GitHub 
-  repos: Repozytoria GitHub 
+  users: Użytkownicy GitHub
+  repos: Repozytoria GitHub
 cv:
   address: Adres
   area: Obszar
   awarder: Nagradzony
-  awards: Nagrody 
+  awards: Nagrody
   basics: Podstawowe informacje
   certificates: Certyfikaty
   city: Miasto

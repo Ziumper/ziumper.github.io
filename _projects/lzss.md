@@ -7,5 +7,4 @@ importance: 2
 category: desktop
 ---
 
-
 {% translate_file _projects/lzss.md %}

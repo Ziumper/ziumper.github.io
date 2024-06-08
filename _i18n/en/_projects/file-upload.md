@@ -1,6 +1,7 @@
 # Project Description
 
 This is a Symfony application created as part of a recruitment project for a PHP programmer position. Its purpose was to assess my skills in this programming platform and to fulfill the following requirements:
+
 - The first page contains a form with three fields: First Name, Last Name, Attachment.
 - The form fields are validated. First name and last name cannot be empty, and the file can only contain images no larger than 2MB.
 - Data from the form is asynchronously saved in the database. After submission, a message is displayed indicating success or failure.
@@ -26,6 +27,7 @@ The most important aspect of the application is the [code](https://github.com/Zi
 ## Used Technologies
 
 As part of the project, I got acquainted with the following technologies and tools:
+
 - [Symfony 7](https://symfony.com/7)
 - [PHPUnit](https://phpunit.de/index.html)
 - [Intervention Image](https://github.com/Intervention/image)

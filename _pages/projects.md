@@ -5,12 +5,14 @@ description: descriptions.projects
 permalink: /projects/
 nav: true
 nav_order: 3
-display_categories: [web-development, e-commerce, game-dev,desktop]
+display_categories: [web-development, e-commerce, game-dev, desktop]
 horizontal: false
 ---
 
 <!-- pages/projects.md -->
+
 {% if site.enable_project_categories and page.display_categories %}
+
 <div class="links">
  {% for category in page.display_categories %}
   {% capture localized_category %}projects.categories.{{category}}{% endcapture %}

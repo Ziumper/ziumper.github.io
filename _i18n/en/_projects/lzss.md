@@ -29,5 +29,6 @@ The following features were implemented as part of the project:
 ## Technologies Used
 
 As part of the project implementation, I became acquainted with the following technologies and tools:
+
 - C++
 - WinApi

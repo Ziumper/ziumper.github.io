@@ -30,6 +30,7 @@ Application have following functionalities:
 ## Technologies Used
 
 In the course of the project, I became acquainted with the following technologies and tools:
+
 - C++
 - ImGui
 - ImPlot

@@ -13,7 +13,7 @@
   contents:
     - title: Programista PHP
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
-      year:  2019 - lut 2024
+      year: 2019 - lut 2024
       description:
         - title: Obowiązki
           contents:
@@ -21,7 +21,7 @@
             - Analiza wymagań i proponowanie rozwiązań na ich podstawie
             - Wdrażanie kolejnych wersji oprogramowania i dodatków udostępniających funkcjonalności
             - Testowanie, debugowanie i utrzymywanie aplikacji e-commerce oraz ich rozwój
-            - Integracja komunikacji aplikacji e-commerce z systemami ERP, CMS itp. 
+            - Integracja komunikacji aplikacji e-commerce z systemami ERP, CMS itp.
             - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
             - Migracja sklepów internetowych na platformę Shopware 6
         - title: Projekty
@@ -30,7 +30,7 @@
             - <a href="https://www.fliesendiscount.de/">Fliesen Discount</a>
             - <a href="https://www.sunzinet.com/en/references/leguano">Leguano</a>
             - <a href="https://www.sunzinet.com/en/references/axion-gmbh">Axion</a>
-          
+
     - title: Programista Unity
       institution: Farmind Studio Sp. z o.o., Warszawa, Polska
       year: 2020 - 2023
@@ -46,13 +46,13 @@
             - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
             - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
             - <a href="http://farmind.pl/night-catcher/">NightCatcher</a>
-             
+
     - title: Programista PHP
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
       year: 2018 - 2019
       description:
         - title: Obowiązki
-          contents: 
+          contents:
             - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem PHP, Smarty, MySQL, XML, CSS i HTML
             - Pomoc w restuktaryzacji i utrzymaniu aplikacji desktopowej <a href="https://pobieranie.meteoryt.pl/">Asystent</a> oraz analogicznej wersji <a href="https://meteoryt.pl/asystentchmura"> chmurowej</a>
         - title: Projekty
@@ -63,7 +63,7 @@
     - title: Programista .NET
       institution: Billennium S.A., Olsztyn, Polska
       year: 2017 - 2018
-      description: 
+      description:
         - title: Obowiązki
           contents:
             - Projektowanie, kodowanie i tworzenie aplikacji internetowych z wykorzystaniem ASP.NET, REST, C#, MVC, Angular, JavaScript i TypeScript, CSS i HTML
@@ -71,7 +71,7 @@
             - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
             - Przeprowadzanie i uczestniczenie w przeglądach kodu
         - title: Projekty
-          contents: 
+          contents:
             - <a href="https://github.com/Ziumper/Bookshop">Projekt rekrutacyjny Księgarnia</a>
 
 - title: Edukacja
@@ -85,11 +85,11 @@
           contents:
             - Zastosowanie Technologii informacyjnych
         - title: Rodzaj studiów
-          contents: 
+          contents:
             - Studia niestacjonarne
         - title: Tytuł pracy dyplomowej
-          contents: 
-            -  Porównanie silników Unity oraz Unreal Engine do wytwarzania aplikacji rozszerzonej rzeczywistości na platformę Android
+          contents:
+            - Porównanie silników Unity oraz Unreal Engine do wytwarzania aplikacji rozszerzonej rzeczywistości na platformę Android
     - title: Inż. Informatyka
       institution: Uniwersytet Warmińsko-Mazurski, Olsztyn, Polska
       year: 2013 - 2017
@@ -98,33 +98,31 @@
           contents:
             - Informatyka Ogólna
         - title: Rodzaj studiów
-          contents: 
+          contents:
             - Studia stacjonarne
         - title: Tytuł pracy dyplomowej
-          contents: 
-            -  Implementacja algorytmu LZSS
+          contents:
+            - Implementacja algorytmu LZSS
     - title: Technik Informatyk
       institution: Zespół Szkółw Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
       year: 2008 - 2012
-
-
 
 - title: Umiejętności
   type: nested_list
   contents:
     - title: Cechy charakteru
       items:
-      - Umiejętność pracy w zespole i umiejętności interpersonalne
-      - Kreatywne rozwiązywanie problemów i krytyczne myślenie
-      - Zdolność adaptacji i elastyczność
-      - Skuteczna komunikacja i artykulacja
-      - Empatia i nastawienie zorientowane na użytkownika
-      - Zarządzanie czasem i ustalanie priorytetów
-      - Ciągła nauka i ciekawość
-      - Dbałość o szczegóły i precyzja
-      - Radzenie sobie ze stresem
-      - Zdolności przywódcze i mentorskie
-      - Utrzymywanie równowangi pomiędzy pracą a życiem osobistym
+        - Umiejętność pracy w zespole i umiejętności interpersonalne
+        - Kreatywne rozwiązywanie problemów i krytyczne myślenie
+        - Zdolność adaptacji i elastyczność
+        - Skuteczna komunikacja i artykulacja
+        - Empatia i nastawienie zorientowane na użytkownika
+        - Zarządzanie czasem i ustalanie priorytetów
+        - Ciągła nauka i ciekawość
+        - Dbałość o szczegóły i precyzja
+        - Radzenie sobie ze stresem
+        - Zdolności przywódcze i mentorskie
+        - Utrzymywanie równowangi pomiędzy pracą a życiem osobistym
     - title: Programowanie
       items:
         - AGILE, SCRUM, Kanban
@@ -140,11 +138,11 @@
         - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
         - Maven, Composer, Nuget, CMake
         - Apache, Elastic Search, Redis, Varnish
-        - Shopware, Symfony, Twig, Smarty, PSH 
+        - Shopware, Symfony, Twig, Smarty, PSH
         - Docker, Vagrant, Oracle VirtualBox, Puppet
         - Nftables
         - Linux, Windows, Mac
-        - Bash, Powershell 
+        - Bash, Powershell
         - UML, Enterprise Architect
     - title: Game-dev
       items:
@@ -155,23 +153,22 @@
         - AR, VR, ARCore
         - Znajomość grafiki komputerowej i technik renderingu
         - Programowanie sieciowe w grach wieloosobowych
-   
+
 - title: Certyfikaty i szkolenia
   type: time_table
   contents:
-      - year: 2023
-        items:
-          - Szkolenie z reklamy w internecie, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
-          - Szkolenie w zakresie marketingu i budowania marki, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
-      - year: 2019
-        items:
-          - Kurs Vue.js, <a href="https://typeofweb.com/">typeofweb</a>
-      - year: 2010
-        items: 
-          - ECDL, <a href="https://ecdl.pl/">European Computer Driving Licence</a>   
+    - year: 2023
+      items:
+        - Szkolenie z reklamy w internecie, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+        - Szkolenie w zakresie marketingu i budowania marki, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+    - year: 2019
+      items:
+        - Kurs Vue.js, <a href="https://typeofweb.com/">typeofweb</a>
+    - year: 2010
+      items:
+        - ECDL, <a href="https://ecdl.pl/">European Computer Driving Licence</a>
 
 - title: Zainteresowania
   type: list
   contents:
-    - Gra na gitarze, dobra książka, gry komputerowe oraz podróże. 
-
+    - Gra na gitarze, dobra książka, gry komputerowe oraz podróże.

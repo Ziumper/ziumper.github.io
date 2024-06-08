@@ -34,6 +34,7 @@ The project implemented the following features:
 ## Technologies Used
 
 During the project implementation, I got acquainted with the following technologies and tools:
+
 - .NET
 - C#
 - 2D Animations

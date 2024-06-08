@@ -4,7 +4,7 @@
 
 # Opis projektu
 
-Celem projektu była implementacja algorytmu bezstratnej kompresji danych [LZSS](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski)  optymalizującego przechowywanie danych. Wykorzystuje on również algorytm [KMP](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) do wyszukiwania powtarzających się ciągów danych i budowania słownika wyrazów i tabeli przesunięć kodowych.
+Celem projektu była implementacja algorytmu bezstratnej kompresji danych [LZSS](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Storer%E2%80%93Szymanski) optymalizującego przechowywanie danych. Wykorzystuje on również algorytm [KMP](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) do wyszukiwania powtarzających się ciągów danych i budowania słownika wyrazów i tabeli przesunięć kodowych.
 Projekt został zrealizowany podczas studiów inżynierski jako praca dyplomowa na Uniwersytecie Warmińsko-Mazurskim w Olsztynie.
 
 <div class="row justify-content-sm-center">
@@ -30,5 +30,6 @@ W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 ## Wykorzystane technologie
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+
 - C++
 - WinApi

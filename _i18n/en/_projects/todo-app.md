@@ -19,6 +19,7 @@ The project was carried out out of curiosity and passion for software developmen
 # Technologies Used
 
 While working on the project, I familiarized myself with the following technologies:
+
 - Avalonia UI
 - WPF
 - C#

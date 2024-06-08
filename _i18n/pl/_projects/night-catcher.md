@@ -34,12 +34,13 @@ W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 ## Wykorzystane technologie
 
 W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+
 - .NET
-- C# 
+- C#
 - Animacje 2D
 - Unity Cinemachine
 - Visual Studio
-- Unity Profiler 
+- Unity Profiler
 - Wwise
 - NUnit
 - Hack&Plan
