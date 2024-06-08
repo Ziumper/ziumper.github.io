@@ -50,4 +50,5 @@ jobs:
           fail: true
           # removed md files that include liquid tags
           # remove archived html page
-          args: --exclude-path archive/index.html --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _i18n/en/_posts/2018-12-22-distill.md --exclude-path _i18n/pt-br/_posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
+          # remove template ave html plage
+          args: --exclude-path archive/src/pages/templates/ave/index.html --exclude-path archive/index.html --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _i18n/en/_posts/2018-12-22-distill.md --exclude-path _i18n/pt-br/_posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
