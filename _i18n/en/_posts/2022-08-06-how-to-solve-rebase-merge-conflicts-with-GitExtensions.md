@@ -19,7 +19,6 @@ First, you should install and configure [GitExtensions](https://git-extensions-d
     </div>
 </div>
 
-
 It contains on hello.html file with the same line edited so it does not know which line it should take when [conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) happens.
 
 ## How to rebase?

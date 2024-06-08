@@ -18,7 +18,6 @@ Po pierwsze, powinieneś zainstalować i skonfigurować [GitExtensions](https://
     </div>
 </div>
 
-
 Zawiera plik hello.html z tym samym edytowanym wierszem, więc nie wie, który wiersz powinien być użyty, gdy [conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) wystąpi.
 
 ## Jak zmienić baze?
