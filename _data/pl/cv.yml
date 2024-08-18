@@ -157,6 +157,9 @@
 - title: Certyfikaty i szkolenia
   type: time_table
   contents:
+    - year: 2024
+      items:
+        - Shopware 6 <a href="https://www.shopware.com/en/academy/certifications/">Zaawansowany programista Shopware</a>
     - year: 2023
       items:
         - Szkolenie z reklamy w internecie, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
