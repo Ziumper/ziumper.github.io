@@ -1,3 +1,12 @@
+---
+layout: page
+title: projects.titles.project13
+description: projects.descriptions.project13
+img: assets/img/projects/posts_manager.jpg
+importance: 1
+category: web-development
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/Demo-Blog-Manager" class="btn btn-amber btn-sm z-depth-0" role="button">View code <i class="fa-brands fa-github"></i></a>
 </div>

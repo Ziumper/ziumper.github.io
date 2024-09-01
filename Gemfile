@@ -28,4 +28,3 @@ group :other_plugins do
     gem 'feedjira'
     gem 'httparty'
 end
-
