@@ -1,3 +1,12 @@
+---
+layout: page
+title: projects.titles.project1
+description: projects.descriptions.project1
+img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
+importance: 2
+category: game-dev
+---
+
 # Project Description
 
 The aim of this project was to analyze and compare selected aspects of developing, functionality, and operation of augmented reality applications on the Android platform using Unity and Unreal Engine game engines. Additionally, it involved conducting a comparative analysis and playability research of hybrid games in the context of enriching traditional board gameplay and expanding its multiplayer capabilities.

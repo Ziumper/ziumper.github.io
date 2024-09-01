@@ -1,3 +1,13 @@
+---
+layout: page
+title: projects.titles.project17
+description: projects.descriptions.project17
+img: assets/img/projects/file-upload1.png
+importance: 1
+category: web-development
+---
+
+
 # Project Description
 
 This is a Symfony application created as part of a recruitment project for a PHP programmer position. Its purpose was to assess my skills in this programming platform and to fulfill the following requirements:

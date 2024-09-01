@@ -1,3 +1,13 @@
+---
+layout: page
+title: projects.titles.project18
+description: projects.descriptions.project18
+img: assets/img/projects/connects_the_pops.jpg
+importance: 1
+category: game-dev
+---
+
+
 <div class="links">
       <a href="https://github.com/Ziumper/connect-the-pops-clone" class="btn btn-amber btn-sm z-depth-0" role="button">View code <i class="fa-brands fa-github"></i></a>
       <a href="https://github.com/Ziumper/connect-the-pops-clone/releases" class="btn btn-amber btn-sm z-depth-0" role="button">Download the app <i class="fa fa-download"></i></a>

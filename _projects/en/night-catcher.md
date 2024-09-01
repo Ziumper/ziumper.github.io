@@ -1,3 +1,12 @@
+---
+layout: page
+title: projects.titles.project4
+description: projects.descriptions.project4
+img: assets/img/projects/night_catcher.png
+importance: 3
+category: game-dev
+---
+
 <div class="links">
    <a href="http://farmind.pl/en/night-catcher-mobile/" class="btn btn-amber btn-sm z-depth-0" role="button">Read more <i class="fa fa-book"></i></a>
 </div>

@@ -1,3 +1,12 @@
+---
+layout: page
+title: projects.titles.project3
+description: projects.descriptions.project3
+img: assets/img/projects/ludo_screen1.jpg
+importance: 4
+category: game-dev
+---
+
 <div class="links">
   <a href="https://www.nintendo.com/us/store/products/ludo-game-just-chill-out-switch/" class="btn btn-amber btn-sm z-depth-0" role="button">Buy game <i class="fa fa-cart-shopping"></i></a>
    <a href="http://farmind.pl/en/just-chill-out/" class="btn btn-amber btn-sm z-depth-0" role="button">Read more <i class="fa fa-book"></i></a>
