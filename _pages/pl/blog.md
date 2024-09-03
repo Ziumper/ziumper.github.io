@@ -3,8 +3,8 @@ page_id: blog
 layout: default
 permalink: /blog/
 title: blog
-blog_name: al-folio in english
-description: a simple whitespace theme for academics
+blog_name: Think twice, code once
+description: Blog about coding, programming, and other interesting things
 nav: true
 nav_order: 1
 pagination:
