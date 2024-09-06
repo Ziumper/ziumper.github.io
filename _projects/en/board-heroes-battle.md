@@ -1,7 +1,7 @@
 ---
 layout: page
-title: projects.titles.project1
-description: projects.descriptions.project1
+title: Board Heroes Battle
+description: Augmented reality turn based board game for the Android platform
 img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
 importance: 2
 category: game-dev

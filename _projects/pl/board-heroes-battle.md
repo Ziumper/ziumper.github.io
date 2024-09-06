@@ -1,3 +1,12 @@
+---
+layout: page
+title: Board Heroes Battle
+description: Gra w rozszerzonej rzeczywistości na platformę Android
+img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
+importance: 2
+category: game-dev
+---
+
 # Opis projektu
 
 Celem niniejszej pracy była analiza i porównanie wybranych aspektów wytwarzania, funkcjonalności oraz działania aplikacji rzeczywistości rozszerzonej na platformę Android przy użyciu silników gier Unity i Unreal Engine oraz przeprowadzenie analizy porównawczej i badań grywalności gier hybrydowych w kontekście wzbogacenia tradycyjnej rozgrywki planszowej oraz poszerzenia

@@ -3,7 +3,7 @@ page_id: projects
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Kolekcja moich projektów
 nav: true
 nav_order: 3
 display_categories: [web-development, e-commerce, game-dev, desktop]

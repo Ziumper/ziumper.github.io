@@ -1,3 +1,13 @@
+---
+page_id: agents_app
+layout: page
+title: Agents App
+description: Aplikacja wykorzystująca symulacje Monte Carlo napisana w C++
+img: assets/img/projects/agents_app2.png
+importance: 1
+category: desktop
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/AgentsApp" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
    <a href="https://github.com/Ziumper/AgentsApp/releases" class="btn btn-amber btn-sm z-depth-0" role="button">Pobierz aplikacje <i class="fa fa-download"></i></a>

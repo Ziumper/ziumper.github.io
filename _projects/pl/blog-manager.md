@@ -1,3 +1,13 @@
+---
+page_id: blog_manager
+layout: page
+title: Blog Manager
+description: Aplikacja do zarządzania blogami MVC na platformie .NET Core i Angular z konfiguracją docker-compose dla lepszego doświadczenia programistycznego
+img: assets/img/projects/posts_manager.jpg
+importance: 1
+category: web-development
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/Demo-Blog-Manager" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
 </div>

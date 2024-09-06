@@ -1,7 +1,8 @@
 ---
+page_id: blog_manager
 layout: page
-title: projects.titles.project13
-description: projects.descriptions.project13
+title: Blog Manager
+description:  Blog management application MVC in .net core and angular with docker-compose setup for better development experience
 img: assets/img/projects/posts_manager.jpg
 importance: 1
 category: web-development

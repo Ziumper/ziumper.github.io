@@ -1,5 +1,5 @@
 ---
-page_id: project_2
+page_id: agents_app
 layout: page
 title: Agents App
 description: Monte carlo simulation app written in C++

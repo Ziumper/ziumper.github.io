@@ -1,7 +1,8 @@
 ---
+page_id: connect_the_pops
 layout: page
-title: projects.titles.project18
-description: projects.descriptions.project18
+title: Connect The Pops Clone
+description: Clone of popular android game Connect The Pops from Popcorn
 img: assets/img/projects/connects_the_pops.jpg
 importance: 1
 category: game-dev
