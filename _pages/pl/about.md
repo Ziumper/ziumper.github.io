@@ -1,7 +1,7 @@
 ---
 page_id: about
 layout: about
-title: O mnie
+title: o mnie
 permalink: /
 subtitle: Inżynier oprogramowania oraz programista gier
 

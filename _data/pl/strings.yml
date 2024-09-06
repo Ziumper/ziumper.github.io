@@ -20,18 +20,6 @@ footer_text: > # the ">" symbol means to ignore newlines until "titles:"
     Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 latest_posts: ostatnie posty
 news: wiadomości
-titles:
-  about: O mnie
-  blog: blog
-  cv: cv
-  profiles: ludzie
-  projects: projekty
-  publications: publikacje
-  repositories: repozytoria
-  selected_publications: wybrane publikacje
-  teaching: nauka
-  submenus: podmenu
-  unk: strona nie znaleziona
 descriptions:
   about: Portoflio inżyniera oprogramowania
   archive-category: archiwum postów w tej kategorii

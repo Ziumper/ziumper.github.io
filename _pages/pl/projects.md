@@ -1,7 +1,7 @@
 ---
 page_id: projects
 layout: page
-title: projects
+title: projekty
 permalink: /projects/
 description: Kolekcja moich projektów
 nav: true
