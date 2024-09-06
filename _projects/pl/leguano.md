@@ -2,7 +2,7 @@
 page_id: leguano
 layout: page
 title: Leguano
-description: Implementation of the first store using Shopware 6 technology
+description: Wdrożenie pierwszego sklepu w technologii Shopware 6
 img: assets/img/projects/leguano1.png
 redirect: https://www.sunzinet.com/en/references/leguano
 importance: 3

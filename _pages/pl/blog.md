@@ -4,7 +4,7 @@ layout: default
 permalink: /blog/
 title: blog
 blog_name: Think twice, code once
-description: Blog about coding, programming, and other interesting things
+description: Blog o kodowaniu, programowaniu i innych ciekawych rzeczach
 nav: true
 nav_order: 1
 pagination:

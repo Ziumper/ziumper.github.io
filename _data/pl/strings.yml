@@ -1,3 +1,10 @@
+categories:
+    fun: zabawa
+    work: praca
+    web-development: web-development
+    e-commerce: e-commerce
+    game-dev: game-dev
+    desktop: desktop
 not_found:
   message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie proszę wróc do
   main_page: strony głównej

@@ -1,3 +1,13 @@
+---
+page_id: lzss
+layout: page
+title: LZSS
+description: Implementacja bezstratnego algorytmu kompresji danych LZSS
+img: assets/img/projects/LZSS.jpg
+importance: 2
+category: desktop
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/LZSS" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
 </div>

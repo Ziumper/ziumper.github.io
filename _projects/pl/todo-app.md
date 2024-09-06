@@ -1,3 +1,13 @@
+---
+page_id: todo_app
+layout: page
+title: Todo App
+description: Prosta aplikacja ToDo, do zarzadzania wykonywanymi zadaniami napisania w .NET Core przy pomocy AvaloniaUI i WPF oraz testami jednostkowymi
+img: assets/img/projects/todo_app_view.png
+importance: 1
+category: desktop
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/ToDoApp" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
    <a href="https://github.com/Ziumper/ToDoApp/releases" class="btn btn-amber btn-sm z-depth-0" role="button">Ściągnij aplikacje <i class="fa fa-download"></i></a>

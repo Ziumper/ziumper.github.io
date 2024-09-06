@@ -1,3 +1,13 @@
+---
+page_id: web_cloud_system
+layout: page
+title: Web Cloud System
+description: Aplikacja webowa do trzymania i zarządzania plikami. Napisana w .NET Core
+img: assets/img/projects/files.jpg
+importance: 1
+category: web-development
+---
+
 <div class="links">
   <a href="https://github.com/Ziumper/WebCloudSystem" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
 </div>

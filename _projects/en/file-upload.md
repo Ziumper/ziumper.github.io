@@ -1,7 +1,8 @@
 ---
+page_id: file_upload
 layout: page
-title: projects.titles.project17
-description: projects.descriptions.project17
+title: File Upload
+description: File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests
 img: assets/img/projects/file-upload1.png
 importance: 1
 category: web-development

@@ -1,3 +1,13 @@
+---
+page_id: crafter
+layout: page
+title: Crafter
+description: Projekt gry, w której został zaimplementowany podstawowy system tworzenia przedmiotów w Unity
+img: assets/img/projects/crafter_equipment.png
+importance: 2
+category: game-dev
+---
+
 <div class="links">
       <a href="https://github.com/Ziumper/CrafterTheGame" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
 </div>

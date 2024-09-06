@@ -1,3 +1,13 @@
+---
+page_id: night_catcher
+layout: page
+title: Night Catcher
+description: Zręcznościowa gra mobilna zrobiona w Unity
+img: assets/img/projects/night_catcher.png
+importance: 3
+category: game-dev
+---
+
 <div class="links">
    <a href="http://farmind.pl/night-catcher/" class="btn btn-amber btn-sm z-depth-0" role="button">Read more <i class="fa fa-book"></i></a>
 </div>

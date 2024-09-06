@@ -1,3 +1,13 @@
+---
+page_id: polygangs
+layout: page
+title: Polygangs
+description: Symulator życia gangsterskiego w mieście z lat 90 w stylu low-poly
+img: assets/img/projects/polygangs.jpg
+importance: 2
+category: game-dev
+---
+
 <div class="links">
    <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/" class="btn btn-amber btn-sm z-depth-0" role="button">Steam <i class="fab fa-steam"></i></a>
 </div>

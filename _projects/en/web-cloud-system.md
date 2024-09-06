@@ -1,9 +1,9 @@
 ---
+page_id: web_cloud_system
 layout: page
-title: projects.titles.project14
-description: projects.descriptions.project14
+title: Web Cloud System
+description: Easy and simple MVC .NET app to store and manage filles in .net core and angular
 img: assets/img/projects/files.jpg
-#redirect: https://github.com/Ziumper/WebCloudSystem
 importance: 1
 category: web-development
 ---

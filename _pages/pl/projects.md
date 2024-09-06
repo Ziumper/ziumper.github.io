@@ -10,6 +10,20 @@ display_categories: [web-development, e-commerce, game-dev, desktop]
 horizontal: false
 ---
 
+
+{% if site.enable_project_categories and page.display_categories %}
+
+<div class="links">
+ {% for category in page.display_categories %}
+  {% capture localized_category %}projects.categories.{{category}}{% endcapture %}
+  <a class="btn btn-outline-amber btn-sm z-depth-0" href=".#{{ site.data[site.active_lang].strings.categories[category] }}">
+       {{ site.data[site.active_lang].strings.categories[category] }}
+  </a>
+ {% endfor %}
+ </div>
+{% endif %}
+
+
 <!-- pages/projects.md -->
 <div class="projects">
   {% if site.enable_project_categories and page.display_categories %}
