@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Disallow: /archive/
 
-Sitemap: https://ziumper.github.io/pl/sitemap.xml
+Sitemap: https://ziumper.github.io/sitemap.xml
