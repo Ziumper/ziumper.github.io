@@ -47,4 +47,3 @@ In the course of the project, I acquainted myself with the following technologie
 - HTML
 - TypeScript
 - SCSS
-- Visual Studio

@@ -1,32 +1,29 @@
+archive_category: archiwum postów w tej kategorii
+archive_tag: archiwum postów z tym tagiem
+archive_year: archiwum postów z tego roku
+blog:
+  navigation_title: Think twice, code once
+citation:
+  bibtex: „lub jako wpis BibTeX:”
+  introduction: „Jeśli uznałeś to za przydatne, zacytuj to jako:”  
 categories:
-    fun: zabawa
+    fun: dla zabawy
     work: praca
-    web-development: web-development
-    e-commerce: e-commerce
+    web-development: aplikacje webowe
+    e-commerce: aplikacje e-commerce
     game-dev: game-dev
-    desktop: desktop
-not_found:
-  message: Zostaniesz przekierowany w ciągu 3 sekund. Jeżeli tak się nie stanie proszę wróc do
-  main_page: strony głównej
-main:
-  contact_note: >
-    Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! 
-    <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>.
-  footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+    desktop: aplikacje desktopowe
+contact_note: Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>.
+footer_text: > # the ">" symbol means to ignore newlines until "titles:"
     Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
     Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
     Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-  more_info: >
-    <p>Inżynier oprogramowania</p>
-    <p><a href="mailto:tomasz.komoszeski@gmail.com">Tomasz Komoszeski</a>,</p>
-    <p>Polska</p>
-  subtitle: Inżynier oprogramowania oraz programista gier
+latest_posts: ostatnie posty
+news: wiadomości
 titles:
   about: O mnie
   blog: blog
   cv: cv
-  latest_posts: ostatnie posty
-  news: wiadomości
   profiles: ludzie
   projects: projekty
   publications: publikacje
@@ -48,13 +45,9 @@ descriptions:
   repositories: Witaj w moim skarbcu kodu, gdzie zamieszczam moje najnowsze, wartościowe repozytoria kodu i statystyki na jego temat.
   teaching: Materiały do kursów.
   unk: Wygląda na to, że popełniono błąd i nic tutaj nie ma.
-blog:
-  description: Blog o kodowaniu, programowaniu i innych ciekawych rzeczach
-  name: Think twice, code once # blog_name will be displayed in your blog page
-  nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-  related_posts:
-    description: "Oto kilka następnych artykułów, które mogą Ci się również spodobać: "
-    title: Podoba Ci się ten artykuł?
+related_posts:
+  description: "Oto kilka następnych artykułów, które mogą Ci się również spodobać: "
+  title: Podoba Ci się ten artykuł?
 months:
   long:
     january: Styczeń
@@ -82,62 +75,10 @@ months:
     october: Paź
     november: List
     december: Grudz
-news:
-  empty: Póki co pusto...
-  titles:
-    news1: Proste ogłoszenie w tekście.
-    news2: Długie ogłoszenie ze szczegółami
-    news3: "Proste ogłoszenie w tekście z emoji! :sparkles: :smile:"
 pagination:
   newer: Nowsze
   older: Starsze
-  page: strona
-projects:
-  titles:
-    project1: Board Heroes Battle
-    project2: Agents App
-    project3: Ludo - Just Chill Out
-    project4: Night Catcher
-    project5: Polygangs
-    project6: LZSS
-    project7: Boesner
-    project8: Leguano
-    project9: Axion
-    prooject10: Fliesen Discount
-    project11: Archiwalne Portfolio
-    project12: Zakodowana witryna internetowa
-    project13: Blog Manager
-    project14: Web Cloud System
-    project15: Todo App
-    project16: Crafter
-    project17: File Upload
-    project18: Klon gry Connect the pops!
-  descriptions:
-    project1: Gra w rozszerzonej rzeczywistości na platformę Android
-    project2: Aplikacja wykonująca symulacje Monte Carlo napisana w C++
-    project3: Implmentacja słynnej gry w "Chińczyka" zrobiona w Unity
-    project4: Zręcznościowa gra mobilna zrobiona w Unity
-    project5: Symulator życia gangsterskiego w mieście z lat 90 w stylu low-poly
-    project6: Implementacja bezstratnego algorytmu kompresji danych LZSS
-    project7: Ponowna implementacja sklepu Boesner w technologii Shopware 5
-    project8: Wdrożenie pierwszego sklepu w technologii Shopware 6
-    project9: Pierwszy projekt w technologii Shopware 5
-    project10: Przeniesienie istniejącego sklepu Shopware 5 na Shopware 6
-    project11: Stary projekt portoflio zbudowany przy pomocy JavaScript, HTML, CSS i Webpacka
-    project12: Zakodowana strona internetowa na podstawie gotowego szablonu HTML, CSS i JS
-    project13: Aplikacja do zarządzania blogami MVC na platformie .NET Core i Angular z konfiguracją docker-compose dla lepszego doświadczenia programistycznego
-    project14: Aplikacja webowa do trzymania i zarządzania plikami. Napisana w .NET Core
-    project15: Prosta aplikacja ToDo, do zarzadzania wykonywanymi zadaniami napisania w .NET Core przy pomocy AvaloniaUI i WPF oraz testami jednostkowymi
-    project16: Projekt gry, w której został zaimplementowany podstawowy system tworzenia przedmiotów w Unity
-    project17: Aplikacja w symfony 7, doctrine i PhpUnit do wrzucania plików na serwer z walidowanym formularzem
-    project18: Klon gry na platformę android o nazwie "Connect The Pops!"
-  categories:
-    fun: dla zabawy
-    work: praca
-    web-development: aplikacje webowe
-    e-commerce: aplikacje e-commerce
-    game-dev: game-dev
-    desktop: aplikacje desktopowe
+  page: strona 
 repositories:
   users: Użytkownicy GitHub
   repos: Repozytoria GitHub
@@ -192,3 +133,47 @@ cv:
   username: Nazwa użytkownika
   volunteer: Ochotnik
   work: Praca
+news: Wiadomości
+newsletter:
+  back: Cofnij
+  error: "O nie! Coś poszło nie tak, spróbuj ponownie!"
+  subscribe: Zapisz się
+  subscribed: "Z powodzeniem zapisałeś się do newslettera."
+  subscribe_to_receive: "Zapisz się do newslettera, by otrzymywać powiadomienia o najnowszych artykułach :"
+  too_many_signups: "Za dużo prób zapisu, spróbuj później"
+  wait: "Proszę zaczekaj..."
+no_news: Póki co pusto
+pagination:
+  newer: Newer
+  older: Older
+  page: page
+search:
+  dark_theme:
+    description: Zmień motyw strony na ciemny
+    title: Zmiana motywu na ciemny
+  dropdown: Dropdown
+  email: Wyślij e-mail
+  footer:
+    close: aby zamknąć
+    navigate: aby nawigować
+    parent: aby cofnąć
+    select: aby wybrać
+  languages: Języki
+  light_theme:
+    description: Zmień motyw strony na jasny
+    title: Zmiana motywu na jasny
+  navigation: Menu nawigacji
+  news: Wiadomości
+  placeholder: Zacznij pisać, aby rozpocząć wyszukiwanie
+  posts: Posty
+  projects: Projekty
+  socials: Społecznościowe
+  system_theme:
+    description: Zmień motyw na podstawowy
+    title: Wybierz podstawowy motyw
+  theme: Motyw
+references: Odnośniki
+post:
+  created_in: Napisano w
+  created_by: przez
+  last_updated: Ostatnio zaaktualizowane w
