@@ -3,7 +3,7 @@ page_id: repositories
 layout: page
 permalink: /repositories/
 title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+description: Welcome inside vault of code, where I post my most recent, valuable code repositories and stats about it.
 nav: true
 nav_order: 4
 ---
