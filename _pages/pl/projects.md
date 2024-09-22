@@ -10,7 +10,6 @@ display_categories: [web-development, e-commerce, game-dev, desktop]
 horizontal: false
 ---
 
-
 {% if site.enable_project_categories and page.display_categories %}
 
 <div class="links">
@@ -22,7 +21,6 @@ horizontal: false
  {% endfor %}
  </div>
 {% endif %}
-
 
 <!-- pages/projects.md -->
 <div class="projects">

@@ -5,21 +5,20 @@ blog:
   navigation_title: Think twice, code once
 citation:
   bibtex: „lub jako wpis BibTeX:”
-  introduction: „Jeśli uznałeś to za przydatne, zacytuj to jako:”  
+  introduction: „Jeśli uznałeś to za przydatne, zacytuj to jako:”
 categories:
-    fun: dla zabawy
-    work: praca
-    web-development: aplikacje webowe
-    e-commerce: aplikacje e-commerce
-    game-dev: game-dev
-    desktop: aplikacje desktopowe
+  fun: dla zabawy
+  work: praca
+  web-development: aplikacje webowe
+  e-commerce: aplikacje e-commerce
+  game-dev: game-dev
+  desktop: aplikacje desktopowe
 contact_note: Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>.
 footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-    Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
-    Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-    Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
+  Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 latest_posts: ostatnie posty
-news: wiadomości
 descriptions:
   about: Portoflio inżyniera oprogramowania
   archive-category: archiwum postów w tej kategorii
@@ -66,7 +65,7 @@ months:
 pagination:
   newer: Nowsze
   older: Starsze
-  page: strona 
+  page: strona
 repositories:
   users: Użytkownicy GitHub
   repos: Repozytoria GitHub
@@ -131,10 +130,6 @@ newsletter:
   too_many_signups: "Za dużo prób zapisu, spróbuj później"
   wait: "Proszę zaczekaj..."
 no_news: Póki co pusto
-pagination:
-  newer: Newer
-  older: Older
-  page: page
 search:
   dark_theme:
     description: Zmień motyw strony na ciemny

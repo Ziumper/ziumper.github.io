@@ -4,12 +4,12 @@ archive_year: an archive of posts from this year
 blog:
   navigation_title: Think twice, code once
 categories:
-    fun: fun
-    work: work
-    web-development: web-development
-    e-commerce: e-commerce
-    game-dev: game-dev
-    desktop: desktop
+  fun: fun
+  work: work
+  web-development: web-development
+  e-commerce: e-commerce
+  game-dev: game-dev
+  desktop: desktop
 citation:
   bibtex: "or as a BibTeX entry:"
   introduction: "If you found this useful, please cite this as:"

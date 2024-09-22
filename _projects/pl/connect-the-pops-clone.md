@@ -8,7 +8,6 @@ importance: 1
 category: game-dev
 ---
 
-
 <div class="links">
       <a href="https://github.com/Ziumper/connect-the-pops-clone" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
       <a href="https://github.com/Ziumper/connect-the-pops-clone/releases" class="btn btn-amber btn-sm z-depth-0" role="button">Pobierz aplikacje <i class="fa fa-download"></i></a>

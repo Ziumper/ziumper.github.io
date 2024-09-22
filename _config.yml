@@ -2,9 +2,9 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Ziumper  # the website title (if blank, full name will be used instead)
+title: Ziumper # the website title (if blank, full name will be used instead)
 first_name: Tomasz
-middle_name: 
+middle_name:
 last_name: Komoszeski
 email: tomasz.komoszeski@gmail.com
 keywords: portfolio-website ziumper software-developer software-engineer game-developer full-stack unity-developer shopware-developer godot-developer unreal-developer frontend-developer backend-developer # add your own keywords or leave empty
@@ -13,7 +13,7 @@ lang: en # the main language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://ziumper.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -76,7 +76,7 @@ flickr_id: # your flickr id
 github_username: Ziumper # your GitHub user name
 gitlab_username: Ziumper # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id:  # Inspire HEP author ID
+inspirehep_id: # Inspire HEP author ID
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
@@ -91,7 +91,7 @@ pinterest_id: # your pinterest id
 publons_id: # your ID on Publons
 quora_username: # your Quora username
 research_gate_profile: # your profile on ResearchGate
-scholar_userid:  # your Google Scholar ID
+scholar_userid: # your Google Scholar ID
 scopus_id: # your profile on Scopus
 semanticscholar_id: # your Semantic Scholar ID
 spotify_id: # your spotify id
@@ -390,7 +390,7 @@ external_links:
 
 languages: ["en", "pl"]
 default_lang: "en"
-exclude_from_localization: ["assets","archive"]
+exclude_from_localization: ["assets", "archive"]
 lang_from_path: true
 country_flag: false # set true for allowing flag symbol in language toggle
 parallel_localization: false
