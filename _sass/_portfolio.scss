@@ -1,0 +1,9 @@
+//Custom scss code for adjustments across the project
+
+.btn.btn-amber {
+  color: var(--global-code-bg-color);
+}
+
+.btn.btn-amber:hover {
+  color: var(--global-hover-text-color);
+}
