@@ -4,7 +4,7 @@ layout: about
 title: o mnie
 permalink: /
 subtitle: Inżynier oprogramowania oraz programista gier
-
+description: Ziumper – portfolio dewelopera front-end i back-end. Poznaj moje projekty, technologie, z którymi pracuję, i dowiedz się, jak mogę pomóc w realizacji Twoich pomysłów. Zapraszam!
 profile:
   align: right
   image: prof_pic.jpg
