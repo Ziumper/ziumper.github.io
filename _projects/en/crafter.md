@@ -4,7 +4,7 @@ layout: page
 title: Crafter
 description: Project of a game in which a basic item crafting system has been implemented in Unity
 img: assets/img/projects/crafter_equipment.png
-importance: 2
+importance: 4
 category: game-dev
 ---
 

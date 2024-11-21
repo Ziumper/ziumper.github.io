@@ -3,7 +3,7 @@ layout: page
 title: Board Heroes Battle
 description: Augmented reality turn based board game for the Android platform
 img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
-importance: 2
+importance: 3
 category: game-dev
 ---
 

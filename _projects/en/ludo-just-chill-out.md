@@ -4,7 +4,7 @@ layout: page
 title: Ludo - Just Chill Out
 description: Ludo board game made in Unity
 img: assets/img/projects/ludo_screen1.jpg
-importance: 4
+importance: 1
 category: game-dev
 ---
 

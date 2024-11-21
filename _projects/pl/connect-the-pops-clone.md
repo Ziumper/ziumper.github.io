@@ -4,7 +4,7 @@ layout: page
 title: Klon gry Connect the pops!
 description: Klon gry na platformę android o nazwie Connect The Pops!
 img: assets/img/projects/connects_the_pops.jpg
-importance: 1
+importance: 4
 category: game-dev
 ---
 

@@ -4,7 +4,7 @@ layout: page
 title: Connect The Pops Clone
 description: Clone of popular android game Connect The Pops from Popcorn
 img: assets/img/projects/connects_the_pops.jpg
-importance: 1
+importance: 4
 category: game-dev
 ---
 
