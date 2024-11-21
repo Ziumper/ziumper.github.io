@@ -25,12 +25,12 @@ This project was a valuable experience, allowing me to develop skills in debuggi
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid  path="assets/img/projects/garage-1.jpg" title="ekran wyboru gracza" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid  path="assets/img/projects/garage-1.jpg" title="garage view" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/garage-2.jpg" title="zasady gry" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/garage-2.jpg" title="garage-tool" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/garage-3.jpg" title="ekran końcowy rozgrywki" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/garage-3.jpg" title="garage" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>

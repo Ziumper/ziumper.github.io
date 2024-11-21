@@ -22,3 +22,17 @@ W ramach mojej pracy nad projektem **Garage Flipper** byłem odpowiedzialny za k
 - Zastosowanie algorytmu Flood Fill do wykrywania i analizy pomieszczeń, co usprawniło rozpoznawanie przestrzeni przez grę.
 
 Projekt był dla mnie cennym doświadczeniem, dającym możliwość rozwoju w zakresie debugowania, optymalizacji systemów oraz pracy w zespole.
+
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid  path="assets/img/projects/garage-1.jpg" title="Widok garażu" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/garage-2.jpg" title="Narzędzie garaż" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/projects/garage-3.jpg" title="Wałek do malowania" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
