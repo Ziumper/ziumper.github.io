@@ -23,8 +23,6 @@ W ramach mojej pracy nad projektem **Garage Flipper** byłem odpowiedzialny za k
 
 Projekt był dla mnie cennym doświadczeniem, dającym możliwość rozwoju w zakresie debugowania, optymalizacji systemów oraz pracy w zespole.
 
-
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid  path="assets/img/projects/garage-1.jpg" title="Widok garażu" class="img-fluid rounded z-depth-1" zoomable=true %}
