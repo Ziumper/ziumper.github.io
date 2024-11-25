@@ -3,7 +3,7 @@ page_id: garage-fliper
 layout: page
 title: Garage Flipper
 description: Gra w której wcielisz się w budowniczego i renowatora garaży i warsztatów samochodowych.
-img: assets/img/projects/polygangs.jpg
+img: assets/img/projects/garage-flipper.jpg
 importance: 2
 category: game-dev
 ---
