@@ -4,7 +4,7 @@ layout: page
 title: Night Catcher
 description: Zręcznościowa gra mobilna zrobiona w Unity
 img: assets/img/projects/night_catcher.png
-importance: 3
+importance: 4
 category: game-dev
 ---
 

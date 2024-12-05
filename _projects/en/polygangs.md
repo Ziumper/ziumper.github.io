@@ -4,7 +4,7 @@ layout: page
 title: Polygangs
 description: Gangster simulator in a Polish city from the 90s.
 img: assets/img/projects/polygangs.jpg
-importance: 2
+importance: 3
 category: game-dev
 ---
 

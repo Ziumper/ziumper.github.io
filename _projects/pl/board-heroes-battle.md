@@ -3,7 +3,7 @@ layout: page
 title: Board Heroes Battle
 description: Gra w rozszerzonej rzeczywistości na platformę Android
 img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
-importance: 3
+importance: 4
 category: game-dev
 ---
 

@@ -4,7 +4,7 @@ layout: page
 title: Night Catcher
 description: Skill based mobile game for Android made in Unity
 img: assets/img/projects/night_catcher.png
-importance: 3
+importance: 4
 category: game-dev
 ---
 

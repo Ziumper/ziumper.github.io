@@ -4,7 +4,7 @@ layout: page
 title: Ludo - Just Chill Out
 description: Implmentacja słynnej gry w Chińczyka zrobiona w Unity
 img: assets/img/projects/ludo_screen1.jpg
-importance: 1
+importance: 2
 category: game-dev
 ---
 

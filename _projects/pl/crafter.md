@@ -4,7 +4,7 @@ layout: page
 title: Crafter
 description: Projekt gry, w której został zaimplementowany podstawowy system tworzenia przedmiotów w Unity
 img: assets/img/projects/crafter_equipment.png
-importance: 4
+importance: 6
 category: game-dev
 ---
 

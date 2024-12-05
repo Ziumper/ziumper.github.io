@@ -4,7 +4,7 @@ layout: page
 title: Garage Flipper
 description: Simulator game where you can become builder and renovator of garages and car repair shops.
 img: assets/img/projects/garage-flipper.jpg
-importance: 1
+importance: 2
 category: game-dev
 ---
 
