@@ -4,7 +4,7 @@ layout: page
 title: Polygangs
 description: Symulator życia gangsterskiego w mieście z lat 90 w stylu low-poly
 img: assets/img/projects/polygangs.jpg
-importance: 2
+importance: 3
 category: game-dev
 ---
 
