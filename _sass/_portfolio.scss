@@ -7,3 +7,17 @@
 .btn.btn-amber:hover {
   color: var(--global-hover-text-color);
 }
+
+.post {
+  .links {
+    padding-bottom: 30px;
+
+    .btn.btn-amber {
+      color: var(--global-back-to-top-text-color);
+    }
+
+    .btn.btn-amber:hover {
+      color: var(--global-text-color);
+    }
+  }
+}
