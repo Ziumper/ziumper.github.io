@@ -8,7 +8,7 @@ description: Ziumper – portfolio of a front-end and back-end developer. Explor
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p>Software engineer</p>
     <p><a href="mailto:tomasz.komoszeski@gmail.com"> Tomasz Komoszeski</a>,</p>
