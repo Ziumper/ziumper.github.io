@@ -80,13 +80,19 @@ jakim jest GDScript.
 Oto, co takiego zrobiłem:
 
 - użyłem metody [stub z GUT](https://gut.readthedocs.io/en/latest/Stubbing.html#to-call-callable).
-
+- musiałem użyć [partial double](https://gut.readthedocs.io/en/latest/Partial-Doubles.html)ze względu na wsparcie metody stub dla obiektów klasy `double`
 - Niestety, nie można nadpisywać implementacji słowa kluczowego `push_error`, więc napisałem własną metodę `print_error`
   i wywołałem w jej wnętrzu oryginalną metodę, aby ją zastąpić funkcją
   anonimową, która z kolei ustawiała by flagę sprawdzającą, czy metoda została poprawnie wywołana.
   Myślę, że w przyszłości do [stub](https://gut.readthedocs.io/en/latest/Stubbing.html#to-call-callable)
   przydałaby się możliwość sprawdzenia czy metdoa została na pewno wywołana. Póki co musiałem się posiłkować zmienną globalną.
-- Dodatkowo musiałem użyć [partial double](https://gut.readthedocs.io/en/latest/Partial-Doubles.html)ze względu na wsparcie metody stub dla obiektów klasy `double`
+
+  Przeszukałem dokumentacje GUT i znalazłem sposób, żeby to sprawdzić przy pomocy
+  następującej funkcji o ile klasa sprawdzająca jest podklasą klasy stub.
+
+  ```py
+  assert_called(save,"print_error")
+  ```
 
 Cały kod prezentuje się następująco:
 
@@ -123,7 +129,8 @@ func test_load_if_game_save_doesnt_exist()->void:
 	var data: Dictionary = save.load_data()
 
 	#assert
-	assert_true(_error_called)
+	assert_true(_error_called) # this one is custom solution for checks
+        assert_called(save,"print_error") # this one comes from gut
 	assert_not_null(data)
 ```
 
@@ -147,7 +154,8 @@ func test_load_if_game_save_doesnt_exist()->void:
 	var data: Dictionary = save.load_data()
 
 	#assert
-	assert_true(error_called)
+
+	assert_true(error_called) # this one is
 	assert_not_null(data)
 ```
 
@@ -173,3 +181,11 @@ Rozwiązanie te ma jednak następujące minusy z którymi należy się liczyć:
 
 Jest to mała cena za możliwość trasnparetnego i przyjemnego sprawdzenia obsługi błędów i walidacji
 kodu w GDscript. Można to jeszcze na pewno ulepszyć, ale zostawiam to jako temat na następny artykuł.
+
+### Możliwe ulepszenia
+
+W skrócie można to ulepszyć w następujący sposób:
+
+- dodać sprawdzenie zwracanego kodu oraz ich obsługę
+- dodać weryfikacje zwracanego kodu błędu w testach
+- dodać własną warstwę lub serwis do logowania błędów

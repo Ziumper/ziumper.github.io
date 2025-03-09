@@ -71,6 +71,10 @@ Here’s what I did:
 - Unfortunately, it's not possible to override the built-in `push_error` function. So, I wrote my own `print_error` method and called the original function inside it. Then, I replaced it with an anonymous function that set a flag to check whether the method was called correctly.
 - Ideally, GUT's [stub](https://gut.readthedocs.io/en/latest/Stubbing.html#to-call-callable) would allow checking whether a method was actually invoked. For now, I had to rely on a global variable.
 - Additionally, I had to use a [partial double](https://gut.readthedocs.io/en/latest/Partial-Doubles.html) because stubbing methods on `double` class objects requires it.
+- I searched through the GUT documentation and found a way to verify this using the following function, provided that the checking class is a subclass of `stub`:
+  ```py
+  assert_called(save, "print_error")
+  ```
 
 Here’s the complete code:
 
@@ -107,7 +111,8 @@ func test_load_if_game_save_doesnt_exist()->void:
     var data: Dictionary = save.load_data()
 
     #assert
-    assert_true(_error_called)
+    assert_true(_error_called) # custom solution for checks
+    assert_called(save, "print_error")   # this one comes from gut
     assert_not_null(data)
 ```
 
@@ -149,3 +154,11 @@ However, this approach has some drawbacks:
 
 This is a small price to pay for transparent and convenient error handling validation in GDScript.  
 There's definitely room for improvement, but I'll leave that for the next article.
+
+### Possible Improvements
+
+In short, this approach can be improved in the following ways:
+
+- Add verification of the returned error code and handle it properly.
+- Validate the returned error code in tests.
+- Implement a custom logging layer or service for error handling.
