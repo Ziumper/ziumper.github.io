@@ -6,6 +6,7 @@ tags: game-dev software-development
 categories: godot gut tests
 description: Testing error handling vis stub method in GUT tool.
 thumbnail: assets/img/posts/gut_logo_256x256.png
+giscus_comments: true
 ---
 
 Testing is certainly not an easy task, especially when it comes to writing tests in game engines. However, we can take advantage of existing solutions. One such solution is [GUT](https://github.com/bitwes/Gut), which stands for Godot Unit Tests.

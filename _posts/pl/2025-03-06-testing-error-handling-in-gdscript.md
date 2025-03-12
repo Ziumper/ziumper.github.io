@@ -6,6 +6,7 @@ tags: game-dev software-development
 categories: godot gut tests
 description: Testowanie obsługi błędów przy pomoc GUT i metody stub w GDscript
 thumbnail: assets/img/posts/gut_logo_256x256.png
+giscus_comments: true
 ---
 
 Testowanie to z pewnością niełatwe zadanie, zwłaszcza jeżeli chodzi o pisanie testów

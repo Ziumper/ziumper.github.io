@@ -4,6 +4,8 @@ title: Jak przechowywać duże pliki binarne z użyciem git lfs na Google Drive 
 date: 2023-10-23 16:40:16
 tags: git git-lfs git-extensions unity unreal-engine
 categories: tutorials
+description: Sprawdzony sposób na darmowy hosting plików przy pomocy adaptera LFS.
+giscus_comments: true
 ---
 
 # Adapter transferu

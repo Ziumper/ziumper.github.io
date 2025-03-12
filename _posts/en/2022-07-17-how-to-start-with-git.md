@@ -4,6 +4,8 @@ title: How to start with GIT?
 date: 2022-07-17 16:40:16
 tags: git gitExtensions
 categories: tutorials
+description: How to start working with GIT. Basic guide about what is git and how you utilise it for version control.
+giscus_comments: true
 ---
 
 I was wondering what GIT means. Here is what I have found:

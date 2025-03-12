@@ -4,6 +4,8 @@ title: Jak rozwiązywać konfilkty przy pomocy GitExtensions?
 date: 2022-08-06 16:40:16
 tags: git gitExtensions
 categories: tutorials
+description: Rozwiązywanie konfliktów. W jaki sposób poradzić sobie z rebase a jak z merge requestami.
+giscus_comments: true
 ---
 
 Czy kiedykolwiek zastanawiałeś się, jak łatwo połączyć swoje zmiany bez niszczenia całego projektu? Oto szybki i prosty przewodnik. Zaczynamy!
