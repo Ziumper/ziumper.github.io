@@ -5,15 +5,6 @@ title: o mnie
 permalink: /
 subtitle: Inżynier oprogramowania oraz programista gier
 description: Ziumper – portfolio dewelopera front-end i back-end. Poznaj moje projekty, technologie, z którymi pracuję, i dowiedz się, jak mogę pomóc w realizacji Twoich pomysłów. Zapraszam!
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Inżynier oprogramowania</p>
-    <p><a href="mailto:tomasz.komoszeski@gmail.com"> Tomasz Komoszeski</a>,</p>
-    <p>Polska</p>
-
 news: false # includes a list of news items
 latest_posts: true # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"

@@ -5,15 +5,6 @@ title: about
 permalink: /
 subtitle: Software engineer and game developer
 description: Ziumper – portfolio of a front-end and back-end developer. Explore my projects, the technologies I work with, and learn how I can help bring your ideas to life. Check it out!
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Software engineer</p>
-    <p><a href="mailto:tomasz.komoszeski@gmail.com"> Tomasz Komoszeski</a>,</p>
-    <p>Poland</p>
-
 news: false # includes a list of news items
 latest_posts: true # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
