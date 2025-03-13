@@ -101,12 +101,12 @@ Dobra, pora sprawdzić, jak można to napisać inaczej:
   potrzebę użycia [array_merge](https://www.php.net/manual/en/function.array-merge.php) i
   zastępuje jej użycie [operatora odpakowującego](https://wiki.php.net/rfc/spread_operator_for_array)
   `php
-    $variables = [
-        ...request->attributes->all(),
-        'repository' => $repository,
-        'request' => $request,
-    ];
-    `
+  $variables = [
+      ...request->attributes->all(),
+      'repository' => $repository,
+      'request' => $request,
+  ];
+  `
 - Bepośrednie przypisanie spowoduje nadpisanie zmiennych
   ```php
   $variables = $request->attributes->all();
