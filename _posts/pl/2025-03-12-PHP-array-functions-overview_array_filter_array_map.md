@@ -100,13 +100,13 @@ Dobra, pora sprawdzić, jak można to napisać inaczej:
   tablicy z nadpisaniem istniejących wcześniej wartości i usuwa również
   potrzebę użycia [array_merge](https://www.php.net/manual/en/function.array-merge.php) i
   zastępuje jej użycie [operatora odpakowującego](https://wiki.php.net/rfc/spread_operator_for_array)
-  `php
+  ```php
   $variables = [
       ...request->attributes->all(),
       'repository' => $repository,
       'request' => $request,
   ];
-  `
+  ```
 - Bepośrednie przypisanie spowoduje nadpisanie zmiennych
   ```php
   $variables = $request->attributes->all();
