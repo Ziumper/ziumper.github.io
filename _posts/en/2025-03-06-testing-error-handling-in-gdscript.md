@@ -2,8 +2,8 @@
 layout: post
 title: Testing Error Handling in Godot Using GUT
 date: 2025-03-06
-tags: game-dev software-development
-categories: godot gut tests
+tags: game-dev godot tests
+categories: tutorials
 description: Testing error handling vis stub method in GUT tool.
 thumbnail: assets/img/posts/gut_logo_256x256.png
 giscus_comments: true

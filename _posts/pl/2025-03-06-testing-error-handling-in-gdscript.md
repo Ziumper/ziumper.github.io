@@ -2,8 +2,8 @@
 layout: post
 title: Testowanie obłsugi błedów w Godocie przy pomocy GUT
 date: 2025-03-06
-tags: game-dev software-development
-categories: godot gut tests
+tags: game-dev godot tests
+categories: tutorials
 description: Testowanie obsługi błędów przy pomoc GUT i metody stub w GDscript
 thumbnail: assets/img/posts/gut_logo_256x256.png
 giscus_comments: true

@@ -2,7 +2,7 @@
 layout: post
 title: Jak zacząć z GIT-em?
 date: 2022-07-17 16:40:16
-tags: git gitExtensions
+tags: git
 categories: tutorials
 description: Śmiały artykuł i początek serio o gicie.
 giscus_comments: true

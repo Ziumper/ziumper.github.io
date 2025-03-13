@@ -2,7 +2,7 @@
 layout: post
 title: How to solve rebase and merge conflicts with GitExtensions?
 date: 2022-08-06 16:40:16
-tags: git gitExtensions
+tags: git
 categories: tutorials
 description: Resolving issues with merge conflicts.
 giscus_comments: true

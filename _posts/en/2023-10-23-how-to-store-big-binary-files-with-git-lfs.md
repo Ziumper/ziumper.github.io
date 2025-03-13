@@ -2,7 +2,7 @@
 layout: post
 title: How to store big binary files with git lfs on Google Drive or One Drive?
 date: 2023-10-23 16:40:16
-tags: git git-lfs git-extensions unity unreal-engine
+tags: git game-dev unity unreal-engine
 categories: tutorials
 description: Hacky way for storing a bigger files in git.
 giscus_comments: true
