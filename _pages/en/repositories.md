@@ -8,6 +8,16 @@ nav: true
 nav_order: 4
 ---
 
+## Stack Overflow
+
+![](https://img.shields.io/stackexchange/stackoverflow/r/6695238?color=orange&label=reputation&logo=stackoverflow&style=for-the-badge&cacheSeconds=86400)
+
+---
+
+## Daily Dev
+
+## <a href="https://app.daily.dev/ziumper"><img src="https://api.daily.dev/devcards/v2/ms4hmNxr453B3wP7kaNo8.png?type=wide&r=jp7" width="652" alt="Ziumper's Dev Card"/></a>
+
 {% if site.data.repositories.github_users %}
 
 ## GitHub users
