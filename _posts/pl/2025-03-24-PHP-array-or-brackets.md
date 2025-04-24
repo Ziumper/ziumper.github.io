@@ -4,7 +4,7 @@ title: "Funkcje tablicowe: inicjalizacja tablicy przy pomocy [...] lub array()? 
 date: 2025-03-24
 tags: php
 description: "Czy deklarowanie tablicy za pomocą słowa array() idzie na śmietnik historii? Co ma wspólnego pieczenie placka z kompilacją kodu?"
-thumbnail: assets/img/posts/cake-1326881.jpg
+thumbnail: assets/img/posts/php-cake.png
 giscus_comments: true
 ---
 Jest to kolejna seria z cyklu PHP review. Tym razem postanowłem przyjrzeć się trochę bliżej funkcji deklarującej array i co się za nią tak naprawdę kryje. 

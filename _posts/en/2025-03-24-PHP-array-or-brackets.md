@@ -4,7 +4,7 @@ title: "Array Functions: Initializing an Array Using [...] or array()? - PHP Rev
 date: 2025-03-24 
 tags: php 
 description: "Is declaring an array using the array() function becoming obsolete? What does baking a cake have in common with code compilation?" 
-thumbnail: assets/img/posts/cake-1326881.jpg 
+thumbnail: assets/img/posts/php-cake.png
 giscus_comments: true
 ---
 This is another installment in the PHP review series. This time, I decided to take a closer look at the array declaration function and what really lies behind it. From what I remember, using `array()` was considered outdated by my colleagues at work and should no longer be used. To verify this, I decided to pull the repository of a PHP code refactoring and updating framework—Rector. After all, what tool is better at handling arrays than one designed for refactoring and adhering to best coding practices?
