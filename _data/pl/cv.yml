@@ -12,6 +12,9 @@
   type: time_table
   contents:
     - title: Programista PHP
+      institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
+      year: mar 2025 - Teraz
+    - title: Programista PHP
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
       year: 2019 - luty 2025
       description:
