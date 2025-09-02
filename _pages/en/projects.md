@@ -6,7 +6,7 @@ permalink: /projects/
 description: A growing collection of cool projects.
 nav: true
 nav_order: 3
-display_categories: [game-dev, e-commerce, web-development, desktop]
+display_categories: [web-development,e-commerce ,game-dev, desktop]
 horizontal: false
 ---
 
