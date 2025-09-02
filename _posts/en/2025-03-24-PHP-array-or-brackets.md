@@ -1,12 +1,13 @@
 ---
-layout: post 
-title: "Array Functions: Initializing an Array Using [...] or array()? - PHP Review #2" 
-date: 2025-03-24 
-tags: php 
-description: "Is declaring an array using the array() function becoming obsolete? What does baking a cake have in common with code compilation?" 
+layout: post
+title: "Array Functions: Initializing an Array Using [...] or array()? - PHP Review #2"
+date: 2025-03-24
+tags: php
+description: "Is declaring an array using the array() function becoming obsolete? What does baking a cake have in common with code compilation?"
 thumbnail: assets/img/posts/php-cake.png
 giscus_comments: true
 ---
+
 This is another installment in the PHP review series. This time, I decided to take a closer look at the array declaration function and what really lies behind it. From what I remember, using `array()` was considered outdated by my colleagues at work and should no longer be used. To verify this, I decided to pull the repository of a PHP code refactoring and updating framework—Rector. After all, what tool is better at handling arrays than one designed for refactoring and adhering to best coding practices?
 
 ## A Deep Dive into the Shallow End
@@ -41,11 +42,11 @@ CODE_SAMPLE
 This is thought-provoking, considering that the method in `LongArrayToShortArrayRector.php` is located in the `Php54` package. In **PHP 5.4**, the short array syntax was introduced. Since then, it has been recommended to use the shorter array notation.
 
 However, this still doesn’t fully answer the question: What is the fundamental difference between calling `array()` and `[]`? So what really happens behind the scenes? When executing a PHP script, you first need to bake a cake... To bake a cake, you need to:
+
 <figure>
 <iframe src="https://www.youtube.com/embed/oVSGrY4DfUg" class="rounded z-depth-1" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="100%" height="500px"></iframe>
 </figure>
-
 
 ## Creating an Abstract Syntax Tree – The Cake
 
@@ -89,7 +90,7 @@ array(1, 2, 3) = [4, 5, 6];  // Error: cannot assign to array()
 
 Honestly, I didn’t expect to find such quirks in the compiler, but this is a significant difference.
 
-Another difference is visible in the [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis), specifically in the [language\_scanner.l](https://github.com/php/php-src/blob/master/Zend/zend_language_scanner.l#L1764C1-L1766C2) file:
+Another difference is visible in the [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis), specifically in the [language_scanner.l](https://github.com/php/php-src/blob/master/Zend/zend_language_scanner.l#L1764C1-L1766C2) file:
 
 ```lexer
 <ST_IN_SCRIPTING>"array" {
@@ -124,5 +125,3 @@ Who would have thought that to determine the real difference between `[]` and `a
 - [The PHP Interpreter](https://github.com/php/php-src/tree/master)
 - [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 - [OpCache Preloading](https://www.php.net/manual/en/opcache.preloading.php)
-
-
