@@ -64,7 +64,7 @@ To jest akurat bardzo ciekawe ponieważ jak czytamy z [dokumentacji](https://www
 > This prevents them from having the current class automatically bound to them.
 > Objects may also not be bound to them at runtime.
 
-Dzięki czemu blokowana jest możliwość wykorzystania metody [bindTo]((https://www.php.net/manual/en/closure.bindto.php) z klasy [Closure]([Closure](https://www.php.net/manual/en/class.closure.php). W tym
+Dzięki czemu blokowana jest możliwość wykorzystania metody [bindTo](https://www.php.net/manual/en/closure.bindto.php) z klasy [Closure]([Closure](https://www.php.net/manual/en/class.closure.php). W tym
 przypadku pojawia się pytanie. Dlaczego powinno się blokować wywołanie metody [bindTo](https://www.php.net/manual/en/closure.bindto.php) dla funkcji anonimowych. Odpowiedzi może być kilka:
 
 **a)** ponieważ chcemy uniknąć niezamierzonego dostępu do `$this` w kontekście klasy
