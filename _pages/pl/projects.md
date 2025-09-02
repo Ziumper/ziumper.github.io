@@ -6,7 +6,7 @@ permalink: /projects/
 description: Kolekcja moich projektów
 nav: true
 nav_order: 3
-display_categories: [web-development,e-commerce ,game-dev, desktop]
+display_categories: [web-development, e-commerce, game-dev, desktop]
 horizontal: false
 ---
 
