@@ -17,21 +17,19 @@
 <span class="p">}</span>
 
 <span class="nv">$status</span> <span class="o">=</span> <span class="nc">Status</span><span class="o">::</span><span class="k">NEW</span><span class="p">;</span>
-</code></pre></div></div> <p>Or even better – <strong>mapping arrays</strong>, which you had to maintain in three different places.<br> (Yeah, we all know that hurt.)</p> <hr> <h2 id="-before--after--how-i-got-rid-of-mappers">🔄 Before &amp; After – how I got rid of mappers</h2> <p><strong>Before (mappers):</strong></p> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">enum</span> <span class="nc">OrderStatus</span><span class="o">:</span> <span class="n">string</span> <span class="p">{</span>
-     <span class="k">case</span> <span class="k">NEW</span> <span class="o">=</span> <span class="s1">'new'</span><span class="p">;</span>
-     <span class="k">case</span> <span class="no">IN_PROGRESS</span> <span class="o">=</span> <span class="s1">'in_progress'</span><span class="p">;</span>
-     <span class="k">case</span> <span class="no">DONE</span> <span class="o">=</span> <span class="s1">'done'</span><span class="p">;</span>
+</code></pre></div></div> <p>Or even better – <strong>mapping arrays</strong>, which you had to maintain in three different places.<br> (Yeah, we all know that hurt.)</p> <hr> <h2 id="-before--after--how-i-got-rid-of-mappers">🔄 Before &amp; After – how I got rid of mappers</h2> <p><strong>Before (mappers):</strong></p> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OrderStatus</span> <span class="p">{</span>
+   <span class="k">public</span> <span class="k">const</span> <span class="no">NEW</span> <span class="o">=</span> <span class="s1">'new'</span><span class="p">;</span>
+   <span class="k">public</span> <span class="k">const</span> <span class="no">IN_PROGRESS</span> <span class="o">=</span> <span class="s1">'in_progress'</span><span class="p">;</span>
+   <span class="k">public</span> <span class="k">const</span> <span class="no">DONE</span> <span class="o">=</span> <span class="s1">'done'</span><span class="p">;</span>
 
-     <span class="k">public</span> <span class="k">function</span> <span class="n">label</span><span class="p">():</span> <span class="kt">string</span> <span class="p">{</span>
-         <span class="k">return</span> <span class="k">match</span><span class="p">(</span><span class="nv">$this</span><span class="p">)</span> <span class="p">{</span>
-             <span class="k">self</span><span class="o">::</span><span class="k">NEW</span> <span class="o">=</span> <span class="s2">"I'm doing things now!"</span><span class="p">,,</span>
-             <span class="k">self</span><span class="o">::</span><span class="no">IN_PROGRESS</span> <span class="o">=</span> <span class="s2">"I'm working on it!"</span><span class="p">,</span>
-             <span class="k">self</span><span class="o">::</span><span class="no">DONE</span> <span class="o">=</span> <span class="s2">"I finished"</span><span class="p">,</span>
-         <span class="p">};</span>
-     <span class="p">}</span>
- <span class="p">}</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="kt">array</span> <span class="nv">$labels</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="k">self</span><span class="o">::</span><span class="k">NEW</span> <span class="o">=</span> <span class="s2">"I'm doing things now!"</span><span class="p">,</span>
+        <span class="k">self</span><span class="o">::</span><span class="no">IN_PROGRESS</span> <span class="o">=</span> <span class="s2">"I'm working on it!"</span><span class="p">,</span>
+        <span class="k">self</span><span class="o">::</span><span class="no">DONE</span> <span class="o">=</span> <span class="s2">"I finished"</span><span class="p">,</span>
+    <span class="p">];</span>
+<span class="p">}</span>
 
-<span class="k">echo</span> <span class="nc">OrderStatus</span><span class="o">::</span><span class="no">IN_PROGRESS</span><span class="o">-&gt;</span><span class="nf">label</span><span class="p">();</span> <span class="c1">// "I'm working on it!"</span>
+<span class="k">echo</span> <span class="nc">OrderStatus</span><span class="o">::</span><span class="nv">$labels</span><span class="p">[</span><span class="nc">OrderStatus</span><span class="o">::</span><span class="no">IN_PROGRESS</span><span class="p">];</span> <span class="c1">// "I'm working on it!"</span>
 </code></pre></div></div> <p><strong>After (enums):</strong></p> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">enum</span> <span class="nc">OrderStatus</span><span class="o">:</span> <span class="n">string</span> <span class="p">{</span>
      <span class="k">case</span> <span class="k">NEW</span> <span class="o">=</span> <span class="s1">'new'</span><span class="p">;</span>
      <span class="k">case</span> <span class="no">IN_PROGRESS</span> <span class="o">=</span> <span class="s1">'in_progress'</span><span class="p">;</span>
