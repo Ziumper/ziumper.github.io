@@ -110,14 +110,14 @@ echo OrderStatus::$labels[OrderStatus::IN_PROGRESS]; // "I'm working on it!"
 ```php
 enum OrderStatus: string {
     case NEW = 'new';
-    case IN_PROGRESS = 'in_progress;
+    case IN_PROGRESS = 'in_progress';
     case DONE = 'done';
 
     public function label(): string {
         return match($this) {
             self::NEW = "I'm doing things now!",,
-            self::IN_PROGRESS = 'I'm working on it!',
-            self::DONE = 'I finished',
+            self::IN_PROGRESS = "I'm working on it!",
+            self::DONE = "I finished",
         };
     }
 }
