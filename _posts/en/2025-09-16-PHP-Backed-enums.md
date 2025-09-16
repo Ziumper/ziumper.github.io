@@ -90,21 +90,19 @@ Or even better – **mapping arrays**, which you had to maintain in three differ
 **Before (mappers):**
 
 ```php
- enum OrderStatus: string {
-     case NEW = 'new';
-     case IN_PROGRESS = 'in_progress';
-     case DONE = 'done';
+class OrderStatus {
+   public const NEW = 'new';
+   public const IN_PROGRESS = 'in_progress';
+   public const DONE = 'done';
 
-     public function label(): string {
-         return match($this) {
-             self::NEW = "I'm doing things now!",,
-             self::IN_PROGRESS = "I'm working on it!",
-             self::DONE = "I finished",
-         };
-     }
- }
+    public static array $labels = [
+        self::NEW = "I'm doing things now!",
+        self::IN_PROGRESS = "I'm working on it!",
+        self::DONE = "I finished",
+    ];
+}
 
-echo OrderStatus::IN_PROGRESS->label(); // "I'm working on it!"
+echo OrderStatus::$labels[OrderStatus::IN_PROGRESS]; // "I'm working on it!"
 ```
 
 **After (enums):**
