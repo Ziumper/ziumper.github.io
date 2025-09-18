@@ -8,7 +8,6 @@ thumbnail: assets/img/posts/programmer-trap.png
 giscus_comments: true
 ---
 
-**Description:**  
 Historia o tym, jak przez jeden mały `null` straciłem 30 minut życia na debugowanie testów,  
 a potem znalazłem prawdę w dokumentacji… która milczy na ten temat. 🙃
 
