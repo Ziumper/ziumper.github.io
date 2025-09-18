@@ -67,7 +67,7 @@ git init
 ```
 
 Add also remote server link. That can be done after setup or later.
-For gitlab you can follow simple tutorial [link to git](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#add-a-remote)
+For gitlab you can follow simple tutorial [link to git](https://docs.gitlab.com/tutorials/learn_git/)
 
 # Lfs setup
 

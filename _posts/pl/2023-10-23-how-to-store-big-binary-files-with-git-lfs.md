@@ -57,7 +57,7 @@ git init
 ```
 
 Dodaj również link do serwera zdalnego. Można to zrobić po konfiguracji lub później.
-Dla lfs z gitlabem możesz sugerować się zgodnie z prostym samouczkiem [link do git](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#add-a-remote)
+Dla lfs z gitlabem możesz sugerować się zgodnie z prostym samouczkiem [link do git](https://docs.gitlab.com/tutorials/learn_git/)
 
 # Konfiguracja lfs
 
