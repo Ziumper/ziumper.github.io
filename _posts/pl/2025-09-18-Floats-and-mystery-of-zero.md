@@ -117,8 +117,7 @@ Udało mi się uprościć kod i **zamiast epsilonów** mam po prostu:
 ```php
 public function getPercentage(): int
 {
-    return $this->limitPrice ?
-        : min(100, (int) round(($this->totalCartPrice / $this->limitPrice) * 100)) : 0;
+    return $this->limitPrice ? min(100, (int) round(($this->totalCartPrice / $this->limitPrice) * 100)) : 0;
 }
 ```
 
