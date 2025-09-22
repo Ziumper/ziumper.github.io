@@ -43,6 +43,7 @@ Symfony Flex to wtyczka Composera, która pomaga zarządzać aplikacjami Symfony
 Gdy instalujesz pakiet posiadający przepis, Symfony Flex dodaje pliki konfiguracyjne i ustawienia do projektu automatycznie.
 Możesz chcieć usunąć niektóre z tych przepisów, jeśli nie są Ci już potrzebne lub chcesz dostosować swoją konfigurację.
 W moim przypadku była to konfiguracja dockera, której nie potrzebowałem.
+
 ```json
 {
   "extra": {
@@ -57,13 +58,14 @@ W moim przypadku była to konfiguracja dockera, której nie potrzebowałem.
 ## Symfony Flex
 
 Przepisy Flex przyjmują pewne założenia co do struktury katalogów w Twoim projekcie. Część z tych założeń można dostosować, dodając odpowiedni klucz w sekcji extra w pliku composer.json. Przykładowo, aby powiedzieć Flexowi, by kopiował klasy PHP do src/App zamiast src:
+
 ```json
 {
-    "...": "...",
+  "...": "...",
 
-    "extra": {
-        "src-dir": "src/App"
-    }
+  "extra": {
+    "src-dir": "src/App"
+  }
 }
 ```
 
