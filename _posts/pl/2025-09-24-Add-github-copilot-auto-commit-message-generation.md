@@ -19,6 +19,7 @@ jak używać GitHub Copilot do automatycznego generowania wiadomości commitów.
 
 Aby rozpocząć, musisz dodać szablon GitHub Copilot do swojego repozytorium. Ten szablon zapewni GitHub Copilot odpowiedni kontekst do generowania wiadomości commitów.
 Możesz utworzyć nowy plik w repozytorium o nazwie `.github/git-commit-instructions.md` i dodać następującą zawartość:
+
 ```
 # Git Commit Instructions
 
@@ -39,6 +40,7 @@ Ten szablon zawiera wytyczne dotyczące pisania dobrych wiadomości commitów i 
 
 Po dodaniu szablonu do repozytorium możesz zacząć używać GitHub Copilot do generowania wiadomości commitów.
 Gdy będziesz gotowy do wykonania commita, możesz użyć jednego z poniższych edytorów IDE wspierających GitHub Copilot:
+
 - Visual Studio Code
 - IDE JetBrains (np. IntelliJ IDEA, PyCharm, WebStorm)
 - Neovim

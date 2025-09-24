@@ -8,10 +8,10 @@ thumbnail: assets/img/posts/githubcopilot.png
 giscus_comments: true
 ---
 
-The most important part of working in a team is communication. And one of the most important ways to communicate with your team is through commit messages. 
+The most important part of working in a team is communication. And one of the most important ways to communicate with your team is through commit messages.
 A good commit message should be clear, concise, and informative. It should describe what changes were made and why they were made.
 However, writing good commit messages can be time-consuming and tedious.
-That's where GitHub Copilot comes in. GitHub Copilot is an AI-powered code completion tool that can help you write code faster and more efficiently. 
+That's where GitHub Copilot comes in. GitHub Copilot is an AI-powered code completion tool that can help you write code faster and more efficiently.
 But did you know that GitHub Copilot can also help you write better commit messages? In this post, we'll show you how to
 use GitHub Copilot to generate commit messages automatically.
 
@@ -19,6 +19,7 @@ use GitHub Copilot to generate commit messages automatically.
 
 To get started, you need to add a GitHub Copilot template to your repository. This template will provide GitHub Copilot with the necessary context to generate commit messages.
 You can create a new file in your repository called `.github/git-commit-instructions.md` and add the following content:
+
 ```
 # Git Commit Instructions
 
@@ -34,16 +35,18 @@ commit better.
 ```
 
 This template provides guidelines for writing good commit messages and will help GitHub Copilot generate better commit messages.
+
 ## Step 2: Use GitHub Copilot to generate commit messages
 
 Once you have added the template to your repository, you can start using GitHub Copilot to generate commit messages.
 When you are ready to make a commit, you can use one of the following IDE editors that support GitHub Copilot:
+
 - Visual Studio Code
 - JetBrains IDEs (e.g., IntelliJ IDEA, PyCharm, WebStorm)
 - Neovim
 
-When you click the commit message editor button, GitHub Copilot will suggest a commit message based on the changes 
-you have made and the guidelines provided in the template. GitHub Copilot will automatically suggest a commit message based on 
+When you click the commit message editor button, GitHub Copilot will suggest a commit message based on the changes
+you have made and the guidelines provided in the template. GitHub Copilot will automatically suggest a commit message based on
 the changes you have made and the guidelines provided in the template.
 
 ## Conclusion
