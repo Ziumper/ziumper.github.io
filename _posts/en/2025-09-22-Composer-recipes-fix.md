@@ -2,7 +2,7 @@
 layout: post
 title: "🧹 How to Remove Recipes from the `extra` Section in composer.json"
 date: 2025-09-22
-tags: php, composer, symfony, symfony-flex
+tags: php composer symfony symfony-flex
 description: "A quick guide to understanding and cleaning up the `extra` section in composer.json, especially Symfony recipes."
 thumbnail: assets/img/posts/cyber-broom.png
 giscus_comments: true
