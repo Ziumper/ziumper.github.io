@@ -10,7 +10,6 @@ category: game-dev
 
 <div class="links">
   <a href="https://www.nintendo.com/us/store/products/ludo-game-just-chill-out-switch/" class="btn btn-amber btn-sm z-depth-0" role="button">Kup grę <i class="fa fa-cart-shopping"></i></a>
-   <a href="http://farmind.pl/just-chill-out/" class="btn btn-amber btn-sm z-depth-0" role="button">Czytaj więcej <i class="fa fa-book"></i></a>
 </div>
 
 # Opis projektu

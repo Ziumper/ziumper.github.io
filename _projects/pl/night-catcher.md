@@ -8,9 +8,6 @@ importance: 4
 category: game-dev
 ---
 
-<div class="links">
-   <a href="http://farmind.pl/night-catcher/" class="btn btn-amber btn-sm z-depth-0" role="button">Read more <i class="fa fa-book"></i></a>
-</div>
 
 # Opis projektu
 
