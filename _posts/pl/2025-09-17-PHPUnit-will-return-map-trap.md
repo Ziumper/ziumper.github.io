@@ -36,8 +36,8 @@ $mock = $this->createMock(MyService::class);
 
 $mock->method('doStuff')
     ->willReturnMap([
-        ['foo', 'bar', 'Result: foo (bar)'],
-        ['baz', null, 'Result: baz'],
+        ['foo', 'Result: foo (bar)'],
+        ['baz', 'Result: baz'],
     ]);
 ```
 
