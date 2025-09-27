@@ -8,7 +8,6 @@ importance: 4
 category: game-dev
 ---
 
-
 # Project Description
 
 A simple Android game where you catch dots in a beautiful graphical setting with cute cats in the background. As the levels progress, the difficulty level increases, and subsequent levels become increasingly challenging. In this project, I was responsible for code reviews and the integration of the WWise tool for sound implementation. Additionally, I served in a supervisory and mentoring role, proposing appropriate technical solutions and code architecture.

@@ -8,7 +8,6 @@ importance: 4
 category: game-dev
 ---
 
-
 # Opis projektu
 
 Prosta gra na androida polegająca na łapaniu kropek w pięknej oprawie graficznej ze słodkimi kotami w tle. Wraz z poziomem wzrasta poziom trudności i kolejne poziomy stają się coraz trudniejsze. Byłem odpowiedzialny w tym projekcie za przeglądy kodu oraz integrację narzędzia WWise, do implementacji dźwięku. Dodatkowo pełniłem tutaj rolę nadzorującą oraz mentorską proponując odpowiednie rozwiązania techniczne i architekturę kodu.
