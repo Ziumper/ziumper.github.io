@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://ziumper.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://ziumper.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-09-27T12:05:31+00:00</updated><id>https://ziumper.github.io/feed.xml</id><title type="html">Ziumper</title><entry><title type="html">How integrate GitHub Copilot to generate commit messages automatically?</title><link href="https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation/" rel="alternate" type="text/html" title="How integrate GitHub Copilot to generate commit messages automatically?"/><published>2025-09-24T00:00:00+00:00</published><updated>2025-09-24T00:00:00+00:00</updated><id>https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation</id><content type="html" xml:base="https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation/"><![CDATA[<p>The most important part of working in a team is communication. And one of the most important ways to communicate with your team is through commit messages. A good commit message should be clear, concise, and informative. It should describe what changes were made and why they were made. However, writing good commit messages can be time-consuming and tedious. That’s where GitHub Copilot comes in. GitHub Copilot is an AI-powered code completion tool that can help you write code faster and more efficiently. But did you know that GitHub Copilot can also help you write better commit messages? In this post, we’ll show you how to use GitHub Copilot to generate commit messages automatically.</p> <h2 id="step-1-add-github-copilot-template-to-your-repository">Step 1: Add GitHub Copilot template to your repository</h2> <p>To get started, you need to add a GitHub Copilot template to your repository. This template will provide GitHub Copilot with the necessary context to generate commit messages. You can create a new file in your repository called <code class="language-plaintext highlighter-rouge">.github/git-commit-instructions.md</code> and add the following content:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Git Commit Instructions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://ziumper.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://ziumper.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-09-29T22:31:43+00:00</updated><id>https://ziumper.github.io/feed.xml</id><title type="html">Ziumper</title><entry><title type="html">Finally well written tests with composer loading structure</title><link href="https://ziumper.github.io/blog/2025/Composer-with-phpunit-setup/" rel="alternate" type="text/html" title="Finally well written tests with composer loading structure"/><published>2025-09-29T00:00:00+00:00</published><updated>2025-09-29T00:00:00+00:00</updated><id>https://ziumper.github.io/blog/2025/Composer-with-phpunit-setup</id><content type="html" xml:base="https://ziumper.github.io/blog/2025/Composer-with-phpunit-setup/"><![CDATA[<p>I stumbled, crawled on ground while having not proper setup in my old project that I should work on. and then I figured how I should structure my loading properties</p> <p>here is what I had in my project</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>but this way all may classes seems to be loaded inside composer autload map. I knew there must be better way to solve that. Here is what I figured out</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src/"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"autoload-dev"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Durring that time I got some really serious issues, I couldn’t declare Traits in my tests folder and it was quite hard feeling to copy paste all that code, then I moved forward with next version.</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src/"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"exclude-from-classmap"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tests/"</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"autoload-dev"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\Tests\\Unit\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/unit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\Tests\\Integration\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/integration"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>So how this works is:</p> <ul> <li>all declarations are stored inside src folder even those used for tests. Base test cases traits, data providers too.</li> <li>integration and tests are using src references and are giving me some nice working cases.</li> <li>exclude from classmap is a guard which stands in front of my testing code and doesn’t allow it to get into production loading flow.</li> </ul> <p>I think this way I can start building something… that makes sense!</p>]]></content><author><name></name></author><category term="php"/><category term="composer"/><category term="phpunit"/><summary type="html"><![CDATA[This post explains how to organize composer project with phpunit dependecies to not load your test cases into classmap and explaing learnings I figured out durring my workflow]]></summary></entry><entry><title type="html">How integrate GitHub Copilot to generate commit messages automatically?</title><link href="https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation/" rel="alternate" type="text/html" title="How integrate GitHub Copilot to generate commit messages automatically?"/><published>2025-09-24T00:00:00+00:00</published><updated>2025-09-24T00:00:00+00:00</updated><id>https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation</id><content type="html" xml:base="https://ziumper.github.io/blog/2025/Add-github-copilot-auto-commit-message-generation/"><![CDATA[<p>The most important part of working in a team is communication. And one of the most important ways to communicate with your team is through commit messages. A good commit message should be clear, concise, and informative. It should describe what changes were made and why they were made. However, writing good commit messages can be time-consuming and tedious. That’s where GitHub Copilot comes in. GitHub Copilot is an AI-powered code completion tool that can help you write code faster and more efficiently. But did you know that GitHub Copilot can also help you write better commit messages? In this post, we’ll show you how to use GitHub Copilot to generate commit messages automatically.</p> <h2 id="step-1-add-github-copilot-template-to-your-repository">Step 1: Add GitHub Copilot template to your repository</h2> <p>To get started, you need to add a GitHub Copilot template to your repository. This template will provide GitHub Copilot with the necessary context to generate commit messages. You can create a new file in your repository called <code class="language-plaintext highlighter-rouge">.github/git-commit-instructions.md</code> and add the following content:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Git Commit Instructions
 
 When making a commit, please follow these guidelines to ensure clarity and consistency in our commit history.
 Provide description in the commit message.
@@ -282,180 +316,4 @@ CODE_SAMPLE</span>
     <span class="c1">#assert
 </span>    <span class="nf">assert_true</span><span class="p">(</span><span class="n">error_called</span><span class="p">)</span>
     <span class="nf">assert_not_null</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div></div> <p>The test would fail because anonymous functions in GDScript capture variables <strong>by value</strong>, not by reference.<br/> To make it work, you need to reference the class instance’s variable instead.</p> <p>Thanks to these simple tricks, I was able to test error handling in a deterministic and repeatable way.</p> <p>However, this approach has some drawbacks:</p> <ul> <li>It requires creating a partial double that partially mimics the logic of the <code class="language-plaintext highlighter-rouge">GameSave</code> class.</li> <li>Each test class must override error handling with an additional <code class="language-plaintext highlighter-rouge">print_error</code> method.</li> <li>Every test needs to stub this method with an additional stub call.</li> </ul> <p>This is a small price to pay for transparent and convenient error handling validation in GDScript.<br/> There’s definitely room for improvement, but I’ll leave that for the next article.</p> <h3 id="possible-improvements">Possible Improvements</h3> <p>In short, this approach can be improved in the following ways:</p> <ul> <li>Add verification of the returned error code and handle it properly.</li> <li>Validate the returned error code in tests.</li> <li>Implement a custom logging layer or service for error handling.</li> </ul>]]></content><author><name></name></author><category term="tutorials"/><category term="game-dev"/><category term="godot"/><category term="tests"/><summary type="html"><![CDATA[Testing error handling vis stub method in GUT tool.]]></summary></entry><entry><title type="html">How to store big binary files with git lfs on Google Drive or One Drive?</title><link href="https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs/" rel="alternate" type="text/html" title="How to store big binary files with git lfs on Google Drive or One Drive?"/><published>2023-10-23T16:40:16+00:00</published><updated>2023-10-23T16:40:16+00:00</updated><id>https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs</id><content type="html" xml:base="https://ziumper.github.io/blog/2023/how-to-store-big-binary-files-with-git-lfs/"><![CDATA[<h1 id="transfer-adapter">Transfer adapter</h1> <p>I suggest connecting git lfs with custom transfer adapter. According to git-lfs documentation:</p> <blockquote> <p>Git LFS supports multiple ways to transfer (upload and download) files. In the core client, the basic way to do this is via a one-off HTTP request via the URL returned from the LFS API for a given object. The core client also supports extensions to allow resuming of downloads (via Range headers) and uploads (via the tus.io protocol).</p> </blockquote> <h1 id="usage-examples">Usage examples</h1> <p>I used this approach to storage media files in my software development project and game dev project. I bet you can do it too. In the most cases I like to use it for:</p> <ul> <li>game dev projects in game engines like Unity and Unreal Engine.</li> <li>dbdumps storage</li> <li>big media files storage (in case you need a one)</li> </ul> <p>There are always a way to do it for another kind of projects.</p> <p>In example bellow I will be using gitlab, google drive and other tools.</p> <h1 id="gitlab-setup">Gitlab setup</h1> <p>Firstly you need to disable default lfs service of gitlab. It’s very vell documented feature in official documentation <a href="https://docs.gitlab.com/ee/topics/git/lfs">Gitlab</a> but there is not much information how to disable it.</p> <p>It’s a litle tricky and not really user friendly but obviously you need to select your repository and dive into settings.</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/settings_gitlab-480.webp 480w,/assets/img/posts/settings_gitlab-800.webp 800w,/assets/img/posts/settings_gitlab-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/settings_gitlab.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/disable_gitlab_lfs_example-480.webp 480w,/assets/img/posts/disable_gitlab_lfs_example-800.webp 800w,/assets/img/posts/disable_gitlab_lfs_example-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/disable_gitlab_lfs_example.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <p>Although!</p> <div class="row mt-3"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/yoda-there-is-480.webp 480w,/assets/img/posts/yoda-there-is-800.webp 800w,/assets/img/posts/yoda-there-is-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/yoda-there-is.gif" class="img-fluid rounded z-depth-1" width="30%" height="auto" data-zoomable="" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> </div> <p>There is another way also via gitlab cli, and to CI tools too via environment variables but I will not cover this, let’s keep it simple.</p> <p>If giltab lfs is disabled on remote you can start with local setup.</p> <h1 id="local-repository-setup">Local repository setup</h1> <p>You will need a new repository or use existing one. I suggest starting with fresh state so you can go with easier setup guide bellow.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init
-</code></pre></div></div> <p>Add also remote server link. That can be done after setup or later. For gitlab you can follow simple tutorial <a href="https://docs.gitlab.com/tutorials/learn_git/">link to git</a></p> <h1 id="lfs-setup">Lfs setup</h1> <p>Download a lfs adapter tool from <a href="https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1">available releases</a>.</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/OIP-480.webp 480w,/assets/img/posts/OIP-800.webp 800w,/assets/img/posts/OIP-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%" height="auto" data-zoomable="" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Download, unzip, install it to some good known location. For example make a new folder in you main work disk like this <code class="language-plaintext highlighter-rouge">C:\Tools</code> so full path to the tool will be like this <code class="language-plaintext highlighter-rouge">C:\Tools\lfs-folderstore.exe</code>.</p> <p>To set up repo with lfs please add .gitattributes file in your repository. For examples check this <a href="https://github.com/gitattributes/gitattributes">link</a>.</p> <h2 id="unity-gitattributes">Unity .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## in root
-
-*.cs diff=csharp text
-*.cginc text
-*.shader text
-
-*.mat merge=unityyamlmerge eol=lf
-*.anim merge=unityyamlmerge eol=lf
-*.unity merge=unityyamlmerge eol=lf
-*.prefab merge=unityyamlmerge eol=lf
-*.physicsMaterial2D merge=unityyamlmerge eol=lf
-*.physicMaterial merge=unityyamlmerge eol=lf
-*.asset merge=unityyamlmerge eol=lf -text
-*.meta merge=unityyamlmerge eol=lf
-*.controller merge=unityyamlmerge eol=lf
-
-## git-lfs ##
-
-#Image
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.ai filter=lfs diff=lfs merge=lfs -text
-*.tif filter=lfs diff=lfs merge=lfs -text
-
-#Audio
-*.mp3 filter=lfs diff=lfs merge=lfs -text
-*.wav filter=lfs diff=lfs merge=lfs -text
-*.ogg filter=lfs diff=lfs merge=lfs -text
-#Wwise
-*.bnk filter=lfs diff=lfs merge=lfs -text
-
-#Video
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.mov filter=lfs diff=lfs merge=lfs -text
-
-#3D Object
-*.FBX filter=lfs diff=lfs merge=lfs -text
-*.fbx filter=lfs diff=lfs merge=lfs -text
-*.blend filter=lfs diff=lfs merge=lfs -text
-*.obj filter=lfs diff=lfs merge=lfs -text
-
-#ETC
-*.a filter=lfs diff=lfs merge=lfs -text
-*.exr filter=lfs diff=lfs merge=lfs -text
-*.tga filter=lfs diff=lfs merge=lfs -text
-*.zip filter=lfs diff=lfs merge=lfs -text
-*.dll filter=lfs diff=lfs merge=lfs -text
-*.unitypackage filter=lfs diff=lfs merge=lfs -text
-*.aif filter=lfs diff=lfs merge=lfs -text
-*.ttf filter=lfs diff=lfs merge=lfs -text
-*.rns filter=lfs diff=lfs merge=lfs -text
-*.reason filter=lfs diff=lfs merge=lfs -text
-*.lxo filter=lfs diff=lfs merge=lfs -text
-
-</code></pre></div></div> <h2 id="unreal-engine-gitattributes">Unreal Engine .gitattributes</h2> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Unreal Engine
-## Auto detect text files and perform LF normalization ##
-
-* text=auto
-
-# UE file types
-*.uasset filter=lfs diff=lfs merge=lfs -text
-*.umap filter=lfs diff=lfs merge=lfs -text
-*.udk filter=lfs diff=lfs merge=lfs -text
-*.upk filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# 2D formats
-# Read more in: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
-
-# Recommended use:
-*.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
-*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
-*.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
-
-# Can also be used:
-*.[fF][lL[oO][aA][tT] filter=lfs diff=lfs merge=lfs -text
-*.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
-*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
-*.[pP][cC][xX] filter=lfs diff=lfs merge=lfs -text
-*.[pP][sS][dD] filter=lfs diff=lfs merge=lfs -text
-*.[xX][cC][fF] filter=lfs diff=lfs merge=lfs -text
-*.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
-*.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
-
-# Other supported formats:
-*.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
-*.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
-*.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# 3D formats
-
-# Always recommended to use:
-# The UE4 FBX import pipeline uses FBX 2018
-*.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
-
-# Can also be used:
-*.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
-
-# Other supported formats:
-*.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
-*.[sS][rR][tT] filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# Audio formats
-# Read more in: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
-
-# Always recommended to use:
-*.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
-
-# Can also be used:
-*.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
-*.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
-*.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
-
-# Not recommended to use, but supported:
-*.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
-*.[wW][mM][aA] filter=lfs diff=lfs merge=lfs -text
-*.[aA][cC]3 filter=lfs diff=lfs merge=lfs -text
-*.[aA][mM][rR] filter=lfs diff=lfs merge=lfs -text
-*.[aA][iI][fF] filter=lfs diff=lfs merge=lfs -text
-*.[aA][uU] filter=lfs diff=lfs merge=lfs -text
-*.[cC][dD][dD][aA] filter=lfs diff=lfs merge=lfs -text
-*.[cC][aA][fF] filter=lfs diff=lfs merge=lfs -text
-*.[bB][wW][fF] filter=lfs diff=lfs merge=lfs -text
-*.[aA][dD][tT][sS] filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# Video formats
-# Read more in: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
-
-# Always recommended to use, supports all platforms:
-# For the best compatibility and performance, it is recommended to use H.264 encoded MP4 (.mp4) container files.
-*.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
-
-# Can also be used, only some platforms are supported:
-*.3[gG]2 filter=lfs diff=lfs merge=lfs -text
-*.3[gG][pP] filter=lfs diff=lfs merge=lfs -text
-*.3[gG][pP]2 filter=lfs diff=lfs merge=lfs -text
-*.3[gG][pP][pP] filter=lfs diff=lfs merge=lfs -text
-*.[mM]4[aA] filter=lfs diff=lfs merge=lfs -text
-*.[mM]4[vV] filter=lfs diff=lfs merge=lfs -text
-*.[mM][o][vV] filter=lfs diff=lfs merge=lfs -text
-*.[aA][sS][fF] filter=lfs diff=lfs merge=lfs -text
-*.[aA][vV][iI] filter=lfs diff=lfs merge=lfs -text
-*.[wW][mM][vV] filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# Fonts
-# Read more in: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
-
-*.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
-*.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
-
---------------------------------------------------
-
-# Documents
-*.[cC][sS][vV] filter=lfs diff=lfs merge=lfs -text
-
-</code></pre></div></div> <h1 id="goolge-drive-setup">Goolge Drive Setup</h1> <p>If repo is ready, you will need some kind of disk space to make it works. So to fully integrate it use Google Drive Client <a href="https://www.google.com/drive/download/">Download</a>. Install it and login so you can create a folder to store all big binary data.</p> <p>After loging you should be able to see your mounted folder in Finder in case using Mac or Windows Explorer as seperated disk. Open it and create a new folder there with name <code class="language-plaintext highlighter-rouge">binary-lfs</code>. That name will be used to store all binary data for you project in lfs setup.</p> <h1 id="git-config-integration">Git config integration</h1> <p>If you have done right everything now it’s a time to connect git-lfs with our tool and google drive.</p> <p>I used my favorite open-source <a href="https://git-extensions-documentation.readthedocs.io/">GitExtension</a> software as reference for integration, but you can use terminal by using git config approach or any kind of text editor. In case using text editor open up config file inside hidden .git folder inside root folder of your project repository.</p> <p>To open up the configuration of your github repository choose following option:</p> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/integration_gitextension-480.webp 480w,/assets/img/posts/integration_gitextension-800.webp 800w,/assets/img/posts/integration_gitextension-1400.webp 1400w," sizes="95vw" type="image/webp"/> <img src="/assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" data-zoomable="" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"/> </picture> </figure> </div> <p>Open it up and append following lines, similar as inside <a href="#cloning-a-repo">Cloning a repo</a></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[lfs "customtransfer.lfs-folder"]
-    path = C:\\Tools\\lfs-folderstore.exe
-    args = 'I:\\My drive\\binary-lfs'
-[lfs]
-    standalonetransferagent = lfs-folder
-    repositoryformatversion = 0
-</code></pre></div></div> <p>Afterwards you should be good to go, afterwards remember to sort out the LFS files in your checkout and copy the content from the now-configured shared folder, by using following command</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git reset <span class="nt">--hard</span> master
-</code></pre></div></div> <p>or if you are using fresh repository simply push it</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push -u origin main
-</code></pre></div></div> <h1 id="troubleshooting">Troubleshooting</h1> <p>Sometimes there could be some problems with your network or issues with git lfs In case of smudge errors or problems you can use following hacks:</p> <ul> <li>try using better internet connection low network bandwidth is not helping</li> <li>restart computer</li> <li>use <code class="language-plaintext highlighter-rouge">git lfs fetch --all</code> fetch git lfs files for ALL remote branches</li> <li>move your google drive or one drive directory cache to new folder and try to download the data again</li> </ul> <h1 id="bibliography-and-sources">Bibliography and sources</h1> <ul> <li><a href="https://github.com/sinbad/lfs-folderstore">Lfs folderstore repo</a></li> <li><a href="https://www.google.com/drive/download/">Google Drive</a></li> <li><a href="https://docs.gitlab.com/">Gitlab Docs</a></li> </ul>]]></content><author><name></name></author><category term="tutorials"/><category term="git"/><category term="game-dev"/><category term="unity"/><category term="unreal-engine"/><summary type="html"><![CDATA[Hacky way for storing a bigger files in git.]]></summary></entry></feed>
+</code></pre></div></div> <p>The test would fail because anonymous functions in GDScript capture variables <strong>by value</strong>, not by reference.<br/> To make it work, you need to reference the class instance’s variable instead.</p> <p>Thanks to these simple tricks, I was able to test error handling in a deterministic and repeatable way.</p> <p>However, this approach has some drawbacks:</p> <ul> <li>It requires creating a partial double that partially mimics the logic of the <code class="language-plaintext highlighter-rouge">GameSave</code> class.</li> <li>Each test class must override error handling with an additional <code class="language-plaintext highlighter-rouge">print_error</code> method.</li> <li>Every test needs to stub this method with an additional stub call.</li> </ul> <p>This is a small price to pay for transparent and convenient error handling validation in GDScript.<br/> There’s definitely room for improvement, but I’ll leave that for the next article.</p> <h3 id="possible-improvements">Possible Improvements</h3> <p>In short, this approach can be improved in the following ways:</p> <ul> <li>Add verification of the returned error code and handle it properly.</li> <li>Validate the returned error code in tests.</li> <li>Implement a custom logging layer or service for error handling.</li> </ul>]]></content><author><name></name></author><category term="tutorials"/><category term="game-dev"/><category term="godot"/><category term="tests"/><summary type="html"><![CDATA[Testing error handling vis stub method in GUT tool.]]></summary></entry></feed>
