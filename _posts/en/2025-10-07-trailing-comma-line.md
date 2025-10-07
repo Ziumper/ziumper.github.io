@@ -1,0 +1,80 @@
+---
+layout: post
+title: "Comma at the end of function arguments in PHP (trailing comma)"
+date: 2025-10-07
+tags: php
+description: "How the trailing comma in PHP makes a programmer's life easier when working with function and constructor arguments. ,"
+giscus_comments: true
+---
+
+Have you ever added a new argument to a function or constructor in PHP and forgotten to add a comma at the end of the previous line? It's a common mistake that can lead to unnecessary fixes and frustration.
+
+Fortunately, since PHP 7.3 you can use the so-called trailing comma, i.e., a comma after the last argument in function calls, function declarations, and arrays. Thanks to this, when you add a new argument, you don't have to remember to manually add a comma at the end of the previous line.
+
+### 🛑 Example without trailing comma
+
+```php
+class User {
+    public function __construct(
+        string $name,
+        int $age
+    ) {
+        // ...
+    }
+}
+```
+
+If you want to add another argument, you have to go back to the previous line and add a comma:
+
+```php
+class User {
+    public function __construct(
+        string $name,
+        int $age, // you have to add a comma
+        string $email
+    ) {
+        // ...
+    }
+}
+```
+
+### ✅ Example with trailing comma
+
+```php
+class User {
+    public function __construct(
+        string $name,
+        int $age,
+    ) {
+        // ...
+    }
+}
+```
+
+Now you can simply add another argument without worrying about commas:
+
+```php
+class User {
+    public function __construct(
+        string $name,
+        int $age,
+        string $email,
+    ) {
+        // ...
+    }
+}
+```
+
+### 📅 Since when?
+
+Trailing comma in function and method argument lists is available since PHP 7.3. Previously, it was only available in arrays.
+
+### 📝 Summary
+
+Using the trailing comma:
+
+- makes adding and removing arguments easier,
+- reduces the risk of syntax errors,
+- improves code readability in the long run.
+
+It's worth using this feature, especially in larger projects!
