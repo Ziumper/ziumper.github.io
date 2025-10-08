@@ -4,7 +4,7 @@ title: "Jak zintegrować GitHub Copilot do automatycznego generowania wiadomośc
 date: 2025-09-24
 tags: git github productivity copilot
 description: "Ten post wyjaśnia, jak używać GitHub Copilot do automatycznego generowania wiadomości commitów, zwiększając produktywność i zapewniając przejrzystą historię zmian."
-thumbnail: assets/img/posts/githubcopilot.png
+thumbnail: assets/img/posts/copilot.png
 giscus_comments: true
 ---
 

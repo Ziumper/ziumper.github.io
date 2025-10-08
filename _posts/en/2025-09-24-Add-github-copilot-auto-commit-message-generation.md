@@ -4,7 +4,7 @@ title: "How integrate GitHub Copilot to generate commit messages automatically?"
 date: 2025-09-24
 tags: git github productivity copilot
 description: "This post explains how to use GitHub Copilot to generate commit messages automatically, improving productivity and ensuring clear commit history."
-thumbnail: assets/img/posts/githubcopilot.png
+thumbnail: assets/img/posts/copilot.png
 giscus_comments: true
 ---
 
