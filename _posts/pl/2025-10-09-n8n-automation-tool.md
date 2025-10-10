@@ -5,6 +5,7 @@ date: 2025-10-09
 tags: n8n
 description: "Ostatnio miałem możliwość zabawy z hostowaną wersją n8n i chciałem podzielić się swoimi wrażeniami"
 giscus_comments: true
+thumbnail: assets/img/posts/n8n-tool.png
 ---
 
 ## Czym jest n8n?
