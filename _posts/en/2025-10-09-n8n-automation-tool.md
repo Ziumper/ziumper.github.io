@@ -4,8 +4,8 @@ title: "New n8n Tool!"
 date: 2025-10-09
 tags: n8n
 description: "Recently, I had the opportunity to play with the hosted version of n8n and wanted to share my impressions."
-thumbnail: assets/img/posts/n8n-tool.png
 giscus_comments: true
+thumbnail: assets/img/posts/n8n-tool.png
 ---
 
 ## What is n8n?
