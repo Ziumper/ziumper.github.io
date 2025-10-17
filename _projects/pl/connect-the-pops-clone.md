@@ -15,7 +15,7 @@ category: game-dev
 
 # Opis projektu
 
-Jest to projekt, który został zrealizowany jako zadanie rekrutacyjne na stanowisko programisty Unity. Jest to gra logiczna na androida [Connect the pops!](https://play.google.com/store/apps/details?id=com.casox.ConnectToMerge) przypominająca w zasadach grę [2048](<https://en.wikipedia.org/wiki/2048_(video_game)>). Zawiera on główne mechaniki gry, czyli łączenie cyfrowych wartości okrągłych okien o wartośći kolejnej potęgi liczby 2.
+Jest to projekt, który został zrealizowany jako zadanie rekrutacyjne na stanowisko programisty Unity. Jest to gra logiczna na androida Connect the pops! przypominająca w zasadach grę [2048](<https://en.wikipedia.org/wiki/2048_(video_game)>). Zawiera on główne mechaniki gry, czyli łączenie cyfrowych wartości okrągłych okien o wartośći kolejnej potęgi liczby 2.
 
 <div class="caption">
     Nagrania przedstawiające rozgrywkę po lewej widać oryginalną grę a po prawej zrealizowaną przeze mnie kopię.
