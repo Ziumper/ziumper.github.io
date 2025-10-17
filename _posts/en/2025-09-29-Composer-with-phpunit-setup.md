@@ -49,9 +49,10 @@ folder and it was quite hard feeling to copy paste all that code, then I moved f
 {
   "autoload": {
     "psr-4": {
-      "Ziumper\\App\\": "src/"
+      "Ziumper\\App\\": "src"
+      "Ziumper\\App\\Tests\\Utils\\": "tests/utils"
     },
-    "exclude-from-classmap": ["tests/"]
+    "exclude-from-classmap": ["tests"]
   },
   "autoload-dev": {
     "psr-4": {
@@ -68,5 +69,9 @@ So how this works is:
   traits, data providers too.
 - integration and tests are using src references and are giving me some nice working cases.
 - exclude from classmap is a guard which stands in front of my testing code and doesn't allow it to get into production loading flow.
+- PSR-4 autoload in Composer loads classes by namespace → folder → filename.
+- PHPUnit use PS-4 not auto generated class map.
+- exclude-from-classmap = guards from loading my utility classes in production
+- no need to write custom bootstrap loading
 
 I think this way I can start building something... that makes sense!

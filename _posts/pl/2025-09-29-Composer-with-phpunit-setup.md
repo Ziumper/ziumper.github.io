@@ -49,9 +49,10 @@ a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu p
 {
   "autoload": {
     "psr-4": {
-      "Ziumper\\App\\": "src/"
+      "Ziumper\\App\\": "src"
+      "Ziumper\\App\\Tests\\Utils\\": "tests/utils"
     },
-    "exclude-from-classmap": ["tests/"]
+    "exclude-from-classmap": ["tests"]
   },
   "autoload-dev": {
     "psr-4": {
@@ -65,7 +66,11 @@ a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu p
 Jak to działa:
 
 - wszystkie deklaracje przechowywane są w folderze src, nawet te używane w testach — np. bazowe przypadki testowe, trait'y, data providery itd.,
-- testy integracyjne i jednostkowe korzystają z odniesień do src i wszystko działa bardzo sprawnie,
+- testy integracyjne i jednostkowe korzystają z odniesień do tests i wszystko działa bardzo sprawnie,
 - `exclude-from-classmap` to coś w rodzaju strażnika, który pilnuje, aby kod testowy nie został przypadkowo załadowany do produkcyjnego środowiska.
+- PSR-4 autoloader Composera ładuje klasy w locie po namespace → folder → filename.
+- PHPUnit korzysta z autoloadera, więc klasy są widoczne w testach.
+- exclude-from-classmap = chroni produkcję przed ładowaniem klas testowych, nie blokuje testów
+- nie ma potrzeby pisania wielu skryptów do ładowania klas php
 
 Myślę, że w ten sposób mogę w końcu zacząć budować coś... co naprawdę ma sens!
