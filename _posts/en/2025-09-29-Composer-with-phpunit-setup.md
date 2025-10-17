@@ -65,7 +65,7 @@ folder and it was quite hard feeling to copy paste all that code, then I moved f
 
 So how this works is:
 
-- all declarations are stored inside src folder even those used for tests. Base test cases
+- all base code declarations are stored inside src folder and those used for tests are inside tests\utils folder. Base test cases
   traits, data providers too.
 - integration and tests are using src references and are giving me some nice working cases.
 - exclude from classmap is a guard which stands in front of my testing code and doesn't allow it to get into production loading flow.

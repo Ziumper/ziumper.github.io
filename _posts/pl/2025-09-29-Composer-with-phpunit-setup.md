@@ -65,7 +65,7 @@ a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu p
 
 Jak to działa:
 
-- wszystkie deklaracje przechowywane są w folderze src, nawet te używane w testach — np. bazowe przypadki testowe, trait'y, data providery itd.,
+- wszystkie deklaracje przechowywane są w folderze src,  a te używane w testach — np. bazowe przypadki testowe, trait'y, data providery itd. w folderze tests utils,
 - testy integracyjne i jednostkowe korzystają z odniesień do tests i wszystko działa bardzo sprawnie,
 - `exclude-from-classmap` to coś w rodzaju strażnika, który pilnuje, aby kod testowy nie został przypadkowo załadowany do produkcyjnego środowiska.
 - PSR-4 autoloader Composera ładuje klasy w locie po namespace → folder → filename.
