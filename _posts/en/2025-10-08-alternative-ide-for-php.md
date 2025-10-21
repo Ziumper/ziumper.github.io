@@ -47,7 +47,7 @@ First of all, I recommend enabling the default plugin for PHP.
 Additionally, I recommend installing this plugin via GitHub: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
 or through the plugin portal [plugin link](https://plugins.netbeans.apache.org/catalogue/?id=29)
 
-To install the plugin, simply download and unpack it, then go to Tools -> Plugins -> Downloaded and select the *.nbm file.
+To install the plugin, simply download and unpack it, then go to Tools -> Plugins -> Downloaded and select the \*.nbm file.
 
 {% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
@@ -55,11 +55,9 @@ After installation, it should look as follows:
 
 {% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
-
 ### PHP Configuration
 
 In the settings, you need to specify the path to the PHP interpreter and configure tools such as Composer, PHPUnit, and PHP_CodeSniffer
-
 
 ### Git Integration
 
@@ -68,7 +66,6 @@ NetBeans has built-in GIT support, which allows convenient work with repositorie
 ### Personalization
 
 The ability to customize themes, keyboard shortcuts, and window layouts.
-
 
 ## Advantages of Apache NetBeans
 

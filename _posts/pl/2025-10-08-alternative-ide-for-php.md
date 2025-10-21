@@ -52,7 +52,7 @@ Przede wszystkim polecam włączyć domyślną wtyczkę dla PHP.
 Dodatkowo polecam doinstalować tą wtyczkę poprzez github: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
 lub poprzez portal z pluginami [link do wtyczki](https://plugins.netbeans.apache.org/catalogue/?id=29)
 
-Aby zainstalować wtyczkę wystarczy ją ściągnąć i rozpakować następnie wrzucić przez Tools -> Plugins -> Downloaded i wybrać plik w formacie *.nbm
+Aby zainstalować wtyczkę wystarczy ją ściągnąć i rozpakować następnie wrzucić przez Tools -> Plugins -> Downloaded i wybrać plik w formacie \*.nbm
 
 {% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
@@ -60,13 +60,11 @@ Po zainstalowaniu powinno to wyglądać następująco:
 
 {% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
-
 ### Konfiguracja PHP
 
 W ustawieniach należy wskazać ścieżkę do interpretera PHP oraz skonfigurować narzędzia takie jak Composer, PHPUnit czy PHP_CodeSniffer
 
-
-### Integracja z Git 
+### Integracja z Git
 
 NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE
 
