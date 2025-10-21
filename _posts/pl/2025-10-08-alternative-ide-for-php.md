@@ -28,18 +28,15 @@ Zanim odpaliłem projekt, to pięć razy zdążyłem wyłączyć niepotrzebne do
 Natomiast w NetBeans zwyczajnie odpaliłem projekt i zacząłem kodować. Oferuje też większość potrzebnych mi funkcji, bez większego
 wpływu na efektywność mojej pracy.
 
-## Długa droga Apache NetBeans
+## Historia
 
 Pamiętam, że jeszcze na studiach był taki program do Javy – NetBeans. Był to jeden z pierwszych, darmowych i otwartoźródłowych edytorów, który pozwalał na wygodną pracę z projektami Java. Z czasem NetBeans przeszedł pod skrzydła Apache Foundation, co dało mu drugie życie. Dziś NetBeans to nie tylko Java – obsługuje PHP, JavaScript, HTML, C/C++ i wiele innych technologii.
 
 Przez lata NetBeans był trochę zapomniany, szczególnie w środowisku PHP, gdzie dominowały PHPStorm, Visual Studio Code czy Sublime Text. Jednak ostatnie wersje NetBeans przyniosły sporo usprawnień, które sprawiają, że warto dać mu szansę.
 
-## Konfiguracja Apache NetBeans
+## Konfiguracja i instalacja
 
 Konfiguracja NetBeans jest stosunkowo prosta, choć wymaga kilku kroków:
-
-### Instalacja
-
 NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne
 
 ### Wtyczki

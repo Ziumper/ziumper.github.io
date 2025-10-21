@@ -23,18 +23,15 @@ Before I even started a project, I had already disabled unnecessary plugins five
 
 In NetBeans, I just opened the project and started coding. It also offers most of the features I need, without significantly affecting my work efficiency.
 
-## The long road of Apache NetBeans
+## History
 
 I remember back in college there was a program for Java – NetBeans. It was one of the first free and open-source editors that allowed comfortable work with Java projects. Over time, NetBeans came under the wing of the Apache Foundation, which gave it a second life. Today, NetBeans is not just Java – it supports PHP, JavaScript, HTML, C/C++, and many other technologies.
 
 For years, NetBeans was somewhat forgotten, especially in the PHP community, where PHPStorm, Visual Studio Code, or Sublime Text dominated. However, the latest versions of NetBeans have brought many improvements that make it worth giving it a try.
 
-## Configuring Apache NetBeans
+## Configuration and installation
 
 Configuring NetBeans is relatively simple, although it requires a few steps:
-
-### Installation
-
 NetBeans can be downloaded directly from the Apache website. The installer is available for all popular operating systems.
 
 ### Plugins
