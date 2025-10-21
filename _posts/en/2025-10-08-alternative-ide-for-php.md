@@ -5,6 +5,8 @@ date: 2025-10-08
 tags: php ide netbeans
 description: "Why not PHPStorm? Why not VIM or Visual Studio Code? For some time, I have been looking for a tool that is not overloaded with features, yet useful and powerful enough to make everyday work easier."
 giscus_comments: true
+toc:
+  sidebar: left
 ---
 
 This post will be a bit longer because I want to present the pains and the journey this IDE has gone through from old software to its newer version. I also want to focus on the drawbacks and, in a sense, show what working in Apache NetBeans looks like today. When did I come across it? Why did I start using it only recently, and why does it seem that this IDE is coming back into favor? I will also try to present how to configure the IDE and my first impressions.
@@ -31,11 +33,42 @@ For years, NetBeans was somewhat forgotten, especially in the PHP community, whe
 
 Configuring NetBeans is relatively simple, although it requires a few steps:
 
-1. **Installation** – NetBeans can be downloaded directly from the Apache website. The installer is available for all popular operating systems.
-2. **Plugins** – After installation, it's worth browsing the available plugins. NetBeans natively supports PHP, but you can add support for other languages.
-3. **PHP Configuration** – In the settings, you need to specify the path to the PHP interpreter and configure tools such as Composer, PHPUnit, or PHP_CodeSniffer.
-4. **GIT Integration** – NetBeans has built-in GIT support, allowing convenient work with repositories directly from the IDE.
-5. **Personalization** – The ability to customize themes, keyboard shortcuts, and window layouts.
+### Installation
+
+NetBeans can be downloaded directly from the Apache website. The installer is available for all popular operating systems.
+
+### Plugins
+
+After installation, it's worth reviewing the available plugins. NetBeans natively supports PHP, but you can add support for other languages.
+First of all, I recommend enabling the default plugin for PHP.
+
+{% include figure.liquid path="assets/img/posts/netbeans/netbeans_php_plugin.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Additionally, I recommend installing this plugin via GitHub: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
+or through the plugin portal [plugin link](https://plugins.netbeans.apache.org/catalogue/?id=29)
+
+To install the plugin, simply download and unpack it, then go to Tools -> Plugins -> Downloaded and select the *.nbm file.
+
+{% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+After installation, it should look as follows:
+
+{% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+
+### PHP Configuration
+
+In the settings, you need to specify the path to the PHP interpreter and configure tools such as Composer, PHPUnit, and PHP_CodeSniffer
+
+
+### Git Integration
+
+NetBeans has built-in GIT support, which allows convenient work with repositories directly from the IDE
+
+### Personalization
+
+The ability to customize themes, keyboard shortcuts, and window layouts.
+
 
 ## Advantages of Apache NetBeans
 

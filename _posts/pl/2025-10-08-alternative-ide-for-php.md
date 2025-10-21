@@ -5,6 +5,8 @@ date: 2025-10-08
 tags: php ide netbeans
 description: "Dlaczego nie PHPStorm? Dlaczego nie VIM albo Visual Studio Code? Od pewnego czasu szukałem narzędzia dla siebie, które byłoby na tyle nieprzeładowane bajerami a jednocześnie wystarczająco użyteczny i poteżne by ułatwiać codzienną pracę. "
 giscus_comments: true
+toc:
+  sidebar: left
 ---
 
 Ten post będzie trochę dłuższy, ponieważ chcę przedstawić bolączki i ścieżkę, jaką to IDE przeszło
@@ -36,11 +38,41 @@ Przez lata NetBeans był trochę zapomniany, szczególnie w środowisku PHP, gdz
 
 Konfiguracja NetBeans jest stosunkowo prosta, choć wymaga kilku kroków:
 
-1. **Instalacja** – NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne.
-2. **Wtyczki** – Po instalacji warto przejrzeć dostępne wtyczki. NetBeans domyślnie obsługuje PHP, ale można doinstalować wsparcie dla innych języków.
-3. **Konfiguracja PHP** – W ustawieniach należy wskazać ścieżkę do interpretera PHP oraz skonfigurować narzędzia takie jak Composer, PHPUnit czy PHP_CodeSniffer.
-4. **Integracja z GIT** – NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE.
-5. **Personalizacja** – Możliwość dostosowania motywów, skrótów klawiszowych i układu okien.
+### Instalacja
+
+NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne
+
+### Wtyczki
+
+Po instalacji warto przejrzeć dostępne wtyczki. NetBeans domyślnie obsługuje PHP, ale można doinstalować wsparcie dla innych języków.
+Przede wszystkim polecam włączyć domyślną wtyczkę dla PHP.
+
+{% include figure.liquid path="assets/img/posts/netbeans/netbeans_php_plugin.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Dodatkowo polecam doinstalować tą wtyczkę poprzez github: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
+lub poprzez portal z pluginami [link do wtyczki](https://plugins.netbeans.apache.org/catalogue/?id=29)
+
+Aby zainstalować wtyczkę wystarczy ją ściągnąć i rozpakować następnie wrzucić przez Tools -> Plugins -> Downloaded i wybrać plik w formacie *.nbm
+
+{% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Po zainstalowaniu powinno to wyglądać następująco:
+
+{% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+
+### Konfiguracja PHP
+
+W ustawieniach należy wskazać ścieżkę do interpretera PHP oraz skonfigurować narzędzia takie jak Composer, PHPUnit czy PHP_CodeSniffer
+
+
+### Integracja z Git 
+
+NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE
+
+### Personalizacja
+
+Możliwość dostosowania motywów, skrótów klawiszowych i układu okien.
 
 ## Zalety Apache NetBeans
 
