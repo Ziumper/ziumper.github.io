@@ -2,32 +2,93 @@
 layout: post
 title: "Alternative IDE for PHP? Apache NetBeans, but not only!"
 date: 2025-10-08
-tags: php ide netbeans
+tags: php, ide, netbeans
 description: "Why not PHPStorm? Why not VIM or Visual Studio Code? For some time, I have been looking for a tool that is not overloaded with features, yet useful and powerful enough to make everyday work easier."
+thumbnail: https://netbeans.apache.org/_/images/apache-netbeans.svg
 giscus_comments: true
 toc:
   sidebar: left
 ---
 
-This post will be a bit longer because I want to present the pains and the journey this IDE has gone through from old software to its newer version. I also want to focus on the drawbacks and, in a sense, show what working in Apache NetBeans looks like today. When did I come across it? Why did I start using it only recently, and why does it seem that this IDE is coming back into favor? I will also try to present how to configure the IDE and my first impressions.
+This post will be a bit longer, as I want to present the pains and the journey this IDE has gone through
+from old software to its newer version. I also want to focus on the drawbacks and, in a sense, show
+what working in Apache NetBeans looks like today. When did I come across it? Why did I start using it only recently,
+and why does it seem that this IDE is making a comeback! I will also try to present how to configure the IDE and my first impressions.
 
-## Why not PHPStorm?
+## PHPStorm
 
-It's not that PHPStorm is bad. It's very good! You could even say it's too good. What I like in software is the feeling that I have control over what I'm doing. On a daily basis, developer tools can be a bit overwhelming. I include the following elements:
+It's not that PHPStorm is bad. It's very good! You could even say, maybe too good.
+What I like in software is the feeling that I have control over what I'm doing.
+Unfortunately, with JetBrains products, I miss that.
+I've always liked to look under the hood of tools and toys I used as a child, and I guess that stayed with me.
 
-- high resource consumption
-- the number of plugins and configuration options
-- multitude of functionalities
+Therefore, I decided to dig deeper into the IDE itself.
+However, the closed source code doesn't really encourage writing plugins.
+You really have to read the documentation.
+You need knowledge of programming languages like Kotlin or Gradle.
+That's quite a big entry point for developers who haven't had much contact with Java.
 
-Before I even started a project, I had already disabled unnecessary plugins five times and restarted my laptop.
+From a user's perspective, it's a very good tool for people starting their programming adventure with PHP.
+It has a lot of helpful magic, which makes programming in it feel much easier.
+Unfortunately, this comes at a cost in terms of computer resources. Of course, it also depends on how many "conveniences" you need during your work.
+Overall, it's a very interesting business model, where you make the user dependent on your product. Sounds familiar, right?
 
-In NetBeans, I just opened the project and started coding. It also offers most of the features I need, without significantly affecting my work efficiency.
+The more, the easier it gets, the more likely we are to use this tool, even at a much higher price.
+In this case, fortunately, you can always use Notepad and struggle with missing semicolons.
+A tear falls... Meanwhile, people are already generating entire applications using modern AI tools.
 
-## History
+Who knows, maybe IDEs should serve a similar purpose.
+But the most important part is ahead.
+Why might PHPStorm not be the best available IDE, and why it might be worth focusing on alternative options.
+In this post, I'd like to look at the alternative: Apache NetBeans.
 
-I remember back in college there was a program for Java – NetBeans. It was one of the first free and open-source editors that allowed comfortable work with Java projects. Over time, NetBeans came under the wing of the Apache Foundation, which gave it a second life. Today, NetBeans is not just Java – it supports PHP, JavaScript, HTML, C/C++, and many other technologies.
+On a daily basis, developer tools can be a bit overwhelming. PhpStorm automatically installs a lot of resource-hungry plugins, such as:
 
-For years, NetBeans was somewhat forgotten, especially in the PHP community, where PHPStorm, Visual Studio Code, or Sublime Text dominated. However, the latest versions of NetBeans have brought many improvements that make it worth giving it a try.
+- [Github Copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot) - a plugin that allows you to conveniently use GitHub Copilot. It's quite useful, but its resource consumption with certain configurations can be problematic. Everyone has limited resources, especially when programming on a laptop. In my opinion, it works much better in a limited context, when I use it from a web browser or just use the chat. However, it is useful in **Agent** mode for code generation. I usually ask it very silly questions, or when I'm not sure if my approach makes sense. Surely, it has tried this before, right? Of the features I disabled in this plugin, it's worth mentioning autocomplete, which can eat up my laptop's memory and isn't that useful. You could even say that "Autocomplete" makes you dumb, but that's a topic for another post.
+
+- [Jetbrains Assistant](https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant) - Nothing helps with programming like another AI assistant! Plus, it's paid and from JetBrains. In some ways, it's much better at debugging and suggesting than its competitor Copilot. No wonder, it's an area to be explored. Of course, as long as there are other products or services that offer similar features. It's just as resource-hungry as its competitor. It offers a pleasant and more readable interface, and I can confidently say it helped me solve several problems during daily coding.
+
+- [Database Management](https://plugins.jetbrains.com/plugin/10925-database-tools-and-sql-for-webstorm) - This explorer is really convenient. You can manipulate table views, quickly adjust views, filters, and choose the right driver for your database. It nicely summarizes data and I can quickly review what's inside. I wholeheartedly recommend it if you need a quick database overview. However, even this client can fail. In my case, it was the database driver when accessing an AWS MySQL database. I couldn't delete a record or preview changes made. Tunneling is possible, but you need to configure it well. Anyway, a solid 7/10! But nothing beats the magic of writing queries in the terminal.
+
+- [Docker](https://plugins.jetbrains.com/plugin/7724-docker) - I don't remember the last time I used it, since I do most things in the console.
+
+- [FTP](https://plugins.jetbrains.com/plugin/13125-ftp-sftp-webdav-connectivity) - I usually launch this plugin just to log into the server. I know I should use the terminal here. And I will probably switch to the terminal soon. It's worth mentioning the synchronization feature using **rsync**, which has really saved me more than once when I had to quickly upload changes or fix a bug in production after a not-so-well-tested deployment.
+
+- [Symfony](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) - lots of useful features, this is a plugin I recommend. Especially for beginners and those learning the [Symfony](https://symfony.com/) framework.
+
+Summing up, plugins are essential if you want to be productive, but as developers, you gain more knowledge by not using these plugins.
+By solving integration problems and interacting directly with the software, you can understand much better "what the author had in mind." It's a pity I only discovered this recently. Better late than never!
+
+Before I launched the project, I managed to disable unnecessary add-ons and restart my laptop five times.
+Additionally, I had to configure double the amount of memory on the Swap partition just to be able to start screen sharing.
+I had to properly configure the whole project, ignore the right folders, just to reduce memory usage.
+This is really worrying, especially when working with larger projects.
+It delayed and bothered me in my daily work. You might think that most people working in PHP use a Mac, which can handle such loads without much trouble. I wonder if that's really okay, especially since I only recently started measuring how much power my laptop can consume when working at full capacity. It ended up that after disabling most unused plugins and skipping project files generated by applications, I was finally able to work normally. Most likely, you need to optimize not only the code you write, but also the tools you use must be properly configured for this purpose. It's a bit tempting to leave things as you found them.
+
+Apart from resource issues, the second important factor is that even if you have the ability to view running processes, PHPStorm does a lot of things automatically for you.
+
+- Choosing the PHP version from the `composer.json` file,
+- Installing dependencies.
+- Fixing configuration errors for you.
+- Auto-importing dependencies
+- Task lists
+- Debugging
+- Code generation (with AI plugins)
+
+## Apache Netbeans
+
+To begin, it's worth mentioning the history of Apache NetBeans:
+
+- **1996** – At Charles University in Prague, a group of students starts the Xelfi project, one of the first Java IDEs written in Java.
+- **1997-1998** – The Xelfi project is developed further, and its name changes to NetBeans.
+- **1999** – Sun Microsystems buys NetBeans from the creators in Prague and begins official development, releasing it as open source software.
+- **2000-2010** – NetBeans develops rapidly, gaining support for new Java versions and other technologies. It becomes one of the most popular IDEs for Java developers.
+- **2010** – Oracle acquires Sun Microsystems and thus becomes the owner of the NetBeans project.
+- **2016** – Oracle decides to donate NetBeans to the Apache Software Foundation, starting the project's incubation process.
+- **2018** – NetBeans officially becomes an Apache project and receives the name Apache NetBeans. The first version under the Apache brand is released – Apache NetBeans 9.0.
+- **2018-present** – Apache NetBeans is actively developed by the open source community. New versions are released regularly, supporting the latest technologies and programming languages.
+
+{% include figure.liquid path="assets/img/posts/netbeans/netbeans_ide.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
 ## Configuration and installation
 
