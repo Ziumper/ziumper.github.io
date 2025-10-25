@@ -84,7 +84,9 @@ podejrzenia działających procesów, to PHPStorm wiele rzeczy robi za nas autom
 
 ## Apache Netbeans
 
-Na początek warto jest wspomniec o historii apache netbeans:
+Na początek warto jest wspomniec o historii Apache NetBeansa. Jest to zintegrowane środowisko
+programistyczne, które zostało stworzone głównie do programowania w Javie, ale teraz wspiera kilka
+języków programistycznych w tym oczywiście PHP. Ogólnie oś czasu wygląda następująco:
 
 - **1996** – Na Uniwersytecie Karola w Pradze grupa studentów rozpoczyna projekt Xelfi, będący jednym z pierwszych środowisk programistycznych dla Javy napisanych w tym języku.
 - **1997-1998** – Projekt Xelfi zostaje rozwinięty, a jego nazwa zmienia się na NetBeans.
@@ -97,12 +99,9 @@ Na początek warto jest wspomniec o historii apache netbeans:
 
 {% include figure.liquid path="assets/img/posts/netbeans/netbeans_ide.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
-### Konfiguracja i instalacja
-
 Konfiguracja NetBeans jest stosunkowo prosta, choć wymaga kilku kroków:
-NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne
-
-#### Wtyczki
+NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne.
+Najwygodniejszym sposobem jest pobranie Apache Netbeansa bezpośrednio z strony [repozytorium](https://github.com/apache/netbeans/releases).
 
 Po instalacji warto przejrzeć dostępne wtyczki. NetBeans domyślnie obsługuje PHP, ale można doinstalować wsparcie dla innych języków.
 Przede wszystkim polecam włączyć domyślną wtyczkę dla PHP.
@@ -120,13 +119,32 @@ Po zainstalowaniu powinno to wyglądać następująco:
 
 {% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
-### Konfiguracja PHP
+W ustawieniach należy wskazać ścieżkę do interpretera PHP
 
-W ustawieniach należy wskazać ścieżkę do interpretera PHP oraz skonfigurować narzędzia takie jak Composer, PHPUnit czy PHP_CodeSniffer
+{% include figure.liquid path="assets/img/posts/netbeans/cli_inerpreter.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+### Debugowanie
+
+Jeżeli chodzi o debugowanie to mamy następującą opcję.
+
+{% include figure.liquid path="assets/img/posts/netbeans/Debugging.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Trzeba również zainstalować [Xdebug Helper](https://chromewebstore.google.com/detail/xdebug-helper-by-jetbrain/aoelhdemabeimdhedkidlnbkfhnhgnhm).
+i ustawić odpowiedni klucz IDE.
+
+{% include figure.liquid path="assets/img/posts/netbeans/xdebug_netbeans.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+W przypadku debugowania z dockera kod testowy na dockerze możemy odpalić w następujący sposób:
+
+```
+docker compose exec -e XDEBUG_MODE=debug -e XDEBUG_CONFIG="start_with_request=trigger idekey=netbeans client_host=host.docker.internal client_port=9003" myServiceInDocker vendor/bin/phpunit'
+```
 
 ### Integracja z Git
 
-NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE
+NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE, ale nie działa niestety tak jak
+bym tego oczekiwał, więc tutaj polecam sie uzbroić w pracę z terminalem. Prawdopodobnie trzeba poczekać
+na naprawę błędów.
 
 ### Personalizacja
 
@@ -141,7 +159,7 @@ Możliwość dostosowania motywów, skrótów klawiszowych i układu okien.
 - **Stabilność** – Rzadko się zawiesza, a aktualizacje są regularne.
 - **Prosta konfiguracja** – Szybko można zacząć pracę bez konieczności instalowania dziesiątek rozszerzeń.
 
-### Wady Apache NetBeans
+### Wady
 
 - **Autocomplete** – Działa dobrze, ale wymaga stosowania PHPDoc. W PHPStormie podpowiedzi są bardziej zaawansowane i nie wymagają tak szczegółowej dokumentacji.
 - **Mniej wtyczek** – Społeczność NetBeans jest mniejsza niż np. VSCode, przez co liczba dostępnych rozszerzeń jest ograniczona.
