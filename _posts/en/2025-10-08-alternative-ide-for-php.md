@@ -2,7 +2,7 @@
 layout: post
 title: "Alternative IDE for PHP? Apache NetBeans, but not only!"
 date: 2025-10-08
-tags: php, ide, netbeans
+tags: php ide netbeans
 description: "Why not PHPStorm? Why not VIM or Visual Studio Code? For some time, I have been looking for a tool that is not overloaded with features, yet useful and powerful enough to make everyday work easier."
 thumbnail: https://netbeans.apache.org/_/images/apache-netbeans.svg
 giscus_comments: true
