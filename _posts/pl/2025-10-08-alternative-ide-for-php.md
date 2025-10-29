@@ -15,7 +15,136 @@ od starego oprogramowania do jego nowszej wersji. Chcę również skupić się n
 jak wygląda obecna praca w Apache NetBeans. Kiedy się na niego natknąłem? Dlaczego zacząłem go używać dopiero niedawno
 i dlaczego wygląda na to, że to IDE wraca do łask! Postaram się też przedstawić sposób konfiguracji IDE i pierwsze wrażenia.
 
-## PHPStorm
+## Apache Netbeans
+
+Na początek warto jest wspomniec o historii Apache NetBeansa. Jest to zintegrowane środowisko
+programistyczne, które zostało stworzone głównie do programowania w Javie, ale teraz wspiera kilka
+języków programistycznych w tym oczywiście PHP. Ogólnie oś czasu wygląda następująco:
+
+- **1996** – Na Uniwersytecie Karola w Pradze grupa studentów rozpoczyna projekt Xelfi, będący jednym z pierwszych środowisk programistycznych dla Javy napisanych w tym języku.
+- **1997-1998** – Projekt Xelfi zostaje rozwinięty, a jego nazwa zmienia się na NetBeans.
+- **1999** – Firma Sun Microsystems kupuje NetBeans od twórców z Pragi i rozpoczyna oficjalny rozwój oraz udostępnia go jako otwarte oprogramowanie.
+- **2000-2010** – NetBeans dynamicznie się rozwija, zyskuje wsparcie dla kolejnych wersji Javy i innych technologii. Staje się jednym z najpopularniejszych IDE dla programistów Java.
+- **2010** – Oracle przejmuje Sun Microsystems i tym samym staje się właścicielem projektu NetBeans.
+- **2016** – Oracle decyduje się przekazać NetBeans do Apache Software Foundation, rozpoczynając proces inkubacji projektu.
+- **2018** – NetBeans oficjalnie staje się projektem Apache i otrzymuje nazwę Apache NetBeans. Wychodzi pierwsza wersja pod szyldem Apache – Apache NetBeans 9.0.
+- **2018-obecnie** – Apache NetBeans jest aktywnie rozwijany przez społeczność open source. Regularnie pojawiają się nowe wersje, które wspierają najnowsze technologie i języki programowania.
+
+{% include figure.liquid path="assets/img/posts/netbeans/netbeans_ide.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Konfiguracja NetBeans jest stosunkowo prosta, choć wymaga kilku kroków:
+NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne.
+Najwygodniejszym sposobem jest pobranie Apache Netbeansa bezpośrednio z strony [repozytorium](https://github.com/apache/netbeans/releases).
+
+Po instalacji warto przejrzeć dostępne wtyczki. NetBeans domyślnie obsługuje PHP, ale można doinstalować wsparcie dla innych języków.
+Przede wszystkim polecam włączyć domyślną wtyczkę dla PHP.
+
+{% include figure.liquid path="assets/img/posts/netbeans/netbeans_php_plugin.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Dodatkowo polecam doinstalować tą wtyczkę poprzez github: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
+lub poprzez portal z pluginami [link do wtyczki](https://plugins.netbeans.apache.org/catalogue/?id=29)
+
+Aby zainstalować wtyczkę wystarczy ją ściągnąć i rozpakować następnie wrzucić przez Tools -> Plugins -> Downloaded i wybrać plik w formacie \*.nbm
+
+{% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Po zainstalowaniu powinno to wyglądać następująco:
+
+{% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+W ustawieniach należy wskazać ścieżkę do interpretera PHP
+
+{% include figure.liquid path="assets/img/posts/netbeans/cli_inerpreter.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+oraz włączyć dodatkowe opcje i podpowiedzi do najnowszej wtyczki
+{% include figure.liquid path="assets/img/posts/netbeans/php-config-enhance.png" %}
+
+### Debugowanie
+
+Jeżeli chodzi o debugowanie to mamy następującą opcję.
+
+{% include figure.liquid path="assets/img/posts/netbeans/Debugging.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+Trzeba również zainstalować [Xdebug Helper](https://chromewebstore.google.com/detail/xdebug-helper-by-jetbrain/aoelhdemabeimdhedkidlnbkfhnhgnhm).
+i ustawić odpowiedni klucz IDE.
+
+{% include figure.liquid path="assets/img/posts/netbeans/xdebug_netbeans.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
+
+W przypadku debugowania z dockera kod testowy na dockerze możemy odpalić w następujący sposób:
+
+```
+docker compose exec -e XDEBUG_MODE=debug -e XDEBUG_CONFIG="start_with_request=trigger idekey=netbeans client_host=host.docker.internal client_port=9003" myServiceInDocker vendor/bin/phpunit'
+```
+
+### Pisanie Kodu
+
+Jeżeli chodzi o pisanie kodu PHP to trzeba się troszkę przestawić:
+
+- importowanie wszystkich zależnosci przy pomocy skrótu klawiszowego `Ctrl + Shift + I` a nie jak w PHPStorm przy pomocy `alt+enter`.
+  Moim zdaniem jest nawet lepsze, gdyż otwiera okno dialogowe, w którym jesteśmy w stanie zdecydować jakie zależności powinniśmy zaimportować.
+- wyszukiwanie za pomocą "Ctrl + I" w prawym górnym rogu
+- przełączanie pomiędzy plikami za pomocą "Ctrl + PageUp" i "Ctrl + PageDown"
+- php doc `/** @var MyClass $myVariable */` działa tylko w jednej lini.
+
+Jest trochę bolączek i zapożyczeń z innych IDE. Koniec końców można go używać jeżeli bardzo się chce.
+
+### Zalety
+
+- **Lekkość** – NetBeans jest zauważalnie mniej zasobożerny niż PHPStorm. Działa płynnie nawet na starszych komputerach.
+- **Open Source** – Całkowicie darmowy, bez ograniczeń licencyjnych.
+- **Wsparcie dla wielu języków** – Oprócz PHP, świetnie radzi sobie z Javą, JavaScriptem, HTML, C/C++.
+- **Wbudowane narzędzia** – Debugger, profiler, integracja z GIT, wsparcie dla frameworków (np. Symfony, Laravel).
+- **Stabilność** – Rzadko się zawiesza, a aktualizacje są regularne.
+- **Prosta konfiguracja** – Szybko można zacząć pracę bez konieczności instalowania dziesiątek rozszerzeń.
+- **Rozszerzalność** - Sami możemy bardzo szybko zacząć rozszerzać swoje IDE, o dziwo jest znacznie bardziej wygodne niż w PHP
+- **Powrót do przeszłości** - Co ciekawe jest to taki trochę powrót do przeszłości i można po prostu poczuć się jak się programowało kiedyś, gdy IDE nie podpowiadało wszystkiego
+- **Proces indeksacji dla PHPStorm** - Obecnie jest dosyć prosty i wydajny na tyle, że bez problemu można korzystać.
+- **Zawiera kilka unikalnych pomyslów** - O dziwo znalazlem w nim kilka fajnych i przydatnych rzeczy, takich jak lista zadań albo troszkę odmienny styl pracy z terminalem.
+- **Możliwość dostosowania motywów, skrótów klawiszowych i układu okien.**
+
+### Wady
+
+- **Autocomplete** – Działa dobrze, ale wymaga stosowania PHPDoc. W PHPStormie podpowiedzi są bardziej zaawansowane i nie wymagają tak szczegółowej dokumentacji.
+- **Mniej wtyczek** – Społeczność NetBeans jest mniejsza niż np. VSCode, przez co liczba dostępnych rozszerzeń jest ograniczona.
+- **Wygląd** – Interfejs użytkownika jest nieco przestarzały w porównaniu do konkurencji.
+- **Brak natywnej integracji z Dockerem** – Trzeba ręcznie konfigurować środowisko, co może być uciążliwe przy pracy z kontenerami.
+  Interpreter PHP tylko w natywnym środowisku, nie można podpiąć z dockera, co jest trochę uciążliwe.
+- **Statyczna analiza kodu** – Działa, ale nie jest tak rozbudowana jak w PHPStormie.
+- **Mniej materiałów edukacyjnych** – Trudniej znaleźć aktualne tutoriale i wsparcie społeczności.
+- **Trochę zacofany** - W ogólnym konkursie raczej sporo mu brakuje do swoich darmowych alternatyw. Zwłaszcza do Visual Studio Code,
+  ale obstawiam, że z czasem się to zmieni
+- **Brak natywnego wsparcia dla dockera** -
+- **Debugging** - tylko na serwerze, jeżeli chcemy debugować skrypty to juz jest z tym trochę gorzej i trzeba już pokombinować.
+- **Integracja GIT** - NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE, ale nie działa niestety tak jak
+  bym tego oczekiwał, więc tutaj polecam sie uzbroić w pracę z terminalem. Prawdopodobnie trzeba poczekać
+  na naprawę błędów.
+- **AI** - brak integracji z copilotem, jest wtyczka, która symuluje to, ale to nie to samo co w PHPStorm. Równie dobrze, może to być plus ;-)
+
+### Przykładowe zastosowania
+
+NetBeans sprawdzi się świetnie w małych i średnich projektach PHP, gdzie nie potrzebujemy zaawansowanych narzędzi do refaktoryzacji
+czy integracji z chmurą. Jest idealny dla osób, które cenią prostotę i stabilność, a jednocześnie chcą mieć dostęp do podstawowych funkcji IDE.
+
+## Wskazówki i triki
+
+- Warto korzystać z funkcji "Live Templates" do szybkiego wstawiania powtarzalnych fragmentów kodu.
+- Można skonfigurować własne skróty klawiszowe, co znacznie przyspiesza pracę.
+- NetBeans pozwala na szybkie przełączanie się między plikami i klasami (Ctrl+O, Ctrl+Shift+O).
+- Warto regularnie aktualizować IDE i wtyczki – poprawia to stabilność i bezpieczeństwo.
+- Jeśli pracujesz z Dockerem to raczej będziesz potrzebował ręcznej konfiguracji środowiska.
+
+## Moje doświadczenia i rekomendacje
+
+Po kilku miesiącach pracy z NetBeans mogę powiedzieć, że to narzędzie, które pozwala skupić się na kodzie.
+Nie rozprasza nadmiarem opcji, a jednocześnie daje wszystko, co potrzebne do codziennej pracy.
+Jeśli szukasz alternatywy dla ciężkich, płatnych IDE – warto spróbować NetBeans.
+Szczególnie polecam go osobom, które cenią prostotę, stabilność i open source.
+Trzeba jednak uzbroić się w cierpliwość, bo praca z tym IDE różni się znacznie od obecnych na rynku rozwiązań i sprawia
+wrażenie ociężałego narzędzia. Jestem pewny, że wraz z czasem rozwój apache netbeansa przyśpieszy i zacznie stanowić realną alternatywę dla
+produktów JETBrains. Mimo, że nawet teraz większość produktów tej firmy już można korzystać za darmo, ale czas płynie
+a firmy przechodzą z rąk do rąk, a kod zostaje.
+
+## A co z PHPStorm?
 
 To nie tak, że PHPStorm jest zły. Jest bardzo dobry! Można też powiedzieć, że nawet za bardzo.
 To, co lubię w oprogramowaniu, to poczucie, że mam kontrolę nad tym, co robię.
@@ -82,151 +211,7 @@ podejrzenia działających procesów, to PHPStorm wiele rzeczy robi za nas autom
 - Debugowanie
 - Generacja kodu (z pluginami AI)
 
-## Apache Netbeans
+Dlaczego więc, podjąłem się próby przerzucenia się na starszą, darmową alternatywe?
+{% include figure.liquid path="assets/img/posts/netbeans/usage.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
-Na początek warto jest wspomniec o historii Apache NetBeansa. Jest to zintegrowane środowisko
-programistyczne, które zostało stworzone głównie do programowania w Javie, ale teraz wspiera kilka
-języków programistycznych w tym oczywiście PHP. Ogólnie oś czasu wygląda następująco:
-
-- **1996** – Na Uniwersytecie Karola w Pradze grupa studentów rozpoczyna projekt Xelfi, będący jednym z pierwszych środowisk programistycznych dla Javy napisanych w tym języku.
-- **1997-1998** – Projekt Xelfi zostaje rozwinięty, a jego nazwa zmienia się na NetBeans.
-- **1999** – Firma Sun Microsystems kupuje NetBeans od twórców z Pragi i rozpoczyna oficjalny rozwój oraz udostępnia go jako otwarte oprogramowanie.
-- **2000-2010** – NetBeans dynamicznie się rozwija, zyskuje wsparcie dla kolejnych wersji Javy i innych technologii. Staje się jednym z najpopularniejszych IDE dla programistów Java.
-- **2010** – Oracle przejmuje Sun Microsystems i tym samym staje się właścicielem projektu NetBeans.
-- **2016** – Oracle decyduje się przekazać NetBeans do Apache Software Foundation, rozpoczynając proces inkubacji projektu.
-- **2018** – NetBeans oficjalnie staje się projektem Apache i otrzymuje nazwę Apache NetBeans. Wychodzi pierwsza wersja pod szyldem Apache – Apache NetBeans 9.0.
-- **2018-obecnie** – Apache NetBeans jest aktywnie rozwijany przez społeczność open source. Regularnie pojawiają się nowe wersje, które wspierają najnowsze technologie i języki programowania.
-
-{% include figure.liquid path="assets/img/posts/netbeans/netbeans_ide.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-Konfiguracja NetBeans jest stosunkowo prosta, choć wymaga kilku kroków:
-NetBeans można pobrać bezpośrednio ze strony Apache. Instalator jest dostępny na wszystkie popularne systemy operacyjne.
-Najwygodniejszym sposobem jest pobranie Apache Netbeansa bezpośrednio z strony [repozytorium](https://github.com/apache/netbeans/releases).
-
-Po instalacji warto przejrzeć dostępne wtyczki. NetBeans domyślnie obsługuje PHP, ale można doinstalować wsparcie dla innych języków.
-Przede wszystkim polecam włączyć domyślną wtyczkę dla PHP.
-
-{% include figure.liquid path="assets/img/posts/netbeans/netbeans_php_plugin.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-Dodatkowo polecam doinstalować tą wtyczkę poprzez github: [netbeans-php-enhancements](https://github.com/junichi11/netbeans-php-enhancements/releases)
-lub poprzez portal z pluginami [link do wtyczki](https://plugins.netbeans.apache.org/catalogue/?id=29)
-
-Aby zainstalować wtyczkę wystarczy ją ściągnąć i rozpakować następnie wrzucić przez Tools -> Plugins -> Downloaded i wybrać plik w formacie \*.nbm
-
-{% include figure.liquid path="assets/img/posts/netbeans/plugin_instruction.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-Po zainstalowaniu powinno to wyglądać następująco:
-
-{% include figure.liquid path="assets/img/posts/netbeans/php-enhancments.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-W ustawieniach należy wskazać ścieżkę do interpretera PHP
-
-{% include figure.liquid path="assets/img/posts/netbeans/cli_inerpreter.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-### Debugowanie
-
-Jeżeli chodzi o debugowanie to mamy następującą opcję.
-
-{% include figure.liquid path="assets/img/posts/netbeans/Debugging.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-Trzeba również zainstalować [Xdebug Helper](https://chromewebstore.google.com/detail/xdebug-helper-by-jetbrain/aoelhdemabeimdhedkidlnbkfhnhgnhm).
-i ustawić odpowiedni klucz IDE.
-
-{% include figure.liquid path="assets/img/posts/netbeans/xdebug_netbeans.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
-
-W przypadku debugowania z dockera kod testowy na dockerze możemy odpalić w następujący sposób:
-
-```
-docker compose exec -e XDEBUG_MODE=debug -e XDEBUG_CONFIG="start_with_request=trigger idekey=netbeans client_host=host.docker.internal client_port=9003" myServiceInDocker vendor/bin/phpunit'
-```
-
-### Integracja z Git
-
-NetBeans posiada wbudowaną obsługę GIT, co pozwala na wygodną pracę z repozytoriami bezpośrednio z poziomu IDE, ale nie działa niestety tak jak
-bym tego oczekiwał, więc tutaj polecam sie uzbroić w pracę z terminalem. Prawdopodobnie trzeba poczekać
-na naprawę błędów.
-
-### Personalizacja
-
-Możliwość dostosowania motywów, skrótów klawiszowych i układu okien.
-
-### Zalety
-
-- **Lekkość** – NetBeans jest zauważalnie mniej zasobożerny niż PHPStorm. Działa płynnie nawet na starszych komputerach.
-- **Open Source** – Całkowicie darmowy, bez ograniczeń licencyjnych.
-- **Wsparcie dla wielu języków** – Oprócz PHP, świetnie radzi sobie z Javą, JavaScriptem, HTML, C/C++.
-- **Wbudowane narzędzia** – Debugger, profiler, integracja z GIT, wsparcie dla frameworków (np. Symfony, Laravel).
-- **Stabilność** – Rzadko się zawiesza, a aktualizacje są regularne.
-- **Prosta konfiguracja** – Szybko można zacząć pracę bez konieczności instalowania dziesiątek rozszerzeń.
-
-### Wady
-
-- **Autocomplete** – Działa dobrze, ale wymaga stosowania PHPDoc. W PHPStormie podpowiedzi są bardziej zaawansowane i nie wymagają tak szczegółowej dokumentacji.
-- **Mniej wtyczek** – Społeczność NetBeans jest mniejsza niż np. VSCode, przez co liczba dostępnych rozszerzeń jest ograniczona.
-- **Wygląd** – Interfejs użytkownika jest nieco przestarzały w porównaniu do konkurencji.
-- **Brak natywnej integracji z Dockerem** – Trzeba ręcznie konfigurować środowisko, co może być uciążliwe przy pracy z kontenerami.
-- **Statyczna analiza kodu** – Działa, ale nie jest tak rozbudowana jak w PHPStormie.
-- **Mniej materiałów edukacyjnych** – Trudniej znaleźć aktualne tutoriale i wsparcie społeczności.
-
-### Przykładowe zastosowania
-
-NetBeans sprawdzi się świetnie w małych i średnich projektach PHP, gdzie nie potrzebujemy zaawansowanych narzędzi do refaktoryzacji czy integracji z chmurą. Jest idealny dla osób, które cenią prostotę i stabilność, a jednocześnie chcą mieć dostęp do podstawowych funkcji IDE.
-
-## Porównanie NetBeans z innymi IDE
-
-| Funkcja / IDE         | NetBeans      | PHPStorm     | Visual Studio Code | Sublime Text    |
-| --------------------- | ------------- | ------------ | ------------------ | --------------- |
-| Cena                  | Darmowy (OSS) | Płatny       | Darmowy            | Płatny          |
-| Wydajność             | Lekki         | Zasobożerny  | Lekki              | Bardzo lekki    |
-| Wsparcie PHP          | Bardzo dobre  | Doskonałe    | Dobre (wtyczki)    | Dobre (wtyczki) |
-| Debugger              | Tak           | Tak          | Tak (wtyczki)      | Nie             |
-| Refaktoryzacja        | Podstawowa    | Zaawansowana | Podstawowa         | Ograniczona     |
-| Integracja z GIT      | Tak           | Tak          | Tak                | Tak             |
-| Docker                | Ręczna        | Wbudowana    | Wtyczki            | Brak            |
-| Wtyczki               | Mało          | Średnio      | Bardzo dużo        | Dużo            |
-| Personalizacja        | Średnia       | Bardzo duża  | Bardzo duża        | Duża            |
-| Wsparcie społeczności | Średnie       | Bardzo duże  | Bardzo duże        | Duże            |
-| Aktualizacje          | Regularne     | Regularne    | Bardzo częste      | Rzadziej        |
-
-## FAQ – Najczęściej zadawane pytania
-
-**Czy NetBeans nadaje się do dużych projektów?**
-
-Nadaje się, choć w bardzo dużych projektach może być mniej wydajny niż PHPStorm. Jednak dla większości zastosowań jest wystarczający.
-
-**Czy NetBeans obsługuje frameworki PHP?**
-
-Tak, obsługuje popularne frameworki jak Symfony, Laravel, Zend. Wymaga to jednak czasem ręcznej konfiguracji.
-
-**Jak wygląda wsparcie dla testów jednostkowych?**
-
-NetBeans pozwala na integrację z PHPUnit, można uruchamiać testy bezpośrednio z IDE.
-
-**Czy można korzystać z NetBeans na Linuksie/Macu/Windowsie?**
-
-Tak, NetBeans jest multiplatformowy.
-
-**Czy NetBeans obsługuje nowoczesne standardy PHP?**
-
-Tak, obsługuje PHP 8.x, typowanie, a także narzędzia do statycznej analizy kodu.
-
-**Jak wygląda wsparcie dla JavaScript i frontendu?**
-
-NetBeans obsługuje JavaScript, HTML, CSS, a także frameworki frontendowe, choć nie tak dobrze jak VSCode.
-
-## Wskazówki i triki
-
-- Warto korzystać z funkcji "Live Templates" do szybkiego wstawiania powtarzalnych fragmentów kodu.
-- Można skonfigurować własne skróty klawiszowe, co znacznie przyspiesza pracę.
-- NetBeans pozwala na szybkie przełączanie się między plikami i klasami (Ctrl+O, Ctrl+Shift+O).
-- Warto regularnie aktualizować IDE i wtyczki – poprawia to stabilność i bezpieczeństwo.
-- Jeśli pracujesz z Dockerem to raczej będziesz potrzebował ręcznej konfiguracji środowiska.
-
-## Moje doświadczenia i rekomendacje
-
-Po kilku miesiącach pracy z NetBeans mogę powiedzieć, że to narzędzie, które pozwala skupić się na kodzie.
-Nie rozprasza nadmiarem opcji, a jednocześnie daje wszystko, co potrzebne do codziennej pracy.
-Jeśli szukasz alternatywy dla ciężkich, płatnych IDE – warto spróbować NetBeans.
-Szczególnie polecam go osobom, które cenią prostotę, stabilność i open source.
-
-Masz pytania lub własne doświadczenia z NetBeans? Podziel się w komentarzu!
+Na dole to NetBeans a na górze PHPStorm... zjada pamięc jak królik kapustę :-)
