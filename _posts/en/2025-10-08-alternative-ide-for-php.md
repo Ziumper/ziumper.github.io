@@ -79,6 +79,10 @@ When it comes to writing PHP code, you have to adjust a bit:
 - php doc `/** @var MyClass $myVariable */` works only in one line.
 
 There are some quirks and borrowings from other IDEs. Ultimately, it can be used if you really want to.
+Netbeans also provides support for the [Twig](https://twig.symfony.com/) templating language.
+Syntax highlighting and auto-complete works, but unfortunately not much.
+Quick search does not work for **Twig** files and other similar files and requires
+appropriate modifications of PHP modules or extensions.
 
 ### Advantages
 
@@ -171,3 +175,4 @@ So why did I decide to try switching to an older, free alternative?
 {% include figure.liquid path="assets/img/posts/netbeans/usage.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
 Below is NetBeans and above is PHPStorm... it eats memory like a rabbit eats cabbage :-)
+This is certainly due to the fact that with great power comes even greater indexation process.

@@ -87,6 +87,9 @@ Jeżeli chodzi o pisanie kodu PHP to trzeba się troszkę przestawić:
 - php doc `/** @var MyClass $myVariable */` działa tylko w jednej lini.
 
 Jest trochę bolączek i zapożyczeń z innych IDE. Koniec końców można go używać jeżeli bardzo się chce.
+Netbeans zapewnia również wsparcie dla języka szablonów [Twig](https://twig.symfony.com/). Działa podśwetlenie składni i auto-complete, ale
+niestety nie wiele więcej. Szybkie wyszukiwanie nie działa dla plików **Twig** oraz innych podobnych plików i wymaga
+odpowiednich modyfikacji modułów dla PHP lub rozszerzeń.
 
 ### Zalety
 
@@ -215,3 +218,5 @@ Dlaczego więc, podjąłem się próby przerzucenia się na starszą, darmową a
 {% include figure.liquid path="assets/img/posts/netbeans/usage.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 
 Na dole to NetBeans a na górze PHPStorm... zjada pamięc jak królik kapustę :-)
+Jest to z pewnością zasługa tego, że z wielką mocą wiąże się jeszcze wiekszy
+proces indeksacji.
