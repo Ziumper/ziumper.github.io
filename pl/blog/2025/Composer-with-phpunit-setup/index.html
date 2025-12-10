@@ -21,7 +21,7 @@
 </span></code></pre></div></div> <p>W międzyczasie napotkałem kilka poważnych problemów — nie mogłem zadeklarować Traitów w folderze testów, a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu przeszedłem do kolejnej wersji. Nie była ona idealna, ale działa dla podstawowych aplikacji. Musiałem wziąć poprawkę na to, że np w Shopware autloading się różni i musiałem napisać własny loading bootstraperem.</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"Ziumper\\App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="nl">"exclude-from-classmap"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tests"</span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
