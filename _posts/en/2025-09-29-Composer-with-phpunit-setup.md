@@ -43,19 +43,20 @@ there must be better way to solve that. Here is what I figured out
 ```
 
 Durring that time I got some really serious issues, I couldn't declare Traits in my tests
-folder and it was quite hard feeling to copy paste all that code, then I moved forward with next version.
+folder and it was quite hard feeling to copy paste all that code, then I moved forward with next version. Later I figured out 
+that I had an issues with PS-4 autoloading inside shopware plugins. So I decided to move with following.
 
 ```json
 {
   "autoload": {
     "psr-4": {
       "Ziumper\\App\\": "src"
-      "Ziumper\\App\\Tests\\Utils\\": "tests/utils"
     },
     "exclude-from-classmap": ["tests"]
   },
   "autoload-dev": {
     "psr-4": {
+      "Ziumper\\App\\Tests\\Utils\\": "tests/utils",
       "Ziumper\\App\\Tests\\Unit\\": "tests/unit",
       "Ziumper\\App\\Tests\\Integration\\": "tests/integration"
     }
@@ -74,4 +75,5 @@ So how this works is:
 - exclude-from-classmap = guards from loading my utility classes in production
 - no need to write custom bootstrap loading
 
-I think this way I can start building something... that makes sense!
+The class loading process may vary depending on the framework or rules used. 
+For example, in shopware, plugins do not want to load Utils classes, for which you have to write with your own bootstrapper class.
