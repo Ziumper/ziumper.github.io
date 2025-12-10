@@ -44,14 +44,14 @@ musi być na to lepszy sposób. I oto co odkryłem:
 
 W międzyczasie napotkałem kilka poważnych problemów — nie mogłem zadeklarować Traitów w folderze testów,
 a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu przeszedłem do kolejnej wersji. Nie była ona idealna,
-ale działa dla podstawowych aplikacji. Musiałem wziąć poprawkę na to, że np w Shopware autloading się różni i musiałem napisać własny loading 
+ale działa dla podstawowych aplikacji. Musiałem wziąć poprawkę na to, że np w Shopware autloading się różni i musiałem napisać własny loading
 bootstraperem.
 
 ```json
 {
   "autoload": {
     "psr-4": {
-      "Ziumper\\App\\": "src",
+      "Ziumper\\App\\": "src"
     },
     "exclude-from-classmap": ["tests"]
   },
@@ -76,4 +76,3 @@ Jak to działa:
 - nie ma potrzeby pisania wielu skryptów do ładowania klas php
 
 Proces ładowania klas, może się różnić w zależności od użytego frameworka czy zasad. Np. w shopware pluginy nie chcą ładować klas Utils co naprawić dodając własny bootstraper.
-
