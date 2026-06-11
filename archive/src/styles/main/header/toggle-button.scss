@@ -1,55 +1,54 @@
 /* Toggle button */
 
 .toggle {
-    display: none;
-    padding-top: 8px;
+  display: none;
+  padding-top: 8px;
 }
 
 .toggle:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .toggle span {
-    position: relative;
-    width: 36px;
-    height: 4px;
-    background: white;
-    display: block;
-    margin-bottom: 8px;
-    transition: .5s;
+  position: relative;
+  width: 36px;
+  height: 4px;
+  background: white;
+  display: block;
+  margin-bottom: 8px;
+  transition: 0.5s;
 }
 
 .toggle span:nth-child(1) {
-    transform-origin: left;
+  transform-origin: left;
 }
 
 .toggle span:nth-child(2) {
-    transform-origin: center;
+  transform-origin: center;
 }
 
 .toggle span:nth-child(3) {
-    transform-origin: center;
+  transform-origin: center;
 }
 
 .toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    left: 2px;
+  transform: rotate(45deg);
+  left: 2px;
 }
 
 .toggle.active span:nth-child(2) {
-    transform: rotate(315deg);
-    right: 3px;
+  transform: rotate(315deg);
+  right: 3px;
 }
 
 .toggle.active span:nth-child(3) {
-    transform: scale(0);
+  transform: scale(0);
 }
-
 
 /* Tablets and mobile*/
 
-@media screen and (max-width:1199px) {
-    .toggle {
-        display: block;
-    }
+@media screen and (max-width: 1199px) {
+  .toggle {
+    display: block;
+  }
 }
