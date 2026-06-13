@@ -46,7 +46,6 @@ jobs:
           # only check local links
           args: >
             --offline
-            --remap '_site(/?.*)/assets/(.*) _site$1/assets/$2'
-            --remap '^file:///.*?_site(/?.*)/assets/(.*) _site$1/assets/$2'
+            --remap '_site(/?.*)/assets/(.*) _site/assets/$2'
             --exclude '_site/archive/**'
             --verbose --no-progress '_site/**/*.html'
