@@ -4,29 +4,54 @@
     - name: Full Name
       value: Tomasz Komoszeski
     - name: Date of Birth
-      value: 5th May 1992
+      value: May 5, 1992
     - name: Languages
       value: Polish (Native), English (C1)
 
 - title: Experience
   type: time_table
   contents:
-    - title: PHP Software Developer
-      year: Mar 2025 - Now
-      institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
-    - title: PHP Software Developer
+    - title: PHP Developer
+      institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Poland
+      year: Mar 2025 - 2025
+      description:
+        - title: Responsibilities and Role
+          contents: My role at Strix required versatility and the ability to quickly adapt to new challenges, from backend code, through the frontend layer, to aspects related to infrastructure and optimization, with particular emphasis on the specifics and capabilities of the Shopware 6 platform.
+        - title: Software Development (Frontend & Backend in Shopware 6)
+          contents:
+            - Designing, implementing, and maintaining scalable e-commerce solutions on the Shopware 6 platform.
+            - Creating and integrating custom plugins, extensions, and template modifications, ensuring high quality and efficient code.
+        - title: Performance and User Experience Optimization
+          contents:
+            - Conducting in-depth performance analyses (e.g., using Lighthouse) for Shopware 6 stores.
+            - Identifying bottlenecks.
+            - Implementing optimization solutions to improve loading speed, responsiveness, and overall UX.
+        - title: Automation and Deployments (DevOps)
+          contents:
+            - Active participation in CI/CD processes.
+            - Automating deployments, configuring, and managing development, testing, and production environments for Shopware 6 projects.
+            - Writing scripts to support operations and development.
+        - title: Project Analysis and Estimation
+          contents:
+            - Analyzing business requirements and translating them into technical specifications.
+            - Precise estimation of time and resources needed to complete tasks and entire projects within the Shopware 6 ecosystem.
+        - title: Technical Support and Mentoring
+          contents:
+            - Providing technical support.
+            - Solving complex production problems and actively participating in code reviews, sharing knowledge and best practices with the team, especially in the context of Shopware 6.
+    - title: PHP Developer
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Poland
       year: 2019 - Feb 2025
       description:
         - title: Responsibilities
           contents:
-            - Designing, coding, and developing e-commerce web applications using <a href="https://www.shopware.com/en/">Shopware 5 and 6</a> technologies
-            - Requirements analysis and proposing solutions based on them
-            - Implementing subsequent software versions and add-ons providing functionalities
-            - Testing, debugging, and maintaining e-commerce applications and their development
-            - Integrating e-commerce application communication with ERP systems, CMS, etc.
-            - Working and communicating in an international, multilingual team
-            - Migrating online stores to the Shopware 6 platform
+            - Designing, coding, and developing e-commerce web applications using <a href="https://www.shopware.com/en/">Shopware 5 and 6</a> technologies.
+            - Analyzing requirements and proposing solutions based on them.
+            - Implementing subsequent software versions and add-ons providing functionalities.
+            - Testing, debugging, and maintaining e-commerce applications and their development.
+            - Integrating e-commerce application communication with ERP, CMS, etc. systems.
+            - Working and communicating in an international, multilingual team.
+            - Migrating online stores to the Shopware 6 platform.
         - title: Projects
           contents:
             - <a href="https://www.sunzinet.com/en/references/boesner">Boesner</a>
@@ -36,94 +61,95 @@
 
     - title: Unity Developer
       institution: Farmind Studio Sp. z o.o., Warsaw, Poland
-      year: 2020 - Jan 2023
+      year: 2020 - 2023
       description:
         - title: Responsibilities
           contents:
-            - Integrating existing, purchased, and creating new tools with C# and .NET for editing game content in the Unity engine
-            - Designing and integrating mechanics in developed games
-            - Technical mentoring, code reviews
-            - Fixing bugs, optimizing, and profiling in the Unity engine
+            - Integrating existing, purchased, and creating new tools using C# and .NET for editing game content in the Unity engine.
+            - Designing and integrating mechanics in developed games.
+            - Technical mentoring, conducting code reviews.
+            - Bug fixing, optimization, and profiling in the Unity engine.
         - title: Projects
           contents:
             - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
             - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
-            - <a href="https://ziumper.github.io/projects/night-catcher">NightCatcher</a>
-    - title: PHP Software developer
+            - <a href="https://ziumper.github.io/pl/projects/night-catcher/">NightCatcher</a>
+
+    - title: PHP Developer
       institution: Meteoryt Sp. z o.o., Szczytno, Poland
       year: 2018 - 2019
       description:
         - title: Responsibilities
           contents:
-            - Designing, coding, and developing e-commerce web applications using PHP, Smarty, MySQL, XML, CSS, and HTML
-            - Assisting in restructuring and maintaining the desktop application <a href="https://pobieranie.meteoryt.pl/">Asystent</a> and its analogous <a href="https://meteoryt.pl/asystentchmura">cloud</a> version
+            - Designing, coding, and developing e-commerce web applications using PHP, Smarty, MySQL, XML, CSS, and HTML.
+            - Assisting in the restructuring and maintenance of the desktop application <a href="https://pobieranie.meteoryt.pl/">Asystent</a> and its analogous <a href="https://meteoryt.pl/asystentchmura"> cloud version</a>.
         - title: Projects
           contents:
             - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
             - <a href="https://wypozyczalnia.asystentonline.pl/">Wypożyczalnia</a>
             - <a href="https://asystentonline.pl/">Asystent</a>
-    - title: .NET Software developer
+    - title: .NET Developer
       institution: Billennium S.A., Olsztyn, Poland
       year: 2017 - 2018
       description:
         - title: Responsibilities
           contents:
-            - Designing, coding, and developing web applications using ASP.NET, REST, C#, MVC, Angular, JavaScript, TypeScript, CSS, and HTML
-            - Fixing bugs, testing, maintaining, and debugging existing applications
-            - Working and communicating in an international, multilingual team
-            - Conducting and participating in code reviews
+            - Designing, coding, and developing web applications using ASP.NET, REST, C#, MVC, Angular, JavaScript and TypeScript, CSS, and HTML.
+            - Bug fixing, testing, maintaining, and debugging existing applications.
+            - Working and communicating in an international, multilingual team.
+            - Conducting and participating in code reviews.
         - title: Projects
           contents:
-            - <a href="https://github.com/Ziumper/Bookshop">Bookstore Recruitment Project</a>
+            - <a href="https://github.com/Ziumper/Bookshop">Recruitment Project Bookshop</a>
 
 - title: Education
   type: time_table
   contents:
-    - title: M.Sc. in Computer Science
+    - title: M.Sc. Eng. Computer Science
       institution: Gdańsk University of Technology, Gdańsk, Poland
       year: 2021 - 2023
       description:
         - title: Specialization
           contents:
             - Application of Information Technologies
-        - title: Type of Studies
+        - title: Type of study
           contents:
-            - Part-time Studies
-        - title: Thesis Title
+            - Part-time studies
+        - title: Thesis title
           contents:
-            - Comparison of Unity and Unreal Engine for Developing Augmented Reality Applications on Android Platform
-    - title: B.Sc. in Computer Science
+            - Comparison of Unity and Unreal Engine for developing augmented reality applications on the Android platform
+    - title: Eng. Computer Science
       institution: University of Warmia and Mazury, Olsztyn, Poland
       year: 2013 - 2017
       description:
         - title: Specialization
           contents:
             - General Computer Science
-        - title: Type of Studies
+        - title: Type of study
           contents:
-            - Full-time Studies
-        - title: Thesis Title
+            - Full-time studies
+        - title: Thesis title
           contents:
-            - Implementation of LZSS Algorithm
+            - Implementation of the LZSS algorithm
     - title: IT Technician
-      institution: Complex of Vocational Schools No. 1 named after Stanisław Staszic, Szczytno, Poland
+      institution: Zespół Szkół Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Poland
       year: 2008 - 2012
 
 - title: Skills
   type: nested_list
   contents:
-    - title: Personality Traits
+    - title: Character Traits
       items:
         - Teamwork and interpersonal skills
         - Creative problem-solving and critical thinking
         - Adaptability and flexibility
         - Effective communication and articulation
-        - Empathy and user-oriented approach
-        - Time management and priority setting
+        - Empathy and user-centric approach
+        - Time management and prioritization
         - Continuous learning and curiosity
         - Attention to detail and precision
         - Stress management
-        - Leadership and mentoring abilities
+        - Leadership and mentoring skills
         - Maintaining work-life balance
     - title: Programming
       items:
@@ -137,7 +163,7 @@
         - Google Tests, NUnit, Moq
         - Angular, Vue.js, JQuery, ExtJs, Node.js
         - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
-        - .NET, LINQ, .NET Core, WPF, Windows Forms, AvaloniaUI
+        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
         - Maven, Composer, Nuget, CMake
         - Apache, Elastic Search, Redis, Varnish
         - Shopware, Symfony, Twig, Smarty, PSH
@@ -146,7 +172,7 @@
         - Linux, Windows, Mac
         - Bash, Powershell
         - UML, Enterprise Architect
-    - title: Game Development
+    - title: Game-dev
       items:
         - Unity, Unreal Engine, Godot
         - Gimp, Photoshop, Blender
@@ -156,16 +182,16 @@
         - Knowledge of computer graphics and rendering techniques
         - Network programming in multiplayer games
 
-- title: Certificates and Trainings
+- title: Certifications and Training
   type: time_table
   contents:
     - year: 2024
       items:
-        - Shopware 6 <a href="https://www.shopware.com/en/academy/certifications/">Certified Advanced Developer</a>
+        - Shopware 6 <a href="https://www.shopware.com/en/academy/certifications/">Advanced Shopware Developer</a>
     - year: 2023
       items:
-        - Internet Advertising Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
-        - Marketing and Brand Building Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+        - Online Advertising Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
+        - Marketing and Branding Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
     - year: 2019
       items:
         - Vue.js Course, <a href="https://typeofweb.com/">typeofweb</a>
@@ -176,4 +202,4 @@
 - title: Interests
   type: list
   contents:
-    - Playing guitar, reading good books, computer games, and traveling.
+    - Playing guitar, good books, computer games, and travel.

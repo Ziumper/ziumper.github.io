@@ -13,7 +13,32 @@
   contents:
     - title: Programista PHP
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
-      year: mar 2025 - Teraz
+      year: mar 2025 - 2025
+      description:
+        - title: Obowiązki i rola
+          contents: Moja rola w Strix wymagała wszechstronności i umiejętności szybkiego adaptowania się do nowych wyzwań, od kodu backendowego, przez warstwę frontendową, po aspekty związane z infrastrukturą i optymalizacją, ze szczególnym uwzględnieniem specyfiki i możliwości platformy Shopware 6.
+        - title: Rozwój Oprogramowania (Frontend & Backend w Shopware 6)
+          contents:
+            - Projektowanie, implementacja i utrzymanie skalowalnych rozwiązań e-commerce na platformie Shopware 6.
+            - Tworzenie i integracja niestandardowych wtyczek, rozszerzeń oraz modyfikacji templatów, zapewniając wysoką jakość i wydajność kodu.
+        - title: Optymalizacja Wydajności i Doświadczenia Użytkownika
+          contents:
+            - Przeprowadzanie dogłębnych analiz wydajności (m.in. z wykorzystaniem Lighthouse) dla sklepów Shopware 6
+            - Identyfikowanie wąskich gardeł
+            - Wdrażanie rozwiązań optymalizacyjnych w celu poprawy szybkości ładowania, responsywności i ogólnego UX
+        - title: Automatyzacja i Wdrożenia (DevOps
+          contents:
+            - Aktywny udział w procesach CI/CD
+            - Automatyzacja wdrożeń oraz konfiguracja i zarządzanie środowiskami deweloperskimi, testowymi i produkcyjnymi dla projektów Shopware 6
+            - Pisanie skryptów wspierających operacje i rozwój
+        - title: Analiza i Estymacja Projektów
+          contents:
+            - Analiza wymagań biznesowych, przekładanie ich na specyfikacje techniczne.
+            - Precyzyjna estymacja czasu i zasobów niezbędnych do realizacji zadań i całych projektów w ekosystemie Shopware 6.
+        - title: Wsparcie Techniczne i Mentoring
+          contents:
+            - Zapewnianie wsparcia technicznego
+            - Rozwiązywanie złożonych problemów produkcyjnych oraz aktywne uczestnictwo w code review, dzieląc się wiedzą i najlepszymi praktykami z zespołem, szczególnie w kontekście Shopware 6
     - title: Programista PHP
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
       year: 2019 - luty 2025
@@ -107,7 +132,7 @@
           contents:
             - Implementacja algorytmu LZSS
     - title: Technik Informatyk
-      institution: Zespół Szkółw Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
+      institution: Zespół Szkół Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
       year: 2008 - 2012
 
 - title: Umiejętności
@@ -125,7 +150,7 @@
         - Dbałość o szczegóły i precyzja
         - Radzenie sobie ze stresem
         - Zdolności przywódcze i mentorskie
-        - Utrzymywanie równowangi pomiędzy pracą a życiem osobistym
+        - Utrzymywanie równowagi pomiędzy pracą a życiem osobistym
     - title: Programowanie
       items:
         - AGILE, SCRUM, Kanban
@@ -149,7 +174,7 @@
         - UML, Enterprise Architect
     - title: Game-dev
       items:
-        - Unity, Unreal Engine,, Godot
+        - Unity, Unreal Engine, Godot
         - Gimp, Photoshop, Blender
         - Unreal Engine C++ API i Profiler
         - Blueprint, Visual Scripting
