@@ -331,6 +331,41 @@ ninja.data = [{
           section: "Projekty",handler: () => {
               window.location.href = "/pl/projects/web-cloud-system/";
             },},{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Społecznościowe',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/ziumper", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Społecznościowe',
+        handler: () => {
+          window.open("https://github.com/Ziumper", "_blank");
+        },
+      },{
+        id: 'social-gitlab',
+        title: 'GitLab',
+        section: 'Społecznościowe',
+        handler: () => {
+          window.open("https://gitlab.com/Ziumper", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'Wyślij e-mail',
+        section: 'Społecznościowe',
+        handler: () => {
+          window.open("mailto:%7A%69%75%6D%70%65%72@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Społecznościowe',
+        handler: () => {
+          window.open("https://twitter.com/ziumper", "_blank");
+        },
+      },{
           id: 'lang-en',
           title: 'en',
           section: 'Języki',

@@ -331,6 +331,41 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/web-cloud-system/";
             },},{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/ziumper", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/Ziumper", "_blank");
+        },
+      },{
+        id: 'social-gitlab',
+        title: 'GitLab',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://gitlab.com/Ziumper", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'Send an email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%7A%69%75%6D%70%65%72@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://twitter.com/ziumper", "_blank");
+        },
+      },{
           id: 'lang-pl',
           title: 'pl',
           section: 'Languages',
