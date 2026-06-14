@@ -66,9 +66,9 @@ layout: default
     <!-- Social -->
     {% if page.social %}
       <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
+        {% comment %}<div class="contact-icons">{% social_links %}</div>{% endcomment %}
 
-        <div class="contact-note">{{ site.data[site.active_lang].strings.contact_note }}</div>
+        {% comment %}<div class="contact-note">{{ site.data[site.active_lang].strings.contact_note }}</div>{% endcomment %}
       </div>
     {% endif %}
 
