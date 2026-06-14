@@ -38,6 +38,8 @@ jobs:
           bundle exec jekyll build
           mkdir -p _site/assets/images
           cp -r archive/src/assets/images/* _site/assets/images/
+      # Copy the directory from archive to cheat the check, but still the links check will do a job, and if something
+      # is wrong with the link it will report it
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
