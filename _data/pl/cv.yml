@@ -12,6 +12,28 @@
   type: time_table
   contents:
     - title: Programista PHP
+      institution: Web24.com.pl Sp. z o.o., Pomorski Park Naukowo-Technologiczny, Al. Zwycięstwa 96/98, 81-451 Gdynia, Polska
+      year: 2026 - obecnie
+      description:
+        - title: Obowiązki i rola
+          contents: Kompleksowy rozwój aplikacji biznesowych w ekosystemie Laravel — od projektowania architektury, przez implementację, po przeglądy kodu i estymację projektów.
+        - title: Rozwój Oprogramowania (Backend w Laravel)
+          contents:
+            - Projektowanie architektury i kodowanie skalowalnych aplikacji biznesowych z wykorzystaniem frameworka Laravel.
+            - Implementacja nowych funkcjonalności, integracji oraz utrzymanie istniejących rozwiązań.
+        - title: Przeglądy Kodu i Jakość
+          contents:
+            - Przeprowadzanie code review w celu zapewnienia wysokiej jakości kodu, spójności architekturalnej i zgodności z najlepszymi praktykami.
+            - Dzielenie się wiedzą i wspieranie rozwoju zespołu.
+        - title: Estymacja i Analiza Projektów
+          contents:
+            - Analiza wymagań biznesowych i technicznych.
+            - Precyzyjna estymacja czasu i zasobów niezbędnych do realizacji projektów.
+        - title: Projektowanie Architektury
+          contents:
+            - Projektowanie architektury aplikacji biznesowych z uwzględnieniem skalowalności, wydajności i łatwości utrzymania.
+            - Podejmowanie kluczowych decyzji technologicznych i architektonicznych.
+    - title: Programista PHP
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
       year: mar 2025 - 2025
       description:
@@ -166,7 +188,7 @@
         - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
         - Maven, Composer, Nuget, CMake
         - Apache, Elastic Search, Redis, Varnish
-        - Shopware, Symfony, Twig, Smarty, PSH
+        - Shopware, Symfony, Laravel, Twig, Smarty, PSH
         - Docker, Vagrant, Oracle VirtualBox, Puppet
         - Nftables
         - Linux, Windows, Mac

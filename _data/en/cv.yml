@@ -12,6 +12,28 @@
   type: time_table
   contents:
     - title: PHP Developer
+      institution: Web24.com.pl Sp. z o.o., Pomorski Park Naukowo-Technologiczny, Al. Zwycięstwa 96/98, 81-451 Gdynia, Poland
+      year: 2026 - Present
+      description:
+        - title: Responsibilities and Role
+          contents: Comprehensive development of business applications within the Laravel ecosystem — from architecture design, through implementation, to code reviews and project estimation.
+        - title: Software Development (Backend in Laravel)
+          contents:
+            - Designing architecture and coding scalable business applications using the Laravel framework.
+            - Implementing new features, integrations, and maintaining existing solutions.
+        - title: Code Reviews and Quality
+          contents:
+            - Conducting code reviews to ensure high code quality, architectural consistency, and adherence to best practices.
+            - Sharing knowledge and supporting team development.
+        - title: Project Estimation and Analysis
+          contents:
+            - Analyzing business and technical requirements.
+            - Precise estimation of time and resources needed for project delivery.
+        - title: Architecture Design
+          contents:
+            - Designing business application architecture with focus on scalability, performance, and maintainability.
+            - Making key technological and architectural decisions.
+    - title: PHP Developer
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Poland
       year: Mar 2025 - 2025
       description:
@@ -166,7 +188,7 @@
         - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
         - Maven, Composer, Nuget, CMake
         - Apache, Elastic Search, Redis, Varnish
-        - Shopware, Symfony, Twig, Smarty, PSH
+        - Shopware, Symfony, Laravel, Twig, Smarty, PSH
         - Docker, Vagrant, Oracle VirtualBox, Puppet
         - Nftables
         - Linux, Windows, Mac
