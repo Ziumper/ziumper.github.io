@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using array_map() in a Programmer's Daily Life. PHP Review #7"
+title: "Using array_map() in a Programmer's Daily Life - PHP Review #7"
 date: 2025-09-30
 tags: php
 description: "This time I decided to take a look at the most common uses of array_map in my daily code."

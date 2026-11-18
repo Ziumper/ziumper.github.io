@@ -11,8 +11,10 @@
   {% if site.giscus.repo %}
     <script defer src="{{ '/assets/js/giscus-setup.js' | relative_url }}"></script>
     <noscript>
-      Please enable JavaScript to view the
-      <a href="http://giscus.app/?ref_noscript">comments powered by giscus.</a>
+      {{ site.data[site.active_lang].strings.giscus.noscript | default: 'Please enable JavaScript to view the' }}
+      <a href="https://giscus.app/?ref_noscript">
+        {{- site.data[site.active_lang].strings.giscus.noscript_link | default: 'comments powered by giscus.' -}}
+      </a>
     </noscript>
   {% else %}
     {% capture giscus_warning %}

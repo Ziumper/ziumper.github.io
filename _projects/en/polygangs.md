@@ -24,7 +24,7 @@ The game focuses on recreating life in a Polish city in the 1990s. Conceptually,
         {% include figure.liquid  path="assets/img/projects/polygangs2.jpg" title="city" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/polygangs3.png" title="car" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/polygangs3.jpg" title="car" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
@@ -40,6 +40,6 @@ Within this project, I was responsible for:
 - implementing some special effects, animations, and sounds
 - prototyping
 
-## Knowledge gain
+## What I learned
 
-This was one of the first game titles I worked on in a fully commercial project in the game-dev industry. It taught me to maintain a distance from the code I was creating, consider the accessibility of new features when designing for non-technical people, make technological compromises, rapid prototyping, and testing effective solutions.
+This was one of the first game titles I worked on in a fully commercial project in the game-dev industry. It taught me to maintain a distance from the code I was creating, consider the accessibility of new features when designing for non-technical people, make technological compromises, prototype rapidly, and test effective solutions.

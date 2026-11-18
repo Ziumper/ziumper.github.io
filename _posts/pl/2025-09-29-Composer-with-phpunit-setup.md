@@ -42,10 +42,10 @@ musi być na to lepszy sposób. I oto co odkryłem:
 }
 ```
 
-W międzyczasie napotkałem kilka poważnych problemów — nie mogłem zadeklarować Traitów w folderze testów,
+W międzyczasie napotkałem kilka poważnych problemów — nie mogłem zadeklarować traitów w folderze testów,
 a kopiowanie i wklejanie całego tego kodu było bardzo frustrujące. W końcu przeszedłem do kolejnej wersji. Nie była ona idealna,
-ale działa dla podstawowych aplikacji. Musiałem wziąć poprawkę na to, że np w Shopware autloading się różni i musiałem napisać własny loading
-bootstraperem.
+ale działa dla podstawowych aplikacji. Musiałem wziąć poprawkę na to, że np. w Shopware autoloading działa inaczej i musiałem napisać własny mechanizm ładowania
+z bootstraperem.
 
 ```json
 {
@@ -67,12 +67,12 @@ bootstraperem.
 
 Jak to działa:
 
-- wszystkie deklaracje przechowywane są w folderze src, a te używane w testach — np. bazowe przypadki testowe, trait'y, data providery itd. w folderze tests utils,
-- testy integracyjne i jednostkowe korzystają z odniesień do tests i wszystko działa bardzo sprawnie,
+- wszystkie deklaracje przechowywane są w folderze src, a te używane w testach (np. bazowe przypadki testowe, traity, data providery itd.) w folderze tests\utils,
+- testy integracyjne i jednostkowe korzystają z odniesień do src i wszystko działa bardzo sprawnie,
 - `exclude-from-classmap` to coś w rodzaju strażnika, który pilnuje, aby kod testowy nie został przypadkowo załadowany do produkcyjnego środowiska.
 - PSR-4 autoloader Composera ładuje klasy w locie po namespace → folder → filename.
 - PHPUnit korzysta z autoloadera, więc klasy są widoczne w testach.
 - exclude-from-classmap = chroni produkcję przed ładowaniem klas testowych, nie blokuje testów
-- nie ma potrzeby pisania wielu skryptów do ładowania klas php
+- nie ma potrzeby pisania wielu skryptów do ładowania klas PHP
 
-Proces ładowania klas, może się różnić w zależności od użytego frameworka czy zasad. Np. w shopware pluginy nie chcą ładować klas Utils co naprawić dodając własny bootstraper.
+Proces ładowania klas może się różnić w zależności od użytego frameworka czy zasad. Np. w Shopware pluginy nie ładują klas Utils, co można naprawić, dodając własny bootstraper.

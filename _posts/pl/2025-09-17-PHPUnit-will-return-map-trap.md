@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "PhpUnit willReturnMap - Przegląd PHP #4"
+title: "PHPUnit willReturnMap - Przegląd PHP #4"
 date: 2025-09-17
 tags: php
-description: 🐛 "PhpUnit, willReturnMap i domyślne argumenty – czyli jak wpaść w subtelną pułapkę 🪤"
+description: "🐛 PHPUnit, willReturnMap i domyślne argumenty – czyli jak wpaść w subtelną pułapkę 🪤"
 thumbnail: assets/img/posts/programmer-trap.png
 giscus_comments: true
 ---
@@ -41,7 +41,7 @@ $mock->method('doStuff')
     ]);
 ```
 
-Brzmi dobrze, nie?  
+Wygląda dobrze, nie?  
 **NIE.** 😅
 
 ---
@@ -50,7 +50,7 @@ Brzmi dobrze, nie?
 
 Jeśli nie przekażesz dokładnie tylu argumentów, ile metoda przyjmuje, PHPUnit powie:
 
-> "Nie wiem o co ci chodzi" 🤷‍♂️  
+> "Nie wiem, o co ci chodzi" 🤷‍♂️  
 > i zwróci `null`.
 
 Czyli gdy w kodzie produkcyjnym wywołasz:
@@ -112,7 +112,7 @@ Teraz już wiem – przy mockach **lepiej podać o jeden argument za dużo niż 
 
 ---
 
-✍️ **PS:** Jeśli ktoś znajdzie w dokumentacji PHPUnit wzmiankę o tym case – dajcie znać.  
+✍️ **PS:** Jeśli ktoś znajdzie w dokumentacji PHPUnit wzmiankę o tym przypadku – dajcie znać.  
 Ja nie znalazłem, a przeszukałem pół internetu. 🙈
 
 [Link do dokumentacji](https://docs.phpunit.de/en/12.3/test-doubles.html#willreturnmap)

@@ -2,7 +2,7 @@
 page_id: lzss
 layout: page
 title: LZSS
-description: Implementation of loseless data compression algorithm - LZSS
+description: Implementation of the lossless data compression algorithm - LZSS
 img: assets/img/projects/LZSS.jpg
 importance: 2
 category: desktop
@@ -41,4 +41,4 @@ The following features were implemented as part of the project:
 As part of the project implementation, I became acquainted with the following technologies and tools:
 
 - C++
-- WinApi
+- WinAPI

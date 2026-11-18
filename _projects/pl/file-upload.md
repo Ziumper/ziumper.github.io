@@ -2,26 +2,26 @@
 page_id: file_upload
 layout: page
 title: File Upload
-description: Aplikacja w symfony 7, doctrine i PhpUnit do wrzucania plików na serwer z walidowanym formularzem
+description: Aplikacja w Symfony 7, Doctrine i PHPUnit do wrzucania plików na serwer z walidowanym formularzem
 img: assets/img/projects/file-upload1.png
 importance: 1
 category: web-development
 ---
 
 <div class="links">
-  <a href="https://github.com/Ziumper/file-upload" class="btn btn-amber btn-sm z-depth-0" role="button">View code <i class="fa-brands fa-github"></i></a>
+  <a href="https://github.com/Ziumper/file-upload" class="btn btn-amber btn-sm z-depth-0" role="button">Zobacz kod <i class="fa-brands fa-github"></i></a>
 </div>
 
 # Opis projektu
 
-Jest to aplikacja symfony napisana w ramach projektu rekrutacyjnego na stanowisko programisty PHP. Miała ona na celu sprawdzenie moich umiejętności w tej platformie programistycznej i wykonanie poniższych wymagań
+Jest to aplikacja Symfony napisana w ramach projektu rekrutacyjnego na stanowisko programisty PHP. Miała ona na celu sprawdzenie moich umiejętności w tej platformie programistycznej i spełnienie poniższych wymagań:
 
 - Pierwsza strona zawiera formularz. Formularz składa się z trzech pól: Imię, Nazwisko, Załącznik.
 - Pola formularza są walidowane. Imię i nazwisko nie mogą być puste, a plik może zawierać wyłącznie obrazki nie większe niż 2MB.
 - Dane z formularza są asynchronicznie zapisywane w bazie danych. Po wysłaniu wyświetlany jest komunikat o powodzeniu lub błędzie.
 - Druga strona zawiera zestawienie dodanych przez formularz danych. Ta strona jest zabezpieczona przed nieuprawnionym dostępem.
 
-Najwazniejszym aspektem wykonanej aplikacji jest [kod](https://github.com/Ziumper/file-upload), ale mimo wszystko wrzucam poniżej zdjęcia aplikacji
+Najważniejszym aspektem wykonanej aplikacji jest [kod](https://github.com/Ziumper/file-upload), ale mimo wszystko wrzucam poniżej zrzuty ekranu aplikacji.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -40,11 +40,11 @@ Najwazniejszym aspektem wykonanej aplikacji jest [kod](https://github.com/Ziumpe
 
 ## Wykorzystane technologie
 
-W ramach projektu udało mi się zapoznać z następującymi technologami i narzędziami
+W ramach projektu udało mi się zapoznać z następującymi technologiami i narzędziami:
 
 - [Symfony 7](https://symfony.com/7)
 - [PHPUnit](https://phpunit.de/index.html)
-- [Invervention Image](https://github.com/Intervention/image)
+- [Intervention Image](https://github.com/Intervention/image)
 - [Doctrine](https://www.doctrine-project.org/)
 - [jQuery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)

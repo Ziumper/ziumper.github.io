@@ -12,13 +12,13 @@ category: game-dev
    <a href="https://tylestarczy.itch.io/steve-the-hamster" class="btn btn-amber btn-sm z-depth-0" role="button">Sprawdź grę na Itch.io <i class="fa fa-gamepad"></i></a>
 </div>
 
-## Opis Projektu
+## Opis projektu
 
 Steve the Hamster to zręcznościowo-logiczna gra 3D, w której gracze wcielają się w chomika poruszającego się w przezroczystej kuli. Celem gry jest pokonanie serii poziomów pełnych zagadek, przeszkód i wrogów, aby wydostać się z domu. Gra łączy dynamiczną akcję z elementami logicznymi, oferując unikalne wyzwania w każdej lokacji.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/steve_the_hamster_1.png" title="example board" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/steve_the_hamster_1.png" title="przykładowa plansza" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -41,7 +41,7 @@ Podczas pracy nad projektem wykorzystałem różnorodne narzędzia i technologie
 - **Drzewa zachowań**:
 <div class="row justify-content-sm-center">
    <div class="col-sm-8 mt-3 mt-md-0">
-      {% include figure.liquid path="assets/img/projects/steve_the_hamster_3.png" title="drzewa zachowań dla npc" class="img-fluid rounded z-depth-1" zoomable=true %}
+      {% include figure.liquid path="assets/img/projects/steve_the_hamster_3.png" title="drzewa zachowań dla NPC" class="img-fluid rounded z-depth-1" zoomable=true %}
    </div>
 </div>
 <div class="caption">
@@ -51,7 +51,7 @@ Korzystając z systemu Behavior Trees, zaimplementowałem inteligencję przeciwn
 - **Podstawowe animacje sterowane inputem**:
 <div class="row justify-content-sm-center justify-content-left">
    <div class="col-sm-8 mt-3 mt-md-0">
-      {% include figure.liquid path="assets/img/projects/steve_the_hamster_animations.png" title="sterowanie anmiacją - obraz blueprintu" class="img-fluid rounded z-depth-1" zoomable=true %}
+      {% include figure.liquid path="assets/img/projects/steve_the_hamster_animations.png" title="sterowanie animacją - obraz blueprintu" class="img-fluid rounded z-depth-1" zoomable=true %}
    </div>
 </div>
 <div class="caption">
@@ -74,7 +74,7 @@ Stworzyłem mechanizm umożliwiający wyświetlanie dialogów chomika w grze. Te
 - **Tworzenie interfejsu użytkownika (UI)**:
 <div class="row justify-content-sm-center">
    <div class="col-sm-8 mt-3 mt-md-0">
-      {% include figure.liquid path="assets/img/projects/steve_the_hamster_menu.png" title="interfejs użytkownika-ustawienia graficzne" class="img-fluid rounded z-depth-1" zoomable=true %}
+      {% include figure.liquid path="assets/img/projects/steve_the_hamster_menu.png" title="interfejs użytkownika - ustawienia graficzne" class="img-fluid rounded z-depth-1" zoomable=true %}
    </div>
 </div>
 <div class="caption">

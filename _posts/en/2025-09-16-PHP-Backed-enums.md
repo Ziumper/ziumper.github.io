@@ -91,14 +91,14 @@ Or even better – **mapping arrays**, which you had to maintain in three differ
 
 ```php
 class OrderStatus {
-   public const NEW = 'new';
-   public const IN_PROGRESS = 'in_progress';
-   public const DONE = 'done';
+    public const NEW = 'new';
+    public const IN_PROGRESS = 'in_progress';
+    public const DONE = 'done';
 
     public static array $labels = [
-        self::NEW = "I'm doing things now!",
-        self::IN_PROGRESS = "I'm working on it!",
-        self::DONE = "I finished",
+        self::NEW => "I'm doing things now!",
+        self::IN_PROGRESS => "I'm working on it!",
+        self::DONE => "I finished",
     ];
 }
 
@@ -108,25 +108,25 @@ echo OrderStatus::$labels[OrderStatus::IN_PROGRESS]; // "I'm working on it!"
 **After (enums):**
 
 ```php
- enum OrderStatus: string {
-     case NEW = 'new';
-     case IN_PROGRESS = 'in_progress';
-     case DONE = 'done';
+enum OrderStatus: string {
+    case NEW = 'new';
+    case IN_PROGRESS = 'in_progress';
+    case DONE = 'done';
 
-     public function label(): string {
-         return match($this) {
-             self::NEW = "I'm doing things now!",,
-             self::IN_PROGRESS = "I'm working on it!",
-             self::DONE = "I finished",
-         };
-     }
- }
+    public function label(): string {
+        return match($this) {
+            self::NEW => "I'm doing things now!",
+            self::IN_PROGRESS => "I'm working on it!",
+            self::DONE => "I finished",
+        };
+    }
+}
 
- echo OrderStatus::IN_PROGRESS->label(); // "I'm working on it!"
+echo OrderStatus::IN_PROGRESS->label(); // "I'm working on it!"
 ```
 
 The result? Mappers are gone, the code is more readable, and my IDE gives me hints on the fly. 😎  
-The example is kind of more abstract but it does show what or how enums may be used to refactor your old code.
+The example is a bit abstract, but it does show how enums can be used to refactor your old code.
 
 ---
 

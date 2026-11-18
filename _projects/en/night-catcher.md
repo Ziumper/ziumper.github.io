@@ -2,7 +2,7 @@
 page_id: night_catcher
 layout: page
 title: Night Catcher
-description: Skill based mobile game for Android made in Unity
+description: Skill-based mobile game for Android made in Unity
 img: assets/img/projects/night_catcher.png
 importance: 4
 category: game-dev
@@ -10,7 +10,7 @@ category: game-dev
 
 # Project Description
 
-A simple Android game where you catch dots in a beautiful graphical setting with cute cats in the background. As the levels progress, the difficulty level increases, and subsequent levels become increasingly challenging. In this project, I was responsible for code reviews and the integration of the WWise tool for sound implementation. Additionally, I served in a supervisory and mentoring role, proposing appropriate technical solutions and code architecture.
+A simple Android game where you catch dots in a beautiful graphical setting with cute cats in the background. As the levels progress, the difficulty level increases, and subsequent levels become increasingly challenging. In this project, I was responsible for code reviews and the integration of the Wwise tool for sound implementation. Additionally, I served in a supervisory and mentoring role, proposing appropriate technical solutions and code architecture.
 
 ## Features
 
@@ -50,4 +50,4 @@ During the project implementation, I got acquainted with the following technolog
 - Wwise
 - NUnit
 - Hack&Plan
-- Gimp
+- GIMP

@@ -14,9 +14,9 @@ Przy okazji dowiesz się, czym są `BackedEnums`, jakie mają plusy i minusy, i 
 ## 🤔 Co to w ogóle są te BackedEnums?
 
 Od PHP **8.1** dostaliśmy wreszcie coś, na co czekaliśmy od lat – **enumy**!  
- A do tego mamy ich bardziej wypasioną wersję – **BackedEnums**.  
- Są to takie enumy, które oprócz nazwy mogą mieć jeszcze wartość (`string` albo `int`).  
- Brzmi jak `const` w klasie, ale jest o niebo lepsze. 💪
+A do tego mamy ich bardziej wypasioną wersję – **BackedEnums**.  
+Są to takie enumy, które oprócz nazwy mogą mieć jeszcze wartość (`string` albo `int`).  
+Brzmi jak `const` w klasie, ale jest o niebo lepsze. 💪
 
 ### Przykład w akcji
 
@@ -55,20 +55,20 @@ Od PHP **8.1** dostaliśmy wreszcie coś, na co czekaliśmy od lat – **enumy**
 ## 😅 Dlaczego `BackedEnums` dla stringów mogą być kłopotliwe?
 
 No właśnie, tutaj miałem małą zagwozdkę.  
- Jeżeli **wartość enuma = jego nazwa**, to trochę strzelamy sobie w kolano, bo potem w kodzie mamy:
+Jeżeli **wartość enuma = jego nazwa**, to trochę strzelamy sobie w kolano, bo potem w kodzie mamy:
 
 ```php
  Status::NEW-value // "NEW"
  Status::NEW-name  // "NEW"
 ```
 
-A skoro można po prostu używać `-name`, to po co nam to całe `value`?  
- Zamiast tego lepiej zostawić zwykłe `enum` (bez wartości) i mieć spokój.
+A skoro można po prostu używać `->name`, to po co nam to całe `value`?  
+Zamiast tego lepiej zostawić zwykłe `enum` (bez wartości) i mieć spokój.
 
 ## ⏳ A co było przed enumami?
 
 Ach, stare dobre czasy...  
- Pisaliśmy takie kwiatki:
+Pisaliśmy takie kwiatki:
 
 ```php
 class Status {
@@ -81,24 +81,24 @@ $status = Status::NEW;
 ```
 
 Albo jeszcze lepiej – **tablice mapperów**, które trzeba było utrzymywać w 3 miejscach naraz.  
- (Tak, wszyscy wiemy, że to bolało).
+(Tak, wszyscy wiemy, że to bolało.)
 
 ---
 
-## 🔄 Before & After – czyli jak się pozbyłem mapperów
+## 🔄 Przed i po – czyli jak się pozbyłem mapperów
 
 **Przed (mappery):**
 
 ```php
 class OrderStatus {
-   public const NEW = 'new';
-   public const IN_PROGRESS = 'in_progress';
-   public const DONE = 'done';
+    public const NEW = 'new';
+    public const IN_PROGRESS = 'in_progress';
+    public const DONE = 'done';
 
     public static array $labels = [
-        self::NEW = "I'm doing things now!",
-        self::IN_PROGRESS = "I'm working on it!",
-        self::DONE = "I finished",
+        self::NEW => "I'm doing things now!",
+        self::IN_PROGRESS => "I'm working on it!",
+        self::DONE => "I finished",
     ];
 }
 
@@ -115,9 +115,9 @@ enum OrderStatus: string {
 
     public function label(): string {
         return match($this) {
-            self::NEW = "I'm doing things now!",,
-            self::IN_PROGRESS = "I'm working on it!",
-            self::DONE = "I finished",
+            self::NEW => "I'm doing things now!",
+            self::IN_PROGRESS => "I'm working on it!",
+            self::DONE => "I finished",
         };
     }
 }
@@ -132,12 +132,12 @@ Przykład jest ciut abstrakcyjny, ale mimo wszystko oddaje problemy, z którymi 
 
 ## 🎉 Moja mała rewolucja
 
-Dzięki enumom udało mi się pozbyć całych mapperów wartości!  
- Teraz kod jest czytelniejszy, IDE podpowiada mi wartości, a ja śpię spokojnie. 🛌
+Dzięki enumom udało mi się pozbyć wszystkich mapperów wartości!  
+Teraz kod jest czytelniejszy, IDE podpowiada mi wartości, a ja śpię spokojnie. 🛌
 
 Mappery? **Nie, dziękuję.**  
- Enumy przejęły pałeczkę i zrobiły to lepiej.  
- I serio – warto było to zrobić. 😎
+Enumy przejęły pałeczkę i zrobiły to lepiej.  
+I serio – warto było to zrobić. 😎
 
 ---
 
@@ -149,7 +149,7 @@ Mappery? **Nie, dziękuję.**
 - Enumy = mniej bugów, mniej mapperów, więcej spokoju w duszy.
 
 **Morał:** Enumy to takie nowe `consty`, tylko ładniejsze i mądrzejsze.  
- Mappery możesz teraz wysłać na emeryturę. 🏖️
+Mappery możesz teraz wysłać na emeryturę. 🏖️
 
 ---
 

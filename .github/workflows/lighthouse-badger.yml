@@ -14,9 +14,9 @@ name: "Lighthouse Badger"
 
 # INPUTS as Secrets (env) for not manually triggered workflows
 env:
-  URLS: https://george-gca.github.io/multi-language-al-folio/
+  URLS: https://ziumper.github.io/
   # If any of the following env is blank, a default value is used instead
-  REPO_BRANCH: "${{ github.repository }} main" # target repository & branch e.g. 'dummy/mytargetrepo main'
+  REPO_BRANCH: "${{ github.repository }} master" # target repository & branch e.g. 'dummy/mytargetrepo main'
   MOBILE_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --throttling.cpuSlowdownMultiplier=2"
   DESKTOP_LIGHTHOUSE_PARAMS: "--only-categories=performance,accessibility,best-practices,seo --preset=desktop --throttling.cpuSlowdownMultiplier=1"
 
@@ -40,18 +40,18 @@ jobs:
     steps:
       - name: Preparatory Tasks
         run: |
-          REPOSITORY=`expr "${{ env.REPO_BRANCH }}" : "\([^ ]*\)"`
-          BRANCH=`expr "${{ env.REPO_BRANCH }}" : ".* \([^ ]*\)"`
-          echo "REPOSITORY=$REPOSITORY" >> $GITHUB_ENV
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          REPOSITORY=$(expr "$REPO_BRANCH" : "\([^ ]*\)")
+          BRANCH=$(expr "$REPO_BRANCH" : ".* \([^ ]*\)")
+          echo "REPOSITORY=$REPOSITORY" >> "$GITHUB_ENV"
+          echo "BRANCH=$BRANCH" >> "$GITHUB_ENV"
         env:
           REPO_BRANCH: ${{ env.REPO_BRANCH }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ env.REPOSITORY }}
           token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN }}
           ref: ${{ env.BRANCH }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: "myactionway/lighthouse-badges"
           path: temp_lighthouse_badges_nested

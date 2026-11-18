@@ -2,7 +2,7 @@
 page_id: todo_app
 layout: page
 title: Todo App
-description: WPF TodoApp apllicaiton for checking AvaloniaUI framework. Project based on AvaloniaUI example with modifications and integrated Unit tests
+description: WPF TodoApp application for trying out the AvaloniaUI framework. Based on the AvaloniaUI example, with modifications and integrated unit tests
 img: assets/img/projects/todo_app_view.png
 importance: 1
 category: desktop
@@ -15,7 +15,7 @@ category: desktop
 
 # Project Description
 
-The project was carried out out of curiosity and passion for software development. I added a task-saving layer to the basic template provided by the manufacturer, allowing tasks to be loaded when the program is restarted, along with unit tests. The application also includes a simple installer to assist users with their tasks.
+The project was carried out out of curiosity and passion for software development. I added a task-saving layer to the basic template provided by the framework authors, allowing tasks to be loaded when the program is restarted, along with unit tests. The application also includes a simple installer to assist users with their tasks.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">

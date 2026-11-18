@@ -9,7 +9,7 @@ giscus_comments: true
 ---
 
 When working with PHP projects, especially those using Symfony,
-you might encounter the `extra` section in your `composer.json`file.
+you might encounter the `extra` section in your `composer.json` file.
 This section often contains recipes that help configure your project.
 However, over time, you may want to remove or clean up these recipes.
 
@@ -36,13 +36,13 @@ It is used by Composer plugins, frameworks (like Symfony), and scripts to store 
 }
 ```
 
-## For what I used the `extra` section?
+## What did I use the `extra` section for?
 
-Well I used it to store Symfony Flex recipes.
+Well, I used it to store Symfony Flex recipes.
 Symfony Flex is a Composer plugin that helps manage Symfony applications by automating the installation and configuration of
 packages. When you install a package that has a recipe, Symfony Flex adds configuration files and settings to your project automatically.
 You may prefer to remove some of these recipes if they are no longer needed or if you want to customize your setup.
-In my case it was docker setup that I didn't need.
+In my case, it was a Docker setup that I didn't need.
 
 ```json
 {
@@ -55,7 +55,7 @@ In my case it was docker setup that I didn't need.
 }
 ```
 
-## Symfony flex
+## Symfony Flex
 
 The Flex recipes make a few assumptions about your project's directory structure. Some of these assumptions can be customized by adding a key under the extra section of your composer.json file. For example, to tell Flex to copy any PHP classes into src/App instead of src:
 

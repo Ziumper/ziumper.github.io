@@ -64,4 +64,4 @@ In the course of the project, I became acquainted with the following technologie
 - Wwise
 - NUnit
 - Hack&Plan
-- Gimp
+- GIMP

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Board Heroes Battle
-description: Augmented reality turn based board game for the Android platform
+description: Augmented reality turn-based board game for the Android platform
 img: assets/img/projects/BoardHeroesBattle_unreal_castle.jpg
 importance: 4
 category: game-dev
@@ -25,7 +25,7 @@ The aim of this project was to analyze and compare selected aspects of developin
 
 # Functionality and Gameplay
 
-The game upon which the applications were based is a blend of turn-based strategy (TBS) with the Dungeon-Crawler board game genre. The application, to combine gameplay types and expand the range of gaming experiences, utilizes AR technology. Through this technology, elements of computer games are transferred into the real world. Using AR, character models, a virtual die, and dungeon room are overlaid onto the physical game board for gameplay. The technology employs image tracking to place them on the captured image from the device's camera and simulate their placement in any room. The game utilizes an AR interface for augmented images.
+The game upon which the applications were based is a blend of turn-based strategy (TBS) with the Dungeon-Crawler board game genre. The application, to combine gameplay types and expand the range of gaming experiences, utilizes AR technology. Through this technology, elements of computer games are transferred into the real world. Using AR, character models, a virtual die, and dungeon rooms are overlaid onto the physical game board for gameplay. The technology employs image tracking to place them on the captured image from the device's camera and simulate their placement in any room. The game utilizes an AR interface for augmented images.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -82,7 +82,7 @@ In the course of project implementation, I became acquainted with the following 
 - Unity
 - Blender
 - Photoshop
-- Gimp
+- GIMP
 - Visual Studio
 - Unreal Engine Blueprints
 - Unity Editor Profiler

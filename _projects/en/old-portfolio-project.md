@@ -4,7 +4,7 @@ layout: page
 title: Old portfolio project
 description: Archived portfolio project written with plain JavaScript, HTML, CSS and Webpack
 img: assets/img/projects/old_portfolio.png
-redirect: /archive
+redirect: /archive/
 importance: 1
 category: web-development
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How integrate GitHub Copilot to generate commit messages automatically?"
+title: "How to integrate GitHub Copilot to generate commit messages automatically?"
 date: 2025-09-24
 tags: git github productivity copilot
 description: "This post explains how to use GitHub Copilot to generate commit messages automatically, improving productivity and ensuring clear commit history."
@@ -39,20 +39,19 @@ This template provides guidelines for writing good commit messages and will help
 ## Step 2: Use GitHub Copilot to generate commit messages
 
 Once you have added the template to your repository, you can start using GitHub Copilot to generate commit messages.
-When you are ready to make a commit, you can use one of the following IDE editors that support GitHub Copilot:
+When you are ready to make a commit, you can use one of the following IDEs that support GitHub Copilot:
 
 - Visual Studio Code
 - JetBrains IDEs (e.g., IntelliJ IDEA, PyCharm, WebStorm)
 - Neovim
 
-When you click the commit message editor button, GitHub Copilot will suggest a commit message based on the changes
-you have made and the guidelines provided in the template. GitHub Copilot will automatically suggest a commit message based on
-the changes you have made and the guidelines provided in the template.
+When you click the commit message generation button, GitHub Copilot will suggest a commit message based on the changes
+you have made and the guidelines provided in the template.
 
 ## Conclusion
 
 Using GitHub Copilot to generate commit messages automatically can help you write better commit messages and improve your productivity.
-By adding a GitHub Copilot template to your repository and using one of the supported IDE editors
+By adding a GitHub Copilot template to your repository and using one of the IDEs
 that support GitHub Copilot, you can easily generate clear and informative commit messages.
 Give it a try and see how it can improve your workflow!
 I'm already using it and I love it! 😊

@@ -2,7 +2,7 @@
 page_id: blog_manager
 layout: page
 title: Blog Manager
-description: Aplikacja do zarządzania blogami MVC na platformie .NET Core i Angular z konfiguracją docker-compose dla lepszego doświadczenia programistycznego
+description: Aplikacja MVC do zarządzania blogami na platformie .NET Core i Angular z konfiguracją docker-compose dla wygodniejszej pracy programistycznej
 img: assets/img/projects/posts_manager.jpg
 importance: 1
 category: web-development
@@ -14,18 +14,18 @@ category: web-development
 
 # Opis projektu
 
-Projekt zostal zrealizowany w celu zaaktualizowania wiedzy i kompetencji z zakresu technologii ASP.NET. Pozwala ona na zbudowaniu systemu zarządzania blogiem oraz użytkownikami, którzy dodają na niego kolejne posty. Podsumowując w projekcie zostaly zaimplementowane takie funkcjonalności jak:
+Projekt został zrealizowany w celu zaktualizowania wiedzy i kompetencji z zakresu technologii ASP.NET. Pozwala on na zbudowanie systemu zarządzania blogiem oraz użytkownikami, którzy dodają na niego kolejne posty. Podsumowując, w projekcie zostały zaimplementowane takie funkcjonalności jak:
 
 - logowanie i rejestracja użytkowników
 - system paginacji postów
 - system zarządzania użytkownikami
 - możliwość dodawania komentarzy do postów i nowych blogów
 - dodawanie i przetrzymywanie obrazów
-- lokalne środowisko developerskie z skryptami do zarządzania cyklem życia aplikacji
+- lokalne środowisko developerskie ze skryptami do zarządzania cyklem życia aplikacji
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/posts_manager.jpg" title="frontend view" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/posts_manager.jpg" title="widok frontendu" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -34,7 +34,7 @@ Projekt zostal zrealizowany w celu zaaktualizowania wiedzy i kompetencji z zakre
 
 ## Wykorzystane technologie i narzędzia
 
-W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+W ramach realizacji projektu udało mi się zapoznać z następującymi technologiami i narzędziami:
 
 - Entity Framework Core
 - Angular

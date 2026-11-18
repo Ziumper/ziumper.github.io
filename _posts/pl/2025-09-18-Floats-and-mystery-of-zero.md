@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🧐 PHP, Liczby zmiennoprzecinkowe i Tajemnica -0.0 Przegląd PHP #5"
+title: "🧐 Liczby zmiennoprzecinkowe i tajemnica -0.0 - Przegląd PHP #5"
 date: 2025-09-18
 tags: php
 description: "Czy wiesz, że w PHP istnieje ujemne zero? Ten post to podróż przez świat ujemnych zer, dzielenia przez nieskończoność i tego, czemu w Twoim kodzie i tak możesz spokojnie pisać == 0.0."
@@ -15,7 +15,7 @@ Miałem taki kod:
 ```php
 public function getPercentage(): int
 {
-    // epsilon to avoid division by zero
+    // epsilon, aby uniknąć dzielenia przez zero
     if (abs($this->limitPrice) < 1e-8) {
         return 0;
     }
@@ -122,9 +122,9 @@ public function getPercentage(): int
 ```
 
 Czytelniej, prościej i dalej bezpiecznie.  
-A fakt, że -0.0 istnieje, zostawiam jako ciekawostkę do impressowania znajomych programistów na kawie. ☕️😎
+A fakt, że -0.0 istnieje, zostawiam jako ciekawostkę, którą można zaimponować znajomym programistom przy kawie. ☕️😎
 
-PS: Jeżeli zależy Ci na użyciu epislona to chyba znacznie lepiej użyć tej stałej.
+PS: Jeżeli zależy Ci na użyciu epsilona, to znacznie lepiej użyć tej stałej:
 
 ```php
 PHP_FLOAT_EPSILON

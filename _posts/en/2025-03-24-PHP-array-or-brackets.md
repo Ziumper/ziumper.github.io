@@ -8,7 +8,7 @@ thumbnail: assets/img/posts/php-cake.png
 giscus_comments: true
 ---
 
-This is another installment in the PHP review series. This time, I decided to take a closer look at the array declaration function and what really lies behind it. From what I remember, using `array()` was considered outdated by my colleagues at work and should no longer be used. To verify this, I decided to pull the repository of a PHP code refactoring and updating framework—Rector. After all, what tool is better at handling arrays than one designed for refactoring and adhering to best coding practices?
+This is another installment in the PHP review series. This time, I decided to take a closer look at the array declaration function and what really lies behind it. From what I remember, using `array()` was considered outdated by my colleagues at work, something that should no longer be used. To verify this, I decided to pull the repository of a PHP code refactoring and updating framework—Rector. After all, what tool is better at handling arrays than one designed for refactoring and adhering to best coding practices?
 
 ## A Deep Dive into the Shallow End
 
@@ -84,8 +84,8 @@ static void zend_verify_list_assign_target(zend_ast *var_ast, zend_ast_attr arra
 In PHP code, this has the following consequences:
 
 ```php
-array(1, 2, 3) = [4, 5, 6];  // Error: cannot assign to array()
-[1, 2, 3] = [4, 5, 6];  // Correct
+array($a, $b, $c) = [4, 5, 6];  // Error: cannot assign to array()
+[$a, $b, $c] = [4, 5, 6];  // Correct
 ```
 
 Honestly, I didn’t expect to find such quirks in the compiler, but this is a significant difference.

@@ -4,9 +4,9 @@
     - name: Imię i nazwisko
       value: Tomasz Komoszeski
     - name: Data urodzenia
-      value: 5 Maj 1992
+      value: 5 maja 1992
     - name: Języki
-      value: Polski (Natywny), Angielski (C1)
+      value: polski (ojczysty), angielski (C1)
 
 - title: Doświadczenie
   type: time_table
@@ -17,50 +17,50 @@
       description:
         - title: Obowiązki i rola
           contents: Kompleksowy rozwój aplikacji biznesowych w ekosystemie Laravel — od projektowania architektury, przez implementację, po przeglądy kodu i estymację projektów.
-        - title: Rozwój Oprogramowania (Backend w Laravel)
+        - title: Rozwój oprogramowania (backend w Laravelu)
           contents:
             - Projektowanie architektury i kodowanie skalowalnych aplikacji biznesowych z wykorzystaniem frameworka Laravel.
             - Implementacja nowych funkcjonalności, integracji oraz utrzymanie istniejących rozwiązań.
-        - title: Przeglądy Kodu i Jakość
+        - title: Przeglądy kodu i jakość
           contents:
             - Przeprowadzanie code review w celu zapewnienia wysokiej jakości kodu, spójności architekturalnej i zgodności z najlepszymi praktykami.
             - Dzielenie się wiedzą i wspieranie rozwoju zespołu.
-        - title: Estymacja i Analiza Projektów
+        - title: Estymacja i analiza projektów
           contents:
             - Analiza wymagań biznesowych i technicznych.
             - Precyzyjna estymacja czasu i zasobów niezbędnych do realizacji projektów.
-        - title: Projektowanie Architektury
+        - title: Projektowanie architektury
           contents:
             - Projektowanie architektury aplikacji biznesowych z uwzględnieniem skalowalności, wydajności i łatwości utrzymania.
             - Podejmowanie kluczowych decyzji technologicznych i architektonicznych.
     - title: Programista PHP
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
-      year: mar 2025 - 2025
+      year: marzec 2025 - 2025
       description:
         - title: Obowiązki i rola
           contents: Moja rola w Strix wymagała wszechstronności i umiejętności szybkiego adaptowania się do nowych wyzwań, od kodu backendowego, przez warstwę frontendową, po aspekty związane z infrastrukturą i optymalizacją, ze szczególnym uwzględnieniem specyfiki i możliwości platformy Shopware 6.
-        - title: Rozwój Oprogramowania (Frontend & Backend w Shopware 6)
+        - title: Rozwój oprogramowania (frontend i backend w Shopware 6)
           contents:
             - Projektowanie, implementacja i utrzymanie skalowalnych rozwiązań e-commerce na platformie Shopware 6.
-            - Tworzenie i integracja niestandardowych wtyczek, rozszerzeń oraz modyfikacji templatów, zapewniając wysoką jakość i wydajność kodu.
-        - title: Optymalizacja Wydajności i Doświadczenia Użytkownika
+            - Tworzenie i integracja niestandardowych wtyczek, rozszerzeń oraz modyfikacji szablonów, zapewniając wysoką jakość i wydajność kodu.
+        - title: Optymalizacja wydajności i doświadczenia użytkownika
           contents:
-            - Przeprowadzanie dogłębnych analiz wydajności (m.in. z wykorzystaniem Lighthouse) dla sklepów Shopware 6
-            - Identyfikowanie wąskich gardeł
-            - Wdrażanie rozwiązań optymalizacyjnych w celu poprawy szybkości ładowania, responsywności i ogólnego UX
-        - title: Automatyzacja i Wdrożenia (DevOps
+            - Przeprowadzanie dogłębnych analiz wydajności (m.in. z wykorzystaniem Lighthouse) dla sklepów Shopware 6.
+            - Identyfikowanie wąskich gardeł.
+            - Wdrażanie rozwiązań optymalizacyjnych w celu poprawy szybkości ładowania, responsywności i ogólnego UX.
+        - title: Automatyzacja i wdrożenia (DevOps)
           contents:
-            - Aktywny udział w procesach CI/CD
-            - Automatyzacja wdrożeń oraz konfiguracja i zarządzanie środowiskami deweloperskimi, testowymi i produkcyjnymi dla projektów Shopware 6
-            - Pisanie skryptów wspierających operacje i rozwój
-        - title: Analiza i Estymacja Projektów
+            - Aktywny udział w procesach CI/CD.
+            - Automatyzacja wdrożeń oraz konfiguracja i zarządzanie środowiskami deweloperskimi, testowymi i produkcyjnymi dla projektów Shopware 6.
+            - Pisanie skryptów wspierających operacje i rozwój.
+        - title: Analiza i estymacja projektów
           contents:
-            - Analiza wymagań biznesowych, przekładanie ich na specyfikacje techniczne.
+            - Analiza wymagań biznesowych i przekładanie ich na specyfikacje techniczne.
             - Precyzyjna estymacja czasu i zasobów niezbędnych do realizacji zadań i całych projektów w ekosystemie Shopware 6.
-        - title: Wsparcie Techniczne i Mentoring
+        - title: Wsparcie techniczne i mentoring
           contents:
-            - Zapewnianie wsparcia technicznego
-            - Rozwiązywanie złożonych problemów produkcyjnych oraz aktywne uczestnictwo w code review, dzieląc się wiedzą i najlepszymi praktykami z zespołem, szczególnie w kontekście Shopware 6
+            - Zapewnianie wsparcia technicznego.
+            - Rozwiązywanie złożonych problemów produkcyjnych oraz aktywne uczestnictwo w code review, dzieląc się wiedzą i najlepszymi praktykami z zespołem, szczególnie w kontekście Shopware 6.
     - title: Programista PHP
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
       year: 2019 - luty 2025
@@ -68,12 +68,12 @@
         - title: Obowiązki
           contents:
             - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem technologii <a href="https://www.shopware.com/en/">Shopware 5 i 6</a>
-            - Analiza wymagań i proponowanie rozwiązań na ich podstawie
-            - Wdrażanie kolejnych wersji oprogramowania i dodatków udostępniających funkcjonalności
-            - Testowanie, debugowanie i utrzymywanie aplikacji e-commerce oraz ich rozwój
+            - Analiza wymagań i proponowanie rozwiązań na ich podstawie.
+            - Wdrażanie kolejnych wersji oprogramowania i dodatków udostępniających funkcjonalności.
+            - Testowanie, debugowanie i utrzymywanie aplikacji e-commerce oraz ich rozwój.
             - Integracja komunikacji aplikacji e-commerce z systemami ERP, CMS itp.
-            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
-            - Migracja sklepów internetowych na platformę Shopware 6
+            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole.
+            - Migracja sklepów internetowych na platformę Shopware 6.
         - title: Projekty
           contents:
             - <a href="https://www.sunzinet.com/en/references/boesner">Boesner</a>
@@ -87,15 +87,15 @@
       description:
         - title: Obowiązki
           contents:
-            - Integracja istniejących, zakupionych i tworzenie nowych narzędzi przy pomocy C# i .NET do edycji zawartości gier w silniku Unity
-            - Projektowanie i integracja mechanik w tworzonych grach
-            - Mentoring techniczny, przeprowadzanie przeglądów kodu
-            - Naprawa błędów, optymalizacja i profilowanie w silniku Unity
+            - Integracja istniejących, zakupionych i tworzenie nowych narzędzi przy pomocy C# i .NET do edycji zawartości gier w silniku Unity.
+            - Projektowanie i integracja mechanik w tworzonych grach.
+            - Mentoring techniczny, przeprowadzanie przeglądów kodu.
+            - Naprawa błędów, optymalizacja i profilowanie w silniku Unity.
         - title: Projekty
           contents:
             - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
-            - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
-            - <a href="https://ziumper.github.io/pl/projects/night-catcher/">NightCatcher</a>
+            - <a href="https://www.nintendo.com/us/store/products/ludo-game-just-chill-out-switch/">Ludo Game</a>
+            - <a href="/projects/night-catcher/">NightCatcher</a>
 
     - title: Programista PHP
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
@@ -103,8 +103,8 @@
       description:
         - title: Obowiązki
           contents:
-            - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem PHP, Smarty, MySQL, XML, CSS i HTML
-            - Pomoc w restuktaryzacji i utrzymaniu aplikacji desktopowej <a href="https://pobieranie.meteoryt.pl/">Asystent</a> oraz analogicznej wersji <a href="https://meteoryt.pl/asystentchmura"> chmurowej</a>
+            - Projektowanie, kodowanie i tworzenie aplikacji internetowych e-commerce z wykorzystaniem PHP, Smarty, MySQL, XML, CSS i HTML.
+            - Pomoc w restrukturyzacji i utrzymaniu aplikacji desktopowej <a href="https://pobieranie.meteoryt.pl/">Asystent</a> oraz analogicznej wersji <a href="https://meteoryt.pl/asystentchmura">chmurowej</a>.
         - title: Projekty
           contents:
             - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
@@ -116,10 +116,10 @@
       description:
         - title: Obowiązki
           contents:
-            - Projektowanie, kodowanie i tworzenie aplikacji internetowych z wykorzystaniem ASP.NET, REST, C#, MVC, Angular, JavaScript i TypeScript, CSS i HTML
-            - Naprawa błędów, testowanie, utrzymywanie i debugowanie istniejących aplikacji
-            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole
-            - Przeprowadzanie i uczestniczenie w przeglądach kodu
+            - Projektowanie, kodowanie i tworzenie aplikacji internetowych z wykorzystaniem ASP.NET, REST, C#, MVC, Angular, JavaScript i TypeScript, CSS i HTML.
+            - Naprawa błędów, testowanie, utrzymywanie i debugowanie istniejących aplikacji.
+            - Praca i komunikacja w międzynarodowym, wielojęzycznym zespole.
+            - Przeprowadzanie i uczestniczenie w przeglądach kodu.
         - title: Projekty
           contents:
             - <a href="https://github.com/Ziumper/Bookshop">Projekt rekrutacyjny Księgarnia</a>
@@ -127,13 +127,13 @@
 - title: Edukacja
   type: time_table
   contents:
-    - title: Mgr. inż. Informatyka
+    - title: Mgr inż. Informatyka
       institution: Politechnika Gdańska, Gdańsk, Polska
       year: 2021 - 2023
       description:
         - title: Specjalność
           contents:
-            - Zastosowanie Technologii informacyjnych
+            - Zastosowanie technologii informacyjnych
         - title: Rodzaj studiów
           contents:
             - Studia niestacjonarne
@@ -146,14 +146,14 @@
       description:
         - title: Specjalność
           contents:
-            - Informatyka Ogólna
+            - Informatyka ogólna
         - title: Rodzaj studiów
           contents:
             - Studia stacjonarne
         - title: Tytuł pracy dyplomowej
           contents:
             - Implementacja algorytmu LZSS
-    - title: Technik Informatyk
+    - title: Technik informatyk
       institution: Zespół Szkół Zawodowych nr 1 im. Stanisława Staszica, Szczytno, Polska
       year: 2008 - 2012
 
@@ -175,29 +175,29 @@
         - Utrzymywanie równowagi pomiędzy pracą a życiem osobistym
     - title: Programowanie
       items:
-        - AGILE, SCRUM, Kanban
+        - Agile, Scrum, Kanban
         - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST/SOAP, ORM, RWD
         - C#, C++, PHP, Java, JavaScript, TypeScript, Python
-        - GIT, SVN
+        - Git, SVN
         - CSS, HTML, LESS, SASS
         - MySQL, MSSQL, Doctrine, Entity Framework, Hibernate, SQLite
         - ImGui, ImPlot, OpenXLSX
-        - Google Tests, NUnit, Moq
-        - Angular, Vue.js, JQuery, ExtJs, Node.js
-        - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
-        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
-        - Maven, Composer, Nuget, CMake
-        - Apache, Elastic Search, Redis, Varnish
+        - GoogleTest, NUnit, Moq
+        - Angular, Vue.js, jQuery, Ext JS, Node.js
+        - Visual Studio, VSCode, Android Studio, PhpStorm, Vim
+        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI
+        - Maven, Composer, NuGet, CMake
+        - Apache, Elasticsearch, Redis, Varnish
         - Shopware, Symfony, Laravel, Twig, Smarty, PSH
         - Docker, Vagrant, Oracle VirtualBox, Puppet
-        - Nftables
-        - Linux, Windows, Mac
-        - Bash, Powershell
+        - nftables
+        - Linux, Windows, macOS
+        - Bash, PowerShell
         - UML, Enterprise Architect
     - title: Game-dev
       items:
         - Unity, Unreal Engine, Godot
-        - Gimp, Photoshop, Blender
+        - GIMP, Photoshop, Blender
         - Unreal Engine C++ API i Profiler
         - Blueprint, Visual Scripting
         - AR, VR, ARCore

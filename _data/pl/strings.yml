@@ -1,11 +1,22 @@
-archive_category: archiwum postów w tej kategorii
-archive_tag: archiwum postów z tym tagiem
-archive_year: archiwum postów z tego roku
+archive:
+  prefix: archiwum
+  category_suffix: w tej kategorii
+  tag_suffix: z tym tagiem
+  year_suffix: z tego roku
+bibliography:
+  abstract: Abs
+  awarded: Nagrodzono
+  blog: Blog
+  book_prefix: W
+  code: Kod
+  last_author_prefix: i
+  poster: Plakat
+  slides: Slajdy
+  supp: Supl
+  video: Wideo
+  website: Strona
 blog:
   navigation_title: Think twice, code once
-citation:
-  bibtex: „lub jako wpis BibTeX:”
-  introduction: „Jeśli uznałeś to za przydatne, zacytuj to jako:”
 categories:
   fun: dla zabawy
   work: praca
@@ -13,66 +24,17 @@ categories:
   e-commerce: aplikacje e-commerce
   game-dev: game-dev
   desktop: aplikacje desktopowe
-contact_note: Jeżeli chcesz się ze mną skontaktować proszę napisz mi maila! <a href="mailto:tomasz.komoszeski@gmail.com">Na adres tomasz.komoszeski@gmail</a> lub poprzez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">linkedin</a>.
-footer_text: > # the ">" symbol means to ignore newlines until "titles:"
-  Obsługiwane przez <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> razem z stylem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
-  Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Zdjęcia z <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-latest_posts: ostatnie posty
-descriptions:
-  about: Portoflio inżyniera oprogramowania
-  archive-category: archiwum postów w tej kategorii
-  archive-tag: archiwum postów z tagiem
-  archive-year: archiwum postów z tym rokiem
-  blog: Prosty blog o programowaniu
-  cv: Curriculum Vitae.
-  profiles: Członkowie mojej grupy naukowej.
-  projects: Kolekcja moich projektów.
-  publications: Publikacje podzielone na kategorię w chronologicznym porządku.
-  repositories: Witaj w moim skarbcu kodu, gdzie zamieszczam moje najnowsze, wartościowe repozytoria kodu i statystyki na jego temat.
-  teaching: Materiały do kursów.
-  unk: Wygląda na to, że popełniono błąd i nic tutaj nie ma.
-related_posts:
-  description: "Oto kilka następnych artykułów, które mogą Ci się również spodobać: "
-  title: Podoba Ci się ten artykuł?
-months:
-  long:
-    january: Styczeń
-    february: Luty
-    march: Marzec
-    april: Kwiecień
-    may: Maj
-    june: Czerwiec
-    july: Lipiec
-    august: Sierpień
-    september: Wrzesień
-    october: Październik
-    november: Listopad
-    december: Grudzień
-  short:
-    january: Sty
-    february: Lut
-    march: Marz
-    april: Kwie
-    may: Maj
-    june: Czerw
-    july: Lipie
-    august: Sierp
-    september: Wrze
-    october: Paź
-    november: List
-    december: Grudz
-pagination:
-  newer: Nowsze
-  older: Starsze
-  page: strona
-repositories:
-  users: Użytkownicy GitHub
-  repos: Repozytoria GitHub
+citation:
+  bibtex: "lub jako wpis BibTeX:"
+  introduction: "Jeśli ten materiał okazał się przydatny, zacytuj go jako:"
+collections:
+  books: książek
+  posts: postów
+contact_note: Jeżeli chcesz się ze mną skontaktować, napisz do mnie na adres <a href="mailto:tomasz.komoszeski@gmail.com">tomasz.komoszeski@gmail.com</a> lub przez <a href="https://www.linkedin.com/in/tomasz-komoszeski-b348a6156">LinkedIn</a>.
 cv:
   address: Adres
   area: Obszar
-  awarder: Nagradzony
+  awarder: Przyznający
   awards: Nagrody
   basics: Podstawowe informacje
   certificates: Certyfikaty
@@ -82,25 +44,26 @@ cv:
   date: Data
   education: Edukacja
   email: Email
-  endDate: Data końcowa
-  fluency: Płynność
-  highlights: Przegląd najważniejszych wydarzeń
-  image: Obraz
+  endDate: Data zakończenia
+  fluency: Poziom znajomości
+  highlights: Najważniejsze osiągnięcia
+  image: Zdjęcie
   institution: Instytucja
   interests: Zainteresowania
-  issuer: Emitent
+  issuer: Wystawca
   keywords: Słowa kluczowe
   label: Etykieta
   language: Język
   languages: Języki
   level: Poziom
   location: Lokalizacja
-  name: Imię
+  name: Imię i nazwisko
   network: Sieć
   organization: Organizacja
   phone: Telefon
-  position: Pozycja
+  position: Stanowisko
   postalCode: Kod pocztowy
+  present: Obecnie
   profiles: Profile
   projects: Projekty
   publications: Publikacje
@@ -109,54 +72,105 @@ cv:
   references: Referencje
   region: Region
   releaseDate: Data wydania
-  score: Punkty
+  score: Wynik
   skills: Umiejętności
-  startDate: Początkowa data
-  studyType: Przedmiot studiów
+  startDate: Data rozpoczęcia
+  studyType: Rodzaj studiów
   summary: Podsumowanie
   table_of_contents: Spis treści
   title: Tytuł
   url: Url
   username: Nazwa użytkownika
-  volunteer: Ochotnik
+  volunteer: Wolontariat
   work: Praca
-news: Wiadomości
+footer:
+  copyright: Copyright
+  last_updated: "Ostatnia aktualizacja:"
+footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+  Zbudowane za pomocą <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> z motywem <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>.
+  Hostowane na <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+giscus:
+  noscript: Włącz JavaScript, aby zobaczyć
+  noscript_link: komentarze obsługiwane przez giscus.
+header:
+  change_theme: Zmień motyw
+  search: Szukaj
+  toggle_navigation: Przełącz nawigację
+latest_posts: ostatnie posty
+months:
+  long:
+    # genitive forms, used in full dates, e.g. "5 marca 2025"
+    january: stycznia
+    february: lutego
+    march: marca
+    april: kwietnia
+    may: maja
+    june: czerwca
+    july: lipca
+    august: sierpnia
+    september: września
+    october: października
+    november: listopada
+    december: grudnia
+  short:
+    january: Sty
+    february: Lut
+    march: Mar
+    april: Kwi
+    may: Maj
+    june: Cze
+    july: Lip
+    august: Sie
+    september: Wrz
+    october: Paź
+    november: Lis
+    december: Gru
+news: aktualności
 newsletter:
-  back: Cofnij
-  error: "O nie! Coś poszło nie tak, spróbuj ponownie!"
-  subscribe: Zapisz się
-  subscribed: "Z powodzeniem zapisałeś się do newslettera."
-  subscribe_to_receive: "Zapisz się do newslettera, by otrzymywać powiadomienia o najnowszych artykułach :"
-  too_many_signups: "Za dużo prób zapisu, spróbuj później"
-  wait: "Proszę zaczekaj..."
-no_news: Póki co pusto
+  back: Wróć
+  error: "Ups! Coś poszło nie tak, spróbuj ponownie."
+  subscribe: zapisz się
+  subscribed: "Zapisano do newslettera."
+  subscribe_to_receive: "Zapisz się, aby otrzymywać powiadomienia o nowych artykułach:"
+  too_many_signups: "Zbyt wiele prób zapisu, spróbuj ponownie za chwilę"
+  wait: "Proszę czekać..."
+no_news: Na razie brak aktualności...
+no_posts: "Na razie brak postów..."
+pagination:
+  navigation: Nawigacja po stronach bloga
+  page: strona
+post:
+  created_in: Opublikowano
+  created_by: przez
+  last_updated: ostatnia aktualizacja
+references: Bibliografia
+related_posts:
+  description: "Oto kilka kolejnych artykułów, które mogą Ci się spodobać:"
+  title: Podoba Ci się ten artykuł?
 search:
   dark_theme:
     description: Zmień motyw strony na ciemny
-    title: Zmiana motywu na ciemny
-  dropdown: Dropdown
+    title: Zmień motyw na ciemny
+  dropdown: Menu rozwijane
   email: Wyślij e-mail
   footer:
     close: aby zamknąć
     navigate: aby nawigować
-    parent: aby cofnąć
+    parent: aby przejść poziom wyżej
     select: aby wybrać
   languages: Języki
   light_theme:
     description: Zmień motyw strony na jasny
-    title: Zmiana motywu na jasny
+    title: Zmień motyw na jasny
   navigation: Menu nawigacji
-  news: Wiadomości
-  placeholder: Zacznij pisać, aby rozpocząć wyszukiwanie
+  news: Aktualności
+  placeholder: Zacznij pisać, aby wyszukać
   posts: Posty
   projects: Projekty
-  socials: Społecznościowe
+  socials: Media społecznościowe
   system_theme:
-    description: Zmień motyw na podstawowy
-    title: Wybierz podstawowy motyw
+    description: Ustaw motyw strony zgodnie z ustawieniami systemu
+    title: Użyj motywu systemowego
   theme: Motyw
-references: Odnośniki
-post:
-  created_in: Napisano w
-  created_by: przez
-  last_updated: Ostatnio zaaktualizowane w
+selected_publications: wybrane publikacje
+site_description: Ziumper – portfolio inżyniera oprogramowania i programisty gier. Projekty, wpisy na blogu i technologie, z którymi pracuję.

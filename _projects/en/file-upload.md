@@ -2,11 +2,15 @@
 page_id: file_upload
 layout: page
 title: File Upload
-description: File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests
+description: File upload app written in Symfony 7 using Doctrine and PHPUnit tests
 img: assets/img/projects/file-upload1.png
 importance: 1
 category: web-development
 ---
+
+<div class="links">
+  <a href="https://github.com/Ziumper/file-upload" class="btn btn-amber btn-sm z-depth-0" role="button">View code <i class="fa-brands fa-github"></i></a>
+</div>
 
 # Project Description
 

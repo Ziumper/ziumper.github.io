@@ -188,6 +188,7 @@ exclude:
   - INSTALL.pt-br.md
   - LICENSE
   - lighthouse_results/
+  - Makefile
   - package.json
   - package-lock.json
   - _pages/en-us/about_einstein.md
@@ -196,6 +197,7 @@ exclude:
   - README.md
   - README.pt-br.md
   - readme_preview/
+  - requirements.txt
   - UPGRADING.md
   - vendor
 keep_files:
@@ -266,7 +268,8 @@ jekyll-archives:
       categories: "/blog/:type/:name/"
 
 display_tags: ["godot", "unity", "unreal-engine", "git", "game-dev", "php"] # these tags will be displayed on the front page of your blog
-display_categories: ["tutorials"] # these categories will be displayed on the front page of your blo
+display_categories: ["tutorials"] # these categories will be displayed on the front page of your blog
+
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
@@ -648,11 +651,14 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
+# The resume JSON files are optional. When they don't exist (current setup),
+# the CV page is built from _data/<lang>/cv.yml instead.
 jekyll_get_json:
   - data: resume_en
     json: assets/json/resume_en.json # it can also be an url
   - data: resume_pl
     json: assets/json/resume_pl.json # it can also be an url
+
 jsonresume:
   - basics
   - work

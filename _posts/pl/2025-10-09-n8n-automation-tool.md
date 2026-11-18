@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Nowy tool n8n!"
+title: "Nowe narzędzie n8n!"
 date: 2025-10-09
 tags: n8n
-description: "Ostatnio miałem możliwość zabawy z hostowaną wersją n8n i chciałem podzielić się swoimi wrażeniami"
+description: "Ostatnio miałem możliwość zabawy z hostowaną wersją n8n i chciałem podzielić się swoimi wrażeniami."
 giscus_comments: true
 thumbnail: assets/img/posts/n8n-tool.png
 ---
@@ -21,14 +21,14 @@ Jego cechy charakterystyczne to:
 - jest prosty w użyciu (przeciągnij i upuść)
 - pozwala na łączenie procesów w podprocesy
 - jeśli znasz [BPMN](https://www.bpmn.org/), szybko zrozumiesz zasadę działania
-- umożliwia pisanie kodu w wbudowanym edytorze przy użyciu JavaScript oraz Pythona
+- umożliwia pisanie kodu we wbudowanym edytorze przy użyciu JavaScript oraz Pythona
 
 ## Charakter pracy z n8n
 
 Jedną z najważniejszych rzeczy, które zrozumiałem podczas pracy z n8n,
 było to, jak istotne jest zapewnienie odpowiedniej struktury danych wejściowych i wyjściowych.
-Daje możliwości zbierania, agregacji i filtrowania danych. Praca na danych ma
-z automatu charakter iteracyjny.
+n8n daje możliwość zbierania, agregacji i filtrowania danych. Praca na danych ma
+z natury charakter iteracyjny.
 
 Pisanie kodu jest całkiem wygodne – dostępne są podpowiedzi i autouzupełnianie.
 Musiałem trochę się przestawić i wykorzystywać bloki z JavaScriptem, aby zapewnić
@@ -42,6 +42,10 @@ Myślę, że świetnie nadaje się do:
 - automatyzacji powtarzalnych czynności
 - szybkiej integracji znanych narzędzi
 - synchronizacji danych
+
+## Przykład użycia
+
+Za pomocą n8n zautomatyzowałem proces pobierania nowych wpisów z kanału RSS i zapisywania ich w Arkuszach Google. Dzięki gotowym integracjom wystarczyło połączyć kilka węzłów, ustawić harmonogram i wszystko działa automatycznie.
 
 ## Wady i ograniczenia
 

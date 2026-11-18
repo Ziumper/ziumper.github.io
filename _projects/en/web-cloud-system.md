@@ -2,7 +2,7 @@
 page_id: web_cloud_system
 layout: page
 title: Web Cloud System
-description: Easy and simple MVC .NET app to store and manage filles in .net core and angular
+description: Easy and simple MVC app to store and manage files, written in .NET Core and Angular
 img: assets/img/projects/files.jpg
 importance: 1
 category: web-development
@@ -14,7 +14,7 @@ category: web-development
 
 # Project Description
 
-This project was created as part of the recruitment process for the company where I [worked](/cv). Its goal was to develop an IT system for file management. The system would be secure, with user authentication. Once logged in, users would be able to manage their files, reset passwords, and share files externally. This project secured my employment, so I've included it here—it may serve me well again in the future.
+This project was created as part of the recruitment process for the company where I [worked](/cv/). Its goal was to develop an IT system for file management. The system would be secure, with user authentication. Once logged in, users would be able to manage their files, reset passwords, and share files externally. This project secured my employment, so I've included it here—it may serve me well again in the future.
 
 ## Technologies and Tools Used
 
@@ -32,4 +32,4 @@ During the project, I familiarized myself with the following technologies and to
 - TypeScript
 - SCSS
 - ASP.NET
-- Rest
+- REST

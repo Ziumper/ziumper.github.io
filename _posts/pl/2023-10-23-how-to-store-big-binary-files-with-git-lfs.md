@@ -2,7 +2,7 @@
 layout: post
 title: Jak przechowywać duże pliki binarne z użyciem git lfs na Google Drive lub One Drive?
 date: 2023-10-23 16:40:16
-tags: git unity unreal-engine
+tags: git game-dev unity unreal-engine
 categories: tutorials
 description: Sprawdzony sposób na darmowy hosting plików przy pomocy adaptera LFS.
 giscus_comments: true
@@ -13,28 +13,28 @@ giscus_comments: true
 Sugeruję połączenie git lfs z niestandardowym adapterem transferu. Zgodnie z dokumentacją git-lfs:
 
 > Git LFS obsługuje wiele sposobów przesyłania (wgrywania i pobierania) plików.
-> W podstawowych aplikacjach klienckich używa się żądania HTTP za pośrednictwem adresu URL zwróconego z API LFS dla danego obiektu.
-> Klient obsługuje również rozszerzenia umożliwiające wznowienie pobierania (za pośrednictwem nagłówków Range) i przesyłania.
+> W podstawowym kliencie używa się do tego pojedynczego żądania HTTP za pośrednictwem adresu URL zwróconego z API LFS dla danego obiektu.
+> Klient obsługuje również rozszerzenia umożliwiające wznowienie pobierania (za pośrednictwem nagłówków Range) i wysyłania (za pomocą protokołu tus.io).
 
 # Przykłady użycia
 
-Wykorzystałem ten sposób do przechowywania plików multimedialnych w moim projekcie i do rozwoju oprogramowania w projektach związanych z grami.
+Wykorzystałem ten sposób do przechowywania plików multimedialnych w moich projektach programistycznych i projektach związanych z tworzeniem gier.
 Jestem pewien, że i Ty możesz to zrobić. W większości przypadków lubię to stosować do:
 
 - projektów związanych z tworzeniem gier w silnikach takich jak Unity i Unreal Engine.
-- przechowywania dbdumps
+- przechowywania zrzutów baz danych (db dumps)
 - przechowywania dużych plików multimedialnych (w razie potrzeby)
 
 Zawsze istnieje sposób, aby to zrobić również dla innych rodzajów projektów.
 
-W poniższym przykładzie będę używał gitlab, google drive i innych narzędzi.
+W poniższym przykładzie będę używał GitLaba, Google Drive i innych narzędzi.
 
-# Konfiguracja Gitlab-a
+# Konfiguracja GitLaba
 
-Po pierwsze, musisz wyłączyć domyślną usługę lfs w gitlabie. Jest to bardzo dobrze udokumentowana funkcja w oficjalnej dokumentacji
-[Gitlab](https://docs.gitlab.com/ee/topics/git/lfs), ale nie ma zbyt dużo informacji na temat tego, jak ją wyłączyć.
+Po pierwsze, musisz wyłączyć domyślną usługę LFS w GitLabie. Jest to funkcja bardzo dobrze opisana w oficjalnej
+[dokumentacji GitLaba](https://docs.gitlab.com/ee/topics/git/lfs), ale nie ma zbyt wielu informacji na temat tego, jak ją wyłączyć.
 
-Jest to trochę skomplikowane i niezbyt przyjazne dla użytkownika, ale oczywiście musisz wybrać swoje repozytorium i wejść w ustawienia.
+Jest to trochę skomplikowane i niezbyt przyjazne dla użytkownika, ale w skrócie musisz wybrać swoje repozytorium i wejść w ustawienia.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -45,30 +45,31 @@ Jest to trochę skomplikowane i niezbyt przyjazne dla użytkownika, ale oczywiś
     </div>
 </div>
 
-Istnieje również inny sposób za pomocą wiersza poleceń gitlab oraz dla narzędzi CI za pomocą zmiennych środowiskowych, ale nie będę tego omawiał, trzymajmy to proste.
-Jeśli gitlab lfs jest wyłączony na zdalnym serwerze, możesz zacząć od konfiguracji lokalnej.
+Istnieje również inny sposób – za pomocą wiersza poleceń GitLaba, a dla narzędzi CI za pomocą zmiennych środowiskowych – ale nie będę go omawiał, żeby nie komplikować.
+
+Jeśli GitLab LFS jest wyłączony na zdalnym serwerze, możesz zacząć od konfiguracji lokalnej.
 
 # Konfiguracja lokalnego repozytorium
 
-Będziesz potrzebował nowego repozytorium lub możesz użyć istniejącego. Sugeruję rozpoczęcie od stanu początkowego, abyś mógł skorzystać z prostego przewodnika konfiguracyjnego poniżej.
+Będziesz potrzebował nowego repozytorium lub możesz użyć istniejącego. Sugeruję rozpoczęcie od czystego stanu, abyś mógł skorzystać z prostego przewodnika konfiguracyjnego poniżej.
 
 ```
 git init
 ```
 
-Dodaj również link do serwera zdalnego. Można to zrobić po konfiguracji lub później.
-Dla lfs z gitlabem możesz sugerować się zgodnie z prostym samouczkiem [link do git](https://docs.gitlab.com/tutorials/learn_git/)
+Dodaj również link do serwera zdalnego. Można to zrobić teraz lub później.
+W przypadku GitLaba możesz skorzystać z prostego samouczka: [link do git](https://docs.gitlab.com/tutorials/learn_git/)
 
 # Konfiguracja lfs
 
 Pobierz narzędzie adaptera lfs z [dostępnych wydań](https://github.com/sinbad/lfs-folderstore/releases/tag/v1.0.1).
 
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/posts/OIP.jpg" class="img-fluid rounded z-depth-1" width="50%"  zoomable=true %}
+    {% include figure.liquid path="assets/img/posts/OIP.jpeg" class="img-fluid rounded z-depth-1" width="50%"  zoomable=true %}
 </div>
 
-Pobierz, rozpakuj, zainstaluj je
-w dobrze znanej lokalizacji. Na przykład utwórz nowy folder na swoim głównym dysku roboczym, np. tak: `C:\Tools`, więc pełna ścieżka do narzędzia
+Pobierz, rozpakuj i zainstaluj je
+w dobrze znanej lokalizacji. Na przykład utwórz nowy folder na swoim głównym dysku roboczym, np. `C:\Tools`, wtedy pełna ścieżka do narzędzia
 będzie wyglądać tak: `C:\Tools\lfs-folderstore.exe`.
 
 Aby skonfigurować repozytorium z lfs, dodaj plik .gitattributes w swoim repozytorium.
@@ -77,7 +78,7 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 ## Unity .gitattributes
 
 ```
-## in root
+## w katalogu głównym
 
 *.cs diff=csharp text
 *.cginc text
@@ -95,7 +96,7 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 ## git-lfs ##
 
-#Image
+#Obrazy
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
@@ -111,17 +112,17 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 #Wwise
 *.bnk filter=lfs diff=lfs merge=lfs -text
 
-#Video
+#Wideo
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text
 
-#3D Object
+#Obiekty 3D
 *.FBX filter=lfs diff=lfs merge=lfs -text
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.blend filter=lfs diff=lfs merge=lfs -text
 *.obj filter=lfs diff=lfs merge=lfs -text
 
-#ETC
+#Inne
 *.a filter=lfs diff=lfs merge=lfs -text
 *.exr filter=lfs diff=lfs merge=lfs -text
 *.tga filter=lfs diff=lfs merge=lfs -text
@@ -140,11 +141,11 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 ```
 ## Unreal Engine
-## Auto detect text files and perform LF normalization ##
+## Automatyczne wykrywanie plików tekstowych i normalizacja LF ##
 
 * text=auto
 
-# UE file types
+# Typy plików UE
 *.uasset filter=lfs diff=lfs merge=lfs -text
 *.umap filter=lfs diff=lfs merge=lfs -text
 *.udk filter=lfs diff=lfs merge=lfs -text
@@ -152,15 +153,15 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 --------------------------------------------------
 
-# 2D formats
-# Read more in: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
+# Formaty 2D
+# Więcej informacji: https://docs.unrealengine.com/4.26/en-US/RenderingAndGraphics/Textures/Importing/
 
-# Recommended use:
+# Zalecane:
 *.[tT][gG][aA] filter=lfs diff=lfs merge=lfs -text
 *.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
 *.[bB][mM][pP] filter=lfs diff=lfs merge=lfs -text
 
-# Can also be used:
+# Można też używać:
 *.[fF][lL[oO][aA][tT] filter=lfs diff=lfs merge=lfs -text
 *.[jJ][pP][eE][gG] filter=lfs diff=lfs merge=lfs -text
 *.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
@@ -170,40 +171,40 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 *.[tT][iI][fF] filter=lfs diff=lfs merge=lfs -text
 *.[tT][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
 
-# Other supported formats:
+# Inne obsługiwane formaty:
 *.[hH][dD][rR] filter=lfs diff=lfs merge=lfs -text
 *.[dD][dD][sS] filter=lfs diff=lfs merge=lfs -text
 *.[eE][xX][rR] filter=lfs diff=lfs merge=lfs -text
 
 --------------------------------------------------
 
-# 3D formats
+# Formaty 3D
 
-# Always recommended to use:
-# The UE4 FBX import pipeline uses FBX 2018
+# Zawsze zalecane:
+# Import FBX w UE4 korzysta z FBX 2018
 *.[fF][bB][xX] filter=lfs diff=lfs merge=lfs -text
 
-# Can also be used:
+# Można też używać:
 *.[oO][bB][jJ] filter=lfs diff=lfs merge=lfs -text
 
-# Other supported formats:
+# Inne obsługiwane formaty:
 *.[aA][bB][cC] filter=lfs diff=lfs merge=lfs -text
 *.[sS][rR][tT] filter=lfs diff=lfs merge=lfs -text
 
 --------------------------------------------------
 
-# Audio formats
-# Read more in: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
+# Formaty audio
+# Więcej informacji: https://docs.unrealengine.com/4.27/en-US/WorkingWithAudio/Overview/#:~:text=Unreal%20Engine%204%20(UE4)%20supports,16%2Dbit%20format%20PCM%20files.
 
-# Always recommended to use:
+# Zawsze zalecane:
 *.[wW][aA][vV] filter=lfs diff=lfs merge=lfs -text
 
-# Can also be used:
+# Można też używać:
 *.[aA][iI][fF][fF] filter=lfs diff=lfs merge=lfs -text
 *.[oO][gG][gG] filter=lfs diff=lfs merge=lfs -text
 *.[fF][lL][aA][cC] filter=lfs diff=lfs merge=lfs -text
 
-# Not recommended to use, but supported:
+# Niezalecane, ale obsługiwane:
 *.[mM][pP]3 filter=lfs diff=lfs merge=lfs -text
 *.[wW][mM][aA] filter=lfs diff=lfs merge=lfs -text
 *.[aA][cC]3 filter=lfs diff=lfs merge=lfs -text
@@ -217,14 +218,14 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 --------------------------------------------------
 
-# Video formats
-# Read more in: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
+# Formaty wideo
+# Więcej informacji: https://docs.unrealengine.com/5.0/en-US/media-framework-technical-reference-for-unreal-engine/
 
-# Always recommended to use, supports all platforms:
-# For the best compatibility and performance, it is recommended to use H.264 encoded MP4 (.mp4) container files.
+# Zawsze zalecane, obsługiwane na wszystkich platformach:
+# Dla najlepszej kompatybilności i wydajności zaleca się pliki MP4 (.mp4) kodowane w H.264.
 *.[mM][pP]4 filter=lfs diff=lfs merge=lfs -text
 
-# Can also be used, only some platforms are supported:
+# Można też używać, ale tylko na niektórych platformach:
 *.3[gG]2 filter=lfs diff=lfs merge=lfs -text
 *.3[gG][pP] filter=lfs diff=lfs merge=lfs -text
 *.3[gG][pP]2 filter=lfs diff=lfs merge=lfs -text
@@ -238,8 +239,8 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 --------------------------------------------------
 
-# Fonts
-# Read more in: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
+# Czcionki
+# Więcej informacji: https://docs.unrealengine.com/5.0/en-US/importing-fonts-in-unreal-engine/
 
 *.[tT][tT][fF] filter=lfs diff=lfs merge=lfs -text
 *.[oO][tT][fF] filter=lfs diff=lfs merge=lfs -text
@@ -253,26 +254,26 @@ Przykłady można znaleźć pod tym [linkiem](https://github.com/gitattributes/g
 
 # Konfiguracja Google Drive
 
-Jeśli repozytorium jest gotowe, będziesz potrzebować jakiegoś rodzaju przestrzeni dyskowej, aby to działało. Aby w pełni zintegrować to z Google Drive, użyj klienta Google Drive [Pobierz](https://www.google.com/drive/download/).
-Zainstaluj go, zaloguj się, aby można było utworzyć folder do przechowywania wszystkich dużych danych binarnych.
+Jeśli repozytorium jest gotowe, będziesz potrzebować jakiegoś rodzaju przestrzeni dyskowej, aby to działało. Aby w pełni to zintegrować, użyj klienta Google Drive: [Pobierz](https://www.google.com/drive/download/).
+Zainstaluj go i zaloguj się, aby można było utworzyć folder do przechowywania wszystkich dużych danych binarnych.
 
-Po zalogowaniu powinieneś zobaczyć swój zamontowany folder w Finderze, jeśli używasz Maca, lub w Exploratorze Windows, jako oddzielony dysk. Otwórz go i utwórz nowy folder o nazwie
-`binary-lfs`. Ta nazwa będzie używana do przechowywania wszystkich danych binarnych dla Twojego projektu w konfiguracji lfs.
+Po zalogowaniu powinieneś zobaczyć swój zamontowany folder w Finderze, jeśli używasz Maca, lub w Eksploratorze Windows jako oddzielny dysk. Otwórz go i utwórz nowy folder o nazwie
+`binary-lfs`. Ten folder będzie używany do przechowywania wszystkich danych binarnych dla Twojego projektu w konfiguracji lfs.
 
 # Integracja konfiguracji Git
 
-Jeśli wszystko zostało wykonane prawidłowo, teraz nadszedł czas, aby połączyć git-lfs z naszym narzędziem i Google Drive.
+Jeśli wszystko zostało wykonane prawidłowo, nadszedł czas, aby połączyć git-lfs z naszym narzędziem i Google Drive.
 
-Użyłem mojego ulubionego otwartoźródłowego oprogramowania [GitExtension](https://git-extensions-documentation.readthedocs.io/) jako odniesienia do integracji, ale możesz użyć terminala za pomocą podejścia z konfiguracją git config
-lub dowolnego edytora tekstu. W przypadku korzystania z edytora tekstu otwórz plik konfiguracyjny w ukrytym folderze .git w głównym folderze Twojego projektu repozytorium.
+Użyłem mojego ulubionego otwartoźródłowego oprogramowania [GitExtension](https://git-extensions-documentation.readthedocs.io/) jako odniesienia do integracji, ale możesz też użyć terminala i polecenia git config
+lub dowolnego edytora tekstu. W przypadku korzystania z edytora tekstu otwórz plik konfiguracyjny w ukrytym folderze .git w głównym folderze repozytorium Twojego projektu.
 
-Aby otworzyć konfigurację Twojego repozytorium github, wybierz następującą opcję:
+Aby otworzyć konfigurację swojego repozytorium, wybierz następującą opcję:
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/integration_gitextension.png" class="img-fluid rounded z-depth-1"  zoomable=true %}
 </div>
 
-Otwórz go i dodaj następujące linie.
+Otwórz go i dodaj następujące linie, podobnie jak w sekcji [Cloning a repo](https://github.com/sinbad/lfs-folderstore#cloning-a-repo) dokumentacji lfs-folderstore:
 
 ```
 [lfs "customtransfer.lfs-folder"]
@@ -283,7 +284,7 @@ Otwórz go i dodaj następujące linie.
     repositoryformatversion = 0
 ```
 
-Następnie, pamiętaj, aby posortować pliki LFS i skopiować zawartość skonfigurowanego wspólnego folderu, używając następującej komendy
+Teraz wszystko powinno działać. Pamiętaj, aby uporządkować pliki LFS w swoim checkoucie i skopiować zawartość skonfigurowanego wspólnego folderu, używając następującej komendy
 
 ```bash
 git reset --hard master
@@ -299,10 +300,10 @@ git push -u origin main
 
 Czasami mogą pojawić się problemy z Twoją siecią lub z git lfs. W przypadku błędów smudge lub innych problemów można wypróbować następujące triki:
 
-- spróbuj użyć lepszego połączenia internetowego, słaby pasmo sieciowe nie pomaga
+- spróbuj użyć lepszego połączenia internetowego – wąskie pasmo sieci nie pomaga
 - zrestartuj komputer
-- użyj `git lfs fetch --all` pobiera pliki git lfs dla WSZYSTKICH zdalnych gałęzi
-- przenieś katalog cache Google Drive lub One Drive do nowego folderu i spróbuj ponownie pobrać dane
+- użyj `git lfs fetch --all`, aby pobrać pliki git lfs dla WSZYSTKICH zdalnych gałęzi
+- przenieś katalog cache Google Drive lub OneDrive do nowego folderu i spróbuj ponownie pobrać dane
 
 # Bibliografia i źródła
 

@@ -4,27 +4,27 @@ title: How to start with GIT?
 date: 2022-07-17 16:40:16
 tags: git
 categories: tutorials
-description: How to start working with GIT. Basic guide about what is git and how you utilise it for version control.
+description: How to start working with GIT. A basic guide to what git is and how to use it for version control.
 giscus_comments: true
 ---
 
 I was wondering what GIT means. Here is what I have found:
 
-> GIT as a word is an alternation of the word get, which was shortened from begetting.
+> GIT as a word is an alteration of the word get, which was shortened from begetting.
 > The implicit reference is to illegitimate offspring,
 > and the term is roughly synonymous with a twit, dolt, moron, or idiot. Within the open source community, the significance of the name choice varies.
 
 It means GIT is for idiots that do not know what they are doing. The perfect tool for a software developer. Let us start from the beginning.
 
-Linus Torvalds decided to develop it for the Linux kernel. From 2005 that helped developers track changes in the code. Available in all operating systems and used by users around the globe. Easy to start but hard to master version control system. You can download it from [this site](https://git-scm.com/downloads) and try it by yourself.
+Linus Torvalds decided to develop it for the Linux kernel. Since 2005 it has helped developers track changes in the code. It is available on all operating systems and used by people around the globe. It is a version control system that is easy to start with but hard to master. You can download it from [this site](https://git-scm.com/downloads) and try it yourself.
 
 # Basics
 
 Download and install [git](https://git-scm.com/downloads) on your OS (Operating system).
-I am starting with the basics. To follow, you need to get familiar with terminal.
+I am starting with the basics. To follow, you need to get familiar with the terminal.
 After installation you should be able to execute some git commands.
-Create a new folder. Then open up a terminal within new folder.
-Let’s make a repository. To achieve it use a command bellow.
+Create a new folder. Then open up a terminal within the new folder.
+Let’s make a repository. To achieve it, use the command below.
 
 ```bash
 git init
@@ -32,26 +32,26 @@ git init
 
 # Tools
 
-There a few GUI (Graphical User Interface) Tools, which can help you geting into GIT.  
-If you are not a fan of terminal I bet you can use [GitExtensions](https://gitextensions.github.io/)
+There are a few GUI (Graphical User Interface) tools which can help you get into GIT.  
+If you are not a fan of the terminal, I bet you can use [GitExtensions](https://gitextensions.github.io/)
 
 <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/posts/gitextension.png" alt="git extensions editor window" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-As an alternative you can use [SourceTree](https://www.sourcetreeapp.com/) it is a valid free to use alternative for Mac. I think if you are using Linux you can go with terminal as well.
+As an alternative, you can use [SourceTree](https://www.sourcetreeapp.com/), which is a free alternative for Mac. If you are using Linux, I think you can go with the terminal as well.
 
 ![SourceTree!](https://wac-cdn.atlassian.com/dam/jcr:580c367b-c240-453d-aa18-c7ced44324f9/hero-mac-screenshot.png?cdnVersion=651)
 
 # Commit
 
-Okay, so far good! Now let’s commit some files to it. I made an HTML file with the following content.
+Okay, so far so good! Now let’s commit some files to it. I made an HTML file with the following content.
 
 ```html
 <h1>Hello there</h1>
 ```
 
-and save it as hello.html. Now you are ready to add it to staging area.
+and save it as hello.html. Now you are ready to add it to the staging area.
 What is a staging area – let’s explain it as a box where you put stuff and then you use it as a snapshot to commit the changes.
 To do it you should specify the path to the file with the file format, or path with some pattern like
 
@@ -77,7 +77,7 @@ Then by typing:
 git status
 ```
 
-You should be able to see all files, which have been added by you to staging area.
+You should be able to see all files, which have been added by you to the staging area.
 
 Afterwards, you can commit the hello.html to your local repository.
 
@@ -87,9 +87,9 @@ git commit -m "Add hello there file"
 
 commit – is a command that saves a snapshot of the “box” that we staged.
 
-# Commits message standards
+# Commit message standards
 
-I want to explain a few standards on how to deal with commit messages and how often you should be doing it. I heard that the more often you are doing it, the better. There is no limit, afterwards, you can always reduce the number of commits, by using the squash functionality. Let’s start with the form of the commit message. How it should be:
+I want to explain a few standards on how to deal with commit messages and how often you should be doing it. I heard that the more often you are doing it, the better. There is no limit; afterwards, you can always reduce the number of commits, by using the squash functionality. Let’s start with the form of the commit message. What it should look like:
 
 - Use imperative statements in the subject line, e.g. “Fix broken Javadoc link”
 
@@ -101,11 +101,11 @@ I want to explain a few standards on how to deal with commit messages and how of
 
 - Wrap lines in the body at 72 characters or less
 
-- Mention associated Jira issue(s) at the end of the commit comment, prefixed with “Issue: ” as above
+- Mention associated Jira issue(s) at the end of the commit comment, prefixed with “Issue: ”
 
 - In the body of the commit message, explain how things worked before this commit, what has changed, and how things work now
 
-- I also like to add some kind of tag of type before the commit message, here are some examples:
+- I also like to add a type tag before the commit message, here are some examples:
 
 ```bash
 – Feature
@@ -117,7 +117,7 @@ I want to explain a few standards on how to deal with commit messages and how of
 – Hotfix
 ```
 
-When you are working on a task it is good to add some number of tasks like #123 that reference some. In summary, it should look like that:
+When you are working on a task, it is good to add the task number as a reference, like #123. In summary, it should look like this:
 
 ```bash
 [FEATURE] #123 My super not quite long commit message.
@@ -132,8 +132,9 @@ example:
 Those commits resolve issue #123 and #124
 ```
 
-Git branches – tree of changes
-Commits can be added to branches. The branch is a set of commits that are separated from the main branch just like in a tree with leafs. To create a branch:
+# Git branches – tree of changes
+
+Commits can be added to branches. The branch is a set of commits that are separated from the main branch just like in a tree with leaves. To create a branch:
 
 ```bash
 git branch <branch_name>
@@ -145,7 +146,7 @@ To switch branch
 git checkout <branch_name>
 ```
 
-After initializing the git repository you usually have one existing main branch from which all created afterwards branches can be derived. Use them to group some changes on the feature you are working on.
+After initializing the git repository you usually have one existing main branch from which all branches created afterwards can be derived. Use them to group some changes on the feature you are working on.
 
 # Workflow
 
@@ -154,4 +155,4 @@ I recommend getting familiar with a few concepts of GIT like a branch, rebase, m
 - Gitflow
 - Trunk
 
-Choose first if you do not have any CI/CD tools in your toolset. The second one is great while working with a good technology stack and integrated code review tools.
+Choose the first one if you do not have any CI/CD tools in your toolset. The second one is great while working with a good technology stack and integrated code review tools.

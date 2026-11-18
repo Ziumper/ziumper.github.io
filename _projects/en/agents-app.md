@@ -2,7 +2,7 @@
 page_id: agents_app
 layout: page
 title: Agents App
-description: Monte carlo simulation app written in C++
+description: Monte Carlo simulation app written in C++
 img: assets/img/projects/agents_app2.png
 importance: 1
 category: desktop
@@ -28,9 +28,9 @@ The aim of the project was to create a real-time simulation of a reputation and 
 
 ## Functionalities
 
-Application have following functionalities:
+The application has the following functionalities:
 
-- a login window that allows tracking, filtering, and better understanding of the trust-building process stages in the simulation
+- a log window that allows tracking, filtering, and better understanding of the trust-building process stages in the simulation
 - the ability to edit input parameters such as initial trust level, number of agents, or number of inputs
 - boost mode, allowing for faster computation and simulation execution
 - export of simulation results to an MS Office Excel file
@@ -44,6 +44,6 @@ In the course of the project, I became acquainted with the following technologie
 - C++
 - ImGui
 - ImPlot
-- GoogleTests
+- GoogleTest
 - OpenXLSX
 - Visual Studio

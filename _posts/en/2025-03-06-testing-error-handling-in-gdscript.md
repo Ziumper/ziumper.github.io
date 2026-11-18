@@ -4,7 +4,7 @@ title: Testing Error Handling in Godot Using GUT
 date: 2025-03-06
 tags: game-dev godot tests
 categories: tutorials
-description: Testing error handling vis stub method in GUT tool.
+description: Testing error handling via the stub method in the GUT tool.
 thumbnail: assets/img/posts/gut_logo_256x256.png
 giscus_comments: true
 ---
@@ -128,7 +128,7 @@ If I wanted to modify a variable like this:
 func test_load_if_game_save_doesnt_exist()->void:
     #arrange
     var save = partial_double(GameSave).new("TestingGameSave.save", "12345")
-    var error_called = true
+    var error_called = false
 
     stub(save,"print_error").to_call(func(_msg: String)->void:
         error_called = true

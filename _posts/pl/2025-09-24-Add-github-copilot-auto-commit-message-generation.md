@@ -39,18 +39,18 @@ Ten szablon zawiera wytyczne dotyczące pisania dobrych wiadomości commitów i 
 ## Krok 2: Użyj GitHub Copilot do generowania wiadomości commitów
 
 Po dodaniu szablonu do repozytorium możesz zacząć używać GitHub Copilot do generowania wiadomości commitów.
-Gdy będziesz gotowy do wykonania commita, możesz użyć jednego z poniższych edytorów IDE wspierających GitHub Copilot:
+Gdy będziesz gotowy do wykonania commita, możesz użyć jednego z poniższych środowisk IDE wspierających GitHub Copilot:
 
 - Visual Studio Code
 - IDE JetBrains (np. IntelliJ IDEA, PyCharm, WebStorm)
 - Neovim
-  Po otwarciu edytora wiadomości commita GitHub Copilot automatycznie zaproponuje wiadomość commita na podstawie wprowadzonych zmian oraz wytycznych ze wskazanego szablonu.
-  GitHub Copilot automatycznie zasugeruje wiadomość commita na podstawie wprowadzonych zmian oraz wytycznych ze wskazanego szablonu.
+
+Po kliknięciu przycisku generowania wiadomości w edytorze commita GitHub Copilot zaproponuje wiadomość commita na podstawie wprowadzonych zmian oraz wytycznych ze wskazanego szablonu.
 
 ## Podsumowanie
 
 Korzystanie z GitHub Copilot do automatycznego generowania wiadomości commitów może pomóc pisać lepsze wiadomości i zwiększyć produktywność.
-Dodając szablon GitHub Copilot do repozytorium i korzystając z jednego z obsługiwanych edytorów IDE
+Dodając szablon GitHub Copilot do repozytorium i korzystając z jednego ze środowisk IDE
 wspierających GitHub Copilot, możesz łatwo generować przejrzyste i informatywne wiadomości commitów.
 Spróbuj i zobacz, jak może to usprawnić Twój workflow!
 Ja już korzystam i bardzo polecam! 😊

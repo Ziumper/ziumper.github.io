@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "PhpUnit willReturnMap - PHP Review #4"
+title: "PHPUnit willReturnMap - PHP Review #4"
 date: 2025-09-17
 tags: php
-description: 🐛 "PhpUnit, willReturnMap and default arguments – how to fall into a subtle trap 🪤"
+description: "🐛 PHPUnit, willReturnMap and default arguments – how to fall into a subtle trap 🪤"
 thumbnail: assets/img/posts/programmer-trap.png
 giscus_comments: true
 ---

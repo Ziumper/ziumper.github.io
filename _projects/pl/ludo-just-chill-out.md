@@ -2,7 +2,7 @@
 page_id: ludo
 layout: page
 title: Ludo - Just Chill Out
-description: Implmentacja słynnej gry w Chińczyka zrobiona w Unity
+description: Implementacja słynnej gry w chińczyka zrobiona w Unity
 img: assets/img/projects/ludo_screen1.jpg
 importance: 2
 category: game-dev
@@ -14,7 +14,7 @@ category: game-dev
 
 # Opis projektu
 
-Projekt bazował na zasadach kultowej gry planszowej Chińczyk, znanej również jako Pachisi. Jej celem jest przesunięcie wszystkich swoich pionków z punktu startowego do domu, czyli do swojego kwadratu na przeciwległym rogu planszy. Chińczyk jest grą zarówno pełną emocji, jak i strategiczną, która może zapewnić wiele godzin zabawy dla graczy w każdym wieku. Projekt został zrealizowany przy pomocy silnika gier Unity w luźnej atmosferze i z relaksującą muzyką. W grze istnieje możliwość grania zarówno z botami jak i w trybie wielu graczy na jednym urządzeniu. Był to mój pierwszy projekt, w którym byłem odpowiedzialny za kodowanie głównych mechanik gry oraz zarządzanie projektem jako główny programista, wykonujący przeglądy kodu oraz prowadząc młodszych kolegów w świat programowania. Zajmowałem się też wydawaniem nowych wersji gry.
+Projekt bazował na zasadach kultowej gry planszowej Chińczyk, znanej również jako Pachisi. Jej celem jest przesunięcie wszystkich swoich pionków z punktu startowego do domu, czyli do swojego kwadratu w przeciwległym rogu planszy. Chińczyk jest grą zarówno pełną emocji, jak i strategiczną, która może zapewnić wiele godzin zabawy dla graczy w każdym wieku. Projekt został zrealizowany przy pomocy silnika gier Unity w luźnej atmosferze i z relaksującą muzyką. W grze istnieje możliwość grania zarówno z botami, jak i w trybie wielu graczy na jednym urządzeniu. Był to mój pierwszy projekt, w którym byłem odpowiedzialny za kodowanie głównych mechanik gry oraz zarządzanie projektem jako główny programista, wykonując przeglądy kodu oraz wprowadzając młodszych kolegów w świat programowania. Zajmowałem się też wydawaniem nowych wersji gry.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -28,21 +28,21 @@ Projekt bazował na zasadach kultowej gry planszowej Chińczyk, znanej również
     </div>
 </div>
 
-## Funkcjonalnośći
+## Funkcjonalności
 
-W ramach projektu zaimplementowane zostały następujace funkcjonalności:
+W ramach projektu zaimplementowane zostały następujące funkcjonalności:
 
 - mechanika poruszania pionkami oraz przeciwnikami komputerowymi
 - efekty specjalne i animacje
 - mechanika poruszania kamerą
 - poruszające się oraz interaktywne elementy otoczenia
 - w pełni turowa rozgrywka
-- tryb wielu graczy na jednym urządzeniu oraz tryb pojedynczego gracza botami
+- tryb wielu graczy na jednym urządzeniu oraz tryb pojedynczego gracza z botami
 - intuicyjny interfejs użytkownika
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/projects/ludo_screen4.jpg" title="example board" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/projects/ludo_screen4.jpg" title="przykładowa plansza" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -51,7 +51,7 @@ W ramach projektu zaimplementowane zostały następujace funkcjonalności:
 
 ## Wykorzystane technologie
 
-W ramach realizacji projektu udało mi się zapoznać z następującymi technologami i narzędziami
+W ramach realizacji projektu udało mi się zapoznać z następującymi technologiami i narzędziami:
 
 - .NET
 - C#
@@ -59,9 +59,9 @@ W ramach realizacji projektu udało mi się zapoznać z następującymi technolo
 - Unity Cinemachine
 - Unity Terrain Tools
 - Visual Studio
-- Bledner
+- Blender
 - Unity Profiler
 - Wwise
 - NUnit
 - Hack&Plan
-- Gimp
+- GIMP

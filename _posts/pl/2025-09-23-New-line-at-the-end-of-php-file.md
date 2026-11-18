@@ -3,7 +3,7 @@ layout: post
 title: "🤓 Dlaczego programiści PHP kochają pustą linię na końcu pliku? Przegląd PHP #6"
 date: 2025-09-23
 tags: php
-description: "Post wyjaśnia, dlaczego programiści dodają pustą linię na końcu plików PHP i Twig, przedstawiając techniczne, historyczne oraz humorystyczne powody tej praktyki. Dowiesz się, jak wpływa to na kompatybilność, czytelność kodu i uniknięcie błędów"
+description: "Post wyjaśnia, dlaczego programiści dodają pustą linię na końcu plików PHP i Twig, przedstawiając techniczne, historyczne oraz humorystyczne powody tej praktyki. Dowiesz się, jak wpływa to na kompatybilność i czytelność kodu oraz jak pomaga unikać błędów."
 thumbnail: assets/img/posts/cooking-butler.png
 giscus_comments: true
 ---
@@ -45,7 +45,7 @@ To trochę jak przestrzeganie zasad BHP w kodzie – nikt nie chce dostać manda
 
 Dawniej edytory tekstu były kapryśne. Brak pustej linii mógł wywołać błędy przy kompilacji lub interpretacji kodu.
 Programiści nauczyli się więc dodawać tę magiczną linię, by uniknąć niespodzianek.
-To trochę jak noszenie skarpetek do sandałów – nie zawsze potrzebne i jest traktowane jako bezguście, ale czasem ratuje dzień! 🧦
+To trochę jak noszenie skarpetek do sandałów – nie zawsze potrzebne i uchodzi za brak gustu, ale czasem ratuje dzień! 🧦
 
 ## Twig 🕸️
 

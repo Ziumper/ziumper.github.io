@@ -16,6 +16,8 @@ on:
 
 jobs:
   build:
+    # only the upstream repository has the Docker Hub secrets for georgegca/multi-language-al-folio
+    if: github.repository_owner == 'george-gca'
     runs-on: ubuntu-latest
 
     steps:

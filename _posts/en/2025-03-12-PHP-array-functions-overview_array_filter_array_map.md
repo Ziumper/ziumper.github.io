@@ -38,7 +38,7 @@ public function show(User $user): Response
 }
 ```
 
-Here, `User` is a mapped database entity, automatically hydrated and returned from the database. More on that here. Neat feature, right? But let’s get back to the juicy part—array functions.
+Here, `User` is a mapped database entity, automatically hydrated and returned from the database. More on that [here](https://symfony.com/doc/current/doctrine.html#doctrine-entity-value-resolver). Neat feature, right? But let’s get back to the juicy part—array functions.
 Meet [array_filter](https://www.php.net/manual/en/function.array-filter.php), found in
 [EntityValueResolver](https://github.com/symfony/symfony/blob/7.2/src/Symfony/Bridge/Doctrine/ArgumentResolver/EntityValueResolver.php#L178)
 
@@ -57,7 +57,7 @@ According to the [docs](https://www.php.net/manual/en/functions.anonymous.php#fu
 > This prevents them from having the current class automatically bound to them.
 > Objects may also not be bound to them at runtime.
 
-So, this blocks the use of the [bindTo](https://en.wikipedia.org/wiki/Pure_function) method. But why would anyone want to do that?
+So, this blocks the use of the [bindTo](https://www.php.net/manual/en/closure.bindto.php) method. But why would anyone want to do that?
 Possible reasons:
 
 a) To prevent accidental access to `$this` within a class context.
@@ -122,11 +122,11 @@ The `...` operator resets numeric indexes (converting string numbers into intege
 and overwriting them). Meanwhile, `+` preserves keys but doesn’t overwrite existing ones.
 
 Also, `...` is faster than `array_merge`, supports Traversable objects,
-and—according to [this RFC](https://wiki.php.net/rfc/spread_operator_for_array#advantages_over_array_merge) —it’s the future.
+and—according to [this RFC](https://wiki.php.net/rfc/spread_operator_for_array#advantages_over_array_merge)—it’s the future.
 So expect to see a lot more `...` instead of `array_merge()`— unless you’re dealing with numeric keys,
 because in that case, `array_merge` still wins the performance race.
 
-In summary
+In summary:
 
 - `...` resets numeric keys but is faster for non-numeric keys.
 - `+` preserves keys but doesn’t overwrite existing ones.

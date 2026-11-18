@@ -94,8 +94,8 @@
         - title: Projects
           contents:
             - <a href="https://store.steampowered.com/app/1480060/Poly_Gangs/">PolyGangs</a>
-            - <a href="https://www.nintendo.com/store/products/ludo-game-just-chill-out-switch/"> Ludo Game </a>
-            - <a href="https://ziumper.github.io/pl/projects/night-catcher/">NightCatcher</a>
+            - <a href="https://www.nintendo.com/us/store/products/ludo-game-just-chill-out-switch/">Ludo Game</a>
+            - <a href="/projects/night-catcher/">NightCatcher</a>
 
     - title: PHP Developer
       institution: Meteoryt Sp. z o.o., Szczytno, Poland
@@ -104,7 +104,7 @@
         - title: Responsibilities
           contents:
             - Designing, coding, and developing e-commerce web applications using PHP, Smarty, MySQL, XML, CSS, and HTML.
-            - Assisting in the restructuring and maintenance of the desktop application <a href="https://pobieranie.meteoryt.pl/">Asystent</a> and its analogous <a href="https://meteoryt.pl/asystentchmura"> cloud version</a>.
+            - Assisting in the restructuring and maintenance of the desktop application <a href="https://pobieranie.meteoryt.pl/">Asystent</a> and its analogous <a href="https://meteoryt.pl/asystentchmura">cloud version</a>.
         - title: Projects
           contents:
             - <a href="https://hejwakacje.pl">Hej Wakacje!</a>
@@ -122,7 +122,7 @@
             - Conducting and participating in code reviews.
         - title: Projects
           contents:
-            - <a href="https://github.com/Ziumper/Bookshop">Recruitment Project Bookshop</a>
+            - <a href="https://github.com/Ziumper/Bookshop">Bookshop (recruitment project)</a>
 
 - title: Education
   type: time_table
@@ -175,29 +175,29 @@
         - Maintaining work-life balance
     - title: Programming
       items:
-        - AGILE, SCRUM, Kanban
+        - Agile, Scrum, Kanban
         - OOP, YAGNI, SOLID, DRY, DI, CI/CD, REST/SOAP, ORM, RWD
         - C#, C++, PHP, Java, JavaScript, TypeScript, Python
-        - GIT, SVN
+        - Git, SVN
         - CSS, HTML, LESS, SASS
         - MySQL, MSSQL, Doctrine, Entity Framework, Hibernate, SQLite
         - ImGui, ImPlot, OpenXLSX
-        - Google Tests, NUnit, Moq
-        - Angular, Vue.js, JQuery, ExtJs, Node.js
-        - Visual Studio, VSCode, Android Studio, PHPStorm, Vim
-        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI, .NET
-        - Maven, Composer, Nuget, CMake
-        - Apache, Elastic Search, Redis, Varnish
+        - GoogleTest, NUnit, Moq
+        - Angular, Vue.js, jQuery, Ext JS, Node.js
+        - Visual Studio, VSCode, Android Studio, PhpStorm, Vim
+        - .NET, LINQ, ASP.NET Core, WPF, Windows Forms, AvaloniaUI
+        - Maven, Composer, NuGet, CMake
+        - Apache, Elasticsearch, Redis, Varnish
         - Shopware, Symfony, Laravel, Twig, Smarty, PSH
         - Docker, Vagrant, Oracle VirtualBox, Puppet
-        - Nftables
-        - Linux, Windows, Mac
-        - Bash, Powershell
+        - nftables
+        - Linux, Windows, macOS
+        - Bash, PowerShell
         - UML, Enterprise Architect
     - title: Game-dev
       items:
         - Unity, Unreal Engine, Godot
-        - Gimp, Photoshop, Blender
+        - GIMP, Photoshop, Blender
         - Unreal Engine C++ API and Profiler
         - Blueprint, Visual Scripting
         - AR, VR, ARCore

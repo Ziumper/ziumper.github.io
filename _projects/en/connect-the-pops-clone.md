@@ -2,7 +2,7 @@
 page_id: connect_the_pops
 layout: page
 title: Connect The Pops Clone
-description: Clone of popular android game Connect The Pops from Popcorn
+description: Clone of the popular Android game Connect The Pops by Popcorn
 img: assets/img/projects/connects_the_pops.jpg
 importance: 5
 category: game-dev
@@ -15,7 +15,7 @@ category: game-dev
 
 # Project Description
 
-This is a project completed as a recruitment task for a Unity programmer position. It's a logic game for Android, Connect the pops!, reminiscent of the rules of [2048](<https://en.wikipedia.org/wiki/2048_(video_game)>). It includes the main game mechanics, which involve merging digital values in circular buttons with the value of the next power of the number 2.
+This is a project completed as a recruitment task for a Unity programmer position. It's a logic game for Android, Connect the pops!, reminiscent of the rules of [2048](<https://en.wikipedia.org/wiki/2048_(video_game)>). It includes the main game mechanics, which involve merging numeric values in circular buttons with the value of the next power of the number 2.
 
 <div class="caption">
     Recordings showing gameplay. On the left, you can see the original game, and on the right, a copy implemented by me.
@@ -46,4 +46,4 @@ As the project base, I used the basic tool template for mobile applications prov
 - Unity Animator
 - [TextMeshPro](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/index.html)
 - Visual Studio
-- Gimp
+- GIMP

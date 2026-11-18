@@ -2,7 +2,7 @@
 layout: post
 title: "🧹 Jak usunąć przepisy z sekcji `extra` w composer.json"
 date: 2025-09-22
-tags: php, composer, symfony, symfony-flex
+tags: php composer symfony symfony-flex
 description: "Krótki przewodnik po sekcji `extra` w composer.json oraz usuwaniu przepisów Symfony."
 thumbnail: assets/img/posts/cyber-broom.png
 giscus_comments: true
@@ -42,7 +42,7 @@ Ja wykorzystywałem ją do przechowywania przepisów Symfony Flex.
 Symfony Flex to wtyczka Composera, która pomaga zarządzać aplikacjami Symfony poprzez automatyczną instalację i konfigurację pakietów.
 Gdy instalujesz pakiet posiadający przepis, Symfony Flex dodaje pliki konfiguracyjne i ustawienia do projektu automatycznie.
 Możesz chcieć usunąć niektóre z tych przepisów, jeśli nie są Ci już potrzebne lub chcesz dostosować swoją konfigurację.
-W moim przypadku była to konfiguracja dockera, której nie potrzebowałem.
+W moim przypadku była to konfiguracja Dockera, której nie potrzebowałem.
 
 ```json
 {

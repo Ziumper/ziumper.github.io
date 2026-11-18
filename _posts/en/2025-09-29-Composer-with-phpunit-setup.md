@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Finally well written tests with composer loading structure"
+title: "Finally, well-written tests with a proper Composer loading structure"
 date: 2025-09-29
 tags: php composer phpunit
-description: "This post explains how to organize composer project with phpunit dependecies to not load your test cases into classmap and explaing learnings I figured out durring my workflow"
+description: "This post explains how to organize a Composer project with PHPUnit dependencies so your test cases are not loaded into the classmap, and shares the lessons I learned along the way."
 thumbnail: assets/img/posts/Logo-composer-transparent.png
 giscus_comments: true
 ---
 
-I stumbled, crawled on ground while having not proper setup in my old project that I should work on.
-and then I figured how I should structure my loading properties
+I stumbled and crawled on the ground with an improper setup in an old project I had to work on.
+And then I figured out how I should structure my class loading.
 
-here is what I had in my project
+Here is what I had in my project:
 
 ```json
 {
@@ -24,8 +24,8 @@ here is what I had in my project
 }
 ```
 
-but this way all may classes seems to be loaded inside composer autload map. I knew
-there must be better way to solve that. Here is what I figured out
+But this way all my classes seemed to be loaded into the Composer autoload map. I knew
+there must be a better way to solve that. Here is what I figured out:
 
 ```json
 {
@@ -42,9 +42,9 @@ there must be better way to solve that. Here is what I figured out
 }
 ```
 
-Durring that time I got some really serious issues, I couldn't declare Traits in my tests
-folder and it was quite hard feeling to copy paste all that code, then I moved forward with next version. Later I figured out
-that I had an issues with PS-4 autoloading inside shopware plugins. So I decided to move with following.
+During that time I ran into some really serious issues: I couldn't declare traits in my tests
+folder, and copy-pasting all that code was quite frustrating, so I moved on to the next version. Later I figured out
+that I had issues with PSR-4 autoloading inside Shopware plugins. So I decided to go with the following:
 
 ```json
 {
@@ -64,16 +64,16 @@ that I had an issues with PS-4 autoloading inside shopware plugins. So I decided
 }
 ```
 
-So how this works is:
+Here is how it works:
 
-- all base code declarations are stored inside src folder and those used for tests are inside tests\utils folder. Base test cases
-  traits, data providers too.
-- integration and tests are using src references and are giving me some nice working cases.
+- all base code declarations are stored inside the src folder, and those used for tests (base test cases,
+  traits, data providers) are inside the tests\utils folder.
+- integration and unit tests use src references, and everything works nicely.
 - exclude from classmap is a guard which stands in front of my testing code and doesn't allow it to get into production loading flow.
 - PSR-4 autoload in Composer loads classes by namespace → folder → filename.
-- PHPUnit use PS-4 not auto generated class map.
-- exclude-from-classmap = guards from loading my utility classes in production
+- PHPUnit uses PSR-4, not the auto-generated class map.
+- exclude-from-classmap = guards against loading my utility classes in production
 - no need to write custom bootstrap loading
 
 The class loading process may vary depending on the framework or rules used.
-For example, in shopware, plugins do not want to load Utils classes, for which you have to write with your own bootstrapper class.
+For example, in Shopware, plugins do not load Utils classes, so you have to write your own bootstrapper class.

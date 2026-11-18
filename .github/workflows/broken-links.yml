@@ -41,31 +41,25 @@ on:
 jobs:
   link-checker:
     runs-on: ubuntu-latest
-    # only run on the main repo
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Link Checker 🔗
         uses: lycheeverse/lychee-action@v2.0.2
         with:
           fail: true
-          # removed md files that include liquid tags
+          # removed md files that include liquid tags; 429 (rate limited, e.g. itch.io) is not a broken link
           args: >
-            --user-agent 'curl/7.54' 
-            --exclude-path _pages/en/blog.md 
-            --exclude-path _pages/pl/blog.md 
-            --exclude-path README.md  
-            --exclude 'https://pl.wikipedia.org/*' 
-            --exclude 'https://en.wikipedia.org/*' 
-            --exclude-path README.pt-br.md 
-            --exclude-path _pages/en-us/404.md 
-            --exclude-path _pages/pt-br/404.md 
-            --exclude-path _pages/en-us/blog.md 
-            --exclude-path _pages/pt-br/blog.md 
-            --exclude-path _posts/en-us/2018-12-22-distill.md 
-            --exclude-path _posts/pt-br/2018-12-22-distill.md 
-            --exclude-path _posts/en-us/2023-04-24-videos.md 
-            --exclude-path _posts/pt-br/2023-04-24-videos.md 
-            --exclude-path _books/en-us/the_godfather.md 
-            --exclude-path _books/pt-br/the_godfather.md 
-            --verbose --no-progress './**/*.md' './**/*.html '
+            --user-agent 'curl/7.54'
+            --accept '100..=103,200..=299,429'
+            --exclude-path README.md
+            --exclude-path _pages/en/404.md
+            --exclude-path _pages/pl/404.md
+            --exclude-path _pages/en/blog.md
+            --exclude-path _pages/pl/blog.md
+            --exclude-path _site
+            --exclude-path archive
+            --exclude-path node_modules
+            --exclude 'https://pl.wikipedia.org/*'
+            --exclude 'https://en.wikipedia.org/*'
+            --verbose --no-progress './**/*.md' './**/*.html'

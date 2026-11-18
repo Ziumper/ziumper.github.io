@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "🧐 Floats and the Mystery of -0.0 PHP Review #5"
+title: "🧐 Floats and the Mystery of -0.0 - PHP Review #5"
 date: 2025-09-18
 tags: php
-description: "Did you know that PHP has negative zero? This post is a journey through the world of negative zeros, 
-division by infinity, and why in your code you can still safely write `== 0.0`."
+description: "Did you know that PHP has negative zero? This post is a journey through the world of negative zeros, division by infinity, and why in your code you can still safely write `== 0.0`."
 thumbnail: assets/img/posts/zero-dungeon.png
 giscus_comments: true
-img: assets/img/posts/zero-dungeon.png
 ---
 
 Yes, really. `-0.0` and `0.0` are two different byte representations according to the [IEEE 754 standard](https://en.wikipedia.org/wiki/IEEE_754) – but in practice… PHP treats them as the same.
@@ -124,7 +122,7 @@ public function getPercentage(): int
 ```
 
 Cleaner, simpler, and still safe.  
-And the fact that -0.0 exists – well, that’s a great trivial fact to impress your fellow developers over coffee. ☕️😎
+And the fact that -0.0 exists – well, that’s a great piece of trivia to impress your fellow developers over coffee. ☕️😎
 
 PS: If you need an epsilon, it's better to use this constant:
 
