@@ -260,6 +260,11 @@ ninja.data = [{
           description: "Relaunch of the Boesner shop in Shopware 5 technology",
           section: "Projects",handler: () => {
               window.location.href = "/projects/boesner/";
+            },},{id: "projects-brita",
+          title: 'BRITA',
+          description: "Varnish caching, backend and admin panel extensions, and monitoring of the BRITA Shopware 6 online shop",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/brita/";
             },},{id: "projects-connect-the-pops-clone",
           title: 'Connect The Pops Clone',
           description: "Clone of the popular Android game Connect The Pops by Popcorn",
@@ -280,6 +285,21 @@ ninja.data = [{
           description: "Simulator game where you become a builder and renovator of garages and car repair shops.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/garage-flipper/";
+            },},{id: "projects-grüne-erde",
+          title: 'Grüne Erde',
+          description: "Data import, Google Shopping feed and modern frontend for the Grüne Erde Shopware 6 shop",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/grune-erde/";
+            },},{id: "projects-j-könig",
+          title: 'J. König',
+          description: "Optimization, admin panel performance, plugins and SFTP order import for the J. König Shopware 6 B2B shop",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/j-koenig/";
+            },},{id: "projects-kraków-airport",
+          title: 'Kraków Airport',
+          description: "Updates and upgrade of the official Kraków Airport website to the latest PHP and Laravel",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/krakow-airport/";
             },},{id: "projects-leguano",
           title: 'Leguano',
           description: "Implementation of the first store using Shopware 6 technology",

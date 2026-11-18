@@ -260,6 +260,11 @@ ninja.data = [{
           description: "Ponowne wdrożenie sklepu Boesner w technologii Shopware 5",
           section: "Projekty",handler: () => {
               window.location.href = "/pl/projects/boesner/";
+            },},{id: "projects-brita",
+          title: 'BRITA',
+          description: "Cache w Varnishu, rozszerzenia backendu i panelu administracyjnego oraz monitoring sklepu BRITA na Shopware 6",
+          section: "Projekty",handler: () => {
+              window.location.href = "/pl/projects/brita/";
             },},{id: "projects-klon-gry-connect-the-pops",
           title: 'Klon gry Connect the pops!',
           description: "Klon popularnej gry na Androida Connect The Pops! od Popcorn",
@@ -280,6 +285,21 @@ ninja.data = [{
           description: "Gra, w której wcielisz się w budowniczego i renowatora garaży i warsztatów samochodowych.",
           section: "Projekty",handler: () => {
               window.location.href = "/pl/projects/garage-flipper/";
+            },},{id: "projects-grüne-erde",
+          title: 'Grüne Erde',
+          description: "Import danych, feed Google Shopping i nowoczesny frontend sklepu Grüne Erde na Shopware 6",
+          section: "Projekty",handler: () => {
+              window.location.href = "/pl/projects/grune-erde/";
+            },},{id: "projects-j-könig",
+          title: 'J. König',
+          description: "Optymalizacja, wydajność panelu administracyjnego, wtyczki i import zamówień przez SFTP w sklepie B2B J. König na Shopware 6",
+          section: "Projekty",handler: () => {
+              window.location.href = "/pl/projects/j-koenig/";
+            },},{id: "projects-kraków-airport",
+          title: 'Kraków Airport',
+          description: "Aktualizacje i migracja oficjalnej strony Kraków Airport do najnowszego PHP i Laravela",
+          section: "Projekty",handler: () => {
+              window.location.href = "/pl/projects/krakow-airport/";
             },},{id: "projects-leguano",
           title: 'Leguano',
           description: "Wdrożenie pierwszego sklepu w technologii Shopware 6",
