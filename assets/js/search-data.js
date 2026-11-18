@@ -36,7 +36,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Welcome inside vault of code, where I post my most recent, valuable code repositories and stats about it.",
+          description: "Welcome to my vault of code, where I share my most recent and valuable repositories along with their stats.",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/repositories/";
@@ -63,7 +63,7 @@ ninja.data = [{
         
           title: "Alternative IDE for PHP? Apache NetBeans, but not only!",
         
-        description: "Why not PHPStorm? Why not VIM or Visual Studio Code? For some time, I have been searching for a tool that is not overloaded with features, yet is sufficiently useful and powerful to facilitate daily work.",
+        description: "Why not PhpStorm? Why not VIM or Visual Studio Code? For some time, I have been searching for a tool that is not overloaded with features, yet is sufficiently useful and powerful to facilitate daily work.",
         section: "Posts",
         handler: () => {
           
@@ -74,7 +74,7 @@ ninja.data = [{
         
           title: "Comma at the end of function arguments in PHP (trailing comma)",
         
-        description: "How the trailing comma in PHP makes a programmer&#39;s life easier when working with function and constructor arguments. ,",
+        description: "How the trailing comma in PHP makes a programmer&#39;s life easier when working with function and constructor arguments.",
         section: "Posts",
         handler: () => {
           
@@ -83,7 +83,7 @@ ninja.data = [{
         },
       },{id: "post-using-array-map-in-a-programmer-39-s-daily-life-php-review-7",
         
-          title: "Using array_map() in a Programmer&#39;s Daily Life. PHP Review #7",
+          title: "Using array_map() in a Programmer&#39;s Daily Life - PHP Review #7",
         
         description: "This time I decided to take a look at the most common uses of array_map in my daily code.",
         section: "Posts",
@@ -92,20 +92,20 @@ ninja.data = [{
             window.location.href = "/blog/2025/array-map-in-php/";
           
         },
-      },{id: "post-finally-well-written-tests-with-composer-loading-structure",
+      },{id: "post-finally-well-written-tests-with-a-proper-composer-loading-structure",
         
-          title: "Finally well written tests with composer loading structure",
+          title: "Finally, well-written tests with a proper Composer loading structure",
         
-        description: "This post explains how to organize composer project with phpunit dependecies to not load your test cases into classmap and explaing learnings I figured out durring my workflow",
+        description: "This post explains how to organize a Composer project with PHPUnit dependencies so your test cases are not loaded into the classmap, and shares the lessons I learned along the way.",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2025/Composer-with-phpunit-setup/";
           
         },
-      },{id: "post-how-integrate-github-copilot-to-generate-commit-messages-automatically",
+      },{id: "post-how-to-integrate-github-copilot-to-generate-commit-messages-automatically",
         
-          title: "How integrate GitHub Copilot to generate commit messages automatically?",
+          title: "How to integrate GitHub Copilot to generate commit messages automatically?",
         
         description: "This post explains how to use GitHub Copilot to generate commit messages automatically, improving productivity and ensuring clear commit history.",
         section: "Posts",
@@ -138,7 +138,7 @@ ninja.data = [{
         },
       },{id: "post-floats-and-the-mystery-of-0-0-php-review-5",
         
-          title: "🧐 Floats and the Mystery of -0.0 PHP Review #5",
+          title: "🧐 Floats and the Mystery of -0.0 - PHP Review #5",
         
         description: "Did you know that PHP has negative zero? This post is a journey through the world of negative zeros, division by infinity, and why in your code you can still safely write `== 0.0`.",
         section: "Posts",
@@ -149,9 +149,9 @@ ninja.data = [{
         },
       },{id: "post-phpunit-willreturnmap-php-review-4",
         
-          title: "PhpUnit willReturnMap - PHP Review #4",
+          title: "PHPUnit willReturnMap - PHP Review #4",
         
-        description: "🐛 &quot;PhpUnit, willReturnMap and default arguments – how to fall into a subtle trap 🪤&quot;",
+        description: "🐛 PHPUnit, willReturnMap and default arguments – how to fall into a subtle trap 🪤",
         section: "Posts",
         handler: () => {
           
@@ -195,7 +195,7 @@ ninja.data = [{
         
           title: "Testing Error Handling in Godot Using GUT",
         
-        description: "Testing error handling vis stub method in GUT tool.",
+        description: "Testing error handling via the stub method in the GUT tool.",
         section: "Posts",
         handler: () => {
           
@@ -206,7 +206,7 @@ ninja.data = [{
         
           title: "How to store big binary files with git lfs on Google Drive or...",
         
-        description: "Hacky way for storing a bigger files in git.",
+        description: "A hacky way of storing bigger files in git.",
         section: "Posts",
         handler: () => {
           
@@ -228,7 +228,7 @@ ninja.data = [{
         
           title: "How to start with GIT?",
         
-        description: "How to start working with GIT. Basic guide about what is git and how you utilise it for version control.",
+        description: "How to start working with GIT. A basic guide to what git is and how to use it for version control.",
         section: "Posts",
         handler: () => {
           
@@ -237,7 +237,7 @@ ninja.data = [{
         },
       },{id: "projects-agents-app",
           title: 'Agents App',
-          description: "Monte carlo simulation app written in C++",
+          description: "Monte Carlo simulation app written in C++",
           section: "Projects",handler: () => {
               window.location.href = "/projects/agents-app/";
             },},{id: "projects-axion",
@@ -247,22 +247,22 @@ ninja.data = [{
               window.location.href = "/projects/axion/";
             },},{id: "projects-blog-manager",
           title: 'Blog Manager',
-          description: "Blog management application MVC in .net core and angular with docker-compose setup for better development experience",
+          description: "Blog management MVC application in .NET Core and Angular with a docker-compose setup for a better development experience",
           section: "Projects",handler: () => {
               window.location.href = "/projects/blog-manager/";
             },},{id: "projects-board-heroes-battle",
           title: 'Board Heroes Battle',
-          description: "Augmented reality turn based board game for the Android platform",
+          description: "Augmented reality turn-based board game for the Android platform",
           section: "Projects",handler: () => {
               window.location.href = "/projects/board-heroes-battle/";
             },},{id: "projects-boesner",
           title: 'Boesner',
-          description: "Relaunch of boesner shop in Shopware 5 technology",
+          description: "Relaunch of the Boesner shop in Shopware 5 technology",
           section: "Projects",handler: () => {
               window.location.href = "/projects/boesner/";
             },},{id: "projects-connect-the-pops-clone",
           title: 'Connect The Pops Clone',
-          description: "Clone of popular android game Connect The Pops from Popcorn",
+          description: "Clone of the popular Android game Connect The Pops by Popcorn",
           section: "Projects",handler: () => {
               window.location.href = "/projects/connect-the-pops-clone/";
             },},{id: "projects-crafter",
@@ -272,12 +272,12 @@ ninja.data = [{
               window.location.href = "/projects/crafter/";
             },},{id: "projects-file-upload",
           title: 'File Upload',
-          description: "File upload symfony app written in symfony 7 with usage of doctrine and PhpUnit tests",
+          description: "File upload app written in Symfony 7 using Doctrine and PHPUnit tests",
           section: "Projects",handler: () => {
               window.location.href = "/projects/file-upload/";
             },},{id: "projects-garage-flipper",
           title: 'Garage Flipper',
-          description: "Simulator game where you can become builder and renovator of garages and car repair shops.",
+          description: "Simulator game where you become a builder and renovator of garages and car repair shops.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/garage-flipper/";
             },},{id: "projects-leguano",
@@ -292,12 +292,12 @@ ninja.data = [{
               window.location.href = "/projects/ludo-just-chill-out/";
             },},{id: "projects-lzss",
           title: 'LZSS',
-          description: "Implementation of loseless data compression algorithm - LZSS",
+          description: "Implementation of the lossless data compression algorithm - LZSS",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lzss/";
             },},{id: "projects-night-catcher",
           title: 'Night Catcher',
-          description: "Skill based mobile game for Android made in Unity",
+          description: "Skill-based mobile game for Android made in Unity",
           section: "Projects",handler: () => {
               window.location.href = "/projects/night-catcher/";
             },},{id: "projects-old-portfolio-project",
@@ -307,7 +307,7 @@ ninja.data = [{
               window.location.href = "/projects/old-portfolio-project/";
             },},{id: "projects-coded-online-store-example",
           title: 'Coded online store example',
-          description: "Coded online store example with HTML, CSS i JS based on existing shop template",
+          description: "Coded online store example with HTML, CSS and JS based on an existing shop template",
           section: "Projects",handler: () => {
               window.location.href = "/projects/online-store-template/";
             },},{id: "projects-polygangs",
@@ -322,12 +322,12 @@ ninja.data = [{
               window.location.href = "/projects/steve-the-hamster/";
             },},{id: "projects-todo-app",
           title: 'Todo App',
-          description: "WPF TodoApp apllicaiton for checking AvaloniaUI framework. Project based on AvaloniaUI example with modifications and integrated Unit tests",
+          description: "WPF TodoApp application for trying out the AvaloniaUI framework. Based on the AvaloniaUI example, with modifications and integrated unit tests",
           section: "Projects",handler: () => {
               window.location.href = "/projects/todo-app/";
             },},{id: "projects-web-cloud-system",
           title: 'Web Cloud System',
-          description: "Easy and simple MVC .NET app to store and manage filles in .net core and angular",
+          description: "Easy and simple MVC app to store and manage files, written in .NET Core and Angular",
           section: "Projects",handler: () => {
               window.location.href = "/projects/web-cloud-system/";
             },},{
