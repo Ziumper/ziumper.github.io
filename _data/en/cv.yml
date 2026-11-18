@@ -35,7 +35,7 @@
             - Making key technological and architectural decisions.
     - title: PHP Developer
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Poland
-      year: Mar 2025 - 2025
+      year: Mar 2025 - Dec 2025
       description:
         - title: Responsibilities and Role
           contents: My role at Strix required versatility and the ability to quickly adapt to new challenges, from backend code, through the frontend layer, to aspects related to infrastructure and optimization, with particular emphasis on the specifics and capabilities of the Shopware 6 platform.
@@ -207,20 +207,23 @@
 - title: Certifications and Training
   type: time_table
   contents:
+    - year: 2026
+      items:
+        - <a href="/assets/img/certificates/architekt-jutra.jpg" target="_blank" rel="noopener">Architekt Jutra</a>, devstyle – 33-hour course on software architecture with AI (LLMs, MCP)
     - year: 2025
       items:
-        - <a href="https://www.linkedin.com/in/ziumper/overlay/Certifications/144255675/treasury">Unreal Engine Game Developer Certificate</a>
-        - <a href="https://www.linkedin.com/in/ziumper/overlay/Certifications/2081535461/treasury/">Droga Nowoczesnego Architekta (DNA)</a>
+        - <a href="/assets/img/certificates/droga-nowoczesnego-architekta.jpg" target="_blank" rel="noopener">Droga Nowoczesnego Architekta (DNA)</a>, devstyle – 5-month software architecture course
     - year: 2024
       items:
-        - Shopware 6 <a href="https://www.shopware.com/en/academy/certifications/">Advanced Shopware Developer</a>
+        - <a href="/assets/img/certificates/unreal-engine-game-developer.jpg" target="_blank" rel="noopener">Unreal Engine Game Developer</a>, Szkoła biznesu Laba
+        - <a href="/assets/img/certificates/shopware-6-advanced-developer.jpg" target="_blank" rel="noopener">Shopware 6 Advanced Developer</a>, Shopware (valid until Aug 2026)
     - year: 2023
       items:
         - Online Advertising Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
         - Marketing and Branding Training, <a href="https://inspire-consulting.pl/pl">Inspire Consulting</a>
     - year: 2019
       items:
-        - Vue.js Course, <a href="https://typeofweb.com/">typeofweb</a>
+        - <a href="/assets/img/certificates/vuejs.jpg" target="_blank" rel="noopener">Vue.js Course</a>, <a href="https://typeofweb.com/">Type of Web</a>
     - year: 2010
       items:
         - ECDL, <a href="https://ecdl.pl/">European Computer Driving Licence</a>
