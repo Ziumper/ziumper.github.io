@@ -29,8 +29,13 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2.2"
+          # ubuntu-latest images only ship the newest patch of each Ruby series, so pin the series, not the patch
+          ruby-version: "3.3"
           bundler-cache: true
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
