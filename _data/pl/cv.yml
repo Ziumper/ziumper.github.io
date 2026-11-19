@@ -13,7 +13,7 @@
   contents:
     - title: Programista PHP
       institution: Web24.com.pl Sp. z o.o., Pomorski Park Naukowo-Technologiczny, Al. Zwycięstwa 96/98, 81-451 Gdynia, Polska
-      year: 2026 - obecnie
+      year: sty 2026 - obecnie
       description:
         - title: Obowiązki i rola
           contents: Kompleksowy rozwój aplikacji biznesowych w ekosystemie Laravel — od projektowania architektury, przez implementację, po przeglądy kodu i estymację projektów.
@@ -35,7 +35,7 @@
             - Podejmowanie kluczowych decyzji technologicznych i architektonicznych.
     - title: Programista PHP
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Polska
-      year: marzec 2025 - grudzień 2025
+      year: mar 2025 - 2025
       description:
         - title: Obowiązki i rola
           contents: Moja rola w Strix wymagała wszechstronności i umiejętności szybkiego adaptowania się do nowych wyzwań, od kodu backendowego, przez warstwę frontendową, po aspekty związane z infrastrukturą i optymalizacją, ze szczególnym uwzględnieniem specyfiki i możliwości platformy Shopware 6.
@@ -63,7 +63,7 @@
             - Rozwiązywanie złożonych problemów produkcyjnych oraz aktywne uczestnictwo w code review, dzieląc się wiedzą i najlepszymi praktykami z zespołem, szczególnie w kontekście Shopware 6.
     - title: Programista PHP
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Polska
-      year: 2019 - luty 2025
+      year: cze 2019 - lut 2025
       description:
         - title: Obowiązki
           contents:
@@ -83,7 +83,19 @@
 
     - title: Programista Unity
       institution: Farmind Studio Sp. z o.o., Warszawa, Polska
-      year: 2020 - 2023
+      year: lis 2023 - kwi 2024
+      description:
+        - title: Obowiązki
+          contents:
+            - Programowanie w C#, testowanie i naprawa błędów w mechanikach gry.
+            - Prototypowanie.
+        - title: Projekty
+          contents:
+            - <a href="/projects/garage-flipper/">Garage Flipper</a>
+
+    - title: Programista Unity
+      institution: Farmind Studio Sp. z o.o., Warszawa, Polska
+      year: lut 2020 - sty 2023
       description:
         - title: Obowiązki
           contents:
@@ -99,7 +111,7 @@
 
     - title: Programista PHP
       institution: Meteoryt Sp. z o.o., Szczytno, Polska
-      year: 2018 - 2019
+      year: lip 2018 - cze 2019
       description:
         - title: Obowiązki
           contents:
@@ -112,7 +124,7 @@
             - <a href="https://asystentonline.pl/">Asystent</a>
     - title: Programista .NET
       institution: Billennium S.A., Olsztyn, Polska
-      year: 2017 - 2018
+      year: sty 2017 - lut 2018
       description:
         - title: Obowiązki
           contents:

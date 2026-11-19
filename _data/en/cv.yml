@@ -13,7 +13,7 @@
   contents:
     - title: PHP Developer
       institution: Web24.com.pl Sp. z o.o., Pomorski Park Naukowo-Technologiczny, Al. Zwycięstwa 96/98, 81-451 Gdynia, Poland
-      year: 2026 - Present
+      year: Jan 2026 - Present
       description:
         - title: Responsibilities and Role
           contents: Comprehensive development of business applications within the Laravel ecosystem — from architecture design, through implementation, to code reviews and project estimation.
@@ -35,7 +35,7 @@
             - Making key technological and architectural decisions.
     - title: PHP Developer
       institution: STRIX POLAND Sp. z o.o., Zygmunta Miłkowskiego 5 / 3U, 30-349 Kraków, Poland
-      year: Mar 2025 - Dec 2025
+      year: Mar 2025 - 2025
       description:
         - title: Responsibilities and Role
           contents: My role at Strix required versatility and the ability to quickly adapt to new challenges, from backend code, through the frontend layer, to aspects related to infrastructure and optimization, with particular emphasis on the specifics and capabilities of the Shopware 6 platform.
@@ -63,7 +63,7 @@
             - Solving complex production problems and actively participating in code reviews, sharing knowledge and best practices with the team, especially in the context of Shopware 6.
     - title: PHP Developer
       institution: SUNZINET Polska Sp. z o.o., Gdańsk, Poland
-      year: 2019 - Feb 2025
+      year: Jun 2019 - Feb 2025
       description:
         - title: Responsibilities
           contents:
@@ -83,7 +83,19 @@
 
     - title: Unity Developer
       institution: Farmind Studio Sp. z o.o., Warsaw, Poland
-      year: 2020 - 2023
+      year: Nov 2023 - Apr 2024
+      description:
+        - title: Responsibilities
+          contents:
+            - Programming in C#, testing and fixing bugs in game mechanics.
+            - Prototyping.
+        - title: Projects
+          contents:
+            - <a href="/projects/garage-flipper/">Garage Flipper</a>
+
+    - title: Unity Developer
+      institution: Farmind Studio Sp. z o.o., Warsaw, Poland
+      year: Feb 2020 - Jan 2023
       description:
         - title: Responsibilities
           contents:
@@ -99,7 +111,7 @@
 
     - title: PHP Developer
       institution: Meteoryt Sp. z o.o., Szczytno, Poland
-      year: 2018 - 2019
+      year: Jul 2018 - Jun 2019
       description:
         - title: Responsibilities
           contents:
@@ -112,7 +124,7 @@
             - <a href="https://asystentonline.pl/">Asystent</a>
     - title: .NET Developer
       institution: Billennium S.A., Olsztyn, Poland
-      year: 2017 - 2018
+      year: Jan 2017 - Feb 2018
       description:
         - title: Responsibilities
           contents:
